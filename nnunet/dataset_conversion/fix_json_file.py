@@ -12,7 +12,7 @@ with open(output_file, 'w') as writer:
         if '"labels": {' in line:
             in_regions = True
             writer.write(line)
-            free_surfer_color_lut = '/home/miran045/reine097/projects/nnUNet/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md'
+            free_surfer_color_lut = '/home/miran045/reine097/projects/abcd-nn-unet/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md'
             free_surfer_label_to_region = get_id_to_region_mapping(free_surfer_color_lut)
             consecutive_labels_to_regions = fill_in_labels(free_surfer_label_to_region)
             for label in consecutive_labels_to_regions:
