@@ -1,0 +1,2 @@
+nodes,ntasks,cpus-per-task,mem-per-cpu,  tmp,      gres,mem,2d nnUNetTrainerV2_5epochs,3d_fullres nnUNetTrainerV2_5epochs,nnUNetTrainerV2_5epochs_dummyLoad,   ideal
+     ,     1,             ,           ,  40g,gpu:v100:1,32g,              330.112421 s,                      901.546459 s,                      83.381515 s, 66.03 s

@@ -8,6 +8,7 @@
 #SBATCH -p k40
 #SBATCH --gres=gpu:k40:1
 cd ~ || exit
-source nnunet-env/bin/activate
+module load gcc cuda/11.2
+source /panfs/roc/msisoft/anaconda/anaconda3-2018.12/etc/profile.d/conda.sh
 cd ~/projects/nnUNet/nnunet/run || exit
 mpirun -np 8 ~/nnunet-env/bin/python ~/projects/nnUNet/nnunet/run/run_training.py 3d_fullres nnUNetTrainerV2 2 0 > run_training_output.txt
