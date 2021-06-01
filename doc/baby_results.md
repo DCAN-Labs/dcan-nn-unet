@@ -16,7 +16,7 @@ Unfortunately, I ran into a [problem](https://github.com/BBillot/SynthSeg/issues
 I found out today that this problem was fixed an hour ago.  I
 hope to go back to SynthSeg and try it again.
 
-My second choice was [nnU-Net](https://github.com/MIC-DKFZ/nnUNet).
+My second choice was [MIC-DKFZ / nnU-Net](https://github.com/MIC-DKFZ/nnUNet).
 I also ran into many difficult problems in running nn-UNet
 but these were due to MSI software and configuration problems and not due to the
 nnU-Net code itself.  However, these were all resolved within a
