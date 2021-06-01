@@ -118,7 +118,7 @@ well-labelled.  How large that set must be
 remains to be seen.  Also, we need separate sets of images for separate age groups.  There are two practical
 considerations for finishing this project:
 manually creating the segmented data, and
-run-time for training on this data.  As I mentioned
+the run-time for training on this data.  As I mentioned
 earlier, it might be possible to halve the 
 training run-time.  I can experiment with the 
 MSI parameters, or we could consult with MSI.
