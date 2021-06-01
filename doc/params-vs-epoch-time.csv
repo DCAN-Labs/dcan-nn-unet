@@ -1,2 +1,9 @@
-nodes,ntasks,cpus-per-task,mem-per-cpu,  tmp,      gres,mem,2d nnUNetTrainerV2_5epochs,3d_fullres nnUNetTrainerV2_5epochs,nnUNetTrainerV2_5epochs_dummyLoad,   ideal
-     ,     1,             ,           ,  40g,gpu:v100:1,32g,              330.112421 s,                      901.546459 s,                      83.381515 s, 66.03 s
+nodes,ntasks,cpus-per-task,  tmp,      gres,mem,2d nnUNetTrainerV2_5epochs,3d_fullres nnUNetTrainerV2_5epochs,nnUNetTrainerV2_5epochs_dummyLoad,   ideal
+     ,     1,             ,  40g,gpu:v100:1,32g,              330.112421 s,                      901.546459 s,                      83.381515 s, 66.03 s
+     ,     1,             ,  40g,gpu:v100:1,64g,              327.677652 s,                      797.883074 s,                      80.875243 s, 66.03 s
+     ,     1,            2,  40g,gpu:v100:1,64g,              186.399038 s,                      424.985731 s,                      81.172311 s, 66.03 s
+     ,     1,            4,  40g,gpu:v100:1,64g,              110.120340 s,                      232.322256 s,                      81.253919 s, 66.03 s
+     ,     1,            8,  40g,gpu:v100:1,64g,               82.855634 s,                      142.410225 s,                      82.600330 s, 66.03 s
+     ,     1,           16,  40g,gpu:v100:1,64g,               75.938617 s,                      106.910975 s,                      81.693084 s, 66.03 s
+     ,     1,           24,  40g,gpu:v100:1,64g,               75.055187 s,                       98.943606 s,                      80.056942 s, 66.03 s
+     ,     2,           24,  40g,gpu:v100:1,64g,               xxxxxxxxxxx,                       xxxxxxxxxxx,                      xxxxxxxxxxx, 66.03 s
