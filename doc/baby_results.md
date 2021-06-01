@@ -104,7 +104,7 @@ Future directions
 -----------------
 
 1. Increase the training set size.  We currently
-have about 20 subjects total.  I would recommend first trying a training set of size 10.  If nnU-Net scales linearly, this will take about 6 days to run.  Keep doubling the training set size until we're using all the data.  Establish the relationship between training set size and run-time and Dice coefficient.
+have about 20 subjects total.  I would recommend first trying a training set of size 10.  If nnU-Net scales linearly, this will take about 6 days to run.  Keep doubling the training set size until we're using all the data.  Establish the relationship between training set size and the resulting run-time and Dice coefficient.
 2. If we don't get good results with a sufficiently large training set, go back and try SynthSeg or perhaps a third application.
 
 Conclusions
