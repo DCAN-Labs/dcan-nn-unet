@@ -115,7 +115,7 @@ image segmentation tasks, I'm confident that
 nnU-Net will do well with a sufficiently large
 training set of baby T1 and T2 images that are
 well-labelled.  How large that set must be
-remains to be seen.  There two practical
+remains to be seen.  Also, we need separate sets of images for separate age groups.  There are two practical
 considerations for finishing this project:
 manually creating the segmented data, and
 run-time for training on this data.  As I mentioned
