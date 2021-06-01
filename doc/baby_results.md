@@ -74,7 +74,7 @@ parameters to match the
 I was able to get within a factor of two of 
 the benchmark.  So it might be possible to halve
 our current run-time.  My experiments with
-optimizing parameters is documented 
+optimizing parameters are documented 
 [here](./params-vs-epoch-time.csv).  The best
 set of parameters I could find for MSI are
 in [this SLURM script](../slurm/train/RunNnUnetTrain_102_0.sh).
