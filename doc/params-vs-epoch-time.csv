@@ -6,4 +6,4 @@ nodes,ntasks,cpus-per-task,  tmp,      gres,mem,2d nnUNetTrainerV2_5epochs,3d_fu
      ,     1,            8,  40g,gpu:v100:1,64g,               82.855634 s,                      142.410225 s,                      82.600330 s, 66.03 s
      ,     1,           16,  40g,gpu:v100:1,64g,               75.938617 s,                      106.910975 s,                      81.693084 s, 66.03 s
      ,     1,           24,  40g,gpu:v100:1,64g,               75.055187 s,                       98.943606 s,                      80.056942 s, 66.03 s
-     ,     2,           24,  40g,gpu:v100:1,64g,               xxxxxxxxxxx,                       xxxxxxxxxxx,                      xxxxxxxxxxx, 66.03 s
+     ,     2,           24,  40g,gpu:v100:1,64g,               ????????? s,                       ????????? s,                      ????????? s, 66.03 s

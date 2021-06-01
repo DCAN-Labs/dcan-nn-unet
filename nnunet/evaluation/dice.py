@@ -59,6 +59,6 @@ gt_data = gt_img.get_fdata()
 print('gt_data.shape:', gt_data.shape)
 print('gt_img.dtype', gt_data.dtype)
 
-print('dice:', dice_coefficient(gt_data, predictions_data))
+print('dice (all):', dice_coefficient(gt_data, predictions_data))
 
-print('dice:', dice_coef_not_unknown(gt_data, predictions_data))
+print('dice (not unknown):', dice_coef_not_unknown(gt_data, predictions_data))
