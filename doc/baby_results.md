@@ -120,8 +120,8 @@ considerations for finishing this project:
 manually creating the segmented data, and
 the run-time for training on this data.  As I mentioned
 earlier, it might be possible to halve the 
-training run-time.  I can experiment with the 
-MSI parameters, or we could consult with MSI.
+training run-time.  I can continue experimenting with the 
+MSI parameters, or we could consult with MSI (the latter might be quicker).
 Also, once we seem to have reached a plateau
 with Dice coefficients, there are methods
 for 
