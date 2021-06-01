@@ -1,5 +1,6 @@
 from os.path import join
 from collections import OrderedDict
+import sys
 
 from batchgenerators.utilities.file_and_folder_operations import *
 
@@ -36,8 +37,7 @@ def fill_in_labels(free_surfer_label_to_region):
     return dict1
 
 
-def main():
-    task_name = 'Task002_Babies'
+def main(task_name):
     target_base = join(nnUNet_raw_data, task_name)
     target_images_tr = join(target_base, "imagesTr")
     target_images_ts = join(target_base, "imagesTs")
@@ -50,4 +50,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    task_name = sys.argv[1]
+    main(task_name)
