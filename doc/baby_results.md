@@ -2,7 +2,7 @@ nnU-Net Segmentation of Baby MRI Images
 ========================================
 
 The goal of the project is to segment MRI scans (both T1-weighted 
-and T2-weighted) both accurately and reasonably quickly.
+and T2-weighted) of babies both accurately and reasonably quickly.
 
 Software considerations
 -----------------------
