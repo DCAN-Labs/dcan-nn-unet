@@ -35,7 +35,7 @@ def dice_coef_not_unknown(y_true, y_pred, smooth=1):
             for k in range(126):
                 y_true_val = int(y_true[i][j][k])
                 y_pred_val = int(y_pred[i][j][k])
-                if y_true_val != 0 or y_pred_val != 0:
+                if y_true_val != 0:
                     union += 1
                     if y_true_val == y_pred_val:
                         intersection += 1
