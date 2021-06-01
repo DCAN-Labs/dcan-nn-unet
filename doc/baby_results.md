@@ -125,5 +125,5 @@ MSI parameters, or we could consult with MSI (the latter might be quicker).
 Also, once we seem to have reached a plateau
 with Dice coefficients, there are methods
 for 
-[extending and changing nnU-Net] that could
+[extending and changing nnU-Net](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/extending_nnunet.md#extendingchanging-nnu-net) that could
 better our results.
