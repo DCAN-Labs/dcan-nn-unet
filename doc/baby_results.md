@@ -64,7 +64,7 @@ should [take about 3 days](https://www.wolframalpha.com/input/?i=1000+*+294.7903
 for a training/cross-validation size of 6.
 (I imagine that the run-time is more dependent
 on the size of the training set than the size
-of the cross-validation set, but I'm not sure about this).
+of the cross-validation set, but I'm not sure about this.)
 
 Inference time for an image is negligible.
 
