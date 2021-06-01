@@ -2,7 +2,7 @@ nnU-Net Segmentation of Baby MRI Images
 ========================================
 
 The goal of the project is to segment MRI scans (both T1-weighted 
-and T2-weighted) both accurately and reasonably quickly.
+and T2-weighted) of babies both accurately and reasonably quickly.
 
 Software considerations
 -----------------------
@@ -16,7 +16,7 @@ Unfortunately, I ran into a [problem](https://github.com/BBillot/SynthSeg/issues
 I found out today that this problem was fixed an hour ago.  I
 hope to go back to SynthSeg and try it again.
 
-My second choice was [nnU-Net](https://github.com/MIC-DKFZ/nnUNet).
+My second choice was [MIC-DKFZ / nnU-Net](https://github.com/MIC-DKFZ/nnUNet).
 I also ran into many difficult problems in running nn-UNet
 but these were due to MSI software and configuration problems and not due to the
 nnU-Net code itself.  However, these were all resolved within a
@@ -64,7 +64,7 @@ should [take about 3 days](https://www.wolframalpha.com/input/?i=1000+*+294.7903
 for a training/cross-validation size of 6.
 (I imagine that the run-time is more dependent
 on the size of the training set than the size
-of the cross-validation set, but I'm not sure about this).
+of the cross-validation set, but I'm not sure about this.)
 
 Inference time for an image is negligible.
 
@@ -74,7 +74,7 @@ parameters to match the
 I was able to get within a factor of two of 
 the benchmark.  So it might be possible to halve
 our current run-time.  My experiments with
-optimizing parameters is documented 
+optimizing parameters are documented 
 [here](./params-vs-epoch-time.csv).  The best
 set of parameters I could find for MSI are
 in [this SLURM script](../slurm/train/RunNnUnetTrain_102_0.sh).
@@ -83,7 +83,7 @@ Results
 -------
 
 I used the 
-[Dice coefficient](https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2#:~:text=Simply%20put%2C%20the%20Dice%20Coefficient,Illustration%20of%20Dice%20Coefficient.).
+[Dice coefficient](https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2#:~:text=Simply%20put%2C%20the%20Dice%20Coefficient,Illustration%20of%20Dice%20Coefficient.) to measure results.
 This is the usual standard for measuring the 
 'accuracy' of medical image segmentations.
 The 
@@ -104,7 +104,7 @@ Future directions
 -----------------
 
 1. Increase the training set size.  We currently
-have about 20 subjects total.  I would recommend first trying a training set of size 10.  If nnU-Net scales linearly, this will take about 6 days to run.  Keep doubling the training set size until we're using all the data.  Establish the relationship between training set size and run-time and Dice coefficient.
+have about 20 subjects total.  I would recommend first trying a training set of size 10.  If nnU-Net scales linearly, this will take about 6 days to run.  Keep doubling the training set size until we're using all the data.  Establish the relationship between training set size and the resulting run-time and Dice coefficient.
 2. If we don't get good results with a sufficiently large training set, go back and try SynthSeg or perhaps a third application.
 
 Conclusions
@@ -115,15 +115,15 @@ image segmentation tasks, I'm confident that
 nnU-Net will do well with a sufficiently large
 training set of baby T1 and T2 images that are
 well-labelled.  How large that set must be
-remains to be seen.  There two practical
+remains to be seen.  Also, we need separate sets of images for separate age groups.  There are two practical
 considerations for finishing this project:
 manually creating the segmented data, and
-run-time for training on this data.  As I mentioned
+the run-time for training on this data.  As I mentioned
 earlier, it might be possible to halve the 
-training run-time.  I can experiment with the 
-MSI parameters, or we could consult with MSI.
+training run-time.  I can continue experimenting with the 
+MSI parameters, or we could consult with MSI (the latter might be quicker).
 Also, once we seem to have reached a plateau
 with Dice coefficients, there are methods
 for 
-[extending and changing nnU-Net] that could
+[extending and changing nnU-Net](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/extending_nnunet.md#extendingchanging-nnu-net) that could
 better our results.
