@@ -87,7 +87,7 @@ inferred by the model trained by nnU-Net.
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](https://...Dark.png)  |  ![](https://...Ocean.png)
+![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_coronal_gt.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_coronal_inferred.jpeg?raw=true)
 
 
 I used the 
