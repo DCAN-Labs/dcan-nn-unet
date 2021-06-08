@@ -82,6 +82,8 @@ in [this SLURM script](../slurm/train/RunNnUnetTrain_102_0.sh).
 Results
 -------
 
+### Images
+
 Below are the manual (i.e., ground-truth) segmentations and the segmentations
 inferred by the model trained by nnU-Net.
 
@@ -89,6 +91,16 @@ Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
 ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_coronal_gt.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_coronal_inferred.jpeg?raw=true)
 
+
+Ground-truth sagittal       |  Inferred sagittal
+:-------------------------:|:-------------------------:
+![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_sagittal_gt.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_sagittal_inferred.jpeg?raw=true)
+
+Ground-truth axial       |  Inferred axial
+:-------------------------:|:-------------------------:
+![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_axial_gt.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_axial_inferred.jpeg?raw=true)
+
+### Dice coefficients
 
 I used the 
 [Dice coefficient](https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2#:~:text=Simply%20put%2C%20the%20Dice%20Coefficient,Illustration%20of%20Dice%20Coefficient.) to measure results.
