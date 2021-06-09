@@ -91,16 +91,16 @@ inferred by the model trained by nnU-Net.
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_coronal_gt.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_coronal_inferred.jpeg?raw=true)
+![](../img/00-02mos_Template05_coronal_gt.jpeg)  |  ![](../img/00-02mos_Template05_coronal_inferred.jpeg)
 
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:
-![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_sagittal_gt.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_sagittal_inferred.jpeg?raw=true)
+![](../img/00-02mos_Template05_sagittal_gt.jpeg)  |  ![](../img/00-02mos_Template05_sagittal_inferred.jpeg)
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
-![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_axial_gt.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_axial_inferred.jpeg?raw=true)
+![](../img/00-02mos_Template05_axial_gt.jpeg)  |  ![](../img/00-02mos_Template05_axial_inferred.jpeg)
 
 #### Segmentation superimposed on T1 and T2 images
 
@@ -114,11 +114,11 @@ I also added smoothing, which I didn't add to the segmentation-only images above
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_coronal_gt_superimposed.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_coronal_inferred_superimposed.jpeg?raw=true)
+![](../img/00-02mos_Template05_coronal_gt_superimposed.jpeg)  |  ![](../img/00-02mos_Template05_coronal_inferred_superimposed.jpeg)
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:
-![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_sagittal_gt_superimposed.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_sagittal_inferred_superimposed.jpeg?raw=true)
+![](../img/00-02mos_Template05_sagittal_gt_superimposed.jpeg)  |  ![](../img/00-02mos_Template05_sagittal_inferred_superimposed.jpeg)
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
