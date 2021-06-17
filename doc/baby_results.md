@@ -42,8 +42,6 @@ I used the following images given to me by Luci Moore:
     * 00-02mos_Template04
     * 00-02mos_Template07
     * 00-02mos_Template08
-* Cross-validation set
-    * 00-02mos_Template03
 * Test set
     * 00-02mos_Template05
 
@@ -61,10 +59,7 @@ we get the following statistics:
 
 Hence, total running time for all training
 should [take about 3 days](https://www.wolframalpha.com/input/?i=1000+*+294.7903675987501+seconds)
-for a training/cross-validation size of 6.
-(I imagine that the run-time is more dependent
-on the size of the training set than the size
-of the cross-validation set, but I'm not sure about this.)
+for a training/cross-validation size of 5.
 
 Inference time for an image is negligible.
 
@@ -87,21 +82,6 @@ inferred by the model trained by nnU-Net.
 
 ### Images
 
-#### Segmentation alone
-
-Ground-truth coronal       |  Inferred coronal
-:-------------------------:|:-------------------------:
-![](../img/00-02mos_Template05_coronal_gt.jpeg)  |  ![](../img/00-02mos_Template05_coronal_inferred.jpeg)
-
-
-Ground-truth sagittal       |  Inferred sagittal
-:-------------------------:|:-------------------------:
-![](../img/00-02mos_Template05_sagittal_gt.jpeg)  |  ![](../img/00-02mos_Template05_sagittal_inferred.jpeg)
-
-Ground-truth axial       |  Inferred axial
-:-------------------------:|:-------------------------:
-![](../img/00-02mos_Template05_axial_gt.jpeg)  |  ![](../img/00-02mos_Template05_axial_inferred.jpeg)
-
 #### Segmentation superimposed on T1 and T2 images
 
 Here we have the images layered (from top to bottom):
@@ -110,7 +90,7 @@ Here we have the images layered (from top to bottom):
 2. T1 (50% opacity)
 3. T2
 
-I also added smoothing, which I didn't add to the segmentation-only images above.
+I also added smoothing.
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
