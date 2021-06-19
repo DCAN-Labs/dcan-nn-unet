@@ -61,7 +61,7 @@ Hence, total running time for all training
 should [take about 3 days](https://www.wolframalpha.com/input/?i=1000+*+294.7903675987501+seconds)
 for a training/cross-validation size of 5.
 
-Inference time for an image is negligible.
+Inference time for one set of T1/T2 images takes about 2 minutes.
 
 I spent a lot of time on optimizing the MSI
 parameters to match the 
