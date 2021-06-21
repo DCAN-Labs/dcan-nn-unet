@@ -156,25 +156,10 @@ Ground-truth axial       |  Inferred axial
 
 ### Dice coefficients
 
-I used the 
-[Dice coefficient](https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2#:~:text=Simply%20put%2C%20the%20Dice%20Coefficient,Illustration%20of%20Dice%20Coefficient.) to measure results.
-This is the usual standard for measuring the 
-'accuracy' of medical image segmentations.
-The 
-[Dice coefficient on our single test set](../nnunet/evaluation/dice.py) is
-0.7347411676344301.  However, this is misleading.  The fraction of 
-voxels with the label 0 (background) is
-0.7297995117701617.  The Dice coefficient
-for foreground voxels is only 0.03424693173990132.
-Again, we shouldn't expect great results with
-a training set size of 5.  Some training set
-sizes used to get good results with nnU-Net are
-* heart: 30
-* hippocampus: 394
-* prostate: 47
-* lungs: 96
-
-The Dice coefficient for 8-month-olds for foreground classes is: 0.9206427375735695
+| Group      | Test set size | Dice coefficient |
+| ----------- | ----------- |-------------------|
+| 00-02mos      | 4       | 0.03424693173990132 |
+| 8mo   | 8        | 0.9206427375735695 |
 
 Future directions
 -----------------
