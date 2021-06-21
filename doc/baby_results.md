@@ -160,6 +160,7 @@ Ground-truth axial       |  Inferred axial
 | ----------- | ----------- |-------------------|
 | 00-02mos      | 4       | 0.03424693173990132 |
 | 8mo   | 8        | 0.9206427375735695 |
+| all   | 34        | running now |
 
 Future directions
 -----------------
