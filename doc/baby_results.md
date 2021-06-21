@@ -24,52 +24,8 @@ week (or three) by working with MSI.  Some time was also spent
 in finding the best SLURM parameters to optimize the running time
 for training.
 
-Initial data set
-----------------
-
-Because of all the unknowns and lack of knowledge of run-time
-for training, I wanted to start with small training/validation/test
-sets.  I wasn't expecting great results with this small training
-set, but I did want to make sure that I could get nn-UNet to run
-efficiently on MSI.  That was accomplished.  Because of [nn-UNet's
-good results on other medical image segmentation problems](https://arxiv.org/pdf/1809.10486v1.pdf)
-I am confident we will get good results with a sufficiently
-large training set.
-
-I used the following images given to me by Luci Moore:
-* Training set
-    * 00-02mos_Template01
-    * 00-02mos_Template04
-    * 00-02mos_Template07
-    * 00-02mos_Template08
-* Test set
-    * 00-02mos_Template05
-
 Run-time
 --------
-
-Training consists of five folds each of 1000 epochs.  Once
-the first fold has done some preliminary set-up, the folds can be
-run in parallel.  From [examination of log files](https://github.com/DCAN-Labs/abcd-nn-unet/blob/main/nnunet/util/calculate_epoch_time.py),
-we get the following statistics:
-
-  * Training/crossvalidation set of size 4
-
-
-    min_epoch_time: 240.548288 s
-    max_epoch_time: 389.860017 s
-    avg_epoch_time: 294.7903675987501 s
-
-  * Training/crossvalidation set of size 8
-
-
-    min_epoch_time: 247.918437
-    max_epoch_time: 357.954143
-    avg_epoch_time: 280.5509568585713
-
-Hence, total running time for all training
-should [take about 3 days](https://www.wolframalpha.com/input/?i=1000+*+294.7903675987501+seconds)
-for a training/cross-validation size of 5.
 
 Inference time for one set of T1/T2 images takes about 2 minutes.
 
@@ -156,11 +112,11 @@ Ground-truth axial       |  Inferred axial
 
 ### Dice coefficients
 
-| Group      | Test set size | Dice coefficient |
-| ----------- | ----------- |-------------------|
-| 00-02mos      | 4       | 0.03424693173990132 |
-| 8mo   | 8        | 0.9206427375735695 |
-| all   | 34        | running now |
+| Group      | Test set size | Dice coefficient | avg_epoch_time |
+| ----------- | ----------- |-------------------|----------------|
+| 00-02mos      | 4       | 0.03424693173990132 | 294.7903675987501 s |
+| 8mo   | 8        | 0.9206427375735695 | 280.5509568585713 |
+| all   | 34        | running now | running now |
 
 Future directions
 -----------------
