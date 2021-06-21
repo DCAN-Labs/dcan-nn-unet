@@ -53,9 +53,19 @@ the first fold has done some preliminary set-up, the folds can be
 run in parallel.  From [examination of log files](https://github.com/DCAN-Labs/abcd-nn-unet/blob/main/nnunet/util/calculate_epoch_time.py),
 we get the following statistics:
 
+  * Training/crossvalidation set of size 4
+
+
     min_epoch_time: 240.548288 s
     max_epoch_time: 389.860017 s
     avg_epoch_time: 294.7903675987501 s
+
+  * Training/crossvalidation set of size 8
+
+
+    min_epoch_time: 247.918437
+    max_epoch_time: 357.954143
+    avg_epoch_time: 280.5509568585713
 
 Hence, total running time for all training
 should [take about 3 days](https://www.wolframalpha.com/input/?i=1000+*+294.7903675987501+seconds)
@@ -163,6 +173,8 @@ sizes used to get good results with nnU-Net are
 * hippocampus: 394
 * prostate: 47
 * lungs: 96
+
+The Dice coefficient for 8-month-olds for foreground classes is: 0.9206427375735695
 
 Future directions
 -----------------

@@ -1,6 +1,7 @@
 import os
 
 import nibabel as nib
+import sys
 
 
 def dice_coefficient(y_true, y_pred, smooth=1):
@@ -44,21 +45,23 @@ def dice_coef_not_unknown(y_true, y_pred, smooth=1):
     return dice
 
 
-home = '/home/miran045/reine097/'
-predictions_filename = os.path.join(home, 'nnUNet/inference/babies/', '00-02mos_Template05.nii.gz')
-ground_truth_filename = os.path.join(home, 'nnUNet_raw_data_base/nnUNet_raw_data/Task102_BabiesSubset/test/labelsTest/',
-                                     '00-02mos_Template05.nii.gz')
+def main(ground_truth_filename, predictions_filename):
+    predictions_img = nib.load(predictions_filename)
+    predictions_data = predictions_img.get_fdata()
+    print('predictions_data.shape:', predictions_data.shape)
+    print('predictions_data.dtype', predictions_data.dtype)
 
-predictions_img = nib.load(predictions_filename)
-predictions_data = predictions_img.get_fdata()
-print('predictions_data.shape:', predictions_data.shape)
-print('predictions_data.dtype', predictions_data.dtype)
+    gt_img = nib.load(ground_truth_filename)
+    gt_data = gt_img.get_fdata()
+    print('gt_data.shape:', gt_data.shape)
+    print('gt_img.dtype', gt_data.dtype)
 
-gt_img = nib.load(ground_truth_filename)
-gt_data = gt_img.get_fdata()
-print('gt_data.shape:', gt_data.shape)
-print('gt_img.dtype', gt_data.dtype)
+    print('dice (all):', dice_coefficient(gt_data, predictions_data))
 
-print('dice (all):', dice_coefficient(gt_data, predictions_data))
+    print('dice (not unknown):', dice_coef_not_unknown(gt_data, predictions_data))
 
-print('dice (not unknown):', dice_coef_not_unknown(gt_data, predictions_data))
+
+if __name__ == "__main__":
+    ground_truth_filename = sys.argv[1]
+    predictions_filename = sys.argv[2]
+    main(ground_truth_filename, predictions_filename)
