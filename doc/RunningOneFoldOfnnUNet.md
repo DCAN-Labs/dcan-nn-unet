@@ -62,7 +62,7 @@ Do the following.
 3. Change to the following directory:
 
 
-    cd /home/faird/shared/code/internal/nnUNet/training/501/
+        cd /home/faird/shared/code/internal/nnUNet/training/501/
    
 4. Open the file *NnUnetTrain_501_1.sh*.  Note how the task number and fold number are coded
 up in the file name.  Change the email addresses if necessary.  Also add the *-c* argument to the last line, if necessary.  Save and close the file.
@@ -70,9 +70,9 @@ up in the file name.  Change the email addresses if necessary.  Also add the *-c
 5. Schedule the SLURM job like this:
 
 
-    -bash-4.2$ sbatch NnUnetTrain_501_1.sh
-    sbatch: Setting account: miran045
-    Submitted batch job 4464201
+        -bash-4.2$ sbatch NnUnetTrain_501_1.sh
+        sbatch: Setting account: miran045
+        Submitted batch job 4464201
 
 6. Now we can see that fold 1 is scheduled to run:
 
