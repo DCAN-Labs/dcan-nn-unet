@@ -55,9 +55,8 @@ Do the following.
 
 1. Start up [NICE](https://www.msi.umn.edu/support/faq/how-do-i-obtain-graphical-connection-using-nice-system).
 2. Log on to mesabi:
-   
     
-    ssh -Y mesabi
+        ssh -Y mesabi
    
 3. Change to the following directory:
 
