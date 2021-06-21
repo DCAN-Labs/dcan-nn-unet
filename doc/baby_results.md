@@ -58,57 +58,6 @@ Here we have the images layered (from top to bottom):
 
 I also added smoothing.
 
-#### 00-02mos_Template05
-
-Ground-truth coronal       |  Inferred coronal
-:-------------------------:|:-------------------------:
-![](../img/00-02mos_Template05_coronal_gt_superimposed.jpeg)  |  ![](../img/00-02mos_Template05_coronal_inferred_superimposed.jpeg)
-
-Ground-truth sagittal       |  Inferred sagittal
-:-------------------------:|:-------------------------:
-![](../img/00-02mos_Template05_sagittal_gt_superimposed.jpeg)  |  ![](../img/00-02mos_Template05_sagittal_inferred_superimposed.jpeg)
-
-Ground-truth axial       |  Inferred axial
-:-------------------------:|:-------------------------:
-![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_axial_gt_superimposed.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_axial_inferred_superimposed.jpeg?raw=true)
-
-#### 8mo_Template09
-
-This nnU-Net was trained on 8 training/cross-validation cases of 8-month-old babies.
-
-The T1, T2, and manually segmented (a.k.a. "ground truth") files are here:
-
-    * /home/feczk001/shared/data/nnUNet/segmentations/JLF_templates_testing/wm_JLF_atlases/8mo/Template09/
-
-The nnU-Net inferred segmentation is available here:
-
-    * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task500_Babies8Mo/8mo_Template09.nii.gz
-
-Ground-truth coronal       |  Inferred coronal
-:-------------------------:|:-------------------------:
-![](../img/8mo_Template09_coronal_gt_superimposed.jpeg)  |  ![](../img/8mo_Template09_coronal_inferred_superimposed.jpeg)
-
-Ground-truth sagittal       |  Inferred sagittal
-:-------------------------:|:-------------------------:
-![](../img/8mo_Template09_sagittal_gt_superimposed.jpeg)  |  ![](../img/8mo_Template09_sagittal_inferred_superimposed.jpeg)
-
-Ground-truth axial       |  Inferred axial
-:-------------------------:|:-------------------------:
-![](../img/8mo_Template09_axial_gt_superimposed.jpeg?raw=true)  |  ![](../img/8mo_Template09_axial_inferred_superimposed.jpeg)
-
-##### Outline
-
-Ground-truth coronal       |  Inferred coronal
-:-------------------------:|:-------------------------:
-![](../img/8mo_Template09_coronal_gt_outline.jpeg)  |  ![](../img/8mo_Template09_coronal_inferred_outline.jpeg)
-
-Ground-truth sagittal       |  Inferred sagittal
-:-------------------------:|:-------------------------:
-![](../img/8mo_Template09_sagittal_gt_outline.jpeg)  |  ![](../img/8mo_Template09_sagittal_inferred_outline.jpeg)
-
-Ground-truth axial       |  Inferred axial
-:-------------------------:|:-------------------------:
-![](../img/8mo_Template09_axial_gt_outline.jpeg?raw=true)  |  ![](../img/8mo_Template09_axial_inferred_outline.jpeg)
 
 ### Dice coefficients
 
