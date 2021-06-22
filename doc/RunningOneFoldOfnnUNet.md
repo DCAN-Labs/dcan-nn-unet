@@ -19,8 +19,6 @@ you have to add some lines to either your *.bashrc* or *.bash_profile* file:
     export nnUNet_raw_data_base="/home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/"
     export nnUNet_preprocessed="/home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_preprocessed"
     export RESULTS_FOLDER="/home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_trained_models"
-    . /panfs/roc/msisoft/anaconda/anaconda3-2018.12/etc/profile.d/conda.sh
-    conda activate
 
 Each of the five folds runs for 1000 epochs.  It takes about 3 days to run 1000 epochs.
 You need to run nnU-Net on the *v100* partition.  However, the longest SLURM job
