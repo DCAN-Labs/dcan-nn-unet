@@ -18,7 +18,7 @@ def main(image_dir, label_dir):
         label_file_base = label_file[:-7]
         if image_file + '_0000' != label_file:
             max_prefix_len = \
-                max([j for j in range(min(len(image_file_base), len(label_file_base))) \
+                max([j for j in range(min(len(image_file_base), len(label_file_base)))
                      if image_file_base[:j] == label_file_base[:j]])
             common_prefix_base = image_file_base[:max_prefix_len]
             if common_prefix_base[-1] == '_':

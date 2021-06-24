@@ -1,7 +1,6 @@
-import os
+import sys
 
 import nibabel as nib
-import sys
 
 
 def dice_coefficient(y_true, y_pred, smooth=1):
@@ -45,13 +44,13 @@ def dice_coef_not_unknown(y_true, y_pred, smooth=1):
     return dice
 
 
-def main(ground_truth_filename, predictions_filename):
-    predictions_img = nib.load(predictions_filename)
+def main(gt_filename, preds_filename):
+    predictions_img = nib.load(preds_filename)
     predictions_data = predictions_img.get_fdata()
     print('predictions_data.shape:', predictions_data.shape)
     print('predictions_data.dtype', predictions_data.dtype)
 
-    gt_img = nib.load(ground_truth_filename)
+    gt_img = nib.load(gt_filename)
     gt_data = gt_img.get_fdata()
     print('gt_data.shape:', gt_data.shape)
     print('gt_img.dtype', gt_data.dtype)

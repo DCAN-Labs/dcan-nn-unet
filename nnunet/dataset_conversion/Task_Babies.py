@@ -37,16 +37,17 @@ def fill_in_labels(free_surfer_label_to_region):
     return dict1
 
 
-def main(task_name):
-    target_base = join(nnUNet_raw_data, task_name)
+def main(task):
+    target_base = join(nnUNet_raw_data, task)
     target_images_tr = join(target_base, "imagesTr")
     target_images_ts = join(target_base, "imagesTs")
-    free_surfer_color_lut = '/home/miran045/reine097/projects/abcd-nn-unet/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md'
+    free_surfer_color_lut = \
+        '/home/miran045/reine097/projects/abcd-nn-unet/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md'
     free_surfer_label_to_region = get_id_to_region_mapping(free_surfer_color_lut)
     consecutive_labels_to_regions = fill_in_labels(free_surfer_label_to_region)
 
     generate_dataset_json(join(target_base, 'dataset.json'), target_images_tr, target_images_ts, ('T1', 'T2'),
-                          labels=dict(consecutive_labels_to_regions), dataset_name=task_name, license='hands off!')
+                          labels=dict(consecutive_labels_to_regions), dataset_name=task, lcns='hands off!')
 
 
 if __name__ == '__main__':

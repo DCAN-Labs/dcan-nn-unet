@@ -46,7 +46,7 @@ def main():
     consecutive_labels_to_regions = fill_in_labels(free_surfer_label_to_region)
 
     generate_dataset_json(join(target_base, 'dataset.json'), target_images_tr, target_images_ts, ('T1',),
-                          labels=dict(consecutive_labels_to_regions), dataset_name=task_name, license='hands off!')
+                          labels=dict(consecutive_labels_to_regions), dataset_name=task_name, lcns='hands off!')
 
 
 if __name__ == '__main__':
