@@ -1,0 +1,254 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>2</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>are used</highlighted_element>
+  <language>Markdown</language>
+  <offset>100</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>2</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;Consider using the past participle replaced.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;This part must be &lt;strong&gt;replaces&lt;/strong&gt; with caution.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-top: 5px; padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Correct: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;padding-top: 5px; width: 100%;&quot;&gt;This part must be &lt;strong&gt;replaced&lt;/strong&gt; with caution.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>replace</highlighted_element>
+  <language>Markdown</language>
+  <offset>128</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>3</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p&gt;This sentence is over 33 words long at the marked position, consider revising it.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>0 4</highlighted_element>
+  <language>Markdown</language>
+  <offset>56</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>18</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>are used</highlighted_element>
+  <language>Markdown</language>
+  <offset>100</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>18</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;Consider using the past participle replaced.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;This part must be &lt;strong&gt;replaces&lt;/strong&gt; with caution.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-top: 5px; padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Correct: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;padding-top: 5px; width: 100%;&quot;&gt;This part must be &lt;strong&gt;replaced&lt;/strong&gt; with caution.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>replace</highlighted_element>
+  <language>Markdown</language>
+  <offset>128</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>33</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The verb after &amp;quot;to&amp;quot; should be in the base form: label.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;He tried not to &lt;strong&gt;laughs&lt;/strong&gt;.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-top: 5px; padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Correct: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;padding-top: 5px; width: 100%;&quot;&gt;He tried not to &lt;strong&gt;laugh&lt;/strong&gt;.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>labels</highlighted_element>
+  <language>Markdown</language>
+  <offset>47</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>34</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The verb after &amp;quot;to&amp;quot; should be in the base form: label.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;He tried not to &lt;strong&gt;laughs&lt;/strong&gt;.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-top: 5px; padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Correct: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;padding-top: 5px; width: 100%;&quot;&gt;He tried not to &lt;strong&gt;laugh&lt;/strong&gt;.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>labels</highlighted_element>
+  <language>Markdown</language>
+  <offset>38</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/baby_results.md</file>
+  <line>16</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/baby_results.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>was fixed</highlighted_element>
+  <language>Markdown</language>
+  <offset>36</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/baby_results.md</file>
+  <line>20</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/baby_results.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;If the conjunctions 'and', '(n)or, 'so', 'but', or 'yet' separate two independent clauses, a comma must precede them: nn-UNet, but&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;She loves playing the &lt;strong&gt;piano and&lt;/strong&gt; I hate it.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-top: 5px; padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Correct: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;padding-top: 5px; width: 100%;&quot;&gt;She loves playing the &lt;strong&gt;piano, and&lt;/strong&gt; I hate it.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>nn-UNet but</highlighted_element>
+  <language>Markdown</language>
+  <offset>51</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/baby_results.md</file>
+  <line>23</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/baby_results.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>was also spent</highlighted_element>
+  <language>Markdown</language>
+  <offset>48</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/baby_results.md</file>
+  <line>38</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/baby_results.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>are documented</highlighted_element>
+  <language>Markdown</language>
+  <offset>22</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/baby_results.md</file>
+  <line>134</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/baby_results.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p&gt;This sentence is over 33 words long at the marked position, consider revising it.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>are well-labelled</highlighted_element>
+  <language>Markdown</language>
+  <offset>43</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md</file>
+  <line>16</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>is given</highlighted_element>
+  <language>Markdown</language>
+  <offset>17</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md</file>
+  <line>26</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>are numbered</highlighted_element>
+  <language>Markdown</language>
+  <offset>64</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md</file>
+  <line>36</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;It's more common nowadays to write this noun as one word.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;I have set a &lt;strong&gt;user name&lt;/strong&gt; for my online profile.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-top: 5px; padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Correct: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;padding-top: 5px; width: 100%;&quot;&gt;I have set a &lt;strong&gt;username&lt;/strong&gt; for my online profile.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>user name</highlighted_element>
+  <language>Markdown</language>
+  <offset>46</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md</file>
+  <line>49</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;Did you mean and or any?&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;He was going &lt;strong&gt;an&lt;/strong&gt; also partying there.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-top: 5px; padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Correct: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;padding-top: 5px; width: 100%;&quot;&gt;He was going &lt;strong&gt;and&lt;/strong&gt; also partying there.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>an</highlighted_element>
+  <language>Markdown</language>
+  <offset>14</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md</file>
+  <line>64</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>are coded</highlighted_element>
+  <language>Markdown</language>
+  <offset>83</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md</file>
+  <line>86</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p&gt;This sentence is over 33 words long at the marked position, consider revising it.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>and process</highlighted_element>
+  <language>Markdown</language>
+  <offset>157</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md</file>
+  <line>102</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>are finished</highlighted_element>
+  <language>Markdown</language>
+  <offset>53</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md</file>
+  <line>102</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>is set</highlighted_element>
+  <language>Markdown</language>
+  <offset>123</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md</file>
+  <line>104</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md" />
+  <problem_class id="GrazieInspection" severity="TYPO" attribute_key="TYPO">Grammar</problem_class>
+  <description>&lt;html&gt;&lt;body&gt;&lt;p style=&quot;padding-bottom: 8px;&quot;&gt;The text seems to be passive voice. To make the text clearer and easier to read, you can often use the active voice.&amp;amp;nbsp;&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; style=&quot;padding-right: 5px; color: gray; vertical-align: top;&quot;&gt; Incorrect: &amp;amp;nbsp;&lt;/td&gt;&lt;td style=&quot;width: 100%;&quot;&gt;A cake &lt;strong&gt;is being baked&lt;/strong&gt; by him.&amp;amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p style=&quot;text-align: left; font-size: x-small; color: gray; padding-top: 10px; padding-bottom: 0px;&quot;&gt; Powered by LanguageTool&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+  <highlighted_element>are finished</highlighted_element>
+  <language>Markdown</language>
+  <offset>25</offset>
+  <length>12</length>
+</problem>
+</problems>

@@ -1,0 +1,710 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Task_Babies.py</file>
+  <line>45</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Task_Babies.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'abcd'</description>
+  <highlighted_element>abcd</highlighted_element>
+  <language>Python</language>
+  <offset>42</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Task_Babies.py</file>
+  <line>45</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Task_Babies.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'unet'</description>
+  <highlighted_element>unet</highlighted_element>
+  <language>Python</language>
+  <offset>50</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Task_Babies.py</file>
+  <line>45</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Task_Babies.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nnunet'</description>
+  <highlighted_element>nnunet</highlighted_element>
+  <language>Python</language>
+  <offset>55</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Task_Babies.py</file>
+  <line>45</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Task_Babies.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Freesurfer'</description>
+  <highlighted_element>Freesurfer</highlighted_element>
+  <language>Python</language>
+  <offset>81</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/fix_json_file.py</file>
+  <line>7</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/fix_json_file.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'readlines'</description>
+  <highlighted_element>readlines</highlighted_element>
+  <language>Python</language>
+  <offset>16</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/fix_json_file.py</file>
+  <line>16</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/fix_json_file.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'abcd'</description>
+  <highlighted_element>abcd</highlighted_element>
+  <language>Python</language>
+  <offset>74</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/fix_json_file.py</file>
+  <line>16</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/fix_json_file.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'unet'</description>
+  <highlighted_element>unet</highlighted_element>
+  <language>Python</language>
+  <offset>82</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/fix_json_file.py</file>
+  <line>16</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/fix_json_file.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nnunet'</description>
+  <highlighted_element>nnunet</highlighted_element>
+  <language>Python</language>
+  <offset>87</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/fix_json_file.py</file>
+  <line>17</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/fix_json_file.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Freesurfer'</description>
+  <highlighted_element>Freesurfer</highlighted_element>
+  <language>Python</language>
+  <offset>42</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>2</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'myelinated'</description>
+  <highlighted_element>myelinated</highlighted_element>
+  <language>Markdown</language>
+  <offset>159</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>2</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'unmyelinated'</description>
+  <highlighted_element>unmyelinated</highlighted_element>
+  <language>Markdown</language>
+  <offset>174</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>7</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Caudate'</description>
+  <highlighted_element>Caudate</highlighted_element>
+  <language>Markdown</language>
+  <offset>9</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>8</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Putamen'</description>
+  <highlighted_element>Putamen</highlighted_element>
+  <language>Markdown</language>
+  <offset>9</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>9</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Pallidum'</description>
+  <highlighted_element>Pallidum</highlighted_element>
+  <language>Markdown</language>
+  <offset>9</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>16</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Accumbens'</description>
+  <highlighted_element>Accumbens</highlighted_element>
+  <language>Markdown</language>
+  <offset>9</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>18</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'myelinated'</description>
+  <highlighted_element>myelinated</highlighted_element>
+  <language>Markdown</language>
+  <offset>159</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>18</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'unmyelinated'</description>
+  <highlighted_element>unmyelinated</highlighted_element>
+  <language>Markdown</language>
+  <offset>174</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>23</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Caudate'</description>
+  <highlighted_element>Caudate</highlighted_element>
+  <language>Markdown</language>
+  <offset>10</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>24</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Putamen'</description>
+  <highlighted_element>Putamen</highlighted_element>
+  <language>Markdown</language>
+  <offset>10</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>25</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Pallidum'</description>
+  <highlighted_element>Pallidum</highlighted_element>
+  <language>Markdown</language>
+  <offset>10</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>28</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Accumbens'</description>
+  <highlighted_element>Accumbens</highlighted_element>
+  <language>Markdown</language>
+  <offset>10</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>30</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Vermis'</description>
+  <highlighted_element>Vermis</highlighted_element>
+  <language>Markdown</language>
+  <offset>4</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>36</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'unmyelinated'</description>
+  <highlighted_element>unmyelinated</highlighted_element>
+  <language>Markdown</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>37</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'unmyelinated'</description>
+  <highlighted_element>unmyelinated</highlighted_element>
+  <language>Markdown</language>
+  <offset>22</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>38</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'myelinated'</description>
+  <highlighted_element>myelinated</highlighted_element>
+  <language>Markdown</language>
+  <offset>21</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md</file>
+  <line>39</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/Freesurfer_LUT_DCAN.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'myelinated'</description>
+  <highlighted_element>myelinated</highlighted_element>
+  <language>Markdown</language>
+  <offset>22</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/paths.py</file>
+  <line>1</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/paths.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'DKFZ'</description>
+  <highlighted_element>DKFZ</highlighted_element>
+  <language>Python</language>
+  <offset>88</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/paths.py</file>
+  <line>20</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/paths.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Plansv'</description>
+  <highlighted_element>Plansv</highlighted_element>
+  <language>Python</language>
+  <offset>34</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/LICENSE</file>
+  <line>3</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/LICENSE" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Neuroimaging'</description>
+  <highlighted_element>Neuroimaging</highlighted_element>
+  <language>TEXT</language>
+  <offset>48</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/README.md</file>
+  <line>1</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/README.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'abcd'</description>
+  <highlighted_element>abcd</highlighted_element>
+  <language>Markdown</language>
+  <offset>2</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/README.md</file>
+  <line>1</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/README.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'unet'</description>
+  <highlighted_element>unet</highlighted_element>
+  <language>Markdown</language>
+  <offset>10</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/README.md</file>
+  <line>2</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/README.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'ABCD'</description>
+  <highlighted_element>ABCD</highlighted_element>
+  <language>Markdown</language>
+  <offset>46</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/utils.py</file>
+  <line>1</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/utils.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'DKFZ'</description>
+  <highlighted_element>DKFZ</highlighted_element>
+  <language>Python</language>
+  <offset>88</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/utils.py</file>
+  <line>21</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/utils.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'splitted'</description>
+  <highlighted_element>splitted</highlighted_element>
+  <language>Python</language>
+  <offset>25</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/utils.py</file>
+  <line>27</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/utils.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'lcns'</description>
+  <highlighted_element>lcns</highlighted_element>
+  <language>Python</language>
+  <offset>59</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/utils.py</file>
+  <line>32</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/utils.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'subfolders'</description>
+  <highlighted_element>subfolders</highlighted_element>
+  <language>Python</language>
+  <offset>26</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/dataset_conversion/utils.py</file>
+  <line>40</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/dataset_conversion/utils.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'lcns'</description>
+  <highlighted_element>lcns</highlighted_element>
+  <language>Python</language>
+  <offset>11</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/params-vs-epoch-time.csv</file>
+  <line>1</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/params-vs-epoch-time.csv" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'ntasks'</description>
+  <highlighted_element>ntasks</highlighted_element>
+  <language>csv</language>
+  <offset>6</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/params-vs-epoch-time.csv</file>
+  <line>1</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/params-vs-epoch-time.csv" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'gres'</description>
+  <highlighted_element>gres</highlighted_element>
+  <language>csv</language>
+  <offset>39</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/params-vs-epoch-time.csv</file>
+  <line>1</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/params-vs-epoch-time.csv" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'fullres'</description>
+  <highlighted_element>fullres</highlighted_element>
+  <language>csv</language>
+  <offset>78</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/baby_results.md</file>
+  <line>14</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/baby_results.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Billot'</description>
+  <highlighted_element>Billot</highlighted_element>
+  <language>Markdown</language>
+  <offset>2</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/baby_results.md</file>
+  <line>19</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/baby_results.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'DKFZ'</description>
+  <highlighted_element>DKFZ</highlighted_element>
+  <language>Markdown</language>
+  <offset>26</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/evaluation/dice.py</file>
+  <line>6</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/evaluation/dice.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pred'</description>
+  <highlighted_element>pred</highlighted_element>
+  <language>Python</language>
+  <offset>31</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/evaluation/dice.py</file>
+  <line>17</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/evaluation/dice.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pred'</description>
+  <highlighted_element>pred</highlighted_element>
+  <language>Python</language>
+  <offset>18</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/evaluation/dice.py</file>
+  <line>30</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/evaluation/dice.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pred'</description>
+  <highlighted_element>pred</highlighted_element>
+  <language>Python</language>
+  <offset>36</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/evaluation/dice.py</file>
+  <line>37</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/evaluation/dice.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pred'</description>
+  <highlighted_element>pred</highlighted_element>
+  <language>Python</language>
+  <offset>18</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/evaluation/dice.py</file>
+  <line>30</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/evaluation/dice.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'coef'</description>
+  <highlighted_element>coef</highlighted_element>
+  <language>Python</language>
+  <offset>9</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/evaluation/dice.py</file>
+  <line>47</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/evaluation/dice.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'preds'</description>
+  <highlighted_element>preds</highlighted_element>
+  <language>Python</language>
+  <offset>22</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/evaluation/dice.py</file>
+  <line>51</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/evaluation/dice.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'dtype'</description>
+  <highlighted_element>dtype</highlighted_element>
+  <language>Python</language>
+  <offset>28</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/evaluation/dice.py</file>
+  <line>56</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/evaluation/dice.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'dtype'</description>
+  <highlighted_element>dtype</highlighted_element>
+  <language>Python</language>
+  <offset>18</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/slurm/train/RunNnUnetTrain_102_0.sh</file>
+  <line>10</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/slurm/train/RunNnUnetTrain_102_0.sh" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'gres'</description>
+  <highlighted_element>gres</highlighted_element>
+  <language>Shell Script</language>
+  <offset>10</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/slurm/train/RunNnUnetTrain_102_0.sh</file>
+  <line>11</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/slurm/train/RunNnUnetTrain_102_0.sh" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'ntasks'</description>
+  <highlighted_element>ntasks</highlighted_element>
+  <language>Shell Script</language>
+  <offset>10</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/util/move_files_to_training_test.py</file>
+  <line>16</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/util/move_files_to_training_test.py" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'feczk'</description>
+  <highlighted_element>feczk</highlighted_element>
+  <language>Python</language>
+  <offset>28</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/make_gray_nifti.m</file>
+  <line>1</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/make_gray_nifti.m" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'filelist'</description>
+  <highlighted_element>filelist</highlighted_element>
+  <language>textmate</language>
+  <offset>0</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/make_gray_nifti.m</file>
+  <line>11</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/make_gray_nifti.m" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'strcmp'</description>
+  <highlighted_element>strcmp</highlighted_element>
+  <language>textmate</language>
+  <offset>11</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/make_blank_nifti.m</file>
+  <line>5</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/make_blank_nifti.m" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'niftiread'</description>
+  <highlighted_element>niftiread</highlighted_element>
+  <language>textmate</language>
+  <offset>4</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/make_blank_nifti.m</file>
+  <line>16</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/make_blank_nifti.m" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'niftiinfo'</description>
+  <highlighted_element>niftiinfo</highlighted_element>
+  <language>textmate</language>
+  <offset>7</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nnunet/make_blank_nifti.m</file>
+  <line>17</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nnunet/make_blank_nifti.m" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'niftiwrite'</description>
+  <highlighted_element>niftiwrite</highlighted_element>
+  <language>textmate</language>
+  <offset>0</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md</file>
+  <line>84</line>
+  <module>abcd-nn-unet</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/doc/RunningOneFoldOfnnUNet.md" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'squeue'</description>
+  <highlighted_element>squeue</highlighted_element>
+  <language>Markdown</language>
+  <offset>46</offset>
+  <length>6</length>
+</problem>
+</problems>

@@ -1,0 +1,1289 @@
+<inspections profile="Default">
+  <group name="XML" path="">
+    <inspection shortName="CheckDtdRefs" defaultSeverity="ERROR" displayName="Unresolved DTD reference" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Checks consistency of &lt;b&gt;DTD&lt;/b&gt; specific references, e.g. references to XML entity or to DTD element declaration.
+The validation works in DTD or XML file types. &lt;br&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlUnusedNamespaceDeclaration" defaultSeverity="WARNING" displayName="Unused XML schema declaration" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Checks for unused namespace declarations and location hints in XML
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlUnboundNsPrefix" defaultSeverity="WARNING" displayName="Unbound XML namespace prefix" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks for unbound namespace prefixes in XML.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlWrongRootElement" defaultSeverity="ERROR" displayName="Wrong root element" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks if root tag name is the same as in &amp;lt;doctype&amp;gt;. &lt;br&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlDuplicatedId" defaultSeverity="ERROR" displayName="Duplicate ID" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks for duplicate &quot;id&quot; attributes in XML.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="CheckXmlFileWithXercesValidator" defaultSeverity="ERROR" displayName="File does not pass external validation" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Thoroughly checks XML files for DTD / schema compliance using Xerces validator.
+The validation works in XML or XHTML file types. &lt;br&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlInvalidId" defaultSeverity="ERROR" displayName="Unresolved ID" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks for unresolved &quot;id&quot; attributes in XML.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlHighlighting" defaultSeverity="ERROR" displayName="XML highlighting" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="true">&lt;html&gt;
+&lt;body&gt;
+Highlights XML validation problems in the results of batch code inspection.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlDefaultAttributeValue" defaultSeverity="WARNING" displayName="Redundant default attribute value assignment" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks for redundant default XML attribute value assignment.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlPathReference" defaultSeverity="ERROR" displayName="File path resolving in XML" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Highlights unresolved file references in XML.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="XmlDeprecatedElement" defaultSeverity="WARNING" displayName="Deprecated elements" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks for deprecated XML elements.
+&lt;p&gt;The elements can be marked by XML comment or documentation tag with text &quot;deprecated&quot;.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="CheckTagEmptyBody" defaultSeverity="WARNING" displayName="XML tag empty body" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports &lt;b&gt;empty&lt;/b&gt; tag body.
+The validation works in XML / JSP / JSPX / HTML/ XHTML file types. &lt;br&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="Version control" path="">
+    <inspection shortName="IgnoreFileDuplicateEntry" defaultSeverity="WARNING" displayName="Ignore file duplicates" enabled="true" language="IgnoreLang" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Checks if an entry (pattern) is duplicated in the ignore file (e.g. .gitignore, .hgignore).
+Duplicate entries in these files are redundant and can be removed.
+
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre&gt;
+    # Output directories
+    /out/
+    /target/
+    &lt;b&gt;&lt;span style=&quot;color: #BE9117; &quot;&gt;/out/&lt;/span&gt;&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="Internationalization" path="">
+    <inspection shortName="NonAsciiCharacters" defaultSeverity="WARNING" displayName="Non-ASCII characters" enabled="true" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports code that uses non-ASCII symbols in suspicious context.&lt;br&gt;
+
+For example:&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    Non-ASCII characters in identifiers, strings, or comments
+  &lt;/li&gt;
+  &lt;li&gt;
+    Identifiers written in different languages, such as &lt;code&gt;my&lt;span color=&quot;red&quot;&gt;C&lt;/span&gt;ollection&lt;/code&gt; with
+    letter &lt;code&gt;&lt;span color=&quot;red&quot;&gt;C&lt;/span&gt;&lt;/code&gt; written in Cyrillic.
+  &lt;/li&gt;
+  &lt;li&gt;
+    Comments or strings containing Unicode symbols, such as long dashes and arrows
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="LossyEncoding" defaultSeverity="WARNING" displayName="Lossy encoding" enabled="true" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+
+This inspection warns you of characters that the current document encoding is incapable to represent. &lt;br&gt;
+
+For example, when you are &lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;typing international characters in a document configured to &lt;b&gt;US-ASCII&lt;/b&gt; charset. Some characters will be lost on save.&lt;/li&gt;
+  &lt;li&gt;or loading &lt;b&gt;UTF-8&lt;/b&gt;-encoded file using &lt;b&gt;ISO-8859-1&lt;/b&gt; one-byte charset. Some characters will be displayed incorrectly.&lt;/li&gt;
+&lt;/ul&gt;
+
+You fix this by changing the file encoding,
+either by specifying the encoding directly in the file, e.g. by editing &lt;b&gt;encoding=&lt;/b&gt; attribute in the XML prolog of XML file,
+or configuring the &lt;b&gt;Settings|Project Settings|File Encodings&lt;/b&gt; .
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="JSON and JSON5" path="">
+    <inspection shortName="JsonPathEvaluateUnknownKey" defaultSeverity="WARNING" displayName="Unknown property key used for JSONPath evaluate expression" enabled="true" language="JSONPath" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+&lt;p&gt;Highlights keys used in JSONPath expression that are not present in source JSON document for evaluate.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="JsonPathUnknownFunction" defaultSeverity="WARNING" displayName="Unknown JSONPath function" enabled="true" language="JSONPath" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks that JSONPath function call uses one of known standard function names:
+ concat, keys, length, min, max, avg, stddev, sum.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="JsonSchemaDeprecation" defaultSeverity="WEAK WARNING" displayName="Deprecated JSON property" enabled="true" language="JSON" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks for deprecated properties in JSON files&lt;br&gt;
+Note that deprecation mechanism is not defined in the JSON Schema specification yet,
+and this inspection uses a non-standard extension &apos;deprecationMessage&apos;.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="JsonPathUnknownOperator" defaultSeverity="WARNING" displayName="Unknown JSONPath operator" enabled="true" language="JSONPath" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks that JSONPath expression uses one of known standard operators:
+ in, nin, subsetof, anyof, noneof, size, empty, contains.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="JsonStandardCompliance" defaultSeverity="ERROR" displayName="Compliance with JSON standard" enabled="true" language="JSON" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks that JSON files conform to language specification (RFC-7159).&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="JsonSchemaRefReference" defaultSeverity="WARNING" displayName="Unresolved &apos;$ref&apos; and &apos;$schema&apos; references" enabled="true" language="JSON" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks that &apos;$ref&apos; and &apos;$schema&apos; paths are valid&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="JsonDuplicatePropertyKeys" defaultSeverity="WARNING" displayName="Duplicate keys in object literals" enabled="true" language="JSON" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks that object literals don&apos;t contain duplicate keys.&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="JsonSchemaCompliance" defaultSeverity="WARNING" displayName="Compliance with JSON schema" enabled="true" language="JSON" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks that JSON files conform to JSON Schemas assigned to them&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="Json5StandardCompliance" defaultSeverity="ERROR" displayName="Compliance with JSON5 standard" enabled="true" language="JSON5" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks that JSON5 files conform to language specification (http://json5.org/).&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="Python" path="">
+    <inspection shortName="PyTestParametrizedInspection" defaultSeverity="WARNING" displayName="Checks that functions decorated by pytest parametrize have correct arguments" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Test function, decorated with @pytest.mark.parametrize, must have arguments to accept parameters from decorator
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyClassicStyleClassInspection" defaultSeverity="WARNING" displayName="Classic style class usage" enabled="false" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects classic style classes usage.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyCallingNonCallableInspection" defaultSeverity="WARNING" displayName="Trying to call a non-callable object" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights attempts to call objects which are not callable, like, for example, tuples.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyAbstractClassInspection" defaultSeverity="WEAK WARNING" displayName="Class must implement all abstract methods" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects when not all abstract properties/methods are defined in a subclass
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyMethodFirstArgAssignmentInspection" defaultSeverity="WARNING" displayName="Reassignment of method&apos;s first argument" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects cases when first parameter, such as &amp;#39;self&amp;#39; or &amp;#39;cls&amp;#39;, is reassigned in a method.
+In most cases imaginable, there&amp;#39;s no point in such reassignment, and it indicates an error.
+&lt;/body&gt;&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyTypeHintsInspection" defaultSeverity="WARNING" displayName="Type hints definitions and usages" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects invalid usages of type hints.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyTupleItemAssignmentInspection" defaultSeverity="WARNING" displayName="Tuple item assignment" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects assignments to tuple item.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyNestedDecoratorsInspection" defaultSeverity="WEAK WARNING" displayName="Problematic nesting of decorators" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection looks for certain decorators that don&amp;#39;t nest well.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyMethodParametersInspection" defaultSeverity="WEAK WARNING" displayName="Methods having troubles with first parameter" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection looks for methods that lack a first parameter (which is usually named &lt;code&gt;self&lt;/code&gt; ).
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyUnresolvedReferencesInspection" defaultSeverity="WARNING" displayName="Unresolved references" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects names that should resolve but don&apos;t.
+Due to dynamic dispatch and duck typing, this is possible in a limited but useful
+number of cases. Top-level and class-level items are supported better than instance items.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyNoneFunctionAssignmentInspection" defaultSeverity="WEAK WARNING" displayName="Assigning function call that doesn&apos;t return anything" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection is similar to pylint inspection E1111. It highlights situations when an assignment is done on a function call but the
+inferred function doesn&apos;t return anything.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyNamedTupleInspection" defaultSeverity="WARNING" displayName="Namedtuple definition" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects invalid definition of namedtuple.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyInterpreterInspection" defaultSeverity="WARNING" displayName="Invalid interpreter configured" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection notifies you if the current project has no Python interpreter configured or an invalid Python interpreter.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyMissingConstructorInspection" defaultSeverity="WARNING" displayName="Missed call to __init__ of super class" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection warns if call to super constructor in class is missed
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyArgumentListInspection" defaultSeverity="WARNING" displayName="Incorrect call arguments" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports discrepancies between declared parameters and actual arguments, as well as
+incorrect arguments (e.g. duplicate named arguments) and incorrect argument order. Decorators are analyzed, too.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyShadowingBuiltinsInspection" defaultSeverity="WEAK WARNING" displayName="Shadowing built-ins" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects shadowing built-in names, such as &apos;len&apos; or &apos;list&apos;.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyInconsistentIndentationInspection" defaultSeverity="WARNING" displayName="Inconsistent indentation" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports inconsistent indentation in Python source files (for example, use of a mixture
+of tabs and spaces).
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyProtocolInspection" defaultSeverity="WARNING" displayName="Protocol definition and usages" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects invalid definitions and usages of protocols introduced in PEP-544.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyByteLiteralInspection" defaultSeverity="WARNING" displayName="Byte literal contains characters &gt; 255" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects characters &amp;gt; 255 in byte literals.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyStatementEffectInspection" defaultSeverity="WARNING" displayName="Statement has no effect" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects statements without any effect.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyStringExceptionInspection" defaultSeverity="ERROR" displayName="Raising a string exception" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects when a string exception is raised.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyListCreationInspection" defaultSeverity="WEAK WARNING" displayName="List creation could be rewritten by list literal" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects situations when list creation
+could be rewritten with list literal.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyStubPackagesAdvertiser" defaultSeverity="WARNING" displayName="Stub packages advertiser" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Advertises stub packages.
+&lt;p&gt;
+Stub package is a package that contains type information for the corresponding runtime package.
+See &lt;a href=&quot;https://www.python.org/dev/peps/pep-0561/&quot;&gt;PEP 561&lt;/a&gt; for more details.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyAsyncCallInspection" defaultSeverity="WARNING" displayName="Coroutine is not awaited" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights coroutines which were called without await
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyPep8NamingInspection" defaultSeverity="WEAK WARNING" displayName="PEP 8 naming convention violation" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks the PEP8 naming conventions.
+&lt;p&gt;
+  See &lt;a href=&quot;https://www.python.org/dev/peps/pep-0008/&quot;&gt;PEP 8&lt;/a&gt; for more details.
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyClassHasNoInitInspection" defaultSeverity="WEAK WARNING" displayName="Class has no __init__ method" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection used when a class has no __init__ method, neither its parent classes.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyTrailingSemicolonInspection" defaultSeverity="WARNING" displayName="Trailing semicolon in statement" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects trailing semicolons in statements.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyDataclassInspection" defaultSeverity="WARNING" displayName="Dataclass definition and usages" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects invalid definitions and usages of classes created with `dataclasses` or `attr` modules.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyDunderSlotsInspection" defaultSeverity="WARNING" displayName="Definition of __slots__ in a class" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects invalid definition of __slots__ in a class.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyAttributeOutsideInitInspection" defaultSeverity="WEAK WARNING" displayName="Instance attribute defined outside __init__" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects instance attribute definition outside __init__ method
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyTypedDictInspection" defaultSeverity="WARNING" displayName="TypedDict definition and usages" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects invalid definition and usage of TypedDict.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyMissingOrEmptyDocstringInspection" defaultSeverity="WEAK WARNING" displayName="Missing or empty docstring" enabled="false" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects lack of docstring and an empty docstring.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyTypeCheckerInspection" defaultSeverity="WARNING" displayName="Type checker" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects type errors in function call expressions.
+Due to dynamic dispatch and duck typing, this is possible in a limited but
+useful number of cases. Types of function parameters can be specified in
+docstrings or in Python 3 function annotations.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyPackageRequirementsInspection" defaultSeverity="WARNING" displayName="Package requirements" enabled="true" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection warns about imported or required, but not installed packages.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="CommandLineInspection" defaultSeverity="WARNING" displayName="Command-line inspection" enabled="true" language="CommandLine" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+&lt;strong&gt;Command line (commands, arguments and options) inspection.&lt;/strong&gt;
+&lt;p&gt;This inspection checks command you type in command console or command file. It helps you to make sure arguments are on their
+  places, option names are correct as well as arguments, provided for options.&lt;/p&gt;
+&lt;p&gt;Do not disable it if you are going to use command-line interfaces like manage.py in Django&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyChainedComparisonsInspection" defaultSeverity="WEAK WARNING" displayName="Chained comparisons can be simplified" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights chained comparisons that can be simplified.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PySingleQuotedDocstringInspection" defaultSeverity="WEAK WARNING" displayName="Single quoted docstring" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights docstrings not using triple double-quoted string format.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyOldStyleClassesInspection" defaultSeverity="WARNING" displayName="Old-style class contains new-style class features" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights occurrences of new-style class features in old-style classes.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyCompatibilityInspection" defaultSeverity="WARNING" displayName="Code compatibility inspection" enabled="false" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Enable this inspection if you need your code to be compatible with a range of Python versions (for example, if you&amp;#39;re building a
+library).
+The range of Python versions with which the code needs to be compatible can be specified in the inspection settings.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyDictDuplicateKeysInspection" defaultSeverity="WARNING" displayName="Dictionary contains duplicate keys" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights using the same value as dictionary key twice.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PySimplifyBooleanCheckInspection" defaultSeverity="WEAK WARNING" displayName="Boolean variable check can be simplified" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects equality comparison with a boolean literal.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyShadowingNamesInspection" defaultSeverity="WEAK WARNING" displayName="Shadowing names from outer scopes" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects shadowing names defined in outer scopes.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyMethodOverridingInspection" defaultSeverity="WARNING" displayName="Method signature does not match signature of overridden method" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects inconsistencies in overriding method signatures.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyDocstringTypesInspection" defaultSeverity="WEAK WARNING" displayName="Type in docstring doesn&apos;t match inferred type" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights types in docstring which don&apos;t match dynamically inferred types.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PySuperArgumentsInspection" defaultSeverity="WARNING" displayName="Wrong arguments to call super" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection check that in any call to super(A, B), B either is an instance of A or a subclass of A.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyAugmentAssignmentInspection" defaultSeverity="WEAK WARNING" displayName="Assignment can be replaced with augmented assignment" enabled="false" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights assignment that can be replaced with augmented assignment.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyPep8Inspection" defaultSeverity="WEAK WARNING" displayName="PEP 8 coding style violation" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection runs the bundled &lt;a href=&quot;https://github.com/PyCQA/pycodestyle&quot;&gt;pycodestyle.py&lt;/a&gt; tool
+to check for violations of the PEP 8 coding style guide.
+&lt;p&gt;
+  See &lt;a href=&quot;https://www.python.org/dev/peps/pep-0008/&quot;&gt;PEP 8&lt;/a&gt; for more details.
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyDefaultArgumentInspection" defaultSeverity="WARNING" displayName="Default argument is mutable" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects when a mutable value as list or dictionary is detected in a default value for an argument. &lt;br/&gt;
+Default argument values are evaluated only once at function definition time, which means that modifying the
+default value of the argument will affect all subsequent calls of the function.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyRedeclarationInspection" defaultSeverity="WARNING" displayName="Redeclared names without usage" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects unconditional redeclarations of names without being used in between, like this: &lt;br/&gt;
+ &lt;pre&gt;def x(): pass
+x = 2
+&lt;/pre&gt;
+It applies to function and class declarations, and top-level assignments. &lt;br/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyPropertyDefinitionInspection" defaultSeverity="WARNING" displayName="Property definitions" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks that arguments to &lt;code&gt;property()&lt;/code&gt; and functions annotated with
+&lt;code&gt;@property&lt;/code&gt; and friends look reasonably.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyStubPackagesCompatibilityInspection" defaultSeverity="WARNING" displayName="Stub packages compatibility inspection" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Checks that a stub package supports the version of the corresponding runtime package.
+&lt;p&gt;
+Stub package is a package that contains type information for some runtime package.
+See &lt;a href=&quot;https://www.python.org/dev/peps/pep-0561/&quot;&gt;PEP 561&lt;/a&gt; for more details.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyNonAsciiCharInspection" defaultSeverity="WARNING" displayName="File contains non-ASCII character" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects file contains non-ASCII characters and doesn&amp;#39;t have an encoding declaration at the top.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyReturnFromInitInspection" defaultSeverity="WARNING" displayName="__init__ method that returns a value" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports occurrences of &lt;code&gt;return&lt;/code&gt; statements with a return value inside
+&lt;code&gt;__init__&lt;/code&gt; methods of classes. A constructor should not return any value.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyArgumentEqualDefaultInspection" defaultSeverity="WEAK WARNING" displayName="Argument passed to function is equal to default parameter value" enabled="false" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights situations, where argument passed to function is equal to default parameter value
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyFromFutureImportInspection" defaultSeverity="WARNING" displayName="from __future__ import must be the first executable statement" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects &lt;code&gt;&apos;from __future__ import&apos;&lt;/code&gt; statements which are used not in the beginning of a file.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyUnnecessaryBackslashInspection" defaultSeverity="WARNING" displayName="Unnecessary backslash" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights backslashes in places where line continuation is implicit (inside (), [], {}).
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyDecoratorInspection" defaultSeverity="WARNING" displayName="Class specific decorator on method outside class" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports usages of @classmethod or @staticmethod decorators on functions outside of a class.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyPropertyAccessInspection" defaultSeverity="WARNING" displayName="Access to properties" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks that properties are accessed correctly:
+read-only not set, write-only not read, non-deletable not deleted.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyUnreachableCodeInspection" defaultSeverity="WARNING" displayName="Unreachable code" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects code which can not be normally reached.
+&lt;/body&gt;&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyMethodMayBeStaticInspection" defaultSeverity="WEAK WARNING" displayName="Method may be static" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects any methods which may safely be made static.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyMandatoryEncodingInspection" defaultSeverity="WARNING" displayName="No encoding specified for file" enabled="false" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects lack of encoding magic comment for file.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyUnboundLocalVariableInspection" defaultSeverity="WARNING" displayName="Unbound local variable" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection warns about local variables referenced before assignment.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyBroadExceptionInspection" defaultSeverity="WEAK WARNING" displayName="Too broad exception clauses" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights too broad exception clauses such as
+no exception class specified, or specified as &amp;#39;Exception&amp;#39;.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyTupleAssignmentBalanceInspection" defaultSeverity="WARNING" displayName="Tuple assignment balance is incorrect" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection check that the number of expressions on right-hand side and targets on left-hand side are the same.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyDictCreationInspection" defaultSeverity="WEAK WARNING" displayName="Dictionary creation could be rewritten by dictionary literal" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects situations when dictionary creation
+could be rewritten with dictionary literal.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyFinalInspection" defaultSeverity="WARNING" displayName="Final classes, methods, and variables" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects invalid usages of final classes, methods and variables.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyOverloadsInspection" defaultSeverity="WARNING" displayName="Overloads in regular Python files" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection validates overloads in regular Python files.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyProtectedMemberInspection" defaultSeverity="WEAK WARNING" displayName="Access to a protected member of a class or a module" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection warns if a protected member is accessed outside the class, a descendant of the class where it&amp;#39;s defined or a module.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyIncorrectDocstringInspection" defaultSeverity="WEAK WARNING" displayName="Incorrect docstring" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects mismatched parameters in a docstring.
+Please note that it doesn&amp;#39;t warn you of missing parameters, if none of them is mentioned in a docstring.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyInitNewSignatureInspection" defaultSeverity="WARNING" displayName="Incompatible signatures of __new__ and __init__" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks mutual compatibility of &lt;code&gt;__new__&lt;/code&gt; and &lt;code&gt;__init__&lt;/code&gt; signatures.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PyRelativeImportInspection" defaultSeverity="WEAK WARNING" displayName="Suspicious relative import" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection reports usages of relative imports inside plain directories, i.e. directories neither containing __init__.py nor explicitly marked as namespace packages.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyDeprecationInspection" defaultSeverity="WARNING" displayName="Deprecated function, class, or module" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights usages of Python functions, classes or methods which are marked as deprecated (which raise a
+DeprecationWarning or a PendingDeprecationWarning).
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyExceptionInheritInspection" defaultSeverity="WARNING" displayName="Exception doesn&apos;t inherit from standard &apos;&apos;Exception&apos;&apos; class" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects when a custom exception class is raised but doesn&amp;#39;t inherit from the builtin &amp;quot;Exception&amp;quot; class.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyRedundantParenthesesInspection" defaultSeverity="WEAK WARNING" displayName="Redundant parentheses" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights redundant parentheses in statements.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyComparisonWithNoneInspection" defaultSeverity="WEAK WARNING" displayName="Comparison with None performed with equality operators" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights comparisons with None. That type of comparisons
+should always be done with &amp;#39;is&amp;#39; or &amp;#39;is not&amp;#39;, never the equality operators.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyMissingTypeHintsInspection" defaultSeverity="WEAK WARNING" displayName="Missing type hinting for function definition" enabled="false" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects lack of type hints for function declaration in
+one of the two formats: parameter annotations or a type comment
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyAssignmentToLoopOrWithParameterInspection" defaultSeverity="WEAK WARNING" displayName="Assignment to &apos;for&apos; loop or &apos;with&apos; statement parameter" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Checks for cases when you rewrite loop variable with inner loop
+&lt;pre style=&quot;font-family: monospace&quot;&gt;
+    for i in xrange(5):
+      for i in xrange(20, 25):
+          print(&quot;Inner&quot;, i)
+      print(&quot;Outer&quot;, i)
+  &lt;/pre&gt;
+
+It also warns you if variable declared in &lt;code&gt;with&lt;/code&gt; statement is redeclared inside of statement body:
+&lt;pre style=&quot;font-family: monospace&quot;&gt;
+    with open(&quot;file&quot;) as f:
+      f.read()
+      with open(&quot;file&quot;) as f:
+  &lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="PySetFunctionToLiteralInspection" defaultSeverity="WARNING" displayName="Function call can be replaced with set literal" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects call for function &amp;quot;set&amp;quot; which can be replaced with
+set literal.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyExceptClausesOrderInspection" defaultSeverity="WARNING" displayName="Bad except clauses order" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights situations when except clauses are not in the correct order
+(from the more specific to the more generic) or one exception class is caught twice. &lt;br/&gt;
+If you don&apos;t fix the order, some exceptions may not be catched by the most specific handler.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyStringFormatInspection" defaultSeverity="WARNING" displayName="Errors in string formatting operations" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects errors in string formatting operations.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyGlobalUndefinedInspection" defaultSeverity="WEAK WARNING" displayName="Global variable is undefined at the module level" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection is used when a variable is defined through the &amp;quot;global&amp;quot; statement but the variable is not defined in the module
+scope.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="PyUnusedLocalInspection" defaultSeverity="WEAK WARNING" displayName="Unused local" enabled="true" language="Python" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights local variables,parameters or local functions unused in scope.
+&lt;/body&gt;&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="CSV" path="">
+    <inspection shortName="CsvValidation" defaultSeverity="WARNING" displayName="Propose possible fixes" enabled="true" language="csv" pluginId="net.seesharpsoft.intellij.plugins.csv" pluginVersion="2.16.4" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Suggests possible fixes for CSV validation errors.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="Markdown" path="">
+    <inspection shortName="MarkdownUnresolvedFileReference" defaultSeverity="WARNING" displayName="Unresolved file references" enabled="true" language="Markdown" pluginId="org.intellij.plugins.markdown" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports unresolved file references in Markdown file.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="HTML" path="">
+    <inspection shortName="HtmlUnknownAnchorTarget" defaultSeverity="WARNING" displayName="Anchor reference problems" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks unresolved anchor references in HTML. &lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="CheckValidXmlInScriptTagBody" defaultSeverity="ERROR" displayName="Malformed content of &lt;script&gt; tag" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks that the &lt;b&gt;script&lt;/b&gt; tag content is valid XML. &lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="HtmlUnknownTag" defaultSeverity="WARNING" displayName="Unknown HTML tag" enabled="true" language="HTML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights unknown HTML tags, and lets mark such tags as Custom to avoid highlighting them as unknown in future. &lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="HtmlUnknownAttribute" defaultSeverity="WARNING" displayName="Unknown HTML tag attribute" enabled="true" language="HTML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights unknown HTML tag attributes as invalid, and lets mark such attributes as Custom to avoid highlighting them as
+invalid. &lt;br&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="CheckEmptyScriptTag" defaultSeverity="WARNING" displayName="Empty tag" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports empty tags (like &lt;b&gt;script&lt;/b&gt; ) that do not work in some browsers.
+The validation works in html or jsp file types. &lt;br&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="HtmlUnknownBooleanAttribute" defaultSeverity="WARNING" displayName="Unknown HTML boolean tag attribute" enabled="true" language="HTML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights HTML non-boolean tag attributes without value as invalid, and lets mark such attributes as Custom to avoid highlighting them as
+invalid.&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RequiredAttributes" defaultSeverity="WARNING" displayName="Missing required attribute" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports XML/HTML tags with missing mandatory attributes.
+You can specify attribute names that should not be reported.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="HtmlMissingClosingTag" defaultSeverity="INFORMATION" displayName="Missing closing tag" enabled="true" language="HTML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports HTML elements without a closing tag.
+Some coding styles require a closing tag on HTML elements even where this is optional.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;&lt;small&gt;New in 2017.2&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="HtmlExtraClosingTag" defaultSeverity="WARNING" displayName="Redundant closing tag for HTML element" enabled="true" language="HTML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection spots extra closing tag for the empty elements like IMG or BR. &lt;br&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="HtmlUnknownTarget" defaultSeverity="WARNING" displayName="File reference problems" enabled="true" language="XML" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks unresolved file references in HTML. &lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="Properties files" path="">
+    <inspection shortName="AlphaUnsortedPropertiesFile" defaultSeverity="WEAK WARNING" displayName="Properties file or resource bundle is alphabetically unsorted" enabled="false" language="Properties" pluginId="com.intellij.properties" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports on alphabetically unsorted resource bundles or properties files.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="TrailingSpacesInProperty" defaultSeverity="WARNING" displayName="Trailing spaces in property" enabled="true" language="Properties" pluginId="com.intellij.properties" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports all properties which key or value are ending with whitespaces. &lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="WrongPropertyKeyValueDelimiter" defaultSeverity="WEAK WARNING" displayName="Property key/value delimiter doesn&apos;t match code style settings" enabled="true" language="Properties" pluginId="com.intellij.properties" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports on properties in which key/value delimiter doesn&apos;t match code style settings.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="UnusedProperty" defaultSeverity="WARNING" displayName="Unused property" enabled="true" language="Properties" pluginId="com.intellij.properties" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports all properties not referenced from outside of the properties file.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="DuplicatePropertyInspection" defaultSeverity="WARNING" displayName="Duplicate property" enabled="false" language="Properties" pluginId="com.intellij.properties" pluginVersion="211.7442.45" isGlobalTool="true">&lt;html&gt;
+&lt;body&gt;
+Reports duplicate property keys with different values, duplicate keys or duplicate property values.
+Scope defines the area where inspection would search for duplicates.
+&lt;p&gt;
+  For example:
+  &lt;code&gt;&lt;pre&gt;
+property1=&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;value&lt;/font&gt;&lt;/b&gt;;
+property2=&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;value&lt;/font&gt;&lt;/b&gt;;
+&lt;/pre&gt;
+  &lt;/code&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="Shell script" path="">
+    <inspection shortName="ShellCheck" defaultSeverity="ERROR" displayName="ShellCheck" enabled="true" language="Shell Script" pluginId="com.jetbrains.sh" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+ShellCheck. &lt;p&gt;A shell script static analysis tool. &lt;a href=&quot;https://github.com/koalaman/shellcheck&quot;&gt;https://github.com/koalaman/shellcheck&lt;/a&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="RegExp" path="">
+    <inspection shortName="RegExpOctalEscape" defaultSeverity="INFORMATION" displayName="Octal escape" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  --&gt;
+
+&lt;html&gt;
+&lt;body&gt;
+Reports octal escapes, which are easily confused with back references.
+Use hexadecimal escapes to avoid confusion.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;&lt;small&gt;New in 2017.1&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpSingleCharAlternation" defaultSeverity="WARNING" displayName="Single character alternation" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports single char alternation (e.g. &lt;b&gt;&lt;code&gt;a|b|c|d&lt;/code&gt;&lt;/b&gt;) in a RegExp.
+It is simpler to use a character class (&lt;b&gt;&lt;code&gt;[abcd]&lt;/code&gt;&lt;/b&gt;) instead.
+This usually also provides slightly better matching performance.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;
+&lt;small&gt;New in 2017.1&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpDuplicateCharacterInClass" defaultSeverity="WARNING" displayName="Duplicate character in character class" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports duplicate characters inside a RegExp character class. For example &lt;code&gt;[++]&lt;/code&gt;.
+Duplicate characters are unnecessary and can be removed without changing the semantics of the regex.
+&lt;!-- tooltip end --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpRedundantNestedCharacterClass" defaultSeverity="WARNING" displayName="Redundant nested character class" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports unnecessary nested character classes.
+For example &lt;code&gt;[a-c[x-z]]&lt;/code&gt;, which is equivalent too &lt;code&gt;[a-cx-z]&lt;/code&gt;.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;&lt;small&gt;New in 2020.2&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpRepeatedSpace" defaultSeverity="WARNING" displayName="Consecutive spaces" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  --&gt;
+
+&lt;html&gt;
+&lt;body&gt;
+Reports multiple consecutive spaces in a RegExp.
+Because spaces are not visible by default, it can be hard to see how many spaces are required.
+The RegExp can be made more clear by replacing the consecutive spaces with a single space and a counted quantifier.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;
+&lt;small&gt;New in 2017.1&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpAnonymousGroup" defaultSeverity="WARNING" displayName="Anonymous capturing group or numeric back reference" enabled="false" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  --&gt;
+
+&lt;html&gt;
+&lt;body&gt;
+Reports anonymous capturing groups and numeric back references in a RegExp.
+These are only reported when the RegExp dialect supports named group and named group references.
+Named groups and named back references improve code readability and are recommended to use instead.
+When a capture is not needed, matching can be more performant and use less memory by using a non-capturing group,
+i.e. &lt;b&gt;(?:xxx)&lt;/b&gt; instead of &lt;b&gt;(xxx)&lt;/b&gt;.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;&lt;small&gt;New in 2017.2&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpUnexpectedAnchor" defaultSeverity="WARNING" displayName="Begin or end anchor in unexpected position" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  --&gt;
+
+&lt;html&gt;
+&lt;body&gt;
+Reports &lt;code&gt;^&lt;/code&gt; or &lt;code&gt;\A&lt;/code&gt; anchors not at the beginning of the pattern and
+&lt;code&gt;$&lt;/code&gt;, &lt;code&gt;\Z&lt;/code&gt; or &lt;code&gt;\z&lt;/code&gt; anchors not at the end of the pattern.
+In the wrong position these RegExp anchors prevent the pattern from matching anything.
+In case of the &lt;code&gt;^&lt;/code&gt; and &lt;code&gt;$&lt;/code&gt; anchors, most likely the literal character was meant and the escape forgotten.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;
+&lt;small&gt;New in 2018.1&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpEmptyAlternationBranch" defaultSeverity="WARNING" displayName="Empty branch in alternation" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  --&gt;
+
+&lt;html&gt;
+&lt;body&gt;
+Reports empty branches in a RegExp alternation. For example:&lt;br&gt; &lt;code&gt;a&lt;b&gt;||&lt;/b&gt;b&lt;/code&gt;
+&lt;p&gt;An empty branch will only match the empty string, and in most cases that is not what is desired.
+This inspection will not report a single empty branch at the start or the end of an alternation.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;&lt;small&gt;New in 2017.2&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpUnnecessaryNonCapturingGroup" defaultSeverity="WARNING" displayName="Unnecessary non-capturing group" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports unnecessary non-capturing groups.
+For example&lt;br&gt;
+&lt;code&gt;Everybody be cool, (?:this) is a robbery!&lt;/code&gt;&lt;br&gt;
+is equivalent too&lt;br&gt;
+&lt;code&gt;Everybody be cool, this is a robbery!&lt;/code&gt;.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;&lt;small&gt;New in 2021.1&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpRedundantEscape" defaultSeverity="WARNING" displayName="Redundant character escape" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  --&gt;
+
+&lt;html&gt;
+&lt;body&gt;
+Reports character escapes that are replaceable with the unescaped character without a change in meaning.
+Note that inside the square brackets of a character class, many escapes are unnecessary that would be necessary outside of a character class.
+For example the regex &lt;b&gt;&lt;code&gt;[\.]&lt;/code&gt;&lt;/b&gt; is identical to &lt;b&gt;&lt;code&gt;[.]&lt;/code&gt;&lt;/b&gt;
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;&lt;small&gt;New in 2017.3&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpEscapedMetaCharacter" defaultSeverity="INFORMATION" displayName="Escaped meta character" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  --&gt;
+
+&lt;html&gt;
+&lt;body&gt;
+Reports the escaped meta characters, e.g. &lt;b&gt;&lt;code&gt;\.&lt;/code&gt;&lt;/b&gt;.
+Some RegExp coding styles specify that meta characters should be placed inside a character class,
+to make the regular expression easier to understand.
+For example the regex &lt;b&gt;&lt;code&gt;\d+\.\d+&lt;/code&gt;&lt;/b&gt; would be written as &lt;code&gt;\d+[.]\d+&lt;/code&gt;.
+This inspection does not warn about the meta character &lt;b&gt;&lt;code&gt;[&lt;/code&gt;&lt;/b&gt;, &lt;b&gt;&lt;code&gt;]&lt;/code&gt;&lt;/b&gt; and &lt;b&gt;&lt;code&gt;^&lt;/code&gt;&lt;/b&gt;,
+because those would need additional escaping inside a character class.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;&lt;small&gt;New in 2017.1&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RegExpDuplicateAlternationBranch" defaultSeverity="WARNING" displayName="Duplicate branch in alternation" enabled="true" language="RegExp" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  --&gt;
+
+&lt;html&gt;
+&lt;body&gt;
+Reports duplicate branches in a RegExp alternation. For example &lt;code&gt;(a|b|a)&lt;/code&gt;.
+Duplicate branches slow down matching and obscure the intent of the expression.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;&lt;small&gt;New in 2017.1&lt;/small&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="EditorConfig" path="">
+    <inspection shortName="EditorConfigCharClassRedundancy" defaultSeverity="WARNING" displayName="Redundant char class" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports the file wildcard patterns with charclasses which have less than two symbols.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigKeyCorrectness" defaultSeverity="WARNING" displayName="Correctness of EditorConfig key" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports unknown property values.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigShadowedOption" defaultSeverity="WARNING" displayName="Meaningfulness of EditorConfig option" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports properties which don&apos;t affect the resulting code style.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigPartialOverride" defaultSeverity="WEAK WARNING" displayName="Partial override" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports header with glob that has suspicious intersection with one of related globs. Example:
+[{foo, bar}] and [{foo, bas}] have non-empty intersection and none of them is subcase of the other.
+This is likely to be a typo.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigPairAcceptability" defaultSeverity="ERROR" displayName="Pair unexpected" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports pairs of values that can&apos;t be used in current context.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigWildcardRedundancy" defaultSeverity="WARNING" displayName="Wildcard redundancy" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports wildcard patterns that could be safely removed.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigEmptyHeader" defaultSeverity="ERROR" displayName="Empty header" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports sections which have an empty file wildcard pattern.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigReferenceCorrectness" defaultSeverity="ERROR" displayName="Correctness of identifier reference" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports invalid referenced identifiers.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigValueUniqueness" defaultSeverity="ERROR" displayName="Uniqueness of value in list" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports repeated values in the list of the prohibited value repetitions.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigHeaderUniqueness" defaultSeverity="WARNING" displayName="Uniqueness of EditorConfig section" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports sections which match the same file patterns.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigListAcceptability" defaultSeverity="ERROR" displayName="List unexpected" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports lists of values that can&apos;t be used in current context.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigMissingRequiredDeclaration" defaultSeverity="ERROR" displayName="Missing required declaration" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports declarations that miss required parts.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigOptionRedundancy" defaultSeverity="WARNING" displayName="Option redundancy" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports options that override other options but have the same properties and values.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigPatternEnumerationRedundancy" defaultSeverity="ERROR" displayName="Redundant pattern enumeration" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports pattern enumerations that contain only one possible pattern.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigValueCorrectness" defaultSeverity="ERROR" displayName="Correctness of EditorConfig value" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports any unexpected values.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigUnusedDeclaration" defaultSeverity="WARNING" displayName="Unused declaration" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports unused declarations.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigCharClassLetterRedundancy" defaultSeverity="WARNING" displayName="Duplicate letter in char class" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports duplicate characters in the section&apos;s file wildcard pattern.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigPatternRedundancy" defaultSeverity="WARNING" displayName="Redundancy of pattern enumeration" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports redundancy in patterns.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigSpaceInHeader" defaultSeverity="WEAK WARNING" displayName="Space in header" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports any suspicious spaces in the section&apos;s file wildcard pattern. Even though spaces can be used in the wildcard patterns, they are likely to be a typo.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigEmptySection" defaultSeverity="WARNING" displayName="Emptiness of EditorConfig section" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports sections which don&apos;t have any properties.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigNoMatchingFiles" defaultSeverity="WARNING" displayName="No matching files" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports sections which don&apos;t match any files in the project.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigRootDeclarationCorrectness" defaultSeverity="ERROR" displayName="Correctness of root declaration" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports unexpected top-level declarations.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="EditorConfigNumerousWildcards" defaultSeverity="WEAK WARNING" displayName="Too many wildcards" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports sections that contain too many wildcards. They might lead to performance issues.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="EditorConfigDeprecatedDescriptor" defaultSeverity="WARNING" displayName="Deprecation of EditorConfig element" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports deprecated properties.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigShadowingOption" defaultSeverity="WARNING" displayName="Uniqueness of occurrence of EditorConfig option" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports properties that disable any other properties declared earlier in the file.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigUnexpectedComma" defaultSeverity="ERROR" displayName="Unexpected comma" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Reports any commas that are not allowed in the current context.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="EditorConfigRootDeclarationUniqueness" defaultSeverity="ERROR" displayName="Uniqueness of top-level declaration" enabled="true" language="EditorConfig" pluginId="org.editorconfig.editorconfigjetbrains" pluginVersion="211.7442.45" isGlobalTool="false">&lt;!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. --&gt;
+&lt;html&gt;
+&lt;body&gt;
+Checks that an EditorConfig file has only one top-level declaration.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="General" path="">
+    <inspection shortName="TodoComment" defaultSeverity="WARNING" displayName="TODO comment" enabled="false" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports &lt;b&gt;TODO&lt;/b&gt; comments in your code. The Format of
+&lt;b&gt;TODO&lt;/b&gt; comments is configurable via the &lt;a href=&quot;settings://preferences.toDoOptions&quot;&gt;Settings | Editor | TODO&lt;/a&gt; panel. Since
+syntax highlighting for &lt;b&gt;TODO&lt;/b&gt; comments is already provided, it is expected that this will largely
+be used in batch mode.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="ProblematicWhitespace" defaultSeverity="WARNING" displayName="Problematic whitespace" enabled="false" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports tabs used for indentation when the code style is configured to use only spaces. Reports spaces used for indentation when
+the code style is configured to use only tabs. Reports spaces used for indentation and tabs used for alignment when the code
+style is configured to use smart tabs.
+&lt;!-- tooltip end --&gt;
+&lt;p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="Annotator" defaultSeverity="ERROR" displayName="Annotator" enabled="true" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="true">&lt;html&gt;
+&lt;body&gt;
+Allows you to see problems reported by language annotators in the results of batch code inspection.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="LongLine" defaultSeverity="WARNING" displayName="The line is longer than allowed by code style" enabled="false" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Inspection warns you of lines which are longer than &lt;b&gt;right margin&lt;/b&gt; parameter in &lt;b&gt;Code Style&lt;/b&gt; settings.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="InjectedReferences" defaultSeverity="ERROR" displayName="Injected references" enabled="true" pluginId="org.intellij.intelliLang" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Checks references injected by IntelliLang plugin.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="RedundantSuppression" defaultSeverity="WARNING" displayName="Redundant suppression" enabled="true" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="true">&lt;html&gt;
+&lt;body&gt;
+Reports usages of
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;@SuppressWarning&lt;/code&gt; annotation, or&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;// noinspection&lt;/code&gt; line comment, or&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;/** noinspection */&lt;/code&gt; JavaDoc comment&lt;/li&gt;
+&lt;/ul&gt;
+
+which can be safely removed because inspection they affect is no longer applicable in this context.
+&lt;p&gt;
+  For example:
+  &lt;code&gt;&lt;pre&gt;
+&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;public class&lt;/font&gt;&lt;/b&gt; C {
+ // symbol is already private,
+ // but annotation is still around
+  @SuppressWarnings({&quot;WeakerAccess&quot;})
+ &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;private boolean&lt;/font&gt;&lt;/b&gt; CONST = &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;true&lt;/font&gt;&lt;/b&gt;;
+ &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;void&lt;/font&gt;&lt;/b&gt; f() {
+    CONST = &lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;false&lt;/font&gt;&lt;/b&gt;;
+  }
+}
+&lt;/pre&gt;
+  &lt;/code&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="InconsistentLineSeparators" defaultSeverity="WARNING" displayName="Inconsistent line separators" enabled="false" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+  This inspection detects files with line separators different from the project default.
+  E.g. you set the line separator to &quot;\n&quot; in the Settings|Editor|Code Style|Line separator,
+  and the file you are editing uses &quot;\r\n&quot; as a line separator.
+
+  Also warns about mixed line separators in the file.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="SyntaxError" defaultSeverity="ERROR" displayName="Syntax error" enabled="true" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="true">&lt;html&gt;
+&lt;body&gt;
+Allows you to see syntax errors in the results of batch code inspection.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="Buildout" path="">
+    <inspection shortName="BuildoutUnresolvedPartInspection" defaultSeverity="WARNING" displayName="Buildout config unresolved part inspection" enabled="true" language="BuildoutCfg" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights unresolved buildout parts.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="YAML" path="">
+    <inspection shortName="YAMLUnusedAnchor" defaultSeverity="WARNING" displayName="Unused anchor" enabled="true" language="yaml" pluginId="org.jetbrains.plugins.yaml" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection highlights unused anchors.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="YAMLRecursiveAlias" defaultSeverity="ERROR" displayName="Recursive alias" enabled="true" language="yaml" pluginId="org.jetbrains.plugins.yaml" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Alias can&apos;t be recursive and used inside data referenced by corresponding anchor
+&lt;!-- tooltip end --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="YAMLUnresolvedAlias" defaultSeverity="ERROR" displayName="Unresolved alias" enabled="true" language="yaml" pluginId="org.jetbrains.plugins.yaml" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection warns about unresolved aliases in yaml files
+&lt;!-- tooltip end --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="YAMLSchemaValidation" defaultSeverity="WARNING" displayName="Validation by JSON Schema" enabled="true" language="yaml" pluginId="org.jetbrains.plugins.yaml" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Validates YAML file against a JSON Schema, if the schema is specified
+&lt;!-- tooltip end --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="YAMLDuplicatedKeys" defaultSeverity="ERROR" displayName="Duplicated YAML keys" enabled="true" language="yaml" pluginId="org.jetbrains.plugins.yaml" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects duplicated keys in YAML files and highlights them in the editor.
+&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="YAMLSchemaDeprecation" defaultSeverity="WEAK WARNING" displayName="Deprecated YAML key" enabled="true" language="yaml" pluginId="org.jetbrains.plugins.yaml" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection checks for deprecated keys in YAML files&lt;br&gt;
+Deprecation is checked only if there exists a JSON schema associated with corresponding YAML file.&lt;br&gt;
+Note that deprecation mechanism is not defined in the JSON Schema specification yet,
+and this inspection uses a non-standard extension &apos;deprecationMessage&apos;.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="ReST" path="">
+    <inspection shortName="RestRoleInspection" defaultSeverity="WARNING" displayName="Role is not defined" enabled="false" language="ReST" pluginId="PythonCore" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+This inspection detects undefined roles.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+  </group>
+  <group name="RELAX NG" path="">
+    <inspection shortName="UnresolvedReference" defaultSeverity="ERROR" displayName="Unresolved references" enabled="true" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports any unresolved references to named patterns (&quot;define&quot;) in RELAX-NG files using the XML Syntax.
+For unresolved references, a quick fix is offered to create a corresponding define-element.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+    <inspection shortName="UnusedDefine" defaultSeverity="WARNING" displayName="Unused define" enabled="false" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+Reports unused named patterns (&quot;define&quot;) in a RELAX-NG file (XML or Compact Syntax).
+A define will not be marked as unused if it is used through an include in another file.
+&lt;/body&gt;
+&lt;/html&gt;
+</inspection>
+  </group>
+  <group name="Proofreading" path="">
+    <inspection shortName="LanguageDetectionInspection" defaultSeverity="WARNING" displayName="Natural language detection" enabled="true" pluginId="tanvd.grazi" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html lang=&quot;en&quot;&gt;&lt;body&gt;Detects natural languages and suggests to enable corresponding grammar and spelling checks.&lt;/body&gt;&lt;/html&gt;
+</inspection>
+    <inspection shortName="SpellCheckingInspection" defaultSeverity="TYPO" displayName="Typo" enabled="true" pluginId="com.intellij" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html&gt;
+&lt;body&gt;
+
+Spellchecker inspection helps locate typos and misspelling in your code, comments and literals, and fix them in one click.
+&lt;/body&gt;
+&lt;/html&gt;</inspection>
+    <inspection shortName="GrazieInspection" defaultSeverity="TYPO" displayName="Grammar" enabled="true" pluginId="tanvd.grazi" pluginVersion="211.7442.45" isGlobalTool="false">&lt;html lang=&quot;en&quot;&gt;&lt;body&gt;Proofreading inspection provides an extended spell and grammar checking.
+
+You can change inspection settings in &lt;a href=&quot;settings://reference.settingsdialog.project.grazie&quot;&gt;Preferences&lt;/a&gt;. &lt;/body&gt;&lt;/html&gt;
+</inspection>
+  </group>
+</inspections>
