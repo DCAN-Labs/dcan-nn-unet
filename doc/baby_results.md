@@ -62,11 +62,11 @@ I also added smoothing.
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](../img/00-02mos_Template05_coronal_gt_superimposed.jpeg)  |  ![](../img/00-02mos_Template05_coronal_inferred_superimposed.jpeg)
+![](../img/00-02mos/00-02mos_Template05_coronal_gt_superimposed.jpeg)  |  ![](../img/00-02mos/00-02mos_Template05_coronal_inferred_superimposed.jpeg)
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:
-![](../img/00-02mos_Template05_sagittal_gt_superimposed.jpeg)  |  ![](../img/00-02mos_Template05_sagittal_inferred_superimposed.jpeg)
+![](../img/00-02mos/00-02mos_Template05_sagittal_gt_superimposed.jpeg)  |  ![](../img/00-02mos/00-02mos_Template05_sagittal_inferred_superimposed.jpeg)
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
@@ -86,29 +86,29 @@ The nnU-Net inferred segmentation is available here:
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](../img/8mo_Template09_coronal_gt_superimposed.jpeg)  |  ![](../img/8mo_Template09_coronal_inferred_superimposed.jpeg)
+![](../img/Task500/8mo_Template09_coronal_gt_superimposed.jpeg)  |  ![](../img/Task500/8mo_Template09_coronal_inferred_superimposed.jpeg)
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:
-![](../img/8mo_Template09_sagittal_gt_superimposed.jpeg)  |  ![](../img/8mo_Template09_sagittal_inferred_superimposed.jpeg)
+![](../img/Task500/8mo_Template09_sagittal_gt_superimposed.jpeg)  |  ![](../img/Task500/8mo_Template09_sagittal_inferred_superimposed.jpeg)
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
-![](../img/8mo_Template09_axial_gt_superimposed.jpeg?raw=true)  |  ![](../img/8mo_Template09_axial_inferred_superimposed.jpeg)
+![](../img/Task500/8mo_Template09_axial_gt_superimposed.jpeg?raw=true)  |  ![](../img/Task500/8mo_Template09_axial_inferred_superimposed.jpeg)
 
 ##### Outline
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](../img/8mo_Template09_coronal_gt_outline.jpeg)  |  ![](../img/8mo_Template09_coronal_inferred_outline.jpeg)
+![](../img/Task500/8mo_Template09_coronal_gt_outline.jpeg)  |  ![](../img/Task500/8mo_Template09_coronal_inferred_outline.jpeg)
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:
-![](../img/8mo_Template09_sagittal_gt_outline.jpeg)  |  ![](../img/8mo_Template09_sagittal_inferred_outline.jpeg)
+![](../img/Task500/8mo_Template09_sagittal_gt_outline.jpeg)  |  ![](../img/Task500/8mo_Template09_sagittal_inferred_outline.jpeg)
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
-![](../img/8mo_Template09_axial_gt_outline.jpeg?raw=true)  |  ![](../img/8mo_Template09_axial_inferred_outline.jpeg)
+![](../img/Task500/8mo_Template09_axial_gt_outline.jpeg?raw=true)  |  ![](../img/Task500/8mo_Template09_axial_inferred_outline.jpeg)
 
 ### Dice coefficients
 
