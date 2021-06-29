@@ -86,29 +86,44 @@ The nnU-Net inferred segmentation is available here:
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](../img/Task500/8mo_Template09_coronal_gt_superimposed.jpeg)  |  ![](../img/Task500/8mo_Template09_coronal_inferred_superimposed.jpeg)
+![](../img/8mo/8mo_Template09_coronal_gt_superimposed.jpeg)  |  ![](../img/8mo/8mo_Template09_coronal_inferred_superimposed.jpeg)
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:
-![](../img/Task500/8mo_Template09_sagittal_gt_superimposed.jpeg)  |  ![](../img/Task500/8mo_Template09_sagittal_inferred_superimposed.jpeg)
+![](../img/8mo/8mo_Template09_sagittal_gt_superimposed.jpeg)  |  ![](../img/8mo/8mo_Template09_sagittal_inferred_superimposed.jpeg)
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
-![](../img/Task500/8mo_Template09_axial_gt_superimposed.jpeg?raw=true)  |  ![](../img/Task500/8mo_Template09_axial_inferred_superimposed.jpeg)
+![](../img/8mo/8mo_Template09_axial_gt_superimposed.jpeg?raw=true)  |  ![](../img/8mo/8mo_Template09_axial_inferred_superimposed.jpeg)
 
 ##### Outline
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](../img/Task500/8mo_Template09_coronal_gt_outline.jpeg)  |  ![](../img/Task500/8mo_Template09_coronal_inferred_outline.jpeg)
+![](../img/8mo/8mo_Template09_coronal_gt_outline.jpeg)  |  ![](../img/8mo/8mo_Template09_coronal_inferred_outline.jpeg)
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:
-![](../img/Task500/8mo_Template09_sagittal_gt_outline.jpeg)  |  ![](../img/Task500/8mo_Template09_sagittal_inferred_outline.jpeg)
+![](../img/8mo/8mo_Template09_sagittal_gt_outline.jpeg)  |  ![](../img/8mo/8mo_Template09_sagittal_inferred_outline.jpeg)
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
-![](../img/Task500/8mo_Template09_axial_gt_outline.jpeg?raw=true)  |  ![](../img/Task500/8mo_Template09_axial_inferred_outline.jpeg)
+![](../img/8mo/8mo_Template09_axial_gt_outline.jpeg?raw=true)  |  ![](../img/8mo/8mo_Template09_axial_inferred_outline.jpeg)
+
+#### Task501_Babies_AllMonths
+
+In this data set, in addition to the T1 and T2 images, we added uniformly colored
+images that coded up the age as a third image for each subject.
+
+This nnU-Net model was trained on 34 training/cross-validation cases of 0- to 8-month-old babies.
+
+The T1, T2, and manually segmented (a.k.a. "ground truth") files are here:
+
+    * /home/feczk001/shared/data/nnUNet/segmentations/JLF_templates_testing/
+
+The nnU-Net inferred segmentation is available here:
+
+    * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task500_Babies8Mo/8mo_Template09.nii.gz
 
 ### Dice coefficients
 
