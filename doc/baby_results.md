@@ -115,15 +115,34 @@ Ground-truth axial       |  Inferred axial
 In this data set, in addition to the T1 and T2 images, we added uniformly colored
 images that coded up the age as a third image for each subject.
 
-This nnU-Net model was trained on 34 training/cross-validation cases of 0- to 8-month-old babies.
+I trained this nnU-Net model on 34 training/cross-validation cases of 0- to 8-month-old babies.
 
 The T1, T2, and manually segmented (a.k.a. "ground truth") files are here:
 
-    * /home/feczk001/shared/data/nnUNet/segmentations/JLF_templates_testing/
+    * /home/feczk001/shared/data/nnUNet/segmentations/JLF_templates_testing/wm_JLF_atlases/
 
-The nnU-Net inferred segmentation is available here:
+The The nnU-Net inferred segmentations are available here:
 
-    * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task500_Babies8Mo/8mo_Template09.nii.gz
+    * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task502_Babies_AllMonths/
+
+##### 00-02mos_Template02
+
+Ground-truth sagittal       |  Inferred sagittal
+:-------------------------:|:-------------------------:
+![](../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_gt.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_inferred.jpeg)
+![](../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_gt_outline.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_inferred_outline.jpeg)
+
+Ground-truth coronal       |  Inferred coronal
+:-------------------------:|:-------------------------:
+![](../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_gt.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_inferred.jpeg)
+![](../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_gt_outline.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_inferred_outline.jpeg)
+
+Ground-truth axial       |  Inferred axial
+:-------------------------:|:-------------------------:
+![](../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_gt.jpeg) |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_inferred.jpeg)
+![](../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_gt_outline.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_inferred_outline.jpeg)
+
+Dice coefficient: 0.9144429929377774
 
 ### Dice coefficients
 
