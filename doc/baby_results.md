@@ -182,6 +182,16 @@ Ground-truth axial       |  Inferred axial
 
 Dice coefficient: 0.8987183567711018
 
+##### Other test cases
+
+| Test case      | Dice coefficient | 
+| ----------- | ----------- |
+| 00-02mos_Template04      | 0.8989362179879133        |
+| 00-02mos_Template17   | 0.9400775783859089        |
+| 00-02mos_Template19 | 0.9315040524238632         |
+| 8mo_Template07 | 0.8579367247861686         |
+| 8mo_Template09 | 0.878052172240119         |
+
 ### Dice coefficients
 
 | Group      | Test set size | Dice coefficient | avg_epoch_time |
