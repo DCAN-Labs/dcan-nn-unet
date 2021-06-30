@@ -113,7 +113,7 @@ Ground-truth axial       |  Inferred axial
 #### Task501_Babies_AllMonths
 
 In this data set, in addition to the T1 and T2 images, we added uniformly colored
-images that coded up the age as a third image for each subject.
+grey-scale volumes that coded up the age as a third image for each subject.
 
 I trained this nnU-Net model on 34 training/cross-validation cases of 0- to 8-month-old babies.
 The age distribution for the training/cross-validation set was:
@@ -129,11 +129,11 @@ The age distribution for the training/cross-validation set was:
 
 The T1, T2, and manually segmented (a.k.a. "ground truth") files are here:
 
-    * /home/feczk001/shared/data/nnUNet/segmentations/JLF_templates_testing/wm_JLF_atlases/
+    * /home/miran045/reine097/JLF_templates_testing/wm_JLF_atlases/
 
 The nnU-Net inferred segmentations are available here:
 
-    * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task502_Babies_AllMonths/
+    * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task501_Babies_AllMonths/
 
 ##### 00-02mos_Template02
 
@@ -204,7 +204,7 @@ Dice coefficient: 0.8987183567711018
 
 ### Dice coefficients
 
-| Group      | Test set size | Dice coefficient | avg_epoch_time |
+| Group      | Training/cross-validation set size | Dice coefficient | avg_epoch_time |
 | ----------- | ----------- |-------------------|----------------|
 | 00-02mos      | 4       | 0.03424693173990132 | 294.7903675987501 s |
 | 8mo   | 8        | 0.9206427375735695 | 280.5509568585713 |
