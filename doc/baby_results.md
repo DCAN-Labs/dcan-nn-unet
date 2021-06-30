@@ -144,6 +144,25 @@ Ground-truth axial       |  Inferred axial
 
 Dice coefficient: 0.9144429929377774
 
+##### 2mo_Template06
+
+Ground-truth sagittal       |  Inferred sagittal
+:-------------------------:|:-------------------------:
+![](../img/Task501/2mo_Template06/sagittal_gt.jpeg)  |  ![](../img/Task501/2mo_Template06/sagittal_inferred.jpeg)
+![](../img/Task501/2mo_Template06/sagittal_gt_outline.jpeg)  |  ![](../img/Task501/2mo_Template06/sagittal_inferred_outline.jpeg)
+
+Ground-truth coronal       |  Inferred coronal
+:-------------------------:|:-------------------------:
+![](../img/Task501/2mo_Template06/coronal_gt.jpeg)  |  ![](../img/Task501/2mo_Template06/coronal_inferred.jpeg)
+![](../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_gt_outline.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_inferred_outline.jpeg)
+
+Ground-truth axial       |  Inferred axial
+:-------------------------:|:-------------------------:
+![](../img/Task501/2mo_Template06/axial_gt.jpeg) |  ![](../img/Task501/2mo_Template06/axial_inferred.jpeg)
+![](../img/Task501/2mo_Template06/axial_gt_outline.jpeg)  |  ![](../img/Task501/2mo_Template06/axial_inferred_outline.jpeg)
+
+Dice coefficient: 0.913313858189733
+
 ### Dice coefficients
 
 | Group      | Test set size | Dice coefficient | avg_epoch_time |
