@@ -70,7 +70,7 @@ Ground-truth sagittal       |  Inferred sagittal
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
-![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_axial_gt_superimposed.jpeg?raw=true)  |  ![](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/img/00-02mos_Template05_axial_inferred_superimposed.jpeg?raw=true)
+![](../img/00-02mos/00-02mos_Template05_axial_gt_superimposed.jpeg)  |  ![](../img/00-02mos/00-02mos_Template05_axial_inferred_superimposed.jpeg)
 
 #### 8mo_Template09
 
@@ -116,12 +116,22 @@ In this data set, in addition to the T1 and T2 images, we added uniformly colore
 images that coded up the age as a third image for each subject.
 
 I trained this nnU-Net model on 34 training/cross-validation cases of 0- to 8-month-old babies.
+The age distribution for the training/cross-validation set was:
+
+| Age (months)      | training set count | 
+| ----------- | ----------- |
+| 0&#8211;2      | 16        |
+| 1  | 2        |
+| 2 | 6         |
+| 6 | 4         |
+| 8 | 6         |
+
 
 The T1, T2, and manually segmented (a.k.a. "ground truth") files are here:
 
     * /home/feczk001/shared/data/nnUNet/segmentations/JLF_templates_testing/wm_JLF_atlases/
 
-The The nnU-Net inferred segmentations are available here:
+The nnU-Net inferred segmentations are available here:
 
     * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task502_Babies_AllMonths/
 
@@ -198,7 +208,7 @@ Dice coefficient: 0.8987183567711018
 | ----------- | ----------- |-------------------|----------------|
 | 00-02mos      | 4       | 0.03424693173990132 | 294.7903675987501 s |
 | 8mo   | 8        | 0.9206427375735695 | 280.5509568585713 |
-| all   | 34        | running now | running now |
+| all (with age-encoding)   | 34        | 0.90412274421532315 | 314.8189190775993 |
 
 Future directions
 -----------------
