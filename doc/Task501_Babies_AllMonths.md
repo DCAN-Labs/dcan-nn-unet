@@ -23,7 +23,20 @@ The nnU-Net inferred segmentations are available here:
 
     * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task501_Babies_AllMonths/
 
-## 00-02mos_Template02
+Below are the manual (i.e., ground-truth) segmentations and the segmentations
+inferred by the model trained by nnU-Net.
+
+## Images
+
+### Segmentation superimposed on T1 and T2 images
+
+Here we have the images layered (from top to bottom):
+
+1. Segmentation (100% opacity)
+2. T1 (50% opacity)
+3. T2
+
+I also added smoothing.
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:

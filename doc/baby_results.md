@@ -43,74 +43,9 @@ in [this SLURM script](../slurm/train/RunNnUnetTrain_102_0.sh).
 Results
 -------
 
-Below are the manual (i.e., ground-truth) segmentations and the segmentations
-inferred by the model trained by nnU-Net.
-
-### Images
-
-#### Segmentation superimposed on T1 and T2 images
-
-Here we have the images layered (from top to bottom):
-
-1. Segmentation (50% opacity)
-2. T1 (50% opacity)
-3. T2
-
-I also added smoothing.
-
-#### 00-02mos_Template05
-
-Ground-truth coronal       |  Inferred coronal
-:-------------------------:|:-------------------------:
-![](../img/00-02mos/00-02mos_Template05_coronal_gt_superimposed.jpeg)  |  ![](../img/00-02mos/00-02mos_Template05_coronal_inferred_superimposed.jpeg)
-
-Ground-truth sagittal       |  Inferred sagittal
-:-------------------------:|:-------------------------:
-![](../img/00-02mos/00-02mos_Template05_sagittal_gt_superimposed.jpeg)  |  ![](../img/00-02mos/00-02mos_Template05_sagittal_inferred_superimposed.jpeg)
-
-Ground-truth axial       |  Inferred axial
-:-------------------------:|:-------------------------:
-![](../img/00-02mos/00-02mos_Template05_axial_gt_superimposed.jpeg)  |  ![](../img/00-02mos/00-02mos_Template05_axial_inferred_superimposed.jpeg)
-
-#### 8mo_Template09
-
-This nnU-Net was trained on 8 training/cross-validation cases of 8-month-old babies.
-
-The T1, T2, and manually segmented (a.k.a. "ground truth") files are here:
-
-    * /home/feczk001/shared/data/nnUNet/segmentations/JLF_templates_testing/wm_JLF_atlases/8mo/Template09/
-
-The nnU-Net inferred segmentation is available here:
-
-    * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task500_Babies8Mo/8mo_Template09.nii.gz
-
-Ground-truth coronal       |  Inferred coronal
-:-------------------------:|:-------------------------:
-![](../img/8mo/8mo_Template09_coronal_gt_superimposed.jpeg)  |  ![](../img/8mo/8mo_Template09_coronal_inferred_superimposed.jpeg)
-
-Ground-truth sagittal       |  Inferred sagittal
-:-------------------------:|:-------------------------:
-![](../img/8mo/8mo_Template09_sagittal_gt_superimposed.jpeg)  |  ![](../img/8mo/8mo_Template09_sagittal_inferred_superimposed.jpeg)
-
-Ground-truth axial       |  Inferred axial
-:-------------------------:|:-------------------------:
-![](../img/8mo/8mo_Template09_axial_gt_superimposed.jpeg?raw=true)  |  ![](../img/8mo/8mo_Template09_axial_inferred_superimposed.jpeg)
-
-##### Outline
-
-Ground-truth coronal       |  Inferred coronal
-:-------------------------:|:-------------------------:
-![](../img/8mo/8mo_Template09_coronal_gt_outline.jpeg)  |  ![](../img/8mo/8mo_Template09_coronal_inferred_outline.jpeg)
-
-Ground-truth sagittal       |  Inferred sagittal
-:-------------------------:|:-------------------------:
-![](../img/8mo/8mo_Template09_sagittal_gt_outline.jpeg)  |  ![](../img/8mo/8mo_Template09_sagittal_inferred_outline.jpeg)
-
-Ground-truth axial       |  Inferred axial
-:-------------------------:|:-------------------------:
-![](../img/8mo/8mo_Template09_axial_gt_outline.jpeg?raw=true)  |  ![](../img/8mo/8mo_Template09_axial_inferred_outline.jpeg)
-
-[Task501_Babies_AllMonths](./Task501_Babies_AllMonths.md)
+* [0-2 months](./00-02mos_Template05.md)
+* [8 months](./8mo_Template09.md)
+* [All months (with age encoding)](./Task501_Babies_AllMonths.md)
 
 ### Dice coefficients
 
@@ -130,12 +65,11 @@ have about 20 subjects total.  I would recommend first trying a training set of 
 Conclusions
 -----------
 
-Given the results of nnU-Net on various medical
-image segmentation tasks, I'm confident that
+I'm confident that
 nnU-Net will do well with a sufficiently large
 training set of baby T1 and T2 images that are
-well-labelled.  How large that set must be
-remains to be seen.  Also, we need separate sets of images for separate age groups.  There are two practical
+well-labelled.  To get a Dice coefficient of at least 0.9, a training/cross-validation set 
+of at least size 8 seems to be necessary.  There are two practical
 considerations for finishing this project:
 manually creating the segmented data, and
 the run-time for training on this data.  As I mentioned
