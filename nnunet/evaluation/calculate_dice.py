@@ -44,20 +44,18 @@ def dice_coef_not_unknown(y_true, y_pred, smooth=1):
     return dice
 
 
-def main(gt_filename, preds_filename):
+def calculate_dice_coefficient(gt_filename, preds_filename):
     predictions_img = nib.load(preds_filename)
     predictions_data = predictions_img.get_fdata()
-    print('predictions_data.shape:', predictions_data.shape)
-    print('predictions_data.dtype', predictions_data.dtype)
 
     gt_img = nib.load(gt_filename)
     gt_data = gt_img.get_fdata()
-    print('gt_data.shape:', gt_data.shape)
-    print('gt_img.dtype', gt_data.dtype)
 
-    print('dice (all):', dice_coefficient(gt_data, predictions_data))
+    return dice_coef_not_unknown(gt_data, predictions_data)
 
-    print('dice (not unknown):', dice_coef_not_unknown(gt_data, predictions_data))
+
+def main(gt_filename, preds_filename):
+    calculate_dice_coefficient(gt_filename, preds_filename)
 
 
 if __name__ == "__main__":
