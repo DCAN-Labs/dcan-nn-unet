@@ -5,22 +5,22 @@ The age distribution for the training/cross-validation set was:
 
 | Age (months)      | training set count | 
 | ----------- | ----------- |
-| 1  | 2        |
-| 2 | 6         |
-| 6 | 4         |
-| 8 | 6         |
+| 1  | 1        |
+| 2 | 2         |
+| 6 | 3         |
+| 8 | 8         |
 
+The T1 and T2 files are here:
 
-The T1, T2, and manually segmented (a.k.a. "ground truth") files are here:
+    * /home/feczk001/shared/data/nnUNet/JLF_templates_testing/wm_JLF_atlases/head_files/
 
-    * /home/miran045/reine097/JLF_templates_testing/wm_JLF_atlases/
+The manually segmented (a.k.a. "ground truth") files are here:
+
+    * /home/feczk001/shared/data/nnUNet/JLF_templates_testing/wm_JLF_atlases/
 
 The nnU-Net inferred segmentations are available here:
 
-    * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task501_Babies_AllMonths/
-
-Below are the manual (i.e., ground-truth) segmentations and the segmentations
-inferred by the model trained by nnU-Net.
+    * /home/feczk001/shared/data/nnUNet/segmentations/Task504_AllAgesWithSkull/predictions/
 
 ## Images
 
@@ -93,27 +93,17 @@ Dice coefficient: 0.8922089516765477
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
-![](../img/Task501/8mo_Template01/sagittal_gt.jpg)  |  ![](../img/Task501/8mo_Template01/sagittal_inferred.jpg)
-![](../img/Task501/8mo_Template01/sagittal_gt_outline.jpg)  |  ![](../img/Task501/8mo_Template01/sagittal_inferred_outline.jpg)
+![](../img/Task504/8mo/Template09/sagittal/ground_truth.jpg)  |  ![](../img/Task504/8mo/Template09/sagittal/inferred.jpg)
+![](../img/Task504/8mo/Template09/sagittal/ground_truth_outline.jpg)  |  ![](../img/Task504/8mo/Template09/sagittal/inferred_outline.jpg)
 
 Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
-![](../img/Task501/8mo_Template01/coronal_gt.jpg)  |  ![](../img/Task501/8mo_Template01/coronal_inferred.jpg)
-![](../img/Task501/8mo_Template01/coronal_gt_outline.jpg)  |  ![](../img/Task501/8mo_Template01/coronal_inferred_outline.jpg)
+![](../img/Task504/8mo/Template09/coronal/ground_truth.jpg)  |  ![](../img/Task504/8mo/Template09/coronal/inferred.jpg)
+![](../img/Task504/8mo/Template09/coronal/ground_truth_outline.jpg)  |  ![](../img/Task504/8mo/Template09/coronal/inferred_outline.jpg)
 
 Ground-truth axial       |  Predicted axial
 :-------------------------:|:-------------------------:
-![](../img/Task501/8mo_Template01/axial_gt.jpg) |  ![](../img/Task501/8mo_Template01/axial_inferred.jpg)
-![](../img/Task501/8mo_Template01/axial_gt_outline.jpg)  |  ![](../img/Task501/8mo_Template01/axial_inferred_outline.jpg)
+![](../img/Task504/8mo/Template09/axial/ground_truth.jpg)  |  ![](../img/Task504/8mo/Template09/axial/inferred.jpg)
+![](../img/Task504/8mo/Template09/axial/ground_truth_outline.jpg)  |  ![](../img/Task504/8mo/Template09/axial/inferred_outline.jpg)
 
 Dice coefficient: 0.8938236674895363
-
-## Other test cases
-
-| Test case      | Dice coefficient | 
-| ----------- | ----------- |
-| 00-02mos_Template04      | 0.8989362179879133        |
-| 00-02mos_Template17   | 0.9400775783859089        |
-| 00-02mos_Template19 | 0.9315040524238632         |
-| 8mo_Template07 | 0.8579367247861686         |
-| 8mo_Template09 | 0.878052172240119         |
