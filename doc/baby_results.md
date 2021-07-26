@@ -45,7 +45,8 @@ Results
 
 * [0-2 months](./00-02mos_Template05.md)
 * [8 months](./8mo_Template09.md)
-* [All months (with age encoding)](./Task501_Babies_AllMonths.md)
+* [All months](./Task501_Babies_AllMonths.md)
+* [All months with skull](./Task504_Babies_AllMonthsWithSkull.md)
 
 ### Dice coefficients
 
