@@ -1,7 +1,7 @@
 # Task504_Babies_AllMonthsWithSkull
 
-I trained this nnU-Net model on 34 training/cross-validation cases of 0- to 8-month-old babies.
-The age distribution for the training/cross-validation set was:
+I trained this nnU-Net model on 14 training cases of 1- to 8-month-old babies.
+The age distribution for the training set was:
 
 | Age (months)      | training set count | 
 | ----------- | ----------- |
