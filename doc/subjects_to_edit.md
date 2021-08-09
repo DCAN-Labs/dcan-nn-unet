@@ -39,6 +39,13 @@ Predicted sagittal       |  Predicted coronal | Predicted axial
 ![](../img/subjects_to_edit/3mo/sub-116845/sagittal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116845/coronal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116845/axial.jpeg)
 ![](../img/subjects_to_edit/3mo/sub-116056/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116845/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116845/axial-outline.jpeg)
 
+#### sub-298032
+
+Predicted sagittal       |  Predicted coronal | Predicted axial
+:-------------------------:|:-------------------------:|:-------------------------:
+![](../img/subjects_to_edit/3mo/sub-298032/sagittal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-298032/coronal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-298032/axial.jpeg)
+![](../img/subjects_to_edit/3mo/sub-298032/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-298032/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-298032/axial-outline.jpeg)
+
 ### 4 months
 
 #### sub-584381
