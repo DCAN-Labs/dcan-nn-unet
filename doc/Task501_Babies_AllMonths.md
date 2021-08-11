@@ -1,10 +1,6 @@
 # Task501_Babies_AllMonths
 
-In this data set, in addition to the T1 and T2 images, we added uniformly colored
-grey-scale volumes that coded up the age as a third image for each subject.
-
-I trained this nnU-Net model on 34 training/cross-validation cases of 0- to 8-month-old babies.
-The age distribution for the training/cross-validation set was:
+We used T1 and T2 images in this training set.
 
 | Age (months)      | training set count | 
 | ----------- | ----------- |
@@ -23,12 +19,61 @@ The nnU-Net inferred segmentations are available here:
 
     * /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task501_Babies_AllMonths/
 
-Below are the manual (i.e., ground-truth) segmentations and the segmentations
-inferred by the model trained by nnU-Net.
+## Training subjects
+
+The data is contained in these Box folders:
+
+* [1mo&#8211;8mo](https://umn.app.box.com/folder/135725640186)
+* [00-02mos](https://umn.app.box.com/folder/113218745237)
+
+Here are the subjects in the training data:
+
+* 00-02mos
+    * Template01 
+    * Template03
+    * Template05
+    * Template06
+    * Template07 
+    * Template08
+    * Template09	
+    * Template10
+    * Template11
+    * Template12
+    * Template13 
+    * Template14 
+    * Template15
+    * Template16
+    * Template18
+    * Template20	
+* 1mo
+    * Template01
+    * Template02
+* 2mo
+    * Template01
+    * Template02
+    * Template03
+    * Template04 
+    * Template05
+    * Template07
+* 6mo
+    * Template01
+    * Template02
+    * Template03
+    * Template04  
+* 8mo
+    * Template02
+    * Template03
+    * Template04
+    * Template05
+    * Template06
+    * Template08
 
 ## Images
 
 ### Segmentation superimposed on T1 and T2 images
+
+Below are the manual (i.e., ground-truth) segmentations and the segmentations
+inferred by the model trained by nnU-Net.
 
 Here we have the images layered (from top to bottom):
 
