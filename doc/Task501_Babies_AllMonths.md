@@ -68,12 +68,26 @@ Here are the subjects in the training data:
     * Template06
     * Template08
 
+Here are the subjects in the test data:
+
+* 00-02mos
+    * Template02  
+    * Template04 
+    * Template17 
+    * Template19
+* 2mo
+    * Template06_0001.nii.gz  
+* 8mo
+    * Template01  
+    * Template07  
+    * Template09
+
 ## Images
 
 ### Segmentation superimposed on T1 and T2 images
 
 Below are the manual (i.e., ground-truth) segmentations and the segmentations
-inferred by the model trained by nnU-Net.
+inferred by the model trained by nnU-Net.*
 
 Here we have the images layered (from top to bottom):
 
