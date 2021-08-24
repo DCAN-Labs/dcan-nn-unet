@@ -13,7 +13,7 @@ def main(origin_folder, destination_folder):
             t1_destination_file = \
                 "{}/images/{}_{}_0000.nii.gz".format(destination_folder, sub_folder, template_folder)
             copyfile(t1_file, t1_destination_file)
-            t2_file = os.path.join(origin_folder, sub_folder, 'T2w_files', template_folder + '_T2w_acpc_dc_restore.nii.gz')
+            t2_file = os.path.join(current_folder, 'T2w_acpc_dc_restore.nii.gz')
             t2_destination_file = \
                 "{}/images/{}_{}_0001.nii.gz".format(destination_folder, sub_folder, template_folder)
             copyfile(t2_file, t2_destination_file)

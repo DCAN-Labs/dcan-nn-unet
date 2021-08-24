@@ -1,3 +1,13 @@
+Run-times
+=========
+
+* 1 segmentation
+  * Fold 0
+    * Queued time:    03:21:42
+    * Initialization:
+
+----
+
 # Benchmarking
 
 * `nnUNet_train 2d nnUNetTrainerV2_5epochs 2 0`
