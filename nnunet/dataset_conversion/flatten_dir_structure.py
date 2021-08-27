@@ -2,22 +2,29 @@ import os
 from os.path import isfile, join
 from os import listdir
 from shutil import copyfile
+import sys
 
 
-src_dir = '/home/feczk001/shared/data/nnUNet/JLF_templates_testing/wm_JLF_atlases/head_files'
-dest_dir = '/home/feczk001/shared/data/nnUNet/JLF_templates_testing/wm_JLF_atlases/head_files_flattened/'
+def flatten_dir_structure(src_dir, dest_dir):
+    for root, dirs, files in os.walk(src_dir):
+        path = root.split(os.sep)
+        print((len(path) - 1) * '---', os.path.basename(root))
+        for file in files:
+            print(len(path) * '---', file)
+            suffix = ''
+            if 'T1' in file:
+                suffix = '_0000'
+            elif 'T2' in file:
+                suffix = '_0001'
+            if file[-7:] == ".nii.gz":
+                file_extension = ".nii.gz"
+            else:
+                file_extension = ".nii"
+            new_file_name = path[-2] + '_' + path[-1] + '_' + file[4:-len(file_extension)] + suffix + file_extension
+            current_src_dir = '/'.join(path)
+            src = join(current_src_dir, file)
+            dst = join(dest_dir, new_file_name)
+            copyfile(src, dst)
 
-subfolders = next(os.walk(src_dir))[1]
-for subfolder in subfolders:
-    subfolder_path = os.path.join(src_dir, subfolder)
-    onlyfiles = [f for f in listdir(subfolder_path) if isfile(join(subfolder_path, f))]
-    for file in onlyfiles:
-        if 'T1' in file:
-            suffix = '_0000'
-        else:
-            suffix = '_0001'
-        new_file_name = subfolder + '_' + file[:-7] + suffix + ".nii.gz"
-        src = join(subfolder_path, file)
-        dst = join(dest_dir, new_file_name)
-        copyfile(src, dst)
-
+if __name__ == "__main__":
+    flatten_dir_structure(sys.argv[1], sys.argv[2])
