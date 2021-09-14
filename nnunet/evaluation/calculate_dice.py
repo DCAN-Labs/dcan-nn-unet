@@ -55,10 +55,11 @@ def calculate_dice_coefficient(gt_filename, preds_filename):
 
 
 def main(gt_filename, preds_filename):
-    calculate_dice_coefficient(gt_filename, preds_filename)
+    return calculate_dice_coefficient(gt_filename, preds_filename)
 
 
 if __name__ == "__main__":
     ground_truth_filename = sys.argv[1]
     predictions_filename = sys.argv[2]
-    main(ground_truth_filename, predictions_filename)
+    result = main(ground_truth_filename, predictions_filename)
+    print('Dice coefficient: ', result)
