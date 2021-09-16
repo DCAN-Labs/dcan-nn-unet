@@ -148,4 +148,4 @@ Ground-truth axial       |  Predicted axial
 ![](../img/Task506/7mo/sub-710922/axial/ground_truth.jpg)  |  ![](../img/Task506/7mo/sub-710922/axial/inferred.jpg)
 ![](../img/Task506/7mo/sub-710922/axial/ground_truth_outline.jpg)  |  ![](../img/Task506/7mo/sub-710922/axial/inferred_outline.jpg)
 
-Dice coefficient: 0.34926525890771865
+Dice coefficient: 0.8695402425239379
