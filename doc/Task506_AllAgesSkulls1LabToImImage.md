@@ -6,7 +6,7 @@ I trained this nnU-Net model on 14 training cases of 1- to 7-month-old babies wi
 The original data is available 
 [here](https://umn.app.box.com/folder/143693300383?s=npitfaxq4udspe1phscihl6gvb9uvihh).
 To be compatible with nnU-Net file/folder structure and naming requirements, the data
-was moved to
+was copied to
 
     /home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/Task506_AllAgesSkulls1LabToImImage
 
@@ -55,7 +55,7 @@ Ground-truth axial       |  Predicted axial
 
 Dice coefficient: 0.3633991985698166
 
-### 2 month: Subject 627391
+### 2 months: Subject 627391
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
