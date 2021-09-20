@@ -78,19 +78,32 @@ is 8.
          24,  # Right-vessel
          25])  # Right-choroid-plexus
 
-Example
+Examples
 -------
 
-### Input (1-month-old)
+### 1mo_sub-198549
 
-| Sagittal      | Coronal | Axial |
-| ----------- | ----------- | ----------- |
-| ![](../../img/lab2im/input_sagittal.jpg) | ![](../../img/lab2im/input_coronal.jpg) | ![](../../img/lab2im/input_axial.jpg) |
+| Type | Sagittal      | Coronal | Axial |
+| -----| ----------- | ----------- | ----------- |
+| input labelled | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/input_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/input_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/input_axial.jpg) |
+| output labelled (normal_prior_distribution) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_axial.jpg) |
+| output T1 | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t1_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t1_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t1_axial.jpg) |
+| output T2| ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t2_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t2_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t2_axial.jpg) |
 
-### Output: labelled, T1, and T2
+### 5mo_sub-176427
 
-| Sagittal      | Coronal | Axial |
-| ----------- | ----------- | ----------- |
-| ![](../../img/lab2im/output_sagittal.jpg) | ![](../../img/lab2im/output_coronal.jpg) | ![](../../img/lab2im/output_axial.jpg) |
-| ![](../../img/lab2im/output_t1_sagittal.jpg) | ![](../../img/lab2im/output_t1_coronal.jpg) | ![](../../img/lab2im/output_t1_axial.jpg) |
-| ![](../../img/lab2im/output_t2_sagittal.jpg) | ![](../../img/lab2im/output_t2_coronal.jpg) | ![](../../img/lab2im/output_t2_axial.jpg) |
+| Type | Sagittal      | Coronal | Axial |
+| -----| ----------- | ----------- | ----------- |
+| input labelled | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/input_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/input_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/input_axial.jpg) |
+| output labelled | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/output_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/output_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/output_axial.jpg) |
+| output T1 | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/output_t1_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/output_t1_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/output_t1_axial.jpg) |
+| output T2| ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/output_t2_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/output_t2_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/5mo_sub-176427/output_t2_axial.jpg) |
+
+### 7mo_sub-439083
+
+| Type | Sagittal      | Coronal | Axial |
+| -----| ----------- | ----------- | ----------- |
+| input labelled | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/input_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/input_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/input_axial.jpg) |
+| output labelled | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/output_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/output_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/output_axial.jpg) |
+| output T1 | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/output_t1_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/output_t1_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/output_t1_axial.jpg) |
+| output T2| ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/output_t2_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/output_t2_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/7mo_sub-439083/output_t2_axial.jpg) |
