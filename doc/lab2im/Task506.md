@@ -87,8 +87,11 @@ Examples
 | -----| ----------- | ----------- | ----------- |
 | input labelled | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/input_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/input_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/input_axial.jpg) |
 | output labelled (normal_prior_distribution) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_axial.jpg) |
-| output T1 | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t1_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t1_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t1_axial.jpg) |
-| output T2| ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t2_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t2_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t2_axial.jpg) |
+| output T1 (normal_prior_distribution) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t1_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t1_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t1_axial.jpg) |
+| output T2 (normal_prior_distribution) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t2_sagittal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t2_coronal.jpg) | ![](../../img/lab2im/normal_prior_distribution/1mo_sub-198549/output_t2_axial.jpg) |
+| output labelled (uniform_prior_distribution) | ![](../../img/lab2im/uniform_prior_distribution/1mo_sub-198549/output_sagittal.jpg) | ![](../../img/lab2im/uniform_prior_distribution/1mo_sub-198549/output_coronal.jpg) | ![](../../img/lab2im/uniform_prior_distribution/1mo_sub-198549/output_axial.jpg) |
+| output T1 (uniform_prior_distribution) | ![](../../img/lab2im/uniform_prior_distribution/1mo_sub-198549/output_t1_sagittal.jpg) | ![](../../img/lab2im/uniform_prior_distribution/1mo_sub-198549/output_t1_coronal.jpg) | ![](../../img/lab2im/uniform_prior_distribution/1mo_sub-198549/output_t1_axial.jpg) |
+| output T2 (uniform_prior_distribution) | ![](../../img/lab2im/uniform_prior_distribution/1mo_sub-198549/output_t2_sagittal.jpg) | ![](../../img/lab2im/uniform_prior_distribution/1mo_sub-198549/output_t2_coronal.jpg) | ![](../../img/lab2im/uniform_prior_distribution/1mo_sub-198549/output_t2_axial.jpg) |
 
 ### 5mo_sub-176427
 
