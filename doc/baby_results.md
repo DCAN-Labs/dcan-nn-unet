@@ -45,9 +45,9 @@ Results
 
 * [0-2 months](./00-02mos_Template05.md)
 * [8 months](./8mo_Template09.md)
-* [All months](./Task501_Babies_AllMonths.md)
-* [All months with skull](./Task504_Babies_AllMonthsWithSkull.md)
-* [All months with skull and `lab2im` augmentation](./Task506_AllAgesSkulls1LabToImImage.md)
+* [All months](tasks/Task501_Babies_AllMonths.md)
+* [All months with skull](tasks/Task504_Babies_AllMonthsWithSkull.md)
+* [All months with skull and `lab2im` augmentation](tasks/Task506_AllAgesSkulls1LabToImImage.md)
 
 ### Dice coefficients
 

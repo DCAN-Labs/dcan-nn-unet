@@ -99,18 +99,18 @@ I also added smoothing.
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:
-![](../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_gt.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_inferred.jpeg)
-![](../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_gt_outline.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_inferred_outline.jpeg)
+![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_gt.jpeg)  |  ![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_inferred.jpeg)
+![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_gt_outline.jpeg)  |  ![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_sagittal_inferred_outline.jpeg)
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_gt.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_inferred.jpeg)
-![](../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_gt_outline.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_inferred_outline.jpeg)
+![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_gt.jpeg)  |  ![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_inferred.jpeg)
+![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_gt_outline.jpeg)  |  ![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_coronal_inferred_outline.jpeg)
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
-![](../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_gt.jpeg) |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_inferred.jpeg)
-![](../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_gt_outline.jpeg)  |  ![](../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_inferred_outline.jpeg)
+![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_gt.jpeg) |  ![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_inferred.jpeg)
+![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_gt_outline.jpeg)  |  ![](../../img/Task501/00-02mos_Template02/00-02mos_Template02_axial_inferred_outline.jpeg)
 
 Dice coefficient: 0.9144429929377774
 
@@ -118,18 +118,18 @@ Dice coefficient: 0.9144429929377774
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:
-![](../img/Task501/2mo_Template06/sagittal_gt.jpeg)  |  ![](../img/Task501/2mo_Template06/sagittal_inferred.jpeg)
-![](../img/Task501/2mo_Template06/sagittal_gt_outline.jpeg)  |  ![](../img/Task501/2mo_Template06/sagittal_inferred_outline.jpeg)
+![](../../img/Task501/2mo_Template06/sagittal_gt.jpeg)  |  ![](../../img/Task501/2mo_Template06/sagittal_inferred.jpeg)
+![](../../img/Task501/2mo_Template06/sagittal_gt_outline.jpeg)  |  ![](../../img/Task501/2mo_Template06/sagittal_inferred_outline.jpeg)
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](../img/Task501/2mo_Template06/coronal_gt.jpeg)  |  ![](../img/Task501/2mo_Template06/coronal_inferred.jpeg)
-![](../img/Task501/2mo_Template06/coronal_gt_outline.jpeg)  |  ![](../img/Task501/2mo_Template06/coronal_inferred_outline.jpeg)
+![](../../img/Task501/2mo_Template06/coronal_gt.jpeg)  |  ![](../../img/Task501/2mo_Template06/coronal_inferred.jpeg)
+![](../../img/Task501/2mo_Template06/coronal_gt_outline.jpeg)  |  ![](../../img/Task501/2mo_Template06/coronal_inferred_outline.jpeg)
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
-![](../img/Task501/2mo_Template06/axial_gt.jpeg) |  ![](../img/Task501/2mo_Template06/axial_inferred.jpeg)
-![](../img/Task501/2mo_Template06/axial_gt_outline.jpeg)  |  ![](../img/Task501/2mo_Template06/axial_inferred_outline.jpeg)
+![](../../img/Task501/2mo_Template06/axial_gt.jpeg) |  ![](../../img/Task501/2mo_Template06/axial_inferred.jpeg)
+![](../../img/Task501/2mo_Template06/axial_gt_outline.jpeg)  |  ![](../../img/Task501/2mo_Template06/axial_inferred_outline.jpeg)
 
 Dice coefficient: 0.913313858189733
 
@@ -137,18 +137,18 @@ Dice coefficient: 0.913313858189733
 
 Ground-truth sagittal       |  Inferred sagittal
 :-------------------------:|:-------------------------:
-![](../img/Task501/8mo_Template01/sagittal_gt.jpg)  |  ![](../img/Task501/8mo_Template01/sagittal_inferred.jpg)
-![](../img/Task501/8mo_Template01/sagittal_gt_outline.jpg)  |  ![](../img/Task501/8mo_Template01/sagittal_inferred_outline.jpg)
+![](../../img/Task501/8mo_Template01/sagittal_gt.jpg)  |  ![](../../img/Task501/8mo_Template01/sagittal_inferred.jpg)
+![](../../img/Task501/8mo_Template01/sagittal_gt_outline.jpg)  |  ![](../../img/Task501/8mo_Template01/sagittal_inferred_outline.jpg)
 
 Ground-truth coronal       |  Inferred coronal
 :-------------------------:|:-------------------------:
-![](../img/Task501/8mo_Template01/coronal_gt.jpg)  |  ![](../img/Task501/8mo_Template01/coronal_inferred.jpg)
-![](../img/Task501/8mo_Template01/coronal_gt_outline.jpg)  |  ![](../img/Task501/8mo_Template01/coronal_inferred_outline.jpg)
+![](../../img/Task501/8mo_Template01/coronal_gt.jpg)  |  ![](../../img/Task501/8mo_Template01/coronal_inferred.jpg)
+![](../../img/Task501/8mo_Template01/coronal_gt_outline.jpg)  |  ![](../../img/Task501/8mo_Template01/coronal_inferred_outline.jpg)
 
 Ground-truth axial       |  Inferred axial
 :-------------------------:|:-------------------------:
-![](../img/Task501/8mo_Template01/axial_gt.jpg) |  ![](../img/Task501/8mo_Template01/axial_inferred.jpg)
-![](../img/Task501/8mo_Template01/axial_gt_outline.jpg)  |  ![](../img/Task501/8mo_Template01/axial_inferred_outline.jpg)
+![](../../img/Task501/8mo_Template01/axial_gt.jpg) |  ![](../../img/Task501/8mo_Template01/axial_inferred.jpg)
+![](../../img/Task501/8mo_Template01/axial_gt_outline.jpg)  |  ![](../../img/Task501/8mo_Template01/axial_inferred_outline.jpg)
 
 Dice coefficient: 0.8987183567711018
 
