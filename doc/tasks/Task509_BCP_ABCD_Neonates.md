@@ -1,6 +1,31 @@
 Task 509: BCP_ABCD_Neonates
 ===========================
 
+Dice scores
+-----------
+
+* **avg dice: 0.8876495909150529**
+  * inferred_file: 0mo_template_19.nii.gz
+      * dice (foreground): 0.9189201114949431
+  * inferred_file: 0mo_template_20.nii.gz
+      * dice (foreground): 0.9280617550802038
+  * inferred_file: 1mo_sub-1.nii.gz
+      * dice (foreground): 0.9076494695766417
+  * inferred_file: 2mo_sub-1.nii.gz
+      * dice (foreground): 0.9132213212633972
+  * inferred_file: 3mo_sub-1.nii.gz
+      * dice (foreground): 0.770322831842359
+  * inferred_file: 4mo_sub-1.nii.gz
+      * dice (foreground): 0.8590723647861956
+  * inferred_file: 5mo_sub-1.nii.gz
+      * dice (foreground): 0.8500781757813186
+  * inferred_file: 6mo_sub-1.nii.gz
+      * dice (foreground): 0.9161512677425887
+  * inferred_file: 7mo_sub-786266.nii.gz
+      * dice (foreground): 0.9192645427440415
+  * inferred_file: 8mo_sub-890518.nii.gz
+      * dice (foreground): 0.8937540688388396
+      
 Data description
 ----------------
 
