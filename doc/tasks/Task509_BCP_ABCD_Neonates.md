@@ -21,9 +21,9 @@ Dice scores
       * dice (foreground): 0.8500781757813186
   * inferred_file: 6mo_sub-1.nii.gz
       * dice (foreground): 0.9161512677425887
-  * inferred_file: 7mo_sub-786266.nii.gz
+  * inferred_file: 7mo_sub-1.nii.gz
       * dice (foreground): 0.9192645427440415
-  * inferred_file: 8mo_sub-890518.nii.gz
+  * inferred_file: 8mo_sub-1.nii.gz
       * dice (foreground): 0.8937540688388396
       
 Data description
