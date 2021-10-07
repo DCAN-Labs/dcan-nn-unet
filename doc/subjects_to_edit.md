@@ -20,8 +20,8 @@ I also added smoothing.
 
 Predicted sagittal       |  Predicted coronal | Predicted axial
 :-------------------------:|:-------------------------:|:-------------------------:
-![](../img/subjects_to_edit/2mo/sub-684448/sagittal.jpeg)  |  ![](../img/subjects_to_edit/2mo/sub-684448/coronal.jpeg)  |  ![](../img/subjects_to_edit/2mo/sub-684448/axial.jpeg)
-![](../img/subjects_to_edit/2mo/sub-684448/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/2mo/sub-684448/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/2mo/sub-684448/axial-outline.jpeg)
+![](../img/subjects_to_edit/2mo/sub-1/sagittal.jpeg)  |  ![](../img/subjects_to_edit/2mo/sub-1/coronal.jpeg)  |  ![](../img/subjects_to_edit/2mo/sub-1/axial.jpeg)
+![](../img/subjects_to_edit/2mo/sub-1/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/2mo/sub-1/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/2mo/sub-1/axial-outline.jpeg)
 
 ### 3 months
 
@@ -29,22 +29,22 @@ Predicted sagittal       |  Predicted coronal | Predicted axial
 
 Predicted sagittal       |  Predicted coronal | Predicted axial
 :-------------------------:|:-------------------------:|:-------------------------:
-![](../img/subjects_to_edit/3mo/sub-116056/sagittal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116056/coronal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116056/axial.jpeg)
-![](../img/subjects_to_edit/3mo/sub-116056/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116056/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116056/axial-outline.jpeg)
+![](../img/subjects_to_edit/3mo/sub-1/sagittal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-1/coronal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-1/axial.jpeg)
+![](../img/subjects_to_edit/3mo/sub-1/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-1/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-1/axial-outline.jpeg)
 
 #### sub-116845
 
 Predicted sagittal       |  Predicted coronal | Predicted axial
 :-------------------------:|:-------------------------:|:-------------------------:
-![](../img/subjects_to_edit/3mo/sub-116845/sagittal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116845/coronal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116845/axial.jpeg)
-![](../img/subjects_to_edit/3mo/sub-116056/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116845/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-116845/axial-outline.jpeg)
+![](../img/subjects_to_edit/3mo/sub-2/sagittal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-2/coronal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-2/axial.jpeg)
+![](../img/subjects_to_edit/3mo/sub-1/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-2/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-2/axial-outline.jpeg)
 
 #### sub-298032
 
 Predicted sagittal       |  Predicted coronal | Predicted axial
 :-------------------------:|:-------------------------:|:-------------------------:
-![](../img/subjects_to_edit/3mo/sub-298032/sagittal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-298032/coronal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-298032/axial.jpeg)
-![](../img/subjects_to_edit/3mo/sub-298032/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-298032/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-298032/axial-outline.jpeg)
+![](../img/subjects_to_edit/3mo/sub-3/sagittal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-3/coronal.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-3/axial.jpeg)
+![](../img/subjects_to_edit/3mo/sub-3/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-3/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/3mo/sub-3/axial-outline.jpeg)
 
 ### 4 months
 
@@ -52,15 +52,15 @@ Predicted sagittal       |  Predicted coronal | Predicted axial
 
 Predicted sagittal       |  Predicted coronal | Predicted axial
 :-------------------------:|:-------------------------:|:-------------------------:
-![](../img/subjects_to_edit/4mo/sub-584381/sagittal.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-584381/coronal.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-584381/axial.jpeg)
-![](../img/subjects_to_edit/4mo/sub-584381/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-584381/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-584381/axial-outline.jpeg)
+![](../img/subjects_to_edit/4mo/sub-1/sagittal.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-1/coronal.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-1/axial.jpeg)
+![](../img/subjects_to_edit/4mo/sub-1/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-1/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-1/axial-outline.jpeg)
 
 #### sub-645257
 
 Predicted sagittal       |  Predicted coronal | Predicted axial
 :-------------------------:|:-------------------------:|:-------------------------:
-![](../img/subjects_to_edit/4mo/sub-584381/sagittal.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-584381/coronal.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-584381/axial.jpeg)
-![](../img/subjects_to_edit/4mo/sub-584381/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-584381/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-584381/axial-outline.jpeg)
+![](../img/subjects_to_edit/4mo/sub-1/sagittal.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-1/coronal.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-1/axial.jpeg)
+![](../img/subjects_to_edit/4mo/sub-1/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-1/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/4mo/sub-1/axial-outline.jpeg)
 
 ### 7 months
 
@@ -68,12 +68,12 @@ Predicted sagittal       |  Predicted coronal | Predicted axial
 
 Predicted sagittal       |  Predicted coronal | Predicted axial
 :-------------------------:|:-------------------------:|:-------------------------:
-![](../img/subjects_to_edit/7mo/sub-402408/sagittal.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-402408/coronal.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-402408/axial.jpeg)
-![](../img/subjects_to_edit/7mo/sub-402408/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-402408/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-402408/axial-outline.jpeg)
+![](../img/subjects_to_edit/7mo/sub-1/sagittal.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-1/coronal.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-1/axial.jpeg)
+![](../img/subjects_to_edit/7mo/sub-1/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-1/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-1/axial-outline.jpeg)
 
 #### sub-439083
 
 Predicted sagittal       |  Predicted coronal | Predicted axial
 :-------------------------:|:-------------------------:|:-------------------------:
-![](../img/subjects_to_edit/7mo/sub-439083/sagittal.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-439083/coronal.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-439083/axial.jpeg)
-![](../img/subjects_to_edit/7mo/sub-439083/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-439083/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-439083/axial-outline.jpeg)
+![](../img/subjects_to_edit/7mo/sub-2/sagittal.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-2/coronal.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-2/axial.jpeg)
+![](../img/subjects_to_edit/7mo/sub-2/sagittal-outline.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-2/coronal-outline.jpeg)  |  ![](../img/subjects_to_edit/7mo/sub-2/axial-outline.jpeg)

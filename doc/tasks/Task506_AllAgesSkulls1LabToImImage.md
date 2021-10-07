@@ -36,116 +36,116 @@ Here we have the images layered (from top to bottom):
 
 I also added smoothing.
 
-### 1 month: Subject 375518
+### 1 month: Example 1
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/1mo/sub-375518/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/1mo/sub-375518/sagittal/inferred.jpg)
-![](../../img/Task506/1mo/sub-375518/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/1mo/sub-375518/sagittal/inferred_outline.jpg)
+![](../../img/Task506/1mo/sub-1/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/1mo/sub-1/sagittal/inferred.jpg)
+![](../../img/Task506/1mo/sub-1/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/1mo/sub-1/sagittal/inferred_outline.jpg)
 
 Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/1mo/sub-375518/coronal/ground_truth.jpg)  |  ![](../../img/Task506/1mo/sub-375518/coronal/inferred.jpg)
-![](../../img/Task506/1mo/sub-375518/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/1mo/sub-375518/coronal/inferred_outline.jpg)
+![](../../img/Task506/1mo/sub-1/coronal/ground_truth.jpg)  |  ![](../../img/Task506/1mo/sub-1/coronal/inferred.jpg)
+![](../../img/Task506/1mo/sub-1/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/1mo/sub-1/coronal/inferred_outline.jpg)
 
 Ground-truth axial       |  Predicted axial
 :-------------------------:|:-------------------------:
-![](../../img/Task506/1mo/sub-375518/axial/ground_truth.jpg)  |  ![](../../img/Task506/1mo/sub-375518/axial/inferred.jpg)
-![](../../img/Task506/1mo/sub-375518/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/1mo/sub-375518/axial/inferred_outline.jpg)
+![](../../img/Task506/1mo/sub-1/axial/ground_truth.jpg)  |  ![](../../img/Task506/1mo/sub-1/axial/inferred.jpg)
+![](../../img/Task506/1mo/sub-1/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/1mo/sub-1/axial/inferred_outline.jpg)
 
 Dice coefficient: 0.3633991985698166
 
-### 2 months: Subject 627391
+### 2 months: Subject 1
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/2mo/sub-627391/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/2mo/sub-627391/sagittal/inferred.jpg)
-![](../../img/Task506/2mo/sub-627391/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/2mo/sub-627391/sagittal/inferred_outline.jpg)
+![](../../img/Task506/2mo/sub-1/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/2mo/sub-1/sagittal/inferred.jpg)
+![](../../img/Task506/2mo/sub-1/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/2mo/sub-1/sagittal/inferred_outline.jpg)
 
 Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/2mo/sub-627391/coronal/ground_truth.jpg)  |  ![](../../img/Task506/2mo/sub-627391/coronal/inferred.jpg)
-![](../../img/Task506/2mo/sub-627391/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/2mo/sub-627391/coronal/inferred_outline.jpg)
+![](../../img/Task506/2mo/sub-1/coronal/ground_truth.jpg)  |  ![](../../img/Task506/2mo/sub-1/coronal/inferred.jpg)
+![](../../img/Task506/2mo/sub-1/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/2mo/sub-1/coronal/inferred_outline.jpg)
 
 Ground-truth axial       |  Predicted axial
 :-------------------------:|:-------------------------:
-![](../../img/Task506/2mo/sub-627391/axial/ground_truth.jpg)  |  ![](../../img/Task506/2mo/sub-627391/axial/inferred.jpg)
-![](../../img/Task506/2mo/sub-627391/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/2mo/sub-627391/axial/inferred_outline.jpg)
+![](../../img/Task506/2mo/sub-1/axial/ground_truth.jpg)  |  ![](../../img/Task506/2mo/sub-1/axial/inferred.jpg)
+![](../../img/Task506/2mo/sub-1/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/2mo/sub-1/axial/inferred_outline.jpg)
 
 Dice coefficient: 0.8989465333315596
 
-### 4 months: Subject 635515
+### 4 months: Subject 1
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/4mo/sub-635515/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/4mo/sub-635515/sagittal/inferred.jpg)
-![](../../img/Task506/4mo/sub-635515/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/4mo/sub-635515/sagittal/inferred_outline.jpg)
+![](../../img/Task506/4mo/sub-1/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/4mo/sub-1/sagittal/inferred.jpg)
+![](../../img/Task506/4mo/sub-1/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/4mo/sub-1/sagittal/inferred_outline.jpg)
 
 Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/4mo/sub-635515/coronal/ground_truth.jpg)  |  ![](../../img/Task506/4mo/sub-635515/coronal/inferred.jpg)
-![](../../img/Task506/4mo/sub-635515/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/4mo/sub-635515/coronal/inferred_outline.jpg)
+![](../../img/Task506/4mo/sub-1/coronal/ground_truth.jpg)  |  ![](../../img/Task506/4mo/sub-1/coronal/inferred.jpg)
+![](../../img/Task506/4mo/sub-1/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/4mo/sub-1/coronal/inferred_outline.jpg)
 
 Ground-truth axial       |  Predicted axial
 :-------------------------:|:-------------------------:
-![](../../img/Task506/4mo/sub-635515/axial/ground_truth.jpg)  |  ![](../../img/Task506/4mo/sub-635515/axial/inferred.jpg)
-![](../../img/Task506/4mo/sub-635515/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/4mo/sub-635515/axial/inferred_outline.jpg)
+![](../../img/Task506/4mo/sub-1/axial/ground_truth.jpg)  |  ![](../../img/Task506/4mo/sub-1/axial/inferred.jpg)
+![](../../img/Task506/4mo/sub-1/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/4mo/sub-1/axial/inferred_outline.jpg)
 
 Dice coefficient: 0.8246552166171827
 
-### 5 months: Subject 272097
+### 5 months: Subject 1
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/5mo/sub-272097/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/5mo/sub-272097/sagittal/inferred.jpg)
-![](../../img/Task506/5mo/sub-272097/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/5mo/sub-272097/sagittal/inferred_outline.jpg)
+![](../../img/Task506/5mo/sub-1/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/5mo/sub-1/sagittal/inferred.jpg)
+![](../../img/Task506/5mo/sub-1/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/5mo/sub-1/sagittal/inferred_outline.jpg)
 
 Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/5mo/sub-272097/coronal/ground_truth.jpg)  |  ![](../../img/Task506/5mo/sub-272097/coronal/inferred.jpg)
-![](../../img/Task506/5mo/sub-272097/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/5mo/sub-272097/coronal/inferred_outline.jpg)
+![](../../img/Task506/5mo/sub-1/coronal/ground_truth.jpg)  |  ![](../../img/Task506/5mo/sub-1/coronal/inferred.jpg)
+![](../../img/Task506/5mo/sub-1/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/5mo/sub-1/coronal/inferred_outline.jpg)
 
 Ground-truth axial       |  Predicted axial
 :-------------------------:|:-------------------------:
-![](../../img/Task506/5mo/sub-272097/axial/ground_truth.jpg)  |  ![](../../img/Task506/5mo/sub-272097/axial/inferred.jpg)
-![](../../img/Task506/5mo/sub-272097/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/5mo/sub-272097/axial/inferred_outline.jpg)
+![](../../img/Task506/5mo/sub-1/axial/ground_truth.jpg)  |  ![](../../img/Task506/5mo/sub-1/axial/inferred.jpg)
+![](../../img/Task506/5mo/sub-1/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/5mo/sub-1/axial/inferred_outline.jpg)
 
 Dice coefficient: 0.8570650750027763
 
-### 6 months: Subject 284149
+### 6 months: Subject 1
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/6mo/sub-284149/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/6mo/sub-284149/sagittal/inferred.jpg)
-![](../../img/Task506/6mo/sub-284149/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/6mo/sub-284149/sagittal/inferred_outline.jpg)
+![](../../img/Task506/6mo/sub-1/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/6mo/sub-1/sagittal/inferred.jpg)
+![](../../img/Task506/6mo/sub-1/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/6mo/sub-1/sagittal/inferred_outline.jpg)
 
 Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/6mo/sub-284149/coronal/ground_truth.jpg)  |  ![](../../img/Task506/6mo/sub-284149/coronal/inferred.jpg)
-![](../../img/Task506/6mo/sub-284149/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/6mo/sub-284149/coronal/inferred_outline.jpg)
+![](../../img/Task506/6mo/sub-1/coronal/ground_truth.jpg)  |  ![](../../img/Task506/6mo/sub-1/coronal/inferred.jpg)
+![](../../img/Task506/6mo/sub-1/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/6mo/sub-1/coronal/inferred_outline.jpg)
 
 Ground-truth axial       |  Predicted axial
 :-------------------------:|:-------------------------:
-![](../../img/Task506/6mo/sub-284149/axial/ground_truth.jpg)  |  ![](../../img/Task506/6mo/sub-284149/axial/inferred.jpg)
-![](../../img/Task506/6mo/sub-284149/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/6mo/sub-284149/axial/inferred_outline.jpg)
+![](../../img/Task506/6mo/sub-1/axial/ground_truth.jpg)  |  ![](../../img/Task506/6mo/sub-1/axial/inferred.jpg)
+![](../../img/Task506/6mo/sub-1/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/6mo/sub-1/axial/inferred_outline.jpg)
 
 Dice coefficient: 0.8626612873828671
 
-### 7 months: Subject 710922
+### 7 months: Subject 1
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/7mo/sub-710922/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/7mo/sub-710922/sagittal/inferred.jpg)
-![](../../img/Task506/7mo/sub-710922/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/7mo/sub-710922/sagittal/inferred_outline.jpg)
+![](../../img/Task506/7mo/sub-1/sagittal/ground_truth.jpg)  |  ![](../../img/Task506/7mo/sub-1/sagittal/inferred.jpg)
+![](../../img/Task506/7mo/sub-1/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task506/7mo/sub-1/sagittal/inferred_outline.jpg)
 
 Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
-![](../../img/Task506/7mo/sub-710922/coronal/ground_truth.jpg)  |  ![](../../img/Task506/7mo/sub-710922/coronal/inferred.jpg)
-![](../../img/Task506/7mo/sub-710922/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/7mo/sub-710922/coronal/inferred_outline.jpg)
+![](../../img/Task506/7mo/sub-1/coronal/ground_truth.jpg)  |  ![](../../img/Task506/7mo/sub-1/coronal/inferred.jpg)
+![](../../img/Task506/7mo/sub-1/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task506/7mo/sub-1/coronal/inferred_outline.jpg)
 
 Ground-truth axial       |  Predicted axial
 :-------------------------:|:-------------------------:
-![](../../img/Task506/7mo/sub-710922/axial/ground_truth.jpg)  |  ![](../../img/Task506/7mo/sub-710922/axial/inferred.jpg)
-![](../../img/Task506/7mo/sub-710922/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/7mo/sub-710922/axial/inferred_outline.jpg)
+![](../../img/Task506/7mo/sub-1/axial/ground_truth.jpg)  |  ![](../../img/Task506/7mo/sub-1/axial/inferred.jpg)
+![](../../img/Task506/7mo/sub-1/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/7mo/sub-1/axial/inferred_outline.jpg)
 
 Dice coefficient: 0.34926525890771865
