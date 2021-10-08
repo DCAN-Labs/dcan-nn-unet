@@ -64,7 +64,7 @@ Images below are layered (from top to bottom):
 2. T1 (50% opacity)
 3. T2
 
-I also added smoothing.
+I also added smoothing to the visual images [TODO which I haven't yet added for this run] created by FreeView.  No sort of smoothing was added to nnU-Net preprocessing, training, inference, or evaluation of inference.
 
 ### 0 month: Example 1
 
