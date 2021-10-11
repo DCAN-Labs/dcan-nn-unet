@@ -1,6 +1,14 @@
 # Running inference (or creating a segmentation)
 
-You could read this first: [Example: inference with pretrained nnU-Net models](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/inference_example_Prostate.md)
+You should read this first: [Example: inference with pretrained nnU-Net models](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/inference_example_Prostate.md)
+
+The trained model is not set directly, although it is set implicitly.  What you have to pass in is the task number.  An example task number would be `509`.  nnU-Net uses the `RESULTS_FOLDER` environment variable to then find the folder.  I have been using the following setting:
+
+     export RESULTS_FOLDER="/home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_trained_models"
+
+Here is a sample inference command:
+
+     nUNet_predict -i /home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/Task509_BCP_ABCD_Neonates/imagesTs/ -o /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task509_BCP_ABCD_Neonates/ -t 509 -m 3d_fullres
 
 Here is an example of running inference on one of our models:
 
