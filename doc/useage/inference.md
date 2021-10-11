@@ -13,6 +13,10 @@ Here is a sample inference command:
 
      nUNet_predict -i /home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/Task509_BCP_ABCD_Neonates/imagesTs/ -o /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task509_BCP_ABCD_Neonates/ -t 509 -m 3d_fullres
      
+You don't need the entire trained models directory in order to run prediction with nnU-Net.  You only need the directory with the particular model you're using to run prediction.  However, you need to preserve the path to that one directory (even though you're not keeping that directory's siblings).  For example, if you're making predictions using model *509* (and you're using the same environment variables given in the preceding examples), you would need this folder and its contents:
+
+     /home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_trained_models/nnUNet/3d_fullres/Task509_BCP_ABCD_Neonates/
+     
 For inference, there is no minimum number of subjects needed.  It should work for 1.  There's no reason why it shouldn't work for 0 subjects, although I haven't tried that (and I don't know whether the maintainers of nnU-Net have tried it).
 
 (For the record, it wouldn't make sense to train without at least one subject.)
