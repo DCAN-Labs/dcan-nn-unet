@@ -1,5 +1,8 @@
 # Running inference (or creating a segmentation)
 
+Overview
+--------
+
 You should read this first: [Example: inference with pretrained nnU-Net models](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/inference_example_Prostate.md)
 
 The trained model is not set directly, although it is set implicitly.  What you have to pass in is the task number.  An example task number would be `509`.  nnU-Net uses the `RESULTS_FOLDER` environment variable to then find the folder.  I have been using the following setting:
@@ -9,6 +12,13 @@ The trained model is not set directly, although it is set implicitly.  What you 
 Here is a sample inference command:
 
      nUNet_predict -i /home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/Task509_BCP_ABCD_Neonates/imagesTs/ -o /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task509_BCP_ABCD_Neonates/ -t 509 -m 3d_fullres
+     
+For inference, there is no minimum number of subjects needed.  It should work for 1.  There's no reason why it shouldn't work for 0 subjects, although I haven't tried that (and I don't know whether the maintainers of nnU-Net have tried it).
+
+(For the record, it wouldn't make sense to train without at least one subject.)
+
+Details
+-------
 
 Here is an example of running inference on one of our models:
 
