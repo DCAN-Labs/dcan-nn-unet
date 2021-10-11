@@ -1,4 +1,4 @@
-from nnunet.dataset_conversion.Task001_BrainABCD import get_id_to_region_mapping, fill_in_labels
+from dcan.dataset_conversion.Task001_BrainABCD import get_id_to_region_mapping, fill_in_labels
 import sys
 
 

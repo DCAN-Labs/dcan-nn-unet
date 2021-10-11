@@ -4,9 +4,9 @@ import sys
 
 from batchgenerators.utilities.file_and_folder_operations import *
 
-from nnunet.dataset_conversion.utils import generate_dataset_json
-from nnunet.paths import nnUNet_raw_data
-from nnunet.util.look_up_tables import get_id_to_region_mapping
+from dcan.dataset_conversion.utils import generate_dataset_json
+from dcan.paths import nnUNet_raw_data
+from dcan.util.look_up_tables import get_id_to_region_mapping
 
 
 def fill_in_labels(free_surfer_label_to_region):

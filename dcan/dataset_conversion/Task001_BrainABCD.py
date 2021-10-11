@@ -3,8 +3,8 @@ from collections import OrderedDict
 
 from batchgenerators.utilities.file_and_folder_operations import *
 
-from nnunet.dataset_conversion.utils import generate_dataset_json
-from nnunet.paths import nnUNet_raw_data
+from dcan.dataset_conversion.utils import generate_dataset_json
+from dcan.paths import nnUNet_raw_data
 
 
 def get_id_to_region_mapping(mapping_file_name, separator=None):

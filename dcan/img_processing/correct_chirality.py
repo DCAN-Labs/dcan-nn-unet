@@ -1,7 +1,7 @@
 import nibabel as nib
 import sys
 
-from nnunet.util.look_up_tables import get_id_to_region_mapping
+from dcan.util.look_up_tables import get_id_to_region_mapping
 
 RIGHT = 'Right'
 
