@@ -21,6 +21,8 @@ For inference, there is no minimum number of subjects needed.  It should work fo
 
 (For the record, it wouldn't make sense to train without at least one subject.)
 
+The model directory is of size 2.834 GB (gigabytes) adding all files/directories recursively.  It doesn't get larger with a larger training size.  It might get larger with larger image sizes, but I don't think we'll be changing those much, if at all.
+
 Details
 -------
 
