@@ -23,6 +23,16 @@ For inference, there is no minimum number of subjects needed.  It should work fo
 
 The model directory is of size 2.834 GB (gigabytes) adding all files/directories recursively.  It doesn't get larger with a larger training size.  It might get larger with larger image sizes, but I don't think we'll be changing those much, if at all.
 
+Here are typical run times and memory usage:
+
+            JobID    CPUTime  MaxVMSize 
+     ------------ ---------- ---------- 
+     7399463        20:32:48            
+     7399463.bat+   20:32:48 158005036K 
+     7399463.ext+   20:32:48    153132K 
+     
+This was for 10 subjects.  Hence, each subject takes about 2 minutes.
+
 Details
 -------
 
