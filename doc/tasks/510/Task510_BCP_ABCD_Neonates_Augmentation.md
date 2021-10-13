@@ -7,10 +7,10 @@ Author: Paul Reiners
 ## Dice scores
 
 * **avg dice: 0.8770182180801516**
+    * [inferred_file: 0mo_template_19.nii.gz](#0_19)
+        * dice (foreground): 0.8909910684524265
     * inferred_file: 0mo_template_20.nii.gz
         * dice (foreground): 0.8950033181460011
-    * inferred_file: 0mo_template_19.nii.gz
-        * dice (foreground): 0.8909910684524265
     * inferred_file: 1mo_sub-1.nii.gz
         * dice (foreground): 0.9035054349602264
     * inferred_file: 2mo_sub-1.nii.gz
@@ -28,8 +28,8 @@ Author: Paul Reiners
     * inferred_file: 8mo_sub-1.nii.gz
         * dice (foreground): 0.9010047010836867
 
-* Statistics stratified by age and anatomical region are given [here](all.csv).
-* Statistics stratified only by anatomical region are given [here](means.csv).
+* [Statistics stratified by age and anatomical region](all.csv).
+* [Statistics stratified only by anatomical region](means.csv).
 
 Data description
 ----------------
@@ -67,19 +67,18 @@ Images below are layered (from top to bottom):
 2. T1 (50% opacity)
 3. T2
 
-### 0 month: Example 1
-
-Ground-truth sagittal       |  Predicted sagittal
-:-------------------------:|:-------------------------:
-![](../../img/Task509/0mo/sub-1/sagittal/ground_truth.jpg)  |  ![](../../img/Task509/0mo/sub-1/sagittal/inferred.jpg)
-![](../../img/Task509/0mo/sub-1/sagittal/ground_truth_outline.jpg)  |  ![](../../img/Task509/0mo/sub-1/sagittal/inferred_outline.jpg)
+### 0 month: Template 19<a name="0_19"></a>
 
 Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
-![](../../img/Task509/0mo/sub-1/coronal/ground_truth.jpg)  |  ![](../../img/Task509/0mo/sub-1/coronal/inferred.jpg)
-![](../../img/Task509/0mo/sub-1/coronal/ground_truth_outline.jpg)  |  ![](../../img/Task509/0mo/sub-1/coronal/inferred_outline.jpg)
+![](../../../img/Task510/0mo/template_19/coronal/ground_truth.jpg)  |  ![](../../../img/Task510/0mo/template_19/coronal/inferred.jpg)
 
-Ground-truth axial       |  Predicted axial
+Dice (foreground): 0.89
+
+### 0 month: Template 20
+
+Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
-![](../../img/Task509/0mo/sub-1/axial/ground_truth.jpg)  |  ![](../../img/Task509/0mo/sub-1/axial/inferred.jpg)
-![](../../img/Task509/0mo/sub-1/axial/ground_truth_outline.jpg)  |  ![](../../img/Task509/0mo/sub-1/axial/inferred_outline.jpg)
+![](../../../img/Task510/0mo/template_20/coronal/ground_truth.jpg)  |  ![](../../../img/Task510/0mo/template_20/coronal/inferred.jpg)
+
+Dice (foreground): 0.90
