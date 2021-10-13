@@ -1,3 +1,5 @@
+# Author: Paul Reiners
+
 import sys
 
 import nibabel as nib
@@ -50,6 +52,8 @@ def calculate_dice_coefficient(gt_filename, preds_filename):
 
     gt_img = nib.load(gt_filename)
     gt_data = gt_img.get_fdata()
+
+    assert predictions_data.shape == gt_data.shape
 
     return dice_coef_not_unknown(gt_data, predictions_data)
 

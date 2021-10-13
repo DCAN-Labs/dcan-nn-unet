@@ -37,7 +37,7 @@ def correct_chirality(nifti_input_file_path, segment_lookup_table, nifti_output_
                 if voxel == 0:
                     continue
                 region = free_surfer_label_to_region[voxel]
-                if chirality < chirality_size // 2:
+                if chirality >= chirality_size // 2:
                     check_and_correct_region(True, region, segment_name_to_number, new_data, chirality,
                                              floor_ceiling, scanner_bore)
                 else:
