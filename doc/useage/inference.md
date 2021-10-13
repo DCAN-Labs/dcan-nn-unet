@@ -25,11 +25,11 @@ The model directory is of size 2.834 GB (gigabytes) adding all files/directories
 
 Here are typical run times and memory usage:
 
-            JobID    CPUTime  MaxVMSize 
-     ------------ ---------- ---------- 
-     7399463        20:32:48            
-     7399463.bat+   20:32:48 158005036K 
-     7399463.ext+   20:32:48    153132K 
+            JobID     MaxRSS   TotalCPU      NCPUS    Elapsed 
+     ------------ ---------- ---------- ---------- ---------- 
+     7438367                  51:05.368         24   00:37:23 
+     7438367.bat+  44392828K  51:05.367         24   00:37:23 
+     7438367.ext+       924K  00:00.001         24   00:37:23 
      
 This was for 10 subjects.  Hence, each subject takes about 2 minutes.
 
