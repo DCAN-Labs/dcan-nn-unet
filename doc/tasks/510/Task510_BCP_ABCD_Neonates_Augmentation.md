@@ -28,7 +28,8 @@ Author: Paul Reiners
     * inferred_file: 8mo_sub-1.nii.gz
         * dice (foreground): 0.9010047010836867
 
-Statistics stratified by age and anatomical region are given [here](all.csv).
+* Statistics stratified by age and anatomical region are given [here](all.csv).
+* Statistics stratified only by anatomical region are given [here](means.csv).
 
 Data description
 ----------------
