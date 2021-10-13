@@ -1,4 +1,4 @@
-Task 509: BCP_ABCD_Neonates
+Task 509: BCP_ABCD_Neonates_Augmentation
 ===========================
 
 Author: Paul Reiners
@@ -58,10 +58,6 @@ The age distribution for the training set was:
 | 6 | 8         |
 | 7 | 9         |
 | 8 | 8         |
-
-## Detailed statistics
-
-
 
 ## Images
 
