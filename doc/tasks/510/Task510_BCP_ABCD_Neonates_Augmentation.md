@@ -6,11 +6,11 @@ Author: Paul Reiners
 
 ## Dice scores
 
-* **avg dice: 0.7378037755594485**
-    * inferred_file: 0mo_template_19.nii.gz
-        * dice (foreground): 0.19814135207437583
+* **avg dice: 0.8770182180801516**
     * inferred_file: 0mo_template_20.nii.gz
-        * dice (foreground): 0.19570860931702036
+        * dice (foreground): 0.8950033181460011
+    * inferred_file: 0mo_template_19.nii.gz
+        * dice (foreground): 0.8909910684524265
     * inferred_file: 1mo_sub-1.nii.gz
         * dice (foreground): 0.9035054349602264
     * inferred_file: 2mo_sub-1.nii.gz
@@ -28,9 +28,8 @@ Author: Paul Reiners
     * inferred_file: 8mo_sub-1.nii.gz
         * dice (foreground): 0.9010047010836867
 
-In the case of the 5-month-old and the 8-month-old, we got slightly better Dice coefficients.  In other
-cases, our results were worse.
-      
+Statistics stratified by age and anatomical region are given [here](all.csv).
+
 Data description
 ----------------
 
@@ -71,8 +70,6 @@ Images below are layered (from top to bottom):
 2. T1 (50% opacity)
 3. T2
 
-I also added smoothing to the visual images [TODO which I haven't yet added for this run] created by FreeView.  No sort of smoothing was added to nnU-Net preprocessing, training, inference, or evaluation of inference.
-
 ### 0 month: Example 1
 
 Ground-truth sagittal       |  Predicted sagittal
@@ -89,5 +86,3 @@ Ground-truth axial       |  Predicted axial
 :-------------------------:|:-------------------------:
 ![](../../img/Task509/0mo/sub-1/axial/ground_truth.jpg)  |  ![](../../img/Task509/0mo/sub-1/axial/inferred.jpg)
 ![](../../img/Task509/0mo/sub-1/axial/ground_truth_outline.jpg)  |  ![](../../img/Task509/0mo/sub-1/axial/inferred_outline.jpg)
-
-Dice coefficient: 0.92
