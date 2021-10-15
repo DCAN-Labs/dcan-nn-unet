@@ -9,7 +9,7 @@ Author: Paul Reiners
 * **avg dice: 0.8770182180801516**
     * [inferred_file: 0mo_template_19.nii.gz](#0_19)
         * dice (foreground): 0.8909910684524265
-    * inferred_file: 0mo_template_20.nii.gz
+    * [inferred_file: 0mo_template_20.nii.gz](#0_20)
         * dice (foreground): 0.8950033181460011
     * inferred_file: 1mo_sub-1.nii.gz
         * dice (foreground): 0.9035054349602264
@@ -73,9 +73,13 @@ Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
 ![](../../../img/Task510/0mo/template_19/coronal/ground_truth.jpg)  |  ![](../../../img/Task510/0mo/template_19/coronal/inferred.jpg)
 
+Ground-truth sagittal       |  Predicted sagittal
+:-------------------------:|:-------------------------:
+![](../../../img/Task510/0mo/template_19/sagittal/ground_truth.jpg)  |  ![](../../../img/Task510/0mo/template_19/sagittal/inferred.jpg)
+
 Dice (foreground): 0.89
 
-### 0 month: Template 20
+### 0 month: Template 20<a name="0_20"></a>
 
 Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
