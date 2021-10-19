@@ -77,12 +77,40 @@ Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
 ![](../../../img/Task510/0mo/template_19/sagittal/ground_truth.jpg)  |  ![](../../../img/Task510/0mo/template_19/sagittal/inferred.jpg)
 
+Ground-truth axial       |  Predicted axial
+:-------------------------:|:-------------------------:
+![](../../../img/Task510/0mo/template_19/axial/ground_truth.jpg)  |  ![](../../../img/Task510/0mo/template_19/axial/inferred.jpg)
+
 Dice (foreground): 0.89
 
-### 0 month: Template 20<a name="0_20"></a>
+### 4 month: Subject 1
 
 Ground-truth coronal       |  Predicted coronal
 :-------------------------:|:-------------------------:
-![](../../../img/Task510/0mo/template_20/coronal/ground_truth.jpg)  |  ![](../../../img/Task510/0mo/template_20/coronal/inferred.jpg)
+![](../../../img/Task510/4mo/subject_01/coronal/ground_truth.jpg)  |  ![](../../../img/Task510/4mo/subject_01/coronal/inferred.jpg)
+
+Ground-truth sagittal       |  Predicted sagittal
+:-------------------------:|:-------------------------:
+![](../../../img/Task510/4mo/subject_01/sagittal/ground_truth.jpg)  |  ![](../../../img/Task510/4mo/subject_01/sagittal/inferred.jpg)
+
+Ground-truth axial       |  Predicted axial
+:-------------------------:|:-------------------------:
+![](../../../img/Task510/4mo/subject_01/axial/ground_truth.jpg)  |  ![](../../../img/Task510/4mo/subject_01/axial/inferred.jpg)
+
+Dice (foreground): 0.84
+
+### 8 month: Subject 1
+
+Ground-truth coronal       |  Predicted coronal
+:-------------------------:|:-------------------------:
+![](../../../img/Task510/8mo/subject_01/coronal/ground_truth.jpg)  |  ![](../../../img/Task510/8mo/subject_01/coronal/inferred.jpg)
+
+Ground-truth sagittal       |  Predicted sagittal
+:-------------------------:|:-------------------------:
+![](../../../img/Task510/8mo/subject_01/sagittal/ground_truth.jpg)  |  ![](../../../img/Task510/8mo/subject_01/sagittal/inferred.jpg)
+
+Ground-truth axial       |  Predicted axial
+:-------------------------:|:-------------------------:
+![](../../../img/Task510/8mo/subject_01/axial/ground_truth.jpg)  |  ![](../../../img/Task510/8mo/subject_01/axial/inferred.jpg)
 
 Dice (foreground): 0.90
