@@ -7,5 +7,4 @@ Dice coefficient:
 ### SynthSet settings
 
     downsample=False
-
-
+    prior_distributions='normal'
