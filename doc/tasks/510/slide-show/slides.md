@@ -16,8 +16,8 @@
 
 |             | coronal     | sagittal (45) | axial
 | ----------- | ----------- | ---- | --- 
-| ground-truth      | ![](../../../../img/Task510/0mo/template_19/coronal/ground_truth_128.jpg)        | ![](../../../../img/Task510/0mo/template_19/sagittal/ground_truth_128.jpg) | ![](../../../../img/Task510/0mo/template_19/axial/ground_truth_128.jpg)
-| predicted   | ![](../../../../img/Task510/0mo/template_19/coronal/inferred_128.jpg)        | ![](../../../../img/Task510/0mo/template_19/sagittal/inferred_128.jpg) | ![](../../../../img/Task510/0mo/template_19/axial/inferred_128.jpg)
+| ground-truth      | ![](0mo_template19_coronal_ground_truth_128.jpg)        | ![](0mo_template19_sagittal_ground_truth_128.jpg) | ![](0mo_template19_axial_ground_truth_128.jpg)
+| predicted   | ![](0mo_template19_coronal_inferred_128.jpg)        | ![](0mo_template19_sagittal_inferred_128.jpg) | ![](0mo_template19_axial_inferred_128.jpg)
 
 ---
 
@@ -26,15 +26,15 @@
 
 |             | coronal     | sagittal (75) | axial
 | ----------- | ----------- | ---- | --- 
-| ground-truth      | ![](../../../../img/Task510/4mo/subject_01/coronal/ground_truth_128.jpg)        | ![](../../../../img/Task510/4mo/subject_01/sagittal/ground_truth_128.jpg) | ![](../../../../img/Task510/4mo/subject_01/axial/ground_truth_128.jpg)
-| predicted   | ![](../../../../img/Task510/4mo/subject_01/coronal/inferred_128.jpg)        | ![](../../../../img/Task510/4mo/subject_01/sagittal/inferred_128.jpg) | ![](../../../../img/Task510/4mo/subject_01/axial/inferred_128.jpg)
+| ground-truth      | ![](4mo_subject01_coronal_ground_truth_128.jpg)        | ![](4mo_subject01_sagittal_ground_truth_128.jpg) | ![](4mo_subject01_axial_ground_truth_128.jpg)
+| predicted   | ![](4mo_subject01_coronal_inferred_128.jpg)        | ![](4mo_subject01_sagittal_inferred_128.jpg) | ![](4mo_subject01_axial_inferred_128.jpg)
 
 ---
 
 ### 8 month: Subject 1
 #### Dice (foreground): 0.90
 
-|             | coronal     | sagittal | axial
+|             | coronal     | sagittal (75) | axial
 | ----------- | ----------- | ---- | --- 
-| ground-truth      | ![](../../../../img/Task510/8mo/subject_01/coronal/ground_truth_128.jpg)        | ![](../../../../img/Task510/8mo/subject_01/sagittal/ground_truth_128.jpg) | ![](../../../../img/Task510/8mo/subject_01/axial/ground_truth_128.jpg)
-| predicted   | ![](../../../../img/Task510/8mo/subject_01/coronal/inferred_128.jpg)        | ![](../../../../img/Task510/8mo/subject_01/sagittal/inferred_128.jpg) | ![](../../../../img/Task510/8mo/subject_01/axial/inferred_128.jpg)
+| ground-truth      | ![](8mo_subject01_coronal_ground_truth_128.jpg)        | ![](8mo_subject01_sagittal_ground_truth_128.jpg) | ![](8mo_subject01_axial_ground_truth_128.jpg)
+| predicted   | ![](8mo_subject01_coronal_inferred_128.jpg)        | ![](8mo_subject01_sagittal_inferred_128.jpg) | ![](8mo_subject01_axial_inferred_128.jpg)

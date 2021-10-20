@@ -131,3 +131,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/doc/tasks/510/slide-show/slides.htm
