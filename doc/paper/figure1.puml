@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+header
+Training
+endheader
+
+database "BCP_ABCD_Neonates" {
+    folder "Segmented images"
+    folder "T1/T2 images"
+}
+
+node "SynthSeg"
+
+database "Augmented images"
+
+node "nnU-Net"
+
+node "Model"
+
+[Segmented images] --> [SynthSeg]
+[SynthSeg] --> [Augmented images]
+[T1/T2 images] --> [nnU-Net]
+[Segmented images] --> [nnU-Net]
+[Augmented images] --> [nnU-Net]
+[nnU-Net] --> [Model]
+
+@enduml
