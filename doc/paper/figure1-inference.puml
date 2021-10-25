@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+header
+Inference
+endheader
+
+folder "T1/T2 images"
+
+node "nnU-Net"
+
+node "Model"
+
+folder "Segmented images"
+
+[T1/T2 images] --> [nnU-Net]
+[Model] --> [nnU-Net]
+[nnU-Net] --> [Segmented images]
+
+@enduml
