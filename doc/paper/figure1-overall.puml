@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+repeat
+    repeat
+        :Read data ()real images);
+        :Generate images with SynthSeg;
+        :Combine generated images with real images;
+        :Split images into training/test sets;
+        :Train model with nnU-Net on training images;
+        :Test model using nnU-Net inference on test images;
+repeat while (Results satisfactory?) is (no)
+->yes;
+:Segment new images using model;
+repeat while (More data?) is (yes)
+stop
+
+@enduml
