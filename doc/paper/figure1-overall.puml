@@ -10,10 +10,10 @@ repeat
         :Split images into training/test sets;
         :Train model with nnU-Net on training images;
         :Test model using nnU-Net inference on test images;
-repeat while (results satisfactory?) is (no)
+repeat while (Results satisfactory?) is (no)
 ->yes;
 :Segment new images using model;
-repeat while (more data?) is (yes)
+repeat while (More data?) is (yes)
 stop
 
 @enduml
