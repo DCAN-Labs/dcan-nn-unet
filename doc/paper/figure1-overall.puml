@@ -3,14 +3,17 @@
 
 start
 repeat
-    :Generate images with SynthSeg;
-    :Combine generated images with real images;
-    :Split images into training/test sets;
-    :Train model with nnU-Net on training images;
-    :Test model using nnU-Net inference on test images;
+    repeat
+        :Read data ()real images);
+        :Generate images with SynthSeg;
+        :Combine generated images with real images;
+        :Split images into training/test sets;
+        :Train model with nnU-Net on training images;
+        :Test model using nnU-Net inference on test images;
 repeat while (results satisfactory?) is (no)
 ->yes;
 :Segment new images using model;
+repeat while (more data?) is (yes)
 stop
 
 @enduml
