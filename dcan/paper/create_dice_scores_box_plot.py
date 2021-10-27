@@ -44,6 +44,6 @@ axs.boxplot(data)
 axs.set_title('Dice scores')
 
 axs.set_xticklabels(segment_names_to_abbreviations.values())
+plt.savefig('../../img/paper/dice_scores.png')
 
 plt.show()
-plt.savefig('../../img/paper/dice_scores.png')
