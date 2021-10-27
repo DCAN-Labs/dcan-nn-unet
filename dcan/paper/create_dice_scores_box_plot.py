@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 
 input_file = '../../doc/tasks/509/all.csv'
-output_file = '../../doc/tasks/509/means_contralateral_average.csv'
 
 all_df = pd.read_csv(input_file)
 
