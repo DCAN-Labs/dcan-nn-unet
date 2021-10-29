@@ -12,16 +12,10 @@ def flatten_dir_structure(src_dir, dest_dir):
             print(len(path) * '---', file)
             suffix = ''
             if 'T1' in file:
-                suffix = '_0000'
+                new_file = file.replace('T1w', '0000')
             elif 'T2' in file:
-                suffix = '_0001'
-            if file[-7:] == ".nii.gz":
-                file_extension = ".nii.gz"
-                base_name = file[:-7]
-            else:
-                file_extension = ".nii"
-                base_name = file[:-4]
-            new_file_name = path[-2] + '_' + path[-1] + base_name + suffix + file_extension
+                new_file = file.replace('T2w', '0001')
+            new_file_name = path[-2] + '_' + path[-1] + new_file
             current_src_dir = '/'.join(path)
             src = join(current_src_dir, file)
             dst = join(dest_dir, new_file_name)
