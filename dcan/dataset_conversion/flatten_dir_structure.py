@@ -10,12 +10,14 @@ def flatten_dir_structure(src_dir, dest_dir):
         print((len(path) - 1) * '---', os.path.basename(root))
         for file in files:
             print(len(path) * '---', file)
-            suffix = ''
             if 'T1' in file:
                 new_file = file.replace('T1w', '0000')
             elif 'T2' in file:
                 new_file = file.replace('T2w', '0001')
-            new_file_name = path[-2] + '_' + path[-1] + new_file
+            else:
+                print("Bad file:", file)
+                continue
+            new_file_name = path[-1] + new_file
             current_src_dir = '/'.join(path)
             src = join(current_src_dir, file)
             dst = join(dest_dir, new_file_name)
