@@ -4,7 +4,7 @@ Task512_BCP_ABCD_Neonates_SynthSegDownsample
 Dice coefficient: 0.8698812664514566
 -----------------
 
-### SynthSet settings
+### SynthSeg settings
 
     downsample=True
     prior_distributions='normal'
