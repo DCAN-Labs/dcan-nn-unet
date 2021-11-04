@@ -4,7 +4,7 @@ from os import listdir
 from os.path import isfile, join
 import os
 
-my_path = '/home/feczk001/shared/projects/nnunet_predict/BCP/input/flat/'
+my_path = '/home/feczk001/shared/projects/nnunet_predict/nnunet_echo_input/to_run_resized/'
 only_files = [f for f in listdir(my_path) if isfile(join(my_path, f))]
 for file in only_files:
     modality = (file[-11:-7])
