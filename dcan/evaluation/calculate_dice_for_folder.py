@@ -1,10 +1,12 @@
+# Author: Paul Reiners
+
 import sys
 from os import listdir
 from os.path import isfile, join
 from calculate_dice import calculate_dice_coefficient
 
 
-def main(inferred_fldr, gt_folder):
+def calculate_dice_for_folder(inferred_fldr, gt_folder):
     inferred_files = [f for f in listdir(inferred_fldr) if isfile(join(inferred_fldr, f))]
     file_count = 0
     total = 0.0
@@ -24,4 +26,4 @@ def main(inferred_fldr, gt_folder):
 if __name__ == "__main__":
     inferred_folder = sys.argv[1]
     ground_truth_folder = sys.argv[2]
-    main(inferred_folder, ground_truth_folder)
+    calculate_dice_for_folder(inferred_folder, ground_truth_folder)
