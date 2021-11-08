@@ -4,7 +4,7 @@ In the table below, training resources are computed for training with 74 subject
 
 The inference task resources are for a single subject.
 
-In both cases, a GPU is used.  The entries were computed using `seff`.
+In both cases, a GPU is used.  The entries were computed using `seff`.  The entries are typical, not an average.
 
 | | Nodes      | Cores per node | CPU Utilized | CPU Efficiency                         | Job Wall-clock time | Memory Utilized | Memory Efficiency  |
 | ---- | ---------- | -------------- | ------------ | -------------------------------------- | ------------------- | --------------- | ------------------ |
