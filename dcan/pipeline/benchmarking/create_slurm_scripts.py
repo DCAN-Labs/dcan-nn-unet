@@ -8,9 +8,8 @@ script = """#!/bin/bash
 #SBATCH -p v100
 #SBATCH --gres=gpu:v100:1
 #SBATCH --ntasks=3               # total number of tasks across all nodes
-#SBATCH --tmp=40g
-#SBATCH --mem=60gb
-#SBATCH -t 00:20:00
+#SBATCH --mem=45gb
+#SBATCH -t 01:00:00
 
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
@@ -18,7 +17,7 @@ script = """#!/bin/bash
 #SBATCH -e single-input-gpu-infer-{}-%j.err
 #SBATCH -o single-input-gpu-infer-{}-%j.out
 
-#SBATCH -A miran045
+#SBATCH -A rando149
 
 ## build script here
 module load gcc cuda/11.2
