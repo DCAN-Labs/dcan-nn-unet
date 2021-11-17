@@ -1,7 +1,7 @@
 Task512_BCP_ABCD_Neonates_SynthSegDownsample
 =============================================
 
-Dice coefficient: 0.8698812664514566
+Dice coefficient: 0.853262030191724
 -----------------
 
 ### SynthSeg settings
@@ -111,7 +111,7 @@ Ground-truth axial       |  Predicted axial
 :-------------------------:|:-------------------------:
 ![](./img/3mo/ground_truth/axial.png)  |  ![](./img/3mo/inferred/axial.png)
 
-Dice (foreground): 0.74
+Dice (foreground): 0.59
 
 ### 4 month
 
