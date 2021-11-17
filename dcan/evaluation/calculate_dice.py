@@ -8,9 +8,12 @@ import nibabel as nib
 def dice_coefficient(y_true, y_pred, smooth=1):
     val_to_count = {}
     intersection = 0
-    for i in range(117):
-        for j in range(159):
-            for k in range(126):
+    max_x = y_true.shape[0]
+    max_y = y_true.shape[1]
+    max_z = y_true.shape[2]
+    for i in range(max_x):
+        for j in range(max_y):
+            for k in range(max_z):
                 y_true_val = int(y_true[i][j][k])
                 if y_true_val not in val_to_count:
                     val_to_count[y_true_val] = 1
@@ -19,12 +22,12 @@ def dice_coefficient(y_true, y_pred, smooth=1):
                 y_pred_val = int(y_pred[i][j][k])
                 if y_true_val == y_pred_val:
                     intersection += 1
-    union = 2. * 117 * 159 * 126
+    union = 2. * max_x * max_y * max_z
     dice = (2. * intersection + smooth) / (union + smooth)
     all_values = val_to_count.values()
     print(val_to_count)
     max_value = max(all_values)
-    guess = max_value / (117 * 159 * 126)
+    guess = max_value / (max_x * max_y * max_z)
     print(guess)
     return dice
 
@@ -32,9 +35,12 @@ def dice_coefficient(y_true, y_pred, smooth=1):
 def dice_coef_not_unknown(y_true, y_pred, smooth=1):
     intersection = 0
     union = 0
-    for i in range(117):
-        for j in range(159):
-            for k in range(126):
+    max_x = y_true.shape[0]
+    max_y = y_true.shape[1]
+    max_z = y_true.shape[2]
+    for i in range(max_x):
+        for j in range(max_y):
+            for k in range(max_z):
                 y_true_val = int(y_true[i][j][k])
                 y_pred_val = int(y_pred[i][j][k])
                 if y_true_val != 0:
