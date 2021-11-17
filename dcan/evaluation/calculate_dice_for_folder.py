@@ -11,7 +11,7 @@ def calculate_dice_for_folder(inferred_fldr, gt_folder):
     file_count = 0
     total = 0.0
     for inferred_file in inferred_files:
-        if inferred_file.endswith('pkl'):
+        if inferred_file.endswith('pkl') or inferred_file.endswith('json'):
             continue
         file_count += 1
         inferred_file_path = join(inferred_fldr, inferred_file)
