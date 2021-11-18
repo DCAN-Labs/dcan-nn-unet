@@ -27,22 +27,33 @@ def correct_chirality(nifti_input_file_path, segment_lookup_table, nifti_output_
     segment_name_to_number = {v: k for k, v in free_surfer_label_to_region.items()}
     img = nib.load(nifti_input_file_path)
     data = img.get_data()
+
+    M = img.affine[:3, :3]
+    abc = img.affine[:3, 3]
+
+    def f(i, j, k):
+        """ Return X, Y, Z coordinates for i, j, k """
+        return M.dot([i, j, k]) + abc
+
     new_data = data.copy()
     data_shape = img.header.get_data_shape()
-    chirality_size = data_shape[0]
-    for chirality in range(chirality_size):
-        for floor_ceiling in range(data_shape[1]):
-            for scanner_bore in range(data_shape[2]):
-                voxel = data[chirality][floor_ceiling][scanner_bore]
+    max_i = data_shape[0]
+    for i in range(max_i):
+        max_j = data_shape[1]
+        for j in range(max_j):
+            max_k = data_shape[2]
+            for k in range(max_k):
+                x, y, z = f(i, j, k)
+                voxel = data[i][j][k]
                 if voxel == 0:
                     continue
                 region = free_surfer_label_to_region[voxel]
-                if chirality >= chirality_size // 2:
-                    check_and_correct_region(True, region, segment_name_to_number, new_data, chirality,
-                                             floor_ceiling, scanner_bore)
+                if x <= 0:
+                    check_and_correct_region(True, region, segment_name_to_number, new_data, i,
+                                             j, k)
                 else:
-                    check_and_correct_region(False, region, segment_name_to_number, new_data, chirality,
-                                             floor_ceiling, scanner_bore)
+                    check_and_correct_region(False, region, segment_name_to_number, new_data, i,
+                                             j, k)
     fixed_img = nib.Nifti1Image(new_data, img.affine, img.header)
     nib.save(fixed_img, nifti_output_file_path)
 
