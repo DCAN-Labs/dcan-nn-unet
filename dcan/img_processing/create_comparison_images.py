@@ -9,7 +9,7 @@ from pathlib import Path
 from dcan.img_processing.create_segmentation_images import create_segmentation_images
 
 
-def create_comparison_images(inferred_fldr, gt_folder, output_dir):
+def create_comparison_images(gt_folder, inferred_fldr, output_dir):
     inferred_files = [f for f in listdir(inferred_fldr) if isfile(join(inferred_fldr, f))]
     for inferred_file in inferred_files:
         if inferred_file.endswith('pkl') or inferred_file.endswith('json'):
@@ -27,7 +27,7 @@ def create_comparison_images(inferred_fldr, gt_folder, output_dir):
 
 
 if __name__ == "__main__":
-    inferred_folder = sys.argv[1]
-    ground_truth_folder = sys.argv[2]
+    inferred_folder = sys.argv[2]
+    ground_truth_folder = sys.argv[1]
     output_dir = sys.argv[3]
     create_comparison_images(inferred_folder, ground_truth_folder, output_dir)
