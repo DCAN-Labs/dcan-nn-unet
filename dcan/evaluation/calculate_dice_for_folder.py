@@ -24,6 +24,6 @@ def calculate_dice_for_folder(inferred_fldr, gt_folder):
 
 
 if __name__ == "__main__":
-    inferred_folder = sys.argv[1]
-    ground_truth_folder = sys.argv[2]
+    inferred_folder = sys.argv[2]
+    ground_truth_folder = sys.argv[1]
     calculate_dice_for_folder(inferred_folder, ground_truth_folder)
