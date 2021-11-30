@@ -1,3 +1,6 @@
+"""Usage: calculate_dice_for_folder <inferred_folder> <ground_truth_folder>"""
+from docopt import docopt
+
 # Author: Paul Reiners
 
 import sys
@@ -24,6 +27,5 @@ def calculate_dice_for_folder(inferred_fldr, gt_folder):
 
 
 if __name__ == "__main__":
-    inferred_folder = sys.argv[2]
-    ground_truth_folder = sys.argv[1]
-    calculate_dice_for_folder(inferred_folder, ground_truth_folder)
+    arguments = docopt(__doc__)
+    calculate_dice_for_folder(arguments['<inferred_folder>'], arguments['<ground_truth_folder>'])
