@@ -1,12 +1,13 @@
 """Usage: calculate_dice_for_folder <inferred_folder> <ground_truth_folder>"""
-from docopt import docopt
-
-# Author: Paul Reiners
-
-import sys
 from os import listdir
 from os.path import isfile, join
+
+from docopt import docopt
+
 from calculate_dice import calculate_dice_coefficient
+
+
+# Author: Paul Reiners
 
 
 def calculate_dice_for_folder(inferred_fldr, gt_folder):
