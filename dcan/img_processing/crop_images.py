@@ -1,7 +1,19 @@
+"""
+Resize Images.
+
+Usage:
+  crop_images <input_folder> <output_folder>
+  crop_images -h | --help
+
+Options:
+  -h --help     Show this screen.
+"""
+
 from os import listdir
 from os.path import isfile, join
+
 import nibabel as nib
-import sys
+from docopt import docopt
 
 
 def crop_images(image_dir, output_dir):
@@ -19,4 +31,5 @@ def crop_images(image_dir, output_dir):
 
 
 if __name__ == '__main__':
-    crop_images(sys.argv[1], sys.argv[2])
+    args = docopt(__doc__)
+    crop_images(args['<input_folder>'], args['<output_folder>'])

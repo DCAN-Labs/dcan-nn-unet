@@ -4,11 +4,9 @@ Resize Images.
 Usage:
   resize_images <input_folder> <output_folder>
   resize_images -h | --help
-  resize_images --version
 
 Options:
   -h --help     Show this screen.
-  --version     Show version.
 """
 
 import os
