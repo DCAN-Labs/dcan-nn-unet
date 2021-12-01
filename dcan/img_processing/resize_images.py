@@ -1,16 +1,30 @@
-import sys
+"""
+Resize Images.
+
+Usage:
+  resize_images <input_folder> <output_folder>
+  resize_images -h | --help
+  resize_images --version
+
+Options:
+  -h --help     Show this screen.
+  --version     Show version.
+"""
+
+import os
 from os import listdir
 from os.path import isfile, join
-import os
+
+from docopt import docopt
 
 
-def resize_images(path, output_folder):
-    only_files = [f for f in listdir(path) if isfile(join(path, f))]
+def resize_images(input_folder, output_folder):
+    only_files = [f for f in listdir(input_folder) if isfile(join(input_folder, f))]
 
     os.system('module load fsl')
     resolution = 1
     for f in only_files:
-        input_image = join(path, f)
+        input_image = join(input_folder, f)
         print(f)
         command = 'flirt -in {} -ref {} -applyisoxfm {} -init $FSLDIR/etc/flirtsch/ident.mat -o {}'
         reference_image = \
@@ -21,4 +35,5 @@ def resize_images(path, output_folder):
 
 
 if __name__ == '__main__':
-    resize_images(sys.argv[1], sys.argv[2])
+    args = docopt(__doc__)
+    resize_images(args['<input_folder>'], args['<output_folder>'])
