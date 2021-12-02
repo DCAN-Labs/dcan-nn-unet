@@ -26,7 +26,7 @@ def resize_images(input_folder, output_folder):
         print(f)
         command = 'flirt -in {} -ref {} -applyisoxfm {} -init $FSLDIR/etc/flirtsch/ident.mat -o {}'
         reference_image = \
-            '/home/feczk001/shared/projects/nnunet_predict/BCP/single_input/input/1mo_sub-439083_0000.nii.gz'
+            '/home/feczk001/shared/projects/nnunet_predict/BCP/single_input/input/1mo_sub-nnnnnn_0000.nii.gz'
         output_image = join(output_folder, f)
         filled_in_command = command.format(input_image, reference_image, resolution, output_image)
         os.system(filled_in_command)
