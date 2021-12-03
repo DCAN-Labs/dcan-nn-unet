@@ -1,5 +1,5 @@
 """
-Resize Images.
+Crop Images.
 
 Usage:
   crop_images <input_folder> <output_folder>
