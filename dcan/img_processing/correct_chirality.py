@@ -28,12 +28,12 @@ def correct_chirality(nifti_input_file_path, segment_lookup_table, nifti_output_
     img = nib.load(nifti_input_file_path)
     data = img.get_data()
 
-    M = img.affine[:3, :3]
+    m = img.affine[:3, :3]
     abc = img.affine[:3, 3]
 
-    def f(i, j, k):
+    def f(ii, jj, kk):
         """ Return X, Y, Z coordinates for i, j, k """
-        return M.dot([i, j, k]) + abc
+        return m.dot([ii, jj, kk]) + abc
 
     new_data = data.copy()
     data_shape = img.header.get_data_shape()
