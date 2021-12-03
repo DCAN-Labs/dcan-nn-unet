@@ -1,5 +1,16 @@
+"""
+Correct chirality.
+
+Usage:
+  correct_chirality <nifti_input_file_path> <segment_lookup_table> <nifti_output_file_path>
+  correct_chirality -h | --help
+
+Options:
+  -h --help     Show this screen.
+"""
+
 import nibabel as nib
-import sys
+from docopt import docopt
 
 from dcan.util.look_up_tables import get_id_to_region_mapping
 
@@ -59,4 +70,5 @@ def correct_chirality(nifti_input_file_path, segment_lookup_table, nifti_output_
 
 
 if __name__ == "__main__":
-    correct_chirality(sys.argv[1], sys.argv[2], sys.argv[3])
+    args = docopt(__doc__)
+    correct_chirality(args['<nifti_input_file_path>'], args['<segment_lookup_table>'], args['nifti_output_file_path'])
