@@ -4,7 +4,6 @@ import os
 import nibabel as nib
 import numpy as np
 from PIL import Image
-import ntpath
 
 from dcan.util.look_up_tables import get_id_to_rgb
 
