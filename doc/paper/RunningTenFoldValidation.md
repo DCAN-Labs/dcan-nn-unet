@@ -47,8 +47,7 @@ The 'real' images and segmentations should already be in these sub-folders
 * imagesTr
 * labelsTr
 
-I have not copied over the synthetic data for each of the ten tasks.  (I think I've only done it for Tasks 516 and 517.  I *would* have done it earlier
-if I had known people were going to start running this before I finished 514 and 515.  Now I'm assuming that writing this documentation to avoid confusion is more urgent than copying and pasting the files.  I will do it tomorrow for any tasks for which it has not already been done.  Sorry about that.)
+I have not copied over the synthetic data for each of the ten tasks.  (I've only done it for Tasks 516, 517, and 518.  We can do as needed so we don't use up too much disk space.)
 You can get these files from:
 
 * /home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/Task512_BCP_ABCD_Neonates_SynthSegDownsample/imagesTr/
