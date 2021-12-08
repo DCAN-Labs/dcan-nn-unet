@@ -1,8 +1,19 @@
-from os.path import join
+"""
+Create JSON file.
+
+Usage:
+  create_json_file <task_name> [<look_up_table_path>]
+  create_json_file -h | --help
+
+Options:
+  -h --help     Show this screen.
+"""
+
 from collections import OrderedDict
-import sys
+from os.path import join
 
 from batchgenerators.utilities.file_and_folder_operations import *
+from docopt import docopt
 
 from dcan.dataset_conversion.utils import generate_dataset_json
 from dcan.paths import nnUNet_raw_data
@@ -31,8 +42,9 @@ def main(task, free_surfer_color_lut='../../look_up_tables/Freesurfer_LUT_DCAN.m
 
 
 if __name__ == '__main__':
-    task_name = sys.argv[1]
-    if len(sys.argv) == 2:
+    args = docopt(__doc__)
+    task_name = args['<task_name>']
+    if len(args) == 2:
         main(task_name)
     else:
-        main(task_name, sys.argv[2])
+        main(task_name, args['<look_up_table_path>'])
