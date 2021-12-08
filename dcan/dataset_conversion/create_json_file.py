@@ -19,12 +19,10 @@ def fill_in_labels(free_surfer_label_to_region):
     return dict1
 
 
-def main(task):
+def main(task, free_surfer_color_lut='../../look_up_tables/Freesurfer_LUT_DCAN.md'):
     target_base = join(nnUNet_raw_data, task)
     target_images_tr = join(target_base, "imagesTr")
     target_images_ts = join(target_base, "imagesTs")
-    free_surfer_color_lut = \
-        '/home/miran045/reine097/projects/abcd-nn-unet/look_up_tables/Freesurfer_LUT_DCAN.md'
     free_surfer_label_to_region = get_id_to_region_mapping(free_surfer_color_lut)
     consecutive_labels_to_regions = fill_in_labels(free_surfer_label_to_region)
 
@@ -34,4 +32,7 @@ def main(task):
 
 if __name__ == '__main__':
     task_name = sys.argv[1]
-    main(task_name)
+    if len(sys.argv) == 2:
+        main(task_name)
+    else:
+        main(task_name, sys.argv[2])
