@@ -1,5 +1,3 @@
-# Author: Paul Reiners
-
 import argparse
 from collections import OrderedDict
 
@@ -34,41 +32,39 @@ def fill_in_labels(free_surfer_label_to_region):
     return dict1
 
 
-def main(input_f):
+def main(input_f, output_f):
     with open(input_f, 'r') as reader:
         # Note: readlines doesn't trim the line endings
         lines = reader.readlines()
 
-    new_lines = []
-
-    in_regions = False
-    for line in lines:
-        if '"labels": {' in line:
-            in_regions = True
-            new_lines.append(line)
-            free_surfer_color_lut = '../../look_up_tables/Freesurfer_LUT_DCAN.md'
-            free_surfer_label_to_region = get_id_to_region_mapping(free_surfer_color_lut)
-            consecutive_labels_to_regions = fill_in_labels(free_surfer_label_to_region)
-            for label in consecutive_labels_to_regions:
-                region = consecutive_labels_to_regions[label]
-                line = '        "{}": "{}"'.format(label, region)
-                # TODO Hack below.  Come up with something better.
-                if label != 172:
-                    line += ","
-                new_lines.append(line)
-                new_lines.append("\n")
-        elif in_regions and '},' in line:
-            new_lines.append(line)
-            in_regions = False
-        elif not in_regions:
-            new_lines.append(line)
-    with open(input_f, 'w') as writer:
-        writer.writelines(new_lines)
+    with open(output_f, 'w') as writer:
+        in_regions = False
+        for line in lines:
+            if '"labels": {' in line:
+                in_regions = True
+                writer.write(line)
+                free_surfer_color_lut = '/home/miran045/reine097/projects/abcd-nn-unet/look_up_tables' \
+                                        '/Freesurfer_LUT_DCAN.md'
+                free_surfer_label_to_region = get_id_to_region_mapping(free_surfer_color_lut)
+                consecutive_labels_to_regions = fill_in_labels(free_surfer_label_to_region)
+                for label in consecutive_labels_to_regions:
+                    region = consecutive_labels_to_regions[label]
+                    line = '        "{}": "{}"'.format(label, region)
+                    if label != 14175:
+                        line += ","
+                    line += "\n"
+                    writer.write(line)
+            elif in_regions and '},' in line:
+                writer.write(line)
+                in_regions = False
+            elif not in_regions:
+                writer.write(line)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fix nnU-Net JSON file.')
     parser.add_argument('input_file', help='input file')
+    parser.add_argument('output_file', help='output file')
     args = parser.parse_args()
 
-    main(args.input_file)
+    main(args.input_file, args.output_file)
