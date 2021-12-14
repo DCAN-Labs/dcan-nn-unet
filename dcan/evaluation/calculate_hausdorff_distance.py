@@ -5,7 +5,9 @@ from scipy.spatial.distance import directed_hausdorff
 import nibabel as nib
 
 labeled_file_1 = '/home/feczk001/shared/data/nnUNet/labelsTs/Task512/8mo_sub-890518.nii.gz'
-labeled_file_2 = '/home/feczk001/shared/data/nnUNet/segmentations/inferred/Task512_BCP_ABCD_Neonates_SynthSegDownsample/original/8mo_sub-890518.nii.gz'
+labeled_file_2 = \
+    '/home/feczk001/shared/data/nnUNet/segmentations/inferred/Task512_BCP_ABCD_Neonates_SynthSegDownsample/original/' \
+    '8mo_sub-890518.nii.gz'
 
 # 2   Left-Cerebral-White-Matter
 
