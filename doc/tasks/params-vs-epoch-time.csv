@@ -1,0 +1,3 @@
+task,nodes,ntasks,cpus-per-task,  tmp,      gres,mem,   p,min_epoch_time (s),max_epoch_time (s),avg_epoch_time (s)
+ 504,     ,     1,           24,  40g,gpu:v100:2,64g,v100,                  ,                   ,       330.112421
+ 517,     ,     6,             ,     ,gpu:v100:1,90g,v100,        370.927866,  475.7118857436353,475.7118857436353
