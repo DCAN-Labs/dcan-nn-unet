@@ -1,4 +1,4 @@
-"""Usage: calculate_dice_for_folder <inferred_folder> <ground_truth_folder>"""
+"""Usage: calculate_dice_for_folder <ground_truth_folder> <inferred_folder>"""
 from os import listdir
 from os.path import isfile, join
 
@@ -10,7 +10,7 @@ from calculate_dice import calculate_dice_coefficient
 # Author: Paul Reiners
 
 
-def calculate_dice_for_folder(inferred_fldr, gt_folder):
+def calculate_dice_for_folder(gt_folder, inferred_fldr):
     inferred_files = [f for f in listdir(inferred_fldr) if isfile(join(inferred_fldr, f))]
     file_count = 0
     total = 0.0
@@ -29,4 +29,4 @@ def calculate_dice_for_folder(inferred_fldr, gt_folder):
 
 if __name__ == "__main__":
     arguments = docopt(__doc__)
-    calculate_dice_for_folder(arguments['<inferred_folder>'], arguments['<ground_truth_folder>'])
+    calculate_dice_for_folder(arguments['<ground_truth_folder>'], arguments['<inferred_folder>'])
