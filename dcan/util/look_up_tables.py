@@ -17,6 +17,10 @@ def get_id_to_region_mapping(mapping_file_name, separator=None):
     return id_to_region
 
 
+def get_ids(mapping_file_name, separator=None):
+    return get_id_to_region_mapping(mapping_file_name, separator).keys()
+
+
 def get_id_to_rgb(mapping_file_name, separator=None):
     file = open(mapping_file_name, 'r')
     lines = file.readlines()
@@ -29,7 +33,7 @@ def get_id_to_rgb(mapping_file_name, separator=None):
         if separator:
             parts = line.split(separator)
         else:
-            parts = line.split()
+            parts = line.s.plit()
         region_id = int(parts[0])
         r = int(parts[2])
         g = int(parts[3])
