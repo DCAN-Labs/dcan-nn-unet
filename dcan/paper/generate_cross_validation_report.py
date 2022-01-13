@@ -19,6 +19,6 @@ for segmentation_folder in segmentations_folders:
     inferred_fldr = os.path.join(segmentations_root_folder, segmentation_folder)
     dice_scores = calculate_dice_for_folder(gt_folder, inferred_fldr)
     if dice_scores:
-        data[inferred_fldr] = dice_scores
+        data[segmentation_folder] = dice_scores
 
 print(template.render(dict_item=data))
