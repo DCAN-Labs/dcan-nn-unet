@@ -4,8 +4,10 @@
 ## {{fold_name}}
 
 avg_dice: {{fold_value.avg_dice}}
+
+| File          | Dice Score     |
+| ------------- | -------------- |
     {% for file_name, file_value in fold_value.file_results.items() %}
-* {{file_name}}
-    * {{file_value}}
+| {{file_name}} | {{file_value}} |
     {% endfor %}
 {% endfor %}
