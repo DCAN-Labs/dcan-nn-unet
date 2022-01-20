@@ -11,6 +11,6 @@ using images of a different size for inference should not matter.  See [Issue #8
 There are, in general, four steps for running inference.
 
 1. Crop images if the images contain shoulders.  Use [crop_images.py](../../dcan/img_processing/crop_images.py).
-2. Resize the images to 182 x 218 x 182.  Use [resize_images.py](../../dcan/img_processing/resize_images.py).
+2. Resize the images to 182 x 218 x 182.  Use [resize_images.py](../../dcan/resize_images.py).
 3. Run nnU-Net inference.  See [inference.md](../useage/inference.md) for details.
 4. Correct chirality problems.  Use [correct_chirality_for_folder.py](../../../CABINET/src/correct_chirality_for_folder.py).
