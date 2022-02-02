@@ -1,10 +1,10 @@
 model_number, image_augmentation, details
 501,          No,                 https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/Task501_Babies_AllMonths.md
 504,          No,                 https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/504/Task504_Babies_AllMonthsWithSkull.md
-506,          No,
-509,          Yes
-510,          Yes
-511,          Yes
-512,          Yes
-513,          No
-516--525,     Yes
+506,          No,                 https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/Task506_AllAgesSkulls1LabToImImage.md
+509,          Yes,                https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/509/Task509_BCP_ABCD_Neonates.md
+510,          Yes,                https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/510/Task510_BCP_ABCD_Neonates_Augmentation.md
+511,          Yes,                https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/511/Task511.md
+512,          Yes,                https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/512/Task512.md
+513,          No,                 https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/513/Task513.md
+516--525,     Yes,                https://docs.google.com/spreadsheets/d/1q09f83Qjqk0gvkg3-vPiVQYxF-CtO2UbZ4kEVZHipeQ/edit#gid=1042110292
