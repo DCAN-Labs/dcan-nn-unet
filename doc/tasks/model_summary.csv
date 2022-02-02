@@ -1,9 +1,10 @@
-model_number, image_augmentation
-501,          No
-504,          No
-506,          No
+model_number, image_augmentation, details
+501,          No,                 https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/Task501_Babies_AllMonths.md
+504,          No,                 https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/504/Task504_Babies_AllMonthsWithSkull.md
+506,          No,
 509,          Yes
 510,          Yes
 511,          Yes
 512,          Yes
 513,          No
+516--525,     Yes
