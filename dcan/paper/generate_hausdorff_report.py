@@ -1,36 +1,21 @@
 import os.path
 
-import numpy as np
-from jinja2 import Environment, PackageLoader, select_autoescape
-
-env = Environment(
-    loader=PackageLoader("dcan.paper"),
-    autoescape=select_autoescape()
-)
-
-template = env.get_template("HausdorffResults.md")
+import pandas as pd
+import matplotlib.pyplot as plt
 
 data = {}
 results_dir = '/home/feczk001/shared/data/nnUNet/segmentations/inferred/PaperCrossValidation/results/'
 folds = ['fold{}'.format(i) for i in range(10)]
-existing_folds = []
-fold = 'fold0'
-data_file_path = os.path.join(results_dir, fold, 'hausdorff', 'hausdorff.npy')
-if os.path.exists(data_file_path):
-    existing_folds.append(fold)
-    labels_file_path = os.path.join(results_dir, fold, 'labels.txt')
-    with open(labels_file_path) as fp:
-        lines = fp.readlines()
-        labels = [int(line.strip()) for line in lines]
-        data['labels'] = labels
-    path_segs_path = os.path.join(results_dir, fold, 'path_segs.txt')
-    with open(path_segs_path) as fp:
-        lines = fp.readlines()
-        paths_segs = [line.strip() for line in lines]
-        data['paths_segs'] = paths_segs
-    hausdorff_data = np.load(data_file_path)
-    data['hausdorff_data'] = hausdorff_data
-    data['existing_folds'] = existing_folds
-
-output = template.render(dict_item=data)
-print(output)
+frames = []
+for fold in folds:
+    data_file_path = os.path.join(results_dir, fold, 'hausdorff', 'hausdorff.csv')
+    if os.path.exists(data_file_path):
+        hausdorff_data = pd.read_csv(data_file_path)
+        frames.append(hausdorff_data)
+all_hausdorff_data = pd.concat(frames, axis=0)
+print(all_hausdorff_data.columns)
+all_hausdorff_data['age_in_months'] = all_hausdorff_data.apply(lambda row: int(row['subject'][0][:1]), axis=1)
+all_hausdorff_data.drop(['subject'], axis=1, inplace=True)
+hausdorff_means = all_hausdorff_data.groupby('age_in_months').mean()
+plt.figure(); hausdorff_means.plot(); plt.legend(loc='best')
+print(hausdorff_means.head())
