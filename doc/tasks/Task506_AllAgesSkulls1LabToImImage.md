@@ -36,7 +36,7 @@ Here we have the images layered (from top to bottom):
 
 I also added smoothing.
 
-### 1 month: Example 1
+### 1 month: Subject 1
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
@@ -55,7 +55,7 @@ Ground-truth axial       |  Predicted axial
 
 Dice coefficient: 0.3633991985698166
 
-### 2 months: Subject 1
+### 2 months: Subject 2
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
@@ -74,7 +74,7 @@ Ground-truth axial       |  Predicted axial
 
 Dice coefficient: 0.8989465333315596
 
-### 4 months: Subject 1
+### 4 months: Subject 3
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
@@ -93,7 +93,7 @@ Ground-truth axial       |  Predicted axial
 
 Dice coefficient: 0.8246552166171827
 
-### 5 months: Subject 1
+### 5 months: Subject 4
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
@@ -112,7 +112,7 @@ Ground-truth axial       |  Predicted axial
 
 Dice coefficient: 0.8570650750027763
 
-### 6 months: Subject 1
+### 6 months: Subject 5
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
@@ -131,7 +131,7 @@ Ground-truth axial       |  Predicted axial
 
 Dice coefficient: 0.8626612873828671
 
-### 7 months: Subject 1
+### 7 months: Subject 6
 
 Ground-truth sagittal       |  Predicted sagittal
 :-------------------------:|:-------------------------:
@@ -148,4 +148,4 @@ Ground-truth axial       |  Predicted axial
 ![](../../img/Task506/7mo/sub-1/axial/ground_truth.jpg)  |  ![](../../img/Task506/7mo/sub-1/axial/inferred.jpg)
 ![](../../img/Task506/7mo/sub-1/axial/ground_truth_outline.jpg)  |  ![](../../img/Task506/7mo/sub-1/axial/inferred_outline.jpg)
 
-Dice coefficient: 0.34926525890771865
+Dice coefficient: 0.8695402425239379

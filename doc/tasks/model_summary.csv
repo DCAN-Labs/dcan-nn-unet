@@ -1,0 +1,10 @@
+model_number, sørensen_dice_coefficient, image_augmentation, image_augmentation_program, details
+501,          ,                          No,                 [none],                     https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/Task501_Babies_AllMonths.md
+504,          ,                          No,                 [none],                     https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/504/Task504_Babies_AllMonthsWithSkull.md
+506,          ,                          No,                 [none],                     https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/Task506_AllAgesSkulls1LabToImImage.md
+509,          0.8876495909150529,        Yes,                lab2im,                     https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/509/Task509_BCP_ABCD_Neonates.md
+510,          0.8770182180801516,        Yes,                lab2im,                     https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/510/Task510_BCP_ABCD_Neonates_Augmentation.md
+511,          ,                          Yes,                SynthSeg,                   https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/511/Task511.md
+512,          0.853262030191724,         Yes,                SynthSeg,                   https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/512/Task512.md
+513,          0.8914551963662968,        No,                 [none],                     https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/tasks/513/Task513.md
+516--525,     ,                          Yes,                SynthSeg,                   https://docs.google.com/spreadsheets/d/1q09f83Qjqk0gvkg3-vPiVQYxF-CtO2UbZ4kEVZHipeQ/edit#gid=1042110292
