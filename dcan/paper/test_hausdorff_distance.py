@@ -2,7 +2,7 @@ from unittest import TestCase
 import numpy as np
 from scipy.spatial import distance
 
-from dcan.paper.hausdorff_distance import hausdorff_distance, directed_hausdorff_distance
+from dcan.paper.hausdorff_distance import hausdorff_distance, directed_hausdorff_distance, hausdorff_distance_95
 
 
 class HausdorffDistanceTest(TestCase):
