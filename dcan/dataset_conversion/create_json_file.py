@@ -12,7 +12,6 @@ Options:
 from collections import OrderedDict
 from os.path import join
 
-from batchgenerators.utilities.file_and_folder_operations import *
 from docopt import docopt
 
 from dcan.dataset_conversion.utils import generate_dataset_json

@@ -32,8 +32,8 @@ network_training_output_dir_base = \
     os.path.join(os.environ['RESULTS_FOLDER']) if "RESULTS_FOLDER" in os.environ.keys() else None
 
 if base is not None:
-    nnUNet_raw_data = join(base, "nnUNet_raw_data")
-    nnUNet_cropped_data = join(base, "nnUNet_cropped_data")
+    nnUNet_raw_data = os.path.join(base, "nnUNet_raw_data")
+    nnUNet_cropped_data = os.path.join(base, "nnUNet_cropped_data")
     maybe_mkdir_p(nnUNet_raw_data)
     maybe_mkdir_p(nnUNet_cropped_data)
 else:
