@@ -29,7 +29,7 @@ def fill_in_labels(free_surfer_label_to_region):
     return dict1
 
 
-def main(task, free_surfer_color_lut='../../look_up_tables/Freesurfer_LUT_DCAN.md'):
+def main(task, free_surfer_color_lut='/home/miran045/reine097/projects/abcd-nn-unet/look_up_tables/Freesurfer_LUT_DCAN.md'):
     target_base = join(nnUNet_raw_data, task)
     target_images_tr = join(target_base, "imagesTr")
     target_images_ts = join(target_base, "imagesTs")
@@ -43,7 +43,7 @@ def main(task, free_surfer_color_lut='../../look_up_tables/Freesurfer_LUT_DCAN.m
 if __name__ == '__main__':
     args = docopt(__doc__)
     task_name = args['<task_name>']
-    if len(args) == 2:
+    if not args['<look_up_table_path>']:
         main(task_name)
     else:
         main(task_name, args['<look_up_table_path>'])
