@@ -74,7 +74,7 @@ def main() -> int:
 
             return int(f[last_underscore_pos + 1:]) % 10
     else:
-        def classifier_func(f): int(f[0])
+        def classifier_func(f): return int(f[0])
 
     create_ten_fold_validation_folders(folder, task_number, task_name, classifier_func, include_t1, include_t2)
 
