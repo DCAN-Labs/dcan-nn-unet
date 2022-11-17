@@ -4,6 +4,13 @@ Task512_BCP_ABCD_Neonates_SynthSegDownsample
 Dice coefficient: 0.853262030191724
 -----------------
 
+### nnU-Net settings
+    "modality": {
+        "0": "T1",
+        "1": "T2"
+    },
+
+
 ### SynthSeg settings
 
     downsample=True
