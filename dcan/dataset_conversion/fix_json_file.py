@@ -1,6 +1,8 @@
 import argparse
 from collections import OrderedDict
 
+from dataset_conversion.create_json_file import get_label_dict
+
 
 def get_id_to_region_mapping(mapping_file_name, separator=None):
     file = open(mapping_file_name, 'r')
@@ -23,11 +25,7 @@ def get_id_to_region_mapping(mapping_file_name, separator=None):
 
 def fill_in_labels(free_surfer_label_to_region):
     free_surfer_label_to_region[0] = "Background"
-    n = max(free_surfer_label_to_region.keys())
-    for i in range(1, n):
-        if i not in free_surfer_label_to_region.keys():
-            free_surfer_label_to_region[i] = 'unknown-' + str(i)
-    dict1 = OrderedDict(sorted(free_surfer_label_to_region.items()))
+    dict1 = get_label_dict(free_surfer_label_to_region)
 
     return dict1
 
@@ -44,7 +42,7 @@ def main(input_f, output_f):
                 in_regions = True
                 writer.write(line)
                 free_surfer_color_lut = '/home/miran045/reine097/projects/abcd-nn-unet/look_up_tables' \
-                                        '/Freesurfer_LUT_DCAN.md'
+                                        '/Freesurfer_LUT_DCAN.txt'
                 free_surfer_label_to_region = get_id_to_region_mapping(free_surfer_color_lut)
                 consecutive_labels_to_regions = fill_in_labels(free_surfer_label_to_region)
                 for label in consecutive_labels_to_regions:

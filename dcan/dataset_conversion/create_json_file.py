@@ -20,16 +20,21 @@ from dcan.util.look_up_tables import get_id_to_region_mapping
 
 
 def fill_in_labels(free_surfer_label_to_region):
+    dict1 = get_label_dict(free_surfer_label_to_region)
+
+    return dict1
+
+
+def get_label_dict(free_surfer_label_to_region):
     n = max(free_surfer_label_to_region.keys())
     for i in range(1, n):
         if i not in free_surfer_label_to_region.keys():
             free_surfer_label_to_region[i] = 'unknown-' + str(i)
     dict1 = OrderedDict(sorted(free_surfer_label_to_region.items()))
-
     return dict1
 
 
-def main(task, free_surfer_color_lut='/home/miran045/reine097/projects/abcd-nn-unet/look_up_tables/Freesurfer_LUT_DCAN.md'):
+def main(task, free_surfer_color_lut='/home/miran045/reine097/projects/abcd-nn-unet/look_up_tables/Freesurfer_LUT_DCAN.txt'):
     target_base = join(nnUNet_raw_data, task)
     target_images_tr = join(target_base, "imagesTr")
     target_images_ts = join(target_base, "imagesTs")
