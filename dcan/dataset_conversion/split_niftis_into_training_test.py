@@ -4,6 +4,8 @@ import sys
 from os import listdir, mkdir
 from os.path import isfile, join
 
+import glob
+
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 
@@ -33,6 +35,16 @@ def main(origin_folder, destination_folder):
     labels_ts_folder = os.path.join(destination_folder, 'labelsTs')
     if not os.path.exists(labels_ts_folder):
         mkdir(labels_ts_folder)
+
+    synthseg_images_file_list = glob.glob('./images/*SynthSeg_generated*.nii.gz')
+    for synthseg_image_file in tqdm(synthseg_images_file_list):
+        basename = os.path.basename(synthseg_image_file)
+        shutil.move(f"./images/{basename}", f"./imagesTr/{basename}")
+
+    synthseg_labels_file_list = glob.glob('./labels/*SynthSeg_generated*.nii.gz')
+    for synthseg_label_file in tqdm(synthseg_labels_file_list):
+        basename = os.path.basename(synthseg_label_file)
+        shutil.move(f"./labels/{basename}", f"./labelsTr/{basename}")
 
     label_files = [f for f in listdir(labels_folder) if isfile(join(labels_folder, f))]
     label_files.sort()
