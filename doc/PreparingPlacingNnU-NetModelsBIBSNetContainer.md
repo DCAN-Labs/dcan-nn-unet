@@ -16,15 +16,16 @@ How-To
       source /panfs/roc/msisoft/anaconda/anaconda3-2018.12/etc/profile.d/conda.sh
       conda activate /home/support/public/torch_cudnn8.2
 All trained models on MSI for are here: 
+
   * */home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_trained_models/nnUNet/3d_fullres*
 
-    1. The first step is to try whether the command nnUNet_export_model_to_zip just works on your model
+  1. The first step is to try whether the command nnUNet_export_model_to_zip just works on your model
 
-       1.1. For example: `nnUNet_export_model_to_zip -t <Task ID> -m 3d_fullres -o <Task ID>.zip`
+   1.1. For example: `nnUNet_export_model_to_zip -t <Task ID> -m 3d_fullres -o <Task ID>.zip`
    
-       1.2. If this generates a zip file for you, skip to step 4
+   1.2. If this generates a zip file for you, skip to step 4
 
-       1.3. It is very likely that you will get the following error message. If so move onto step 2:
+   1.3. It is very likely that you will get the following error message. If so move onto step 2:
 
 
     Traceback (most recent call last):
@@ -46,17 +47,22 @@ All trained models on MSI for are here:
 
     nnUNet_find_best_configuration -t <Task ID> -m 3d_fullres
 
-    This will take some time, be patient
-    When it finishes the text done will be sent to standard output (or the terminal)
-    Once step 2 finishes, try repeating step 1
-    If a ZIP file has been created with the model, it can now be placed into the MSI S3 bucket that houses all BIBSNet models
-    To place ZIP file into bucket type: 
+This will take some time, be patient
+When it finishes the text 'done' will be sent to standard output (or the terminal)
+Once step 2 finishes, try repeating step 1
+
+4. If a ZIP file has been created with the model, it can now be placed into the MSI S3 bucket that houses all BIBSNet models
+To place ZIP file into bucket type: 
 
         s3cmd put </path/to/zip/file> s3://CABINET_data 
     
-Next, ensure that the ZIP file just placed in the bucket is available publicly by typing:
-     s3cmd --acl-public setacl s3://CABINET_data/<ZIP filename>
-    A test to ensure this worked is to see whether the file can be downloaded from the web
-    Open a web browser and type input the following URL:
+Next, ensure that the ZIP file just placed in the bucket is available publicly by typing:
+     
+    s3cmd --acl-public setacl s3://CABINET_data/<ZIP filename>
+    
+A test to ensure this worked is to see whether the file can be downloaded from the web
+Open a web browser and type input the following URL:
+
     https://s3.msi.umn.edu/CABINET_data/<ZIP filename>
-    If the file begins downloading, you are done!
+
+If the file begins downloading, you are done!
