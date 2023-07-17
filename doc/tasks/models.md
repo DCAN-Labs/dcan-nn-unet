@@ -4,7 +4,7 @@ Index of best models found
 T1/T2
 -----
 
-* [Task 512](./512/Task512.md)
+* [Task 552](./512/Task552.md)
 
 T1-only
 -------
