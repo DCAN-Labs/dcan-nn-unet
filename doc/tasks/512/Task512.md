@@ -14,7 +14,7 @@ Dice coefficient: 0.853262030191724
 ### SynthSeg settings
 
     downsample=True
-    prior_distributions='normal'n
+    prior_distributions='normal'
     164 synthetic images per real image
 
 ### Summary
