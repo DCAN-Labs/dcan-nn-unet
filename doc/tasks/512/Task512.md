@@ -15,6 +15,7 @@ Dice coefficient: 0.853262030191724
 
     downsample=True
     prior_distributions='normal'
+    164 synthetic images per real image
 
 ### Summary
 

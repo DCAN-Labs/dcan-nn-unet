@@ -7,7 +7,7 @@ Dice coefficient: 0.8914551963662968
 No image augmentation used.
 
 Data
-* Ground truth: /home/feczk001/shared/data/nnUNet/labelsTs/Task512/
+* Ground truth: /home/feczk001/shared/data/nnUNet/labelsTs/Task513/
 * Inferred labels: /home/feczk001/shared/data/nnUNet/segmentations/inferred/Task513_BCP_ABCD_Neonates_NoAugmentation/
 * T1/T2 files: /home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/Task513_BCP_ABCD_Neonates_NoAugmentation/imagesTs/
 
