@@ -1,6 +1,7 @@
 Task 554
 ==============
 
+The training of this model was aborted.
 
     Dice score (median over subjects): 0.xxxx
     IoU (median over subjects):        0.xxxx
