@@ -10,42 +10,38 @@ Options:
 """
 
 import os
-from os import listdir
-from os.path import isfile, join
-import subprocess
+import shutil
 import sys
+from os.path import isfile, join
+
+import nilearn
+from nilearn import image
+from tqdm import tqdm
 
 
-def resize_images(input_folder, output_folder, flirt_path):
-    os.system('module load fsl')
-    only_files = [f for f in listdir(input_folder) if isfile(join(input_folder, f))]
-
-    t1_suffix = '_0000.nii.gz'
-    t2_suffix = '_0001.nii.gz'
-    for f in only_files:
-        if f.endswith('_0000.nii.gz'):
-            in_path = join(input_folder, f)
-            ref_path = join(input_folder, f[:-len(t1_suffix)] + t2_suffix)
-            print('in_path: ', in_path)
-            print('ref_path:', ref_path)
-            try:
-                subprocess.check_call([flirt_path, '-interp', 'spline', '-in',
-                                       in_path, '-ref', ref_path])
-            except Exception as err:
-                print('Error:', err)
-
-    resolution = 1
-    for f in only_files:
-        input_image = join(input_folder, f)
-        print(f)
-        command = '{} -in {} -ref {} -applyisoxfm {} -init $FSLDIR/etc/flirtsch/ident.mat -o {}'
-        reference_image = \
-            '/home/feczk001/shared/projects/nnunet_predict/BCP/single_input/input/1mo_sub-nnnnnn_0000.nii.gz'
-        output_image = join(output_folder, f)
-        filled_in_command = command.format(flirt_path, input_image, reference_image, resolution, output_image)
-        os.system(filled_in_command)
+def resize_images(input_folder, output_folder):
+    only_files = [f for f in os.listdir(input_folder) if isfile(join(input_folder, f))]
+    desired_shape = (182, 218, 182)
+    for f in tqdm(only_files):
+        file_path = join(input_folder, f)
+        smoothed_img = image.load_img(file_path)
+        header = smoothed_img.header
+        data_shape = header.get_data_shape()
+        if data_shape[:3] != desired_shape:
+            print(f'Resizing: {f}')
+            if f.endswith('_aseg.nii.gz'):
+                interpolation = 'nearest'
+            else:
+                interpolation = 'continuous'
+            target_affine = smoothed_img.affine
+            resampled = \
+                nilearn.image.resample_img(smoothed_img, target_shape=desired_shape, target_affine=target_affine,
+                                           interpolation=interpolation)
+            resampled.to_filename(os.path.join(output_folder, f))
+        else:
+            shutil.copy(file_path, output_folder)
 
 
 if __name__ == '__main__':
     args = sys.argv
-    resize_images(args[1], args[2], args[3])
+    resize_images(args[1], args[2])
