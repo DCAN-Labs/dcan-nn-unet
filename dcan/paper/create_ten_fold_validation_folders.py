@@ -5,7 +5,7 @@ import sys
 import os.path
 from os import listdir
 from os.path import isfile, join
-from shutil import copyfile
+from shutil import copy
 
 from sklearn.model_selection import StratifiedKFold
 
@@ -16,17 +16,17 @@ def move_file_unit(
         base_file_name = all_images[i]
         if include_t1:
             t1_src_file = base_file_name + '_0000.nii.gz'
-            copyfile(os.path.join(source_folder, t1_src_file), os.path.join(dest_images_folder, t1_src_file))
+            copy(os.path.join(source_folder, t1_src_file), dest_images_folder)
         if include_t2:
             t2_src_file = base_file_name + '_0001.nii.gz'
-            copyfile(os.path.join(source_folder, t2_src_file), os.path.join(dest_images_folder, t2_src_file))
+            copy(os.path.join(source_folder, t2_src_file), dest_images_folder)
         label_src_file = base_file_name + '.nii.gz'
-        copyfile(os.path.join(source_folder, label_src_file), os.path.join(dest_labels_folder, label_src_file))
+        copy(os.path.join(source_folder, label_src_file), dest_labels_folder)
 
 
 def create_ten_fold_validation_folders(
-        source_folder, starting_task_number, task_name, classifier_func, include_t1=True, include_t2=True):
-    nnunet_raw_data_folder = '/home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data'
+        source_folder, nnunet_raw_data_folder, starting_task_number, task_name, classifier_func, include_t1=True,
+        include_t2=True):
     all_images = [f for f in listdir(source_folder) if isfile(join(source_folder, f))]
     all_images.sort()
     all_images = all_images[::3]
@@ -63,6 +63,7 @@ def create_ten_fold_validation_folders(
 def main() -> int:
     """Create stratified 10-fold validation folders"""
     folder = sys.argv[1]
+    nnunet_raw_data_folder = '/scratch.global/lundq163/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/'
     task_number = int(sys.argv[2])
     task_name = sys.argv[3]
     synth_seg = bool(sys.argv[4])
@@ -76,7 +77,8 @@ def main() -> int:
     else:
         def classifier_func(f): return int(f[0])
 
-    create_ten_fold_validation_folders(folder, task_number, task_name, classifier_func, include_t1, include_t2)
+    create_ten_fold_validation_folders(
+        folder, nnunet_raw_data_folder, task_number, task_name, classifier_func, include_t1, include_t2)
 
     return 0
 
