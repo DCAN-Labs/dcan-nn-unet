@@ -93,7 +93,7 @@ Run
 
 * [SynthSeg/dcan/image_generation_for_all_ages.py](https://github.com/DCAN-Labs/SynthSeg/blob/main/SynthSeg/dcan/image_generation_for_all_ages.py)
 
-
+```
     usage: SynthSeg [-h] [--starting-age-in-months STARTING_AGE_IN_MONTHS]
                     [--distribution {normal,uniform}]
                     input-dir output-dir min-mask-file
@@ -112,8 +112,7 @@ Run
       --starting-age-in-months STARTING_AGE_IN_MONTHS
       --distribution {normal,uniform}
                             distribution of priors (default: normal)
-    
-    Forked off of BBillot's SynthSeg
+```
 
 Example arguments:
     
