@@ -10,7 +10,17 @@ Nevertheless, the information below should save you some time and headaches and 
 All SynthSeg-generated generated image files and all real image files need to be of the same
 size.  If they are not, you should run this program:
 
-* abcd-nn-unet/dcan/img_processing/resize_images.py
+* [abcd-nn-unet/dcan/img_processing/resize_images.py](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/dcan/img_processing/resize_images.py)
+
+```
+usage: resize_images [-h] input_folder output_folder
+
+Resizes all images in a folder to (182, 218, 182).
+
+positional arguments:
+  input_folder
+  output_folder
+```
 
 Here is a sample set of arguments:
 
