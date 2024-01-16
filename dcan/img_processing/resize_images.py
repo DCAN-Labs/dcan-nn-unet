@@ -9,9 +9,9 @@ Options:
   -h --help     Show this screen.
 """
 
+import argparse
 import os
 import shutil
-import sys
 from os.path import isfile, join
 
 import nilearn
@@ -43,5 +43,11 @@ def resize_images(input_folder, output_folder):
 
 
 if __name__ == '__main__':
-    args = sys.argv
-    resize_images(args[1], args[2])
+    parser = argparse.ArgumentParser(
+        prog='resize_images',
+        description='Resizes all images in a folder to (182, 218, 182).',
+        epilog='Contact reine097 if you have any questions or run into any problems.')
+    parser.add_argument('input_folder')
+    parser.add_argument('output_folder')
+    args = parser.parse_args()
+    resize_images(args.input_folder, args.output_folder)
