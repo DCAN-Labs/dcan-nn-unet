@@ -7,6 +7,7 @@ from os import listdir
 from os.path import isfile, join
 from shutil import copy
 
+import argparse
 from sklearn.model_selection import StratifiedKFold
 
 
@@ -61,14 +62,25 @@ def create_ten_fold_validation_folders(
 
 
 def main() -> int:
-    """Create stratified 10-fold validation folders"""
-    folder = sys.argv[1]
+    """Create stratified 10-fold validation folders."""
+    parser = argparse.ArgumentParser(
+        prog='create_ten_fold_validation_folders',
+        description='Create stratified 10-fold validation folders.',
+        epilog='Contact reine097 if you have any questions or run into any problems.')
+    parser.add_argument('folder')
+    parser.add_argument('task_number')
+    parser.add_argument('task_name')
+    parser.add_argument('synth_seg')
+    parser.add_argument('include_t1')
+    parser.add_argument('include_t2')
+    args = parser.parse_args()
+    folder = args.folder
     nnunet_raw_data_folder = '/scratch.global/lundq163/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/'
-    task_number = int(sys.argv[2])
-    task_name = sys.argv[3]
-    synth_seg = bool(sys.argv[4])
-    include_t1 = bool(sys.argv[5])
-    include_t2 = bool(sys.argv[6])
+    task_number = int(args.task_number)
+    task_name = args.task_name
+    synth_seg = bool(args.synth_seg)
+    include_t1 = bool(args.include_t1)
+    include_t2 = bool(args.include_t2)
     if synth_seg:
         def classifier_func(f):
             last_underscore_pos = f.rfind('_')
