@@ -85,7 +85,7 @@ usage: ten_fold_uniformity_estimation [-h]
 Creates SynthSeg uniform priors for ten-fold validation.
 ```
 
-* [uniform_intensity_estimation_by_age.py](https://github.com/DCAN-Labs/SynthSeg/blob/main/SynthSeg/dcan/uniform_intensity_estimation_by_age.py)
+* [uniform_intensity_estimation_by_age.py](https://github.com/DCAN-Labs/SynthSeg/blob/main/SynthSeg/dcan/uniform_intensity_estimation_by_age.py) This code is called from `ten_fold_uniformity_estimation` (above).
 
 ## Generate synthetic images for all ages
 
