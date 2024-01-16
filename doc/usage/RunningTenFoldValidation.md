@@ -36,21 +36,29 @@ First you must create 10 Task folders, one for each fold, for nnU-Net.
 The code to run is 
 [here](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/dcan/paper/create_ten_fold_validation_folders.py).
 
-The arguments are 
+The usage is 
 
-    folder = sys.argv[1]
-    nnunet_raw_data_folder = '/scratch.global/lundq163/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/'
-    task_number = int(sys.argv[2])
-    task_name = sys.argv[3]
-    synth_seg = bool(sys.argv[4])
-    include_t1 = bool(sys.argv[5])
-    include_t2 = bool(sys.argv[6])
+```
+usage: create_ten_fold_validation_folders [-h]
+                                          folder task_number task_name
+                                          synth_seg include_t1 include_t2
+
+Create stratified 10-fold validation folders.
+
+positional arguments:
+  folder
+  task_number
+  task_name
+  synth_seg
+  include_t1
+  include_t2
+```
 
 Note that there is a hard-coded path:
 
     nnunet_raw_data_folder = '/scratch.global/lundq163/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/'
 
-You should generalize this by making it a command-line argument.
+This should be read in at run-time from the system setting `nnUNet_raw_data_base`.
 
 Here are some sample arguments:
 
