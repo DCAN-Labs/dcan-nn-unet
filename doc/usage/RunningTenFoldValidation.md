@@ -78,6 +78,13 @@ Create 10 mins_maxes_{i}.npy files, one for each fold.  Sample min/max files are
 The code to generate min/max files is here:
 
 * [ten_fold_uniformity_estimation.py](https://github.com/DCAN-Labs/SynthSeg/blob/main/SynthSeg/dcan/ten_fold_uniformity_estimation.py)
+
+```
+usage: ten_fold_uniformity_estimation [-h]
+
+Creates SynthSeg uniform priors for ten-fold validation.
+```
+
 * [uniform_intensity_estimation_by_age.py](https://github.com/DCAN-Labs/SynthSeg/blob/main/SynthSeg/dcan/uniform_intensity_estimation_by_age.py)
 
 ## Generate synthetic images for all ages
