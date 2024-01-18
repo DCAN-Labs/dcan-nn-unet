@@ -54,6 +54,10 @@ positional arguments:
   include_t2
 ```
 
+Example args:
+
+`/scratch.global/lundq163/nnUNet/intermediateData_resized/ 540 "T1_T2" "" True True`
+
 Note that there is a hard-coded path:
 
     nnunet_raw_data_folder = '/scratch.global/lundq163/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/'
