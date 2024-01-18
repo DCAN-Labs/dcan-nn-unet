@@ -126,7 +126,7 @@ Example arguments:
     1000
     --distribution="uniform"
 
-## Running trading for each fold.
+## Running training for each fold.
 
 See [Running Ten-Fold Validation](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/usage/RunningTenFoldValidation.md#running-ten-fold-validation)
 
