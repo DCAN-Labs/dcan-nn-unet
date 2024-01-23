@@ -137,4 +137,24 @@ See [Running inference (or creating a segmentation)](https://github.com/DCAN-Lab
 ## Create T1-only folders
 
 To create T1-only 10-fold validation folders from T1/T2 10-fold validation folders run  
-[create_t1_ten_fold_validation_from_t1_t2_ten_fold_validation.py]
+[create_t1_ten_fold_validation_from_t1_t2_ten_fold_validation.py](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/dcan/paper/create_t1_ten_fold_validation_from_t1_t2_ten_fold_validation.py).
+
+Useage:
+
+```
+usage: create_t1_ten_fold_validation_from_t1_t2_ten_fold_validation
+       [-h]
+       parent_source_folder first_source_task_number parent_destination_folder
+       first_destination_task_number
+
+Create stratified 10-fold validation folders of T1 images from T1/T2 images.
+
+positional arguments:
+  parent_source_folder
+  first_source_task_number
+  parent_destination_folder
+  first_destination_task_number
+
+optional arguments:
+  -h, --help            show this help message and exit
+```
