@@ -54,6 +54,10 @@ positional arguments:
   include_t2
 ```
 
+Example args:
+
+`/scratch.global/lundq163/nnUNet/intermediateData_resized/ 540 "T1_T2" "" True True`
+
 Note that there is a hard-coded path:
 
     nnunet_raw_data_folder = '/scratch.global/lundq163/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/'
@@ -78,7 +82,14 @@ Create 10 mins_maxes_{i}.npy files, one for each fold.  Sample min/max files are
 The code to generate min/max files is here:
 
 * [ten_fold_uniformity_estimation.py](https://github.com/DCAN-Labs/SynthSeg/blob/main/SynthSeg/dcan/ten_fold_uniformity_estimation.py)
-* [uniform_intensity_estimation_by_age.py](https://github.com/DCAN-Labs/SynthSeg/blob/main/SynthSeg/dcan/uniform_intensity_estimation_by_age.py)
+
+```
+usage: ten_fold_uniformity_estimation [-h]
+
+Creates SynthSeg uniform priors for ten-fold validation.
+```
+
+* [uniform_intensity_estimation_by_age.py](https://github.com/DCAN-Labs/SynthSeg/blob/main/SynthSeg/dcan/uniform_intensity_estimation_by_age.py) This code is called from `ten_fold_uniformity_estimation` (above).
 
 ## Generate synthetic images for all ages
 
@@ -86,7 +97,7 @@ Run
 
 * [SynthSeg/dcan/image_generation_for_all_ages.py](https://github.com/DCAN-Labs/SynthSeg/blob/main/SynthSeg/dcan/image_generation_for_all_ages.py)
 
-
+```
     usage: SynthSeg [-h] [--starting-age-in-months STARTING_AGE_IN_MONTHS]
                     [--distribution {normal,uniform}]
                     input-dir output-dir min-mask-file
@@ -105,8 +116,7 @@ Run
       --starting-age-in-months STARTING_AGE_IN_MONTHS
       --distribution {normal,uniform}
                             distribution of priors (default: normal)
-    
-    Forked off of BBillot's SynthSeg
+```
 
 Example arguments:
     
@@ -116,7 +126,7 @@ Example arguments:
     1000
     --distribution="uniform"
 
-## Running trading for each fold.
+## Running training for each fold.
 
 See [Running Ten-Fold Validation](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/usage/RunningTenFoldValidation.md#running-ten-fold-validation)
 
