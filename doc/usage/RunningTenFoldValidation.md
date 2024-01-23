@@ -133,3 +133,8 @@ See [Running Ten-Fold Validation](https://github.com/DCAN-Labs/dcan-nn-unet/blob
 ## Running inference.
 
 See [Running inference (or creating a segmentation)](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/usage/inference.md#running-inference-or-creating-a-segmentation)
+
+## Create T1-only folders
+
+To create T1-only 10-fold validation folders from T1/T2 10-fold validation folders run  
+[create_t1_ten_fold_validation_from_t1_t2_ten_fold_validation.py]
