@@ -22,4 +22,4 @@ You should contact []()[Paul Reiners](mailto:reine097@umn.edu) if you have any q
 3. [Run SynthSeg](https://github.com/BBillot/SynthSeg/blob/master/scripts/tutorials/2-generation_explained.py) to create synthetic images.
 4. [Create nnU-Net model](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how_to_use_nnunet.md).
 5. After the model is created, for a sanity check you should [run Dice coefficient measures](https://github.com/DCAN-Labs/SynthSeg/blob/ade17f53285e8932a47ba91bba1f93a40874cc20/ext/neuron/metrics.py#L97) using the model and make sure the Dice coefficient is reasonable (at least 0.80, and, preferably, 0.90 or 0.95).
-6. Communicate with [Barry Tikalsky](mailto:tikal004@umn.edu) who adds new models before and after testing
+6. Communicate with [Tim Hendrickson](mailto:hendr522@umn.edu), who adds new models, before and after testing
