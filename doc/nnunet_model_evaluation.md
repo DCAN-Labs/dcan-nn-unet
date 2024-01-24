@@ -17,9 +17,9 @@ You should contact []()[Paul Reiners](mailto:reine097@umn.edu) if you have any q
 
 ## Step-by-step process
 
-1. Visual inspection (by Fez is ideal)
-2. Dice coefficient measures
-3. Communicate with people who add new models (I think this is Barry currently?) before and after testing
-
-## Checklists
-Often, itemized checklists are easier to follow and some SOPs might be better described in this form.
+1. Download the new data set of segmented MRI images.
+2. Visual inspection (by Fez is ideal) of the data set.
+3. [Run SynthSeg](https://github.com/BBillot/SynthSeg/blob/master/scripts/tutorials/2-generation_explained.py) to create synthetic images.
+4. [Create nnU-Net model](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how_to_use_nnunet.md).
+5. After the model is created, for a sanity check you should [run Dice coefficient measures](https://github.com/DCAN-Labs/SynthSeg/blob/ade17f53285e8932a47ba91bba1f93a40874cc20/ext/neuron/metrics.py#L97) using the model and make sure the Dice coefficient is reasonable (at least 0.80, and, preferably, 0.90 or 0.95).
+6. Communicate with [Barry Tikalsky](mailto:tikal004@umn.edu) who adds new models before and after testing
