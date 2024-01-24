@@ -1,11 +1,12 @@
 # Creating a nnU-Net model using SynthSeg
 
 ## Introduction
-BIBSNet uses a nnU-Net model as its core component.  The nnU-Net model is usually trained on not only
-real MRI images, but synthetic MRI images created by SynthSeg.
+BIBSNet uses a nnU-Net model as its core component.  The data set for training of a nnU-Net model consists of MRI images and synthetic MRI images created by SynthSeg.
 
 ## Scope of SOP
-This section covers the purpose of the SOP and the process it covers and why its important to follow the enclosed steps, like compliance and/or safety.
+In this document, we cover validation of model (both real and synthetic) data, creation of
+synthetic data, model training, model quality evaluation, and who to contact to add the
+model to BIBSNet.
 
 ## Contacts
 Every SOP should identify who the document is intended for, list roles and responsibilities, and contact information for coordinating personnel.
