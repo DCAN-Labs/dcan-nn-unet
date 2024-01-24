@@ -1,7 +1,8 @@
 # Creating a nnU-Net model using SynthSeg
 
 ## Introduction
-Some companies like to include a reminder of the organizations mission.
+BIBSNet uses a nnU-Net model as its core component.  The nnU-Net model is usually trained on not only
+real MRI images, but synthetic MRI images created by SynthSeg.
 
 ## Scope of SOP
 This section covers the purpose of the SOP and the process it covers and why its important to follow the enclosed steps, like compliance and/or safety.
