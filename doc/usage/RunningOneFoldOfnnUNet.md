@@ -50,7 +50,7 @@ Note the *-c* an the end.  This stands for *continue*.
 Now we show how to run a training fold on MSI.  As an example, we will run fold 1 of task 501.
 Do the following.
 
-1. Start up [NICE](https://www.msi.umn.edu/support/faq/how-do-i-obtain-graphical-connection-using-nice-system).
+1. Start up a new [Desktop](https://www.msi.umn.edu/support/faq/how-do-i-obtain-graphical-connection-using-nice-system).
 2. Log on to mesabi:
     
         ssh -Y mesabi
