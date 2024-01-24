@@ -52,7 +52,7 @@ Do the following.
 
 1. Start up a new [Desktop](https://www.msi.umn.edu/support/faq/how-do-i-obtain-graphical-connection-using-nice-system) on *agate*.
    
-2. Look at the following directory:
+2. Look at the following directory as an example:
 
 
         /home/faird/shared/code/internal/nnUNet/slurm_scripts/552
