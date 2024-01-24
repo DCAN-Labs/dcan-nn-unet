@@ -15,7 +15,10 @@ Every SOP should identify who the document is intended for, list roles and respo
 If the SOP includes specific language or acronyms, include a glossary of terms.
 
 ## Step-by-step process
-This section is where the procedure is broken down into step-by-step instructions with relevant information, like specific equipment used. For some processes, this might be a visual representation, like a flowchart.
+
+1. Visual inspection (by Fez is ideal)
+2. Dice coefficient measures
+3. Communicate with people who add new models (I think this is Barry currently?) before and after testing
 
 ## Checklists
 Often, itemized checklists are easier to follow and some SOPs might be better described in this form.
