@@ -13,8 +13,7 @@ one line like this:
 
 where *n* is some integer.
 
-Each set of data is given a task number.  Before you can do anything,
-you have to add some lines to either your *.bashrc* or *.bash_profile* file:
+Each set of data is given a task number.  You should set the following environment variables in your SLURM script.  The third line should be unchanged, but you might need to change the values for the first two lines.
 
     export nnUNet_raw_data_base="/home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/"
     export nnUNet_preprocessed="/home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_preprocessed"
