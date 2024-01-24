@@ -128,7 +128,7 @@ Example arguments:
 
 ## Running training for each fold.
 
-See [Running Ten-Fold Validation](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/usage/RunningTenFoldValidation.md#running-ten-fold-validation)
+See [Running a single task](https://github.com/DCAN-Labs/dcan-nn-unet/blob/main/doc/usage/RunningOneFoldOfnnUNet.md)
 
 ## Running inference.
 
