@@ -34,7 +34,7 @@ You can list the jobs running like this:
 
 You will probably want to substitute your own user name.
 
-From the naming convention of our jobs, we can see that fold 1 of task 500 isn't running.
+From the naming convention of our jobs, we can see that fold 1 of task 501 isn't running.
 Here is the call to run training on fold 1 of task 501 for the first time.  Do not run this yet,
 though.
 
