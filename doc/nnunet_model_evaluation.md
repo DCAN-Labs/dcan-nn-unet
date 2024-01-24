@@ -3,10 +3,8 @@
 ## Introduction
 BIBSNet uses a nnU-Net model as its core component.  The data set for training of a nnU-Net model consists of MRI images and synthetic MRI images created by SynthSeg.
 
-## Scope of SOP
-In this document, we cover validation of model (both real and synthetic) data, creation of
-synthetic data, model training, model quality evaluation, and who to contact to add the
-model to BIBSNet.
+## Scope
+In this document, we cover the creation of synthetic data,  validation of model data (natural and synthetic), model training, model quality evaluation, and who to contact to add the model to BIBSNet.
 
 ## Contacts
 Every SOP should identify who the document is intended for, list roles and responsibilities, and contact information for coordinating personnel.
