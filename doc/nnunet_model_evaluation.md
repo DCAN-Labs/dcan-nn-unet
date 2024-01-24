@@ -1,13 +1,14 @@
 # Creating a nnU-Net model using SynthSeg
 
 ## Introduction
-BIBSNet uses a nnU-Net model as its core component.  The data set for training of a nnU-Net model consists of MRI images and synthetic MRI images created by SynthSeg.
+BIBSNet uses a nnU-Net model as its core component.  The data set for training a nnU-Net model consists of MRI images and synthetic MRI images created by SynthSeg.
 
+Research professionals creating a nnU-Net model from new data should find this a helpful document.
 ## Scope
 In this document, we cover the creation of synthetic data,  validation of model data (natural and synthetic), model training, model quality evaluation, and who to contact to add the model to BIBSNet.
 
 ## Contacts
-Every SOP should identify who the document is intended for, list roles and responsibilities, and contact information for coordinating personnel.
+You should contact []()[Paul Reiners](mailto:reine097@umn.edu) if you have any questions or run into any problems.
 
 ## Glossary
 * *BIBSNet*: This BIDS App provides the utility of creating a nnU-Net anatomical MRI segmentation and mask with a infant brain trained model for the purposes of circumventing JLF within Nibabies.
