@@ -50,7 +50,7 @@ Note the *-c* an the end.  This stands for *continue*.
 Now we show how to run a training fold on MSI.  As an example, we will run fold 1 of task 501.
 Do the following.
 
-1. Start up a new [Desktop](https://www.msi.umn.edu/support/faq/how-do-i-obtain-graphical-connection-using-nice-system) on *agate*.
+1. Start up a new [Desktop](https://www.msi.umn.edu/support/faq/how-do-i-obtain-graphical-connection-using-nice-system) on *mesabi*.  You will need a GPU so you should probably select Interactive GPU for Resources.
    
 2. Look at the following directory as an example:
 
