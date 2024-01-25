@@ -4,11 +4,12 @@ import shutil
 from pathlib import Path
 
 from tqdm.contrib import itertools
+from typing import Tuple
 
 
 def create_single_contrast_ten_fold_validation_from_t1_t2_ten_fold_validation(
-        parent_source_folder, first_source_task_number, parent_destination_folder, first_destination_task_number,
-        contrast_code, contrast_name):
+        parent_source_folder: str, first_source_task_number: int, parent_destination_folder: str,
+        first_destination_task_number: int, contrast_code: str, contrast_name: str) -> None:
     images_folders = ['imagesTr', 'imagesTs']
     labels_folders = ['labelsTr', 'labelsTs']
     folders = images_folders + labels_folders
@@ -30,8 +31,8 @@ def create_single_contrast_ten_fold_validation_from_t1_t2_ten_fold_validation(
             assert False
 
 
-def get_folders(first_destination_task_number, first_source_task_number, folder, i, parent_destination_folder,
-                parent_source_folder, contrast_name):
+def get_folders(first_destination_task_number: int, first_source_task_number: int, folder: str, i: int,
+                parent_destination_folder: str, parent_source_folder: str, contrast_name: str) -> Tuple[str, str]:
     source_folder = \
         os.path.join(
             parent_source_folder, f'Task{str(first_source_task_number + i)}_T1_T2_Fold{str(i)}', folder)
