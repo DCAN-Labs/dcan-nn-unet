@@ -13,8 +13,7 @@ one line like this:
 
 where *n* is some integer.
 
-Each set of data is given a task number.  Before you can do anything,
-you have to add some lines to either your *.bashrc* or *.bash_profile* file:
+Each set of data is given a task number.  You should set the following environment variables in your SLURM script.  The third line should be unchanged, but you might need to change the values for the first two lines.
 
     export nnUNet_raw_data_base="/home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/"
     export nnUNet_preprocessed="/home/feczk001/shared/data/nnUNet/nnUNet_raw_data_base/nnUNet_preprocessed"
@@ -35,7 +34,7 @@ You can list the jobs running like this:
 
 You will probably want to substitute your own user name.
 
-From the naming convention of our jobs, we can see that fold 1 of task 500 isn't running.
+From the naming convention of our jobs, we can see that fold 1 of task 501 isn't running.
 Here is the call to run training on fold 1 of task 501 for the first time.  Do not run this yet,
 though.
 
@@ -51,27 +50,24 @@ Note the *-c* an the end.  This stands for *continue*.
 Now we show how to run a training fold on MSI.  As an example, we will run fold 1 of task 501.
 Do the following.
 
-1. Start up [NICE](https://www.msi.umn.edu/support/faq/how-do-i-obtain-graphical-connection-using-nice-system).
-2. Log on to mesabi:
-    
-        ssh -Y mesabi
+1. Start up a new [Desktop](https://www.msi.umn.edu/support/faq/how-do-i-obtain-graphical-connection-using-nice-system) on *mesabi*.  You will need a GPU so you should probably select Interactive GPU for Resources.
    
-3. Change to the following directory:
+2. Look at the following directory as an example:
 
 
-        cd /home/faird/shared/code/internal/nnUNet/training/501/
+        /home/faird/shared/code/internal/nnUNet/slurm_scripts/552
    
-4. Open the file *NnUnetTrain_501_1.sh*.  Note how the task number and fold number are coded
+3. Open the file *NnUnetTrain_agate.sh*.  Note how the task number and fold number are coded
 up in the file name.  Change the email addresses if necessary.  Also add the *-c* argument to the last line, if necessary.  Save and close the file.
    
-5. Schedule the SLURM job like this:
+4. Schedule the SLURM job like this (making a new copy of *NnUnetTrain_agate.sh* in a new Task folder):
 
 
-        -bash-4.2$ sbatch NnUnetTrain_501_1.sh
+        -bash-4.2$ sbatch NnUnetTrain_agate.sh
         sbatch: Setting account: miran045
         Submitted batch job 4464201
 
-6. Now we can see that fold 1 is scheduled to run:
+5. Now we can see that fold 1 is scheduled to run:
 
         -bash-4.2$ squeue -u reine097
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
@@ -81,9 +77,9 @@ up in the file name.  Change the email addresses if necessary.  Also add the *-c
            4453638      v100 501_4_Tr reine097  R    2:54:16      1 cn2112
            4453620      v100 501_0_Tr reine097  R    3:28:54      1 cn2114
 
-7. You can monitor the progress of jobs with *squeue*.  You will also get emails when jobs start, stop, fail, and so on.
+6. You can monitor the progress of jobs with *squeue*.  You will also get emails when jobs start, stop, fail, and so on.
 
-8. Another way to monitor a particular job is to check the end of its log file like this (we get the name of the log file from its task number, fold number, and process ID):
+7. Another way to monitor a particular job is to check the end of its log file like this (we get the name of the log file from its task number, fold number, and process ID):
 
         -bash-4.2$ tail Train_501_0_nnUNet-4453620.out
         2021-06-21 08:13:03.053071: lr: 0.007941
@@ -99,6 +95,6 @@ up in the file name.  Change the email addresses if necessary.  Also add the *-c
 
 The most important information here is the epoch number.  We can see that we're on epoch 226 of 1000.  "Average global foreground Dice" can also give you an idea how well the algorithm is performing at this point.
 
-9. If the SLURM job times out before all 1000 epochs are finished, go back to step 5 and repeat, making sure the *-c* flag is set.
+8. If the SLURM job times out before all 1000 epochs are finished, go back to step 5 and repeat, making sure the *-c* flag is set.
 
-10. When all 1000 epochs are finished, you should get an email saying that the task finished with an exit code of 0.
+0. When all 1000 epochs are finished, you should get an email saying that the task finished with an exit code of 0.
