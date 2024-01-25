@@ -10,6 +10,20 @@ from typing import Tuple
 def create_single_contrast_ten_fold_validation_from_t1_t2_ten_fold_validation(
         parent_source_folder: str, first_source_task_number: int, parent_destination_folder: str,
         first_destination_task_number: int, contrast_code: str, contrast_name: str) -> None:
+    """
+    Creates ten-fold validation folders for a single contrast type.
+
+    Args:
+        parent_source_folder (str): The T1/T2 folder from which the single contrast folder is being created.
+        first_source_task_number (int): The starting nnU-Net task number.
+        parent_destination_folder (str): The folder where the single contrast folders will go.
+        first_destination_task_number: (int) The starting task number for the single contrast folds.
+        contrast_code (str): The code that is appended to the anatomical images, such as '0000'.
+        contrast_name (str): The abbreviation of the contrast, such as 'T1'.
+
+    Returns:
+        None.
+    """
     images_folders = ['imagesTr', 'imagesTs']
     labels_folders = ['labelsTr', 'labelsTs']
     folders = images_folders + labels_folders
