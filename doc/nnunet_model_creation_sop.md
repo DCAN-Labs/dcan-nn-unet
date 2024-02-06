@@ -20,6 +20,8 @@ You should contact []()[Paul Reiners](mailto:reine097@umn.edu) if you have any q
 1. Download the new data set of segmented MRI images.
 2. Visually inspect the data set (inspection by Fez is ideal).
 3. [Run SynthSeg](https://github.com/BBillot/SynthSeg/blob/master/scripts/tutorials/2-generation_explained.py) to create synthetic images.
-4. [Create nnU-Net model](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how_to_use_nnunet.md).
-5. After the model is created, for a sanity check you should [run Dice coefficient measures](https://github.com/DCAN-Labs/SynthSeg/blob/ade17f53285e8932a47ba91bba1f93a40874cc20/ext/neuron/metrics.py#L97) using the model and make sure the Dice coefficient is reasonable (at least 0.80, and, preferably, 0.90 or 0.95).
-6. Communicate with [Tim Hendrickson](mailto:hendr522@umn.edu), who adds new models, before and after testing
+4. The SynthSeg images will be put in the nnU-Net *imagesTr* and *labelsTr* folders.  None will go in *imagesTs* or *labelsTs*.  
+5. [Create nnU-Net model](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how_to_use_nnunet.md).
+6. After the model is created, for a sanity check you should [run Dice coefficient measures](https://github.com/DCAN-Labs/SynthSeg/blob/ade17f53285e8932a47ba91bba1f93a40874cc20/ext/neuron/metrics.py#L97) using the model and make sure the Dice coefficient is reasonable (at least 0.80, and, preferably, 0.90 or 0.95).
+7. Visually inspect segmentations after running inference using the new model on a test dataset (to look for holes or any other obvious issues).
+8. Communicate with [Tim Hendrickson](mailto:hendr522@umn.edu), who adds new models, before and after testing.  ["Preparing and Placing nnU-Net Models into BIBSNet Container"](https://docs.google.com/document/d/1IOudCeg6PEJfLANF9ZcESQWwkWuVqNWh-5JlUMXURVs/edit?usp=sharing) describes how nnU-Net models are placed in BIBSNet and any preparation needed.
