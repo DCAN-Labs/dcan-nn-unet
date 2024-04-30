@@ -5,7 +5,7 @@ from os.path import abspath, join, isdir, isfile
 
 from tqdm import tqdm
 
-source_folder = '/scratch.global/reine097/infant-segmentation-model/'
+source_folder = '/scratch.global/reine097/nnUNet/s3_bucket_backup'
 task_folder = '/scratch.global/reine097/Task526/'
 images_tr_folder = os.path.join(task_folder, 'imagesTr')
 labels_tr_folder = os.path.join(task_folder, 'labelsTr')
