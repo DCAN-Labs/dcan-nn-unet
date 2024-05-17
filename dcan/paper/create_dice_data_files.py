@@ -9,7 +9,7 @@ from evaluation.calculate_dice_for_region import calculate_dice_coefficient
 STEP = 4
 
 
-def main(ground_truth_folder, inferred_files_folder, step=1):
+def main(ground_truth_folder, inferred_files_folder, output_pickle_file, step=1):
     free_surfer_lut_dcan_file = open('../../doc/Freesurfer_LUT_DCAN.txt', 'r')
     lines_of_text = free_surfer_lut_dcan_file.readlines()
     d = dict()
@@ -34,7 +34,7 @@ def main(ground_truth_folder, inferred_files_folder, step=1):
                 dice_coefficient = calculate_dice_coefficient(gt_label_file, inferred_file, region_number, step)
                 d[region_number].append(dice_coefficient)
 
-    dbfile = open('../../data/dice.pickle', 'wb')
+    dbfile = open(output_pickle_file, 'wb')
     pickle.dump(d, dbfile)
     dbfile.close()
 
@@ -42,4 +42,5 @@ def main(ground_truth_folder, inferred_files_folder, step=1):
 if __name__ == '__main__':
     gt_folder = sys.argv[1]
     inferred_files = sys.argv[2]
+    output_pickle_file = sys.argv[3]
     main(gt_folder, inferred_files, STEP)
