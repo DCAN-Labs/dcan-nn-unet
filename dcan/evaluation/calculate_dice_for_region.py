@@ -3,9 +3,10 @@
 import sys
 
 import nibabel as nib
+from tqdm import tqdm
 
 
-def dice_coefficient(y_true, y_pred, region, smooth=1):
+def dice_coefficient(y_true, y_pred, region, smooth=1, step=1):
     m = 0
     n = 0
     intersection = 0
@@ -28,7 +29,7 @@ def dice_coefficient(y_true, y_pred, region, smooth=1):
     return dice
 
 
-def calculate_dice_coefficient(gt_filename, preds_filename, region):
+def calculate_dice_coefficient(gt_filename, preds_filename, region, step=1):
     predictions_img = nib.load(preds_filename)
     predictions_data = predictions_img.get_fdata()
 
@@ -37,16 +38,16 @@ def calculate_dice_coefficient(gt_filename, preds_filename, region):
 
     assert predictions_data.shape == gt_data.shape
 
-    return dice_coefficient(gt_data, predictions_data, region)
+    return dice_coefficient(gt_data, predictions_data, region, step)
 
 
-def main(gt_filename, preds_filename, region):
-    return calculate_dice_coefficient(gt_filename, preds_filename, region)
+def main(gt_filename, preds_filename, region, step=1):
+    return calculate_dice_coefficient(gt_filename, preds_filename, region, step)
 
 
 if __name__ == "__main__":
     ground_truth_filename = sys.argv[1]
     predictions_filename = sys.argv[2]
-    rgn = int(sys.argv[3])
-    result = main(ground_truth_filename, predictions_filename, rgn)
+    step = int(sys.argv[3])
+    result = main(ground_truth_filename, predictions_filename, step)
     print('Dice coefficient: ', result)
