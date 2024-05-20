@@ -1,7 +1,7 @@
-Task 528
+Task 527
 ========
 
-528 was trained with T2-only images
+527 was trained with T1/T2 image pairs
 ```
 iou_median:        0.7921853510223594
 dice_score_median: 0.8840431096012269

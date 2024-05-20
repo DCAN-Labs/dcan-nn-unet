@@ -3,141 +3,81 @@ Task 527
 
 527 was trained with a T1+T2 pair
 ```
-iou_median:        0.7844563732380077
-dice_score_median: 0.8790602818587053
+iou_median:        0.7921853510223594
+dice_score_median: 0.8840431096012269
 ```
 ---
 ```
 subject: 0mo_sub-107528.nii.gz
-	iou:        0.868714650761012
-	dice_score: 0.9297456413901009
-subject: 0mo_sub-118091.nii.gz
-	iou:        0.8482108682027633
-	dice_score: 0.9178723951949352
-subject: 0mo_sub-123208.nii.gz
-	iou:        0.8535381781123588
-	dice_score: 0.9209825707394033
-subject: 0mo_sub-125504.nii.gz
-	iou:        0.4943880691960524
-	dice_score: 0.6616595506796196
-subject: 0mo_sub-134449.nii.gz
-	iou:        0.5316280538760065
-	dice_score: 0.6941999430435885
+	iou:        0.8736238258668109
+	dice_score: 0.9325498681412141
 subject: 0mo_sub-145203.nii.gz
-	iou:        0.6119595920969669
-	dice_score: 0.7592741097274519
-subject: 0mo_sub-153860.nii.gz
-	iou:        0.8682978447101692
-	dice_score: 0.9295068740549388
+	iou:        0.5526944790069859
+	dice_score: 0.7119165894965988
 subject: 0mo_sub-154099.nii.gz
-	iou:        0.7533513458572334
-	dice_score: 0.859327307840433
-subject: 0mo_sub-168064.nii.gz
-	iou:        0.819597440166442
-	dice_score: 0.9008557850025446
-subject: 0mo_sub-175403.nii.gz
-	iou:        0.8510417822470827
-	dice_score: 0.9195273606661273
-subject: 0mo_sub-181722.nii.gz
-	iou:        0.8646871818812369
-	dice_score: 0.9274340385797751
-subject: 0mo_sub-184697.nii.gz
-	iou:        0.8620061687250228
-	dice_score: 0.9258897024220109
-subject: 0mo_sub-185840.nii.gz
-	iou:        0.8621101020076077
-	dice_score: 0.9259496536659273
-subject: 0mo_sub-193910.nii.gz
-	iou:        0.8694871372494212
-	dice_score: 0.9301878787335844
-subject: 0mo_sub-195465.nii.gz
-	iou:        0.5448006271722649
-	dice_score: 0.7053345494503227
-subject: 0mo_sub-204271.nii.gz
-	iou:        0.8711898078196677
-	dice_score: 0.9311613436424624
-subject: 0mo_sub-207504.nii.gz
-	iou:        0.8585943567206274
-	dice_score: 0.9239179637298895
+	iou:        0.7937839966948548
+	dice_score: 0.8850385533239112
 subject: 0mo_sub-231094.nii.gz
-	iou:        0.6646178536688607
-	dice_score: 0.7985230390415589
+	iou:        0.724622251789143
+	dice_score: 0.8403257595064484
 subject: 0mo_sub-231265.nii.gz
-	iou:        0.8445297407772621
-	dice_score: 0.9157127934765258
-subject: 1mo_sub-110076.nii.gz
-	iou:        0.8650055229378524
-	dice_score: 0.9276171167429434
+	iou:        0.8487840127742541
+	dice_score: 0.9182078673561686
+subject: 0mo_sub-314566.nii.gz
+	iou:        0.8729162707968501
+	dice_score: 0.9321466041143671
+subject: 0mo_sub-387471.nii.gz
+	iou:        0.8672141786143608
+	dice_score: 0.9288855971161251
+subject: 0mo_sub-396706.nii.gz
+	iou:        0.8764572932491596
+	dice_score: 0.9341617274336398
 subject: 1mo_sub-116400.nii.gz
-	iou:        0.8681103681868872
-	dice_score: 0.929399443396889
+	iou:        0.8590545468839689
+	dice_score: 0.9241843369633106
 subject: 1mo_sub-156492.nii.gz
-	iou:        0.5584992517340085
-	dice_score: 0.7167141737397522
+	iou:        0.7308780274769523
+	dice_score: 0.8445170784801386
 subject: 1mo_sub-164209.nii.gz
-	iou:        0.8627770091948215
-	dice_score: 0.9263341827238694
+	iou:        0.7669782468451108
+	dice_score: 0.8681241528844262
 subject: 1mo_sub-185464.nii.gz
-	iou:        0.8461558012486518
-	dice_score: 0.9166678139364619
+	iou:        0.7562366788212302
+	dice_score: 0.8612013266201407
 subject: 1mo_sub-198549.nii.gz
-	iou:        0.7638002538206384
-	dice_score: 0.8660847532743989
-subject: 1mo_sub-203895.nii.gz
-	iou:        0.8288849235008945
-	dice_score: 0.9064374831449536
+	iou:        0.7875275409557694
+	dice_score: 0.8811361200533918
 subject: 1mo_sub-234939.nii.gz
-	iou:        0.8683764302450676
-	dice_score: 0.9295518999252255
-subject: 1mo_sub-240158.nii.gz
-	iou:        0.578827490240945
-	dice_score: 0.7332371570997326
-subject: 1mo_sub-245025.nii.gz
-	iou:        0.8553434235208963
-	dice_score: 0.9220324525248816
-subject: 1mo_sub-280614.nii.gz
-	iou:        0.6504003073136873
-	dice_score: 0.7881727898854964
-subject: 2mo_sub-256983.nii.gz
-	iou:        0.8051124926553769
-	dice_score: 0.8920358104430117
+	iou:        0.8649413524063697
+	dice_score: 0.9275802172545597
+subject: 1mo_sub-298523.nii.gz
+	iou:        0.7215718262389813
+	dice_score: 0.838270951291244
+subject: 2mo_sub-231898.nii.gz
+	iou:        0.8329947690866488
+	dice_score: 0.9088894121729699
 subject: 2mo_sub-372377.nii.gz
-	iou:        0.7384898546094503
-	dice_score: 0.8495762602902126
-subject: 3mo_sub-116056.nii.gz
-	iou:        0.741141766695223
-	dice_score: 0.8513284568517124
-subject: 3mo_sub-116845.nii.gz
-	iou:        0.7098014472505726
-	dice_score: 0.8302735366118769
+	iou:        0.7420114553883099
+	dice_score: 0.8519019241802658
+subject: 3mo_sub-309615.nii.gz
+	iou:        0.834454787495532
+	dice_score: 0.9097578127194695
+subject: 4mo_sub-198549.nii.gz
+	iou:        0.7320396391894268
+	dice_score: 0.8452920159924008
 subject: 4mo_sub-376515.nii.gz
-	iou:        0.8150592191867955
-	dice_score: 0.8981075775131282
-subject: 4mo_sub-710922.nii.gz
-	iou:        0.6249201614854433
-	dice_score: 0.7691702968570011
-subject: 5mo_sub-176427.nii.gz
-	iou:        0.6166667880184659
-	dice_score: 0.7628866908052679
-subject: 5mo_sub-198202.nii.gz
-	iou:        0.649595032542425
-	dice_score: 0.7875812180949227
-subject: 6mo_sub-277762.nii.gz
-	iou:        0.5249830530983535
-	dice_score: 0.688510015944425
-subject: 6mo_sub-284149.nii.gz
-	iou:        0.6453799591025106
-	dice_score: 0.7844752885640772
-subject: 7mo_sub-657158.nii.gz
-	iou:        0.48694294672709265
-	dice_score: 0.6549584808236905
-subject: 7mo_sub-682023.nii.gz
-	iou:        0.4853937899349022
-	dice_score: 0.6535557011575087
-subject: 8mo_sub-518969.nii.gz
-	iou:        0.5555839678010888
-	dice_score: 0.7143091974516983
-subject: 8mo_sub-552990.nii.gz
-	iou:        0.6542793409998603
-	dice_score: 0.7910143405514816
+	iou:        0.7905867053498641
+	dice_score: 0.8830476658785427
+subject: 5mo_sub-381606.nii.gz
+	iou:        0.8120685143832781
+	dice_score: 0.896288973559777
+subject: 6mo_sub-116845.nii.gz
+	iou:        0.7237949966783356
+	dice_score: 0.8397692278696337
+subject: 7mo_sub-198549.nii.gz
+	iou:        0.7640049169334422
+	dice_score: 0.8662163122153633
+subject: 8mo_sub-198202.nii.gz
+	iou:        0.8567751685277255
+	dice_score: 0.9228636649763572
 ```
