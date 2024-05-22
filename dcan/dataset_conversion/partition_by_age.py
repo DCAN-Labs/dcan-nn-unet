@@ -5,6 +5,7 @@ from os.path import isfile, join
 from pathlib import Path
 import shutil
 
+
 def main(src_dir):
     only_files = [f for f in listdir(src_dir) if isfile(join(src_dir, f))]
 
@@ -15,6 +16,7 @@ def main(src_dir):
         mo = f[0]
         dest_dir = os.path.join(src_dir, f'{mo}mo')
         shutil.move(join(src_dir, f), dest_dir)
+
 
 if __name__ == '__main__':
     src_dir = sys.argv[1]
