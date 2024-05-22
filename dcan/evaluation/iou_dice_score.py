@@ -1,11 +1,11 @@
+import argparse
 import os.path
-
-import numpy as np
-import sys
+import statistics
 from os import listdir
 from os.path import isfile, join
+
 import nibabel as nib
-import statistics
+import numpy as np
 
 
 def compute_metrics(y_true, y_pred):
@@ -35,8 +35,17 @@ def compute_metrics(y_true, y_pred):
 
 
 if __name__ == "__main__":
-    ground_truth_folder = sys.argv[1]
-    predictions_folder = sys.argv[2]
+    parser = argparse.ArgumentParser(
+        prog='IOUDiceScore',
+        description='Computes IOU and DICE statistics for a pair of sets of files',
+        epilog='Pleae contact reine097 if you have questions or run into problems.')
+    parser.add_argument('ground_truth_folder', help="The folder containing the ground truth segmentations.")
+    parser.add_argument('predictions_folder',
+                        help="The folder of segmentations whose accuracy is to be measured.  \
+                        These will typically be the predictions of a segmentation model.")
+    args = parser.parse_args()
+    ground_truth_folder = args.ground_truth_folder
+    predictions_folder = args.predictions_folder
     gt_files = [f for f in listdir(ground_truth_folder) if isfile(join(ground_truth_folder, f))]
     ious = []
     dice_scores = []
