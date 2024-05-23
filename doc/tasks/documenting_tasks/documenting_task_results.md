@@ -1,6 +1,23 @@
 Documenting the results of a Task
 =================================
 
+Getting top-level results
+-------------------------
+
+```
+Script path: /home/miran045/reine097/projects/abcd-nn-unet/dcan/evaluation/iou_dice_score.py
+Sample args: /scratch.global/lundq163/nnUNet_HBCD/nnUNet_raw_data_base/nnUNet_raw_data/Task528/labelsTs/ /home/feczk001/shared/data/nnUNet/528_infer/
+```
+
+For creating images:
+
+```
+Script path: /home/miran045/reine097/projects/SynthSeg/SynthSeg/dcan/paper/evaluate_results.py
+Sample args: /scratch.global/lundq163/nnUNet_HBCD/nnUNet_raw_data_base/nnUNet_raw_data/Task527/labelsTs/
+/home/feczk001/shared/data/nnUNet/527_infer/
+/home/feczk001/shared/data/nnUNet/527_results/
+```
+
 Creating markdown and plots of model applied to test set
 --------------------------------------------------------
 
