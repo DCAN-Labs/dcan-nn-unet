@@ -27,5 +27,14 @@ Note that `src_dir` is hard-coded in this script.  Do not simply edit the path. 
 for any other hard-coded structures you find.</b>
 
 After this is done, you should find a folder of `catplot`s for each age group in the 
-`results_folder` you specified.  Copy these over to the correct folders in doc/tasks.  This copying step should
+`results_folder` you specified.  Copy these over to the correct folders in doc/tasks.
+This copying step should
 be automated.
+
+### Create markdown docs for each age group.
+
+These are generated from a Jinja template.  Run this program:
+
+    SynthSeg/dcan/paper/task/write_month_markdown.py
+
+Run it from the SynthSeg root project folder so it can find the paths.
