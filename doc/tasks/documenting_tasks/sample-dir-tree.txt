@@ -1,0 +1,112 @@
+/home/feczk001/shared/data/nnUNet/528
+├── infer
+│   ├── 0mo
+│   │   ├── 0mo_sub-107528.nii.gz
+│   │   ├── 0mo_sub-118091.nii.gz
+│   │   ├── 0mo_sub-123208.nii.gz
+│   │   ├── 0mo_sub-125504.nii.gz
+│   │   ├── 0mo_sub-134449.nii.gz
+│   │   ├── 0mo_sub-145203.nii.gz
+│   │   ├── 0mo_sub-153860.nii.gz
+│   │   ├── 0mo_sub-154099.nii.gz
+│   │   ├── 0mo_sub-168064.nii.gz
+│   │   ├── 0mo_sub-175403.nii.gz
+│   │   ├── 0mo_sub-181722.nii.gz
+│   │   ├── 0mo_sub-184697.nii.gz
+│   │   ├── 0mo_sub-185840.nii.gz
+│   │   ├── 0mo_sub-193910.nii.gz
+│   │   ├── 0mo_sub-195465.nii.gz
+│   │   ├── 0mo_sub-204271.nii.gz
+│   │   ├── 0mo_sub-207504.nii.gz
+│   │   ├── 0mo_sub-231094.nii.gz
+│   │   └── 0mo_sub-231265.nii.gz
+│   ├── 1mo
+│   │   ├── 1mo_sub-110076.nii.gz
+│   │   ├── 1mo_sub-116400.nii.gz
+│   │   ├── 1mo_sub-156492.nii.gz
+│   │   ├── 1mo_sub-164209.nii.gz
+│   │   ├── 1mo_sub-185464.nii.gz
+│   │   ├── 1mo_sub-198549.nii.gz
+│   │   ├── 1mo_sub-203895.nii.gz
+│   │   ├── 1mo_sub-234939.nii.gz
+│   │   ├── 1mo_sub-240158.nii.gz
+│   │   ├── 1mo_sub-245025.nii.gz
+│   │   └── 1mo_sub-280614.nii.gz
+│   ├── 2mo
+│   │   ├── 2mo_sub-256983.nii.gz
+│   │   └── 2mo_sub-372377.nii.gz
+│   ├── 3mo
+│   │   ├── 3mo_sub-116056.nii.gz
+│   │   └── 3mo_sub-116845.nii.gz
+│   ├── 4mo
+│   │   ├── 4mo_sub-376515.nii.gz
+│   │   └── 4mo_sub-710922.nii.gz
+│   ├── 5mo
+│   │   ├── 5mo_sub-176427.nii.gz
+│   │   └── 5mo_sub-198202.nii.gz
+│   ├── 6mo
+│   │   ├── 6mo_sub-277762.nii.gz
+│   │   └── 6mo_sub-284149.nii.gz
+│   ├── 7mo
+│   │   ├── 7mo_sub-657158.nii.gz
+│   │   └── 7mo_sub-682023.nii.gz
+│   ├── 8mo
+│   │   ├── 8mo_sub-518969.nii.gz
+│   │   └── 8mo_sub-552990.nii.gz
+│   └── pmo
+└── labelsTs
+    ├── 0mo
+    │   ├── 0mo_sub-107528.nii.gz
+    │   ├── 0mo_sub-118091.nii.gz
+    │   ├── 0mo_sub-123208.nii.gz
+    │   ├── 0mo_sub-125504.nii.gz
+    │   ├── 0mo_sub-134449.nii.gz
+    │   ├── 0mo_sub-145203.nii.gz
+    │   ├── 0mo_sub-153860.nii.gz
+    │   ├── 0mo_sub-154099.nii.gz
+    │   ├── 0mo_sub-168064.nii.gz
+    │   ├── 0mo_sub-175403.nii.gz
+    │   ├── 0mo_sub-181722.nii.gz
+    │   ├── 0mo_sub-184697.nii.gz
+    │   ├── 0mo_sub-185840.nii.gz
+    │   ├── 0mo_sub-193910.nii.gz
+    │   ├── 0mo_sub-195465.nii.gz
+    │   ├── 0mo_sub-204271.nii.gz
+    │   ├── 0mo_sub-207504.nii.gz
+    │   ├── 0mo_sub-231094.nii.gz
+    │   └── 0mo_sub-231265.nii.gz
+    ├── 1mo
+    │   ├── 1mo_sub-110076.nii.gz
+    │   ├── 1mo_sub-116400.nii.gz
+    │   ├── 1mo_sub-156492.nii.gz
+    │   ├── 1mo_sub-164209.nii.gz
+    │   ├── 1mo_sub-185464.nii.gz
+    │   ├── 1mo_sub-198549.nii.gz
+    │   ├── 1mo_sub-203895.nii.gz
+    │   ├── 1mo_sub-234939.nii.gz
+    │   ├── 1mo_sub-240158.nii.gz
+    │   ├── 1mo_sub-245025.nii.gz
+    │   └── 1mo_sub-280614.nii.gz
+    ├── 2mo
+    │   ├── 2mo_sub-256983.nii.gz
+    │   └── 2mo_sub-372377.nii.gz
+    ├── 3mo
+    │   ├── 3mo_sub-116056.nii.gz
+    │   └── 3mo_sub-116845.nii.gz
+    ├── 4mo
+    │   ├── 4mo_sub-376515.nii.gz
+    │   └── 4mo_sub-710922.nii.gz
+    ├── 5mo
+    │   ├── 5mo_sub-176427.nii.gz
+    │   └── 5mo_sub-198202.nii.gz
+    ├── 6mo
+    │   ├── 6mo_sub-277762.nii.gz
+    │   └── 6mo_sub-284149.nii.gz
+    ├── 7mo
+    │   ├── 7mo_sub-657158.nii.gz
+    │   └── 7mo_sub-682023.nii.gz
+    └── 8mo
+        ├── 8mo_sub-518969.nii.gz
+        └── 8mo_sub-552990.nii.gz
+
+20 directories, 89 files
