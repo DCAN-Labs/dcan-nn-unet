@@ -38,3 +38,10 @@ These are generated from a Jinja template.  Run this program:
     SynthSeg/dcan/paper/task/write_month_markdown.py
 
 Run it from the SynthSeg root project folder so it can find the paths.
+
+### Create top-level task markdown docs.
+
+These include, e.g., 528.md and 528-all-measures.md.  I've been copying and pasting from old
+versions.  This should probably be formalized with Jinja templates, though.
+
+
