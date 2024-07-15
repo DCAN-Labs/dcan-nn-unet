@@ -48,7 +48,7 @@ def main(input_f, output_f):
                 for label in consecutive_labels_to_regions:
                     region = consecutive_labels_to_regions[label]
                     line = '        "{}": "{}"'.format(label, region)
-                    if label != 14175 and region != "Vermis":
+                    if label != 14175:
                         line += ","
                     line += "\n"
                     writer.write(line)
