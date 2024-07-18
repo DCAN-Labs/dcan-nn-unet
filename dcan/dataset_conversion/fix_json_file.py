@@ -48,7 +48,7 @@ def main(input_f, output_f):
                 for label in consecutive_labels_to_regions:
                     region = consecutive_labels_to_regions[label]
                     line = '        "{}": "{}"'.format(label, region)
-                    if label != 14175:
+                    if not (label == 14175 and "FreesurferColorLUT.txt" in free_surfer_color_lut) and not (label == 172 and "Freesurfer_LUT_DCAN.txt" in free_surfer_color_lut):
                         line += ","
                     line += "\n"
                     writer.write(line)
