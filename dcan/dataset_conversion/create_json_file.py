@@ -2,11 +2,12 @@
 Create JSON file.
 
 Usage:
-  create_json_file <task_name> [<look_up_table_path>]
+  create_json_file <task_name> [<look_up_table_path>] [--modalities=<mods>]
   create_json_file -h | --help
 
 Options:
   -h --help     Show this screen.
+  --modalities=<mods>   modalities used [default: t1t2].
 """
 
 from collections import OrderedDict
@@ -33,7 +34,7 @@ def get_label_dict(free_surfer_label_to_region):
     dict1 = OrderedDict(sorted(free_surfer_label_to_region.items()))
     return dict1
 
-
+# TODO: Generalize hard coded path
 def main(task, free_surfer_color_lut='/home/miran045/reine097/projects/abcd-nn-unet/look_up_tables/Freesurfer_LUT_DCAN.txt'):
     target_base = join(nnUNet_raw_data, task)
     target_images_tr = join(target_base, "imagesTr")
@@ -41,13 +42,21 @@ def main(task, free_surfer_color_lut='/home/miran045/reine097/projects/abcd-nn-u
     free_surfer_label_to_region = get_id_to_region_mapping(free_surfer_color_lut)
     consecutive_labels_to_regions = fill_in_labels(free_surfer_label_to_region)
 
-    generate_dataset_json(join(target_base, 'dataset.json'), target_images_tr, target_images_ts, ('T1', 'T2'),
+    generate_dataset_json(join(target_base, 'dataset.json'), target_images_tr, target_images_ts, modality,
                           labels=dict(consecutive_labels_to_regions), dataset_name=task, lcns='hands off!')
 
 
 if __name__ == '__main__':
     args = docopt(__doc__)
     task_name = args['<task_name>']
+    modalities = args['--modalities']
+    if modalities == "t1":
+        modality = ['T1']
+    elif modalities == "t2":
+        modality = ['T2']
+    elif modalities == "t1t2":
+        modality = ['T1', 'T2']
+
     if not args['<look_up_table_path>']:
         main(task_name)
     else:

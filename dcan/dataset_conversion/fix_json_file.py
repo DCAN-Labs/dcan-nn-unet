@@ -41,14 +41,14 @@ def main(input_f, output_f):
             if '"labels": {' in line:
                 in_regions = True
                 writer.write(line)
-                free_surfer_color_lut = '/home/miran045/reine097/projects/abcd-nn-unet/look_up_tables' \
+                # TODO: generalize hard coded path
                                         '/Freesurfer_LUT_DCAN.txt'
                 free_surfer_label_to_region = get_id_to_region_mapping(free_surfer_color_lut)
                 consecutive_labels_to_regions = fill_in_labels(free_surfer_label_to_region)
                 for label in consecutive_labels_to_regions:
                     region = consecutive_labels_to_regions[label]
                     line = '        "{}": "{}"'.format(label, region)
-                    if label != 14175:
+                    if not (label == 14175 and "FreesurferColorLUT.txt" in free_surfer_color_lut) and not (label == 172 and "Freesurfer_LUT_DCAN.txt" in free_surfer_color_lut):
                         line += ","
                     line += "\n"
                     writer.write(line)
