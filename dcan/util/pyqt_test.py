@@ -1,13 +1,15 @@
 import sys
 import os
+import signal
 import subprocess
+import psutil
+
 from test1 import Ui_MainWindow
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import QObject, QThread, pyqtSignal
+from PyQt5.QtCore import QObject, QThread, pyqtSignal, QTimer
 
 class Thread(QtCore.QThread):
-
     finished = pyqtSignal()
     input1 = ''
     input2 = ''
@@ -31,26 +33,24 @@ class Thread(QtCore.QThread):
         self.input8 = input8
 
     def run(self):
-        # TODO: make this a selected path
-        #print("RUNNING!")
-        #p = subprocess.run(["bash", "/home/faird/efair/projects/dcan-nn-unet/dcan/util/export_automation_test.sh", self.input1, self.input2, self.input3, self.input4, self.input5, self.input6, self.input7, self.input8])
-        p = subprocess.run(["python", "/home/faird/efair/projects/dcan-nn-unet/dcan/util/automation_test.py", self.input1, self.input2, self.input3, self.input4, self.input5, self.input6, self.input7, self.input8])     
+        # Start subprocess and wait for it to finish
+        p = subprocess.Popen(["python", f"{self.input1}dcan/util/automation_test.py", self.input1, self.input2, self.input3, self.input4, self.input5, self.input6, self.input7, self.input8]) 
         self.processes.append(p)
-        
-        self.finished.emit()
-        #self.str_signal.emit('Emitted message from StringThread. Name = ' + self._name)
-        #print("Done run")
+        p.wait()
+        self.finished.emit() # Tells the program that the subprocess finished
         
     def stop(self):
-        print("Stopped process.")
-        
         if len(self.processes) > 0:
-            self.processes[0].kill()
-            
+            print("Stopping Process...")
+            parent = psutil.Process(self.processes[-1].pid) 
+            for child in parent.children(recursive=True):  # Kill current subprocess and all child subprocesses
+                child.kill()
+            parent.kill()
+            print("PROCESS STOPPED")
 
 class Window(Ui_MainWindow):
-    #p = None
     temp_thread = None
+    inputDict = {}
     
     def __innit__(self):
         super.__innit__()
@@ -58,36 +58,80 @@ class Window(Ui_MainWindow):
     def setupUi(self, MainWindow):
         super().setupUi(MainWindow)
         
-        self.line_dcan_path.setText("/home/faird/efair/projects/dcan-nn-unet/")
-        self.line_synth_path.setText("/home/faird/efair/projects/SynthSeg/")
-        self.line_modality.setText("t2")
-        self.line_distribution.setText("uniform")
-        self.line_synth_img_amt.setText("0")
-        self.line_task_number.setText("545")
-        self.line_task_path.setText("/scratch.global/lundq163/nnUNet_HBCD_noFlip_noMirr/nnUNet_raw_data_base/nnUNet_raw_data/Task545/")
-        self.line_raw_data_base_path.setText("/scratch.global/lundq163/nnUNet_HBCD_noFlip_noMirr/nnUNet_raw_data_base/")
+        # Put all input fields in a dictionary
+        self.inputDict['dcan_path'] = self.line_dcan_path
+        self.inputDict['synth_path'] = self.line_synth_path
+        self.inputDict['task_path'] = self.line_task_path
+        self.inputDict['raw_data_base_path'] = self.line_raw_data_base_path
+        self.inputDict['modality'] = self.line_modality
+        self.inputDict['task_number'] = self.line_task_number
+        self.inputDict['distribution'] = self.line_distribution
+        self.inputDict['synth_img_amt'] = self.line_synth_img_amt
         
+        # Some setup stuff
+        self.menuiuhwuaibfa.setTitle("TEST PROGRAM")
         self.pushButton.setText('run')
-        self.pushButton.clicked.connect(self.on_clicked)
-        
-        
+        self.pushButton_2.setText('Populate Preset')
+        self.pushButton.clicked.connect(self.run_program)
+        self.pushButton_2.clicked.connect(self.populate_inputs)
+        self.button_clear.clicked.connect(self.clear_inputs)
+        self.button_save.clicked.connect(self.save_presets)
     
-    def on_clicked(self):
+    def run_program(self):
+        # If process isn't currently running
         if self.pushButton.text() == "run":
-            self.pushButton.setText('cancel')
-            self.temp_thread = Thread(self.line_dcan_path.text(), self.line_task_path.text(), self.line_synth_path.text(), self.line_raw_data_base_path.text(),
-                                      self.line_modality.text(), self.line_task_number.text(), self.line_distribution.text(), self.line_synth_img_amt.text())
-            self.temp_thread.finished.connect(lambda: self.pushButton.setText('run'))
-            self.temp_thread.start()
+            # Make sure all inputs are filled
+            if any(inp.text() == "" for inp in self.inputDict.values()):
+                print("Please fill out all input fields")
+                self.menuiuhwuaibfa.setTitle("Please fill out all input fields")
+            else:
+                self.menuiuhwuaibfa.setTitle("Running...")
+                # Start new worker thread to run main program. Allows UI to continue working along with it
+                self.temp_thread = Thread(self.line_dcan_path.text(), self.line_task_path.text(), self.line_synth_path.text(), self.line_raw_data_base_path.text(),
+                                        self.line_modality.text(), self.line_task_number.text(), self.line_distribution.text(), self.line_synth_img_amt.text())
+                self.temp_thread.finished.connect(lambda: self.pushButton.setText('run')) # Listen for when process finishes
+                self.temp_thread.start()
+                self.pushButton.setText('cancel')
+        # If process is currently running
         elif self.pushButton.text() == "cancel":
-            print("STOPPING PROCESSSSSSS")
-            self.temp_thread.stop()
-            self.temp_thread.exit()
+            self.menuiuhwuaibfa.setTitle("Program Stopped")
+            self.temp_thread.stop() # Stops subrocesses within thread. This will cause the finish signal to be sent
             self.pushButton.setText('run')
-            #self.p.kill()     
-    
-    def change_label_text(self, label):
-        self.menuiuhwuaibfa.setText(label)
+            
+    def populate_inputs(self):
+        f = open(f"automation_presets/preset_test.txt")
+        lines = [line for line in f.readlines() if line.strip()] # Ignore blank lines
+
+        for line in lines:
+            line = line.strip().split('=')
+            # If there is no info associated with a certain input, clear the input line
+            if len(line) == 1:
+                self.inputDict[line[0]].clear() 
+            elif len(line) == 2:
+                self.inputDict[line[0]].setText(line[1])
+                    
+        f.close()
+            
+    def save_presets(self):
+        # Make sure file doesn't exist yet and create presets data
+        if not os.path.isfile("./automation_presets/preset_test.txt"):
+            f = open("./automation_presets/preset_test.txt", "w")
+            for key, val in self.inputDict.items():
+                f.write(f"{key}={val.text()}\n")
+            f.close()
+        else:
+            print("File already exists")
+            self.menuiuhwuaibfa.setTitle("File already exists")
+        
+    def clear_inputs(self):
+        # Clear all input fields
+        for key in self.inputDict.keys():
+            self.inputDict[key].clear()
+        
+    def sleepSec(self, sec):
+        # Disable buttons if needed
+        self.pushButton.setEnabled(False)
+        QTimer.singleShot(sec * 1000, lambda: self.pushButton.setDisabled(False))
         
 def main(): 
     app = QtWidgets.QApplication(sys.argv)
