@@ -3,10 +3,48 @@ import os
 import shutil
 import sys
 import subprocess
+import time
 
 from os.path import isfile, join
 
 processess = []
+
+def get_job_id_by_name(job_name):
+    # Run the squeue command and capture the output
+    result = subprocess.run(['squeue', '--name', job_name, '--format', '%.18i %.9P %.50j %.8u %.2t %.10M %.6D %R'], capture_output=True, text=True)
+    
+    # Extract the job ID from the output
+    output = result.stdout.splitlines()
+    if len(output) > 1:
+        # Assuming the first line is the header, get the first job ID from the second line
+        job_id = output[1].split()[0]
+        return job_id
+    else:
+        return None
+
+def check_complete(job_id):
+    f = open(f"{args.slurm_scripts_path}545_{i}_Train_nnUNet-{job_id}.err")
+    lines = f.readlines()
+    
+    for line in lines:
+        if "DUE TO TIME LIMIT" in line:
+            print(f"JOB {job_id} STOPPED DUE TO TIME LIMIT")
+            return False
+    
+    return True
+    
+def is_job_running(job_id):
+    """Check if the job with the given job_id is still running."""
+    result = subprocess.run(['squeue', '--job', str(job_id)], capture_output=True, text=True)
+    return str(job_id) in result.stdout
+
+def wait_for_job_to_finish(job_id, check_interval=60):
+    """Wait until the job with the given job_id is no longer running."""
+    while is_job_running(job_id):
+        print(f"Job {job_id} is still running. Waiting...")
+        time.sleep(check_interval)
+    print(f"Job {job_id} has finished.")
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -14,6 +52,7 @@ if __name__ == '__main__':
     parser.add_argument('task_path')
     parser.add_argument('synth_path')
     parser.add_argument('raw_data_base_path')
+    parser.add_argument('slurm_scripts_path')
 
     parser.add_argument('modality')
     parser.add_argument('task_number')
@@ -29,7 +68,7 @@ if __name__ == '__main__':
     os.environ["RESULTS_FOLDER"] = f"{args.raw_data_base_path}nnUNet_trained_models/"
     
     # test_run: bash /home/faird/efair/projects/dcan-nn-unet/dcan/util/export_automation_test.sh /home/faird/efair/projects/dcan-nn-unet/ /scratch.global/lundq163/nnUNet_HBCD_noFlip_noMirr/nnUNet_raw_data_base/nnUNet_raw_data/Task545/ /home/faird/efair/projects/SynthSeg/ /scratch.global/lundq163/nnUNet_HBCD_noFlip_noMirr/nnUNet_raw_data_base/ t2 545 uniform 50
-        
+    '''
     # RESIZING IMAGES
     print("--- Now Resizing Images ---")
     p = subprocess.run(["python", f'{args.dcan_path}dcan/img_processing/resize_images_test.py', args.task_path])
@@ -71,3 +110,39 @@ if __name__ == '__main__':
     os.remove(f'{args.task_path}dataset.json')
     os.rename(f'{args.task_path}dataset2.json', f'{args.task_path}dataset.json')
     print("--- Dataset json Created ---")
+    
+    # Running Plan and Preprocess
+    print("--- Now Running Plan and Preprocess ---")
+    
+    os.chdir(f"{args.slurm_scripts_path}")
+    subprocess.run(["sbatch", "-W", "NnUnet_plan_and_preprocess_agate.sh"])
+    print("--- Finished Plan and Preprocessing ---")
+    '''
+    
+    # Training Model
+    print("--- Now Running Nnunet Training ---")
+    job_ids = [0, 0, 0, 0, 0]
+    complete = [False, False, False, False, False]
+    
+    os.chdir(f"{args.slurm_scripts_path}")
+    subprocess.run(["sbatch", "-W", "NnUnetTrain_agate.sh", "0", "faird"])
+    
+    # Start first fold and wait for initial steps
+    job_ids[0] = get_job_id_by_name(f"545_0_Train_nnUNet")
+    
+    # Start next folds
+    for i in range(1, 3):
+        subprocess.run(["sbatch", "-W", "NnUnetTrain_agate.sh", f"{i}", "faird"])
+        job_ids[i] = get_job_id_by_name(f"545_{i}_Train_nnUNet")
+    
+    # Keep running folds untill all of them are done
+    while not all(complete[i] == True for i in range(3)):
+        for i in range(3):
+            # Wait for first fold to finish and check the error file. If it terminated due to time limit, run it again with the -c argument
+            wait_for_job_to_finish(job_ids[i])
+            check_complete(job_ids[i])
+            if complete[i] == False:
+                subprocess.run(["sbatch", "-W", "NnUnetTrain_agate.sh", f"{i}", "faird", "-c"])
+                job_ids[i] = get_job_id_by_name(f"545_{i}_Train_nnUNet")
+    
+    print("--- Finished Training ---")
