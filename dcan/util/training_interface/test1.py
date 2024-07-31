@@ -149,7 +149,6 @@ class Ui_MainWindow(object):
         self.label_slurm_scripts_path.setText(_translate("MainWindow", "Slurm Scripts Path"))
         self.menuiuhwuaibfa.setTitle(_translate("MainWindow", "iuhwuaibfa"))
 
-
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

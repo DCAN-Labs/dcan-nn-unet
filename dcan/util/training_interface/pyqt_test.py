@@ -6,6 +6,7 @@ import psutil
 
 from test1 import Ui_MainWindow
 from PyQt5.QtWidgets import *
+from PyQt5.QtWidgets import QMessageBox, QMainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QObject, QThread, pyqtSignal, QTimer
 
@@ -52,16 +53,15 @@ class Thread(QtCore.QThread):
             parent.kill()
             print("PROCESS STOPPED")
 
-class Window(Ui_MainWindow):
+class Window(QtWidgets.QMainWindow, Ui_MainWindow):
     temp_thread = None
     inputDict = {}
     script_dir = ''
+    running = False
     
-    def __innit__(self):
-        super.__innit__()
-
-    def setupUi(self, MainWindow):
-        super().setupUi(MainWindow)
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
         
         # Put all input fields in a dictionary
         self.inputDict['dcan_path'] = self.line_dcan_path
@@ -86,11 +86,11 @@ class Window(Ui_MainWindow):
         
         # Get the directory of this file
         self.script_dir = os.path.abspath(os.path.dirname(__file__))
-        os.chdir(self.script_dir)
+        os.chdir(self.script_dir)  
     
     def run_program(self):
         # If process isn't currently running
-        if self.pushButton.text() == "run":
+        if self.running == False:
             # Make sure all inputs are filled
             if any(inp.text() == "" for inp in self.inputDict.values()):
                 print("Please fill out all input fields")
@@ -100,14 +100,21 @@ class Window(Ui_MainWindow):
                 # Start new worker thread to run main program. Allows UI to continue working along with it
                 self.temp_thread = Thread(self.line_dcan_path.text(), self.line_task_path.text(), self.line_synth_path.text(), self.line_raw_data_base_path.text(), self.line_slurm_scripts_path.text(), 
                                           self.line_modality.text(), self.line_task_number.text(), self.line_distribution.text(), self.line_synth_img_amt.text(), self.script_dir)
-                self.temp_thread.finished.connect(lambda: self.pushButton.setText('run')) # Listen for when process finishes
+                #self.temp_thread.finished.connect(lambda: self.pushButton.setText('run')) # Listen for when process finishes
+                self.temp_thread.finished.connect(self.on_finish_thread) # Listen for when process finishes
                 self.temp_thread.start()
+                self.running = True
                 self.pushButton.setText('cancel')
         # If process is currently running
-        elif self.pushButton.text() == "cancel":
+        elif self.running == True:
             self.menuiuhwuaibfa.setTitle("Program Stopped")
             self.temp_thread.stop() # Stops subrocesses within thread. This will cause the finish signal to be sent
+            self.running = False
             self.pushButton.setText('run')
+        
+    def on_finish_thread(self):
+        self.running = False
+        self.pushButton.setText('run')
             
     def populate_inputs(self):
         try:
@@ -164,14 +171,26 @@ class Window(Ui_MainWindow):
     def sleepSec(self, sec):
         # Disable buttons if needed
         self.pushButton.setEnabled(False)
-        QTimer.singleShot(sec * 1000, lambda: self.pushButton.setDisabled(False))
+        QTimer.singleShot(sec * 1000, lambda: self.pushButton.setEnabled(True))
+        
+    def closeEvent(self, event):
+        print("CLOSING")
+        # Override the close event to execute a function first
+        if self.running == True:
+            reply = QMessageBox.question(self, 'Close Confirmation', 
+                                        "A program is currently running. Quitting now will cause it to stop at its current step, you will be able to start from here again if you wish to continue later. Are you sure you want to quit?", 
+                                        QMessageBox.Yes | QMessageBox.No, 
+                                        QMessageBox.No)
+            if reply == QMessageBox.Yes:
+                self.run_program()
+                event.accept()  # Accept the event to close the window
+            else:
+                event.ignore()  # Ignore the event to prevent the window from closing
         
 def main(): 
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow() 
     ui = Window()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    ui.show()
     sys.exit(app.exec_())
     
 if __name__ == "__main__":
