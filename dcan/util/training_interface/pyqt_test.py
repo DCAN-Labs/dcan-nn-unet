@@ -5,6 +5,7 @@ import subprocess
 import psutil
 
 from test1 import Ui_MainWindow
+from k_login import Ui_LoginWindow
 from PyQt5.QtWidgets import *
 from PyQt5.QtWidgets import QMessageBox, QMainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -62,6 +63,20 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+                
+        # Get the directory of this file
+        self.script_dir = os.path.abspath(os.path.dirname(__file__))
+        os.chdir(self.script_dir)  
+        
+        # Set up presets
+        num = 0
+        for file in os.listdir(f"{self.script_dir}/automation_presets"):
+            file = file[:-7]
+            self.comboBox_preset.addItem(file)
+            num += 1 
+        if num == 0:
+            self.comboBox_preset.setItemText(0, 'You do not have any presets')
+            self.comboBox_preset.setStyleSheet("background-color: rgb(137, 137, 137)")
         
         # Put all input fields in a dictionary
         self.inputDict['dcan_path'] = self.line_dcan_path
@@ -83,10 +98,6 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         self.button_clear.clicked.connect(self.clear_inputs)
         self.button_save.clicked.connect(self.save_preset)
         self.button_remove.clicked.connect(self.remove_preset)
-        
-        # Get the directory of this file
-        self.script_dir = os.path.abspath(os.path.dirname(__file__))
-        os.chdir(self.script_dir)  
     
     def run_program(self):
         # If process isn't currently running
@@ -117,36 +128,40 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pushButton.setText('run')
             
     def populate_inputs(self):
-        try:
-            f = open(f"{self.script_dir}/automation_presets/{self.line_set_preset.text()}.config")
-            lines = [line for line in f.readlines() if line.strip()] # Ignore blank lines
+        if self.comboBox_preset.currentIndex()>0:
+            try:
+                f = open(f"{self.script_dir}/automation_presets/{self.comboBox_preset.currentText()}.config")
+                lines = [line for line in f.readlines() if line.strip()] # Ignore blank lines
 
-            for line in lines:
-                line = line.strip().split('=')
-                # If there is no info associated with a certain input, clear the input line
-                if len(line) == 1:
-                    self.inputDict[line[0]].clear() 
-                elif len(line) == 2:
-                    self.inputDict[line[0]].setText(line[1])
-                        
-            f.close()
-            print("Preset Loaded")
-            self.menuiuhwuaibfa.setTitle("Preset Loaded")
-        except:
-            print("File Does Not Exist")
-            self.menuiuhwuaibfa.setTitle("File Does Not Exist")
+                for line in lines:
+                    line = line.strip().split('=')
+                    # If there is no info associated with a certain input, clear the input line
+                    if len(line) == 1:
+                        self.inputDict[line[0]].clear() 
+                    elif len(line) == 2:
+                        self.inputDict[line[0]].setText(line[1])
+                            
+                f.close()
+                print("Preset Loaded")
+                self.menuiuhwuaibfa.setTitle("Preset Loaded")
+            except:
+                print("File Does Not Exist")
+                self.menuiuhwuaibfa.setTitle("File Does Not Exist")
             
     def save_preset(self):
         # If overwrite is checked, delete the file if it exists already
         if self.check_overwrite.isChecked(): 
             if os.path.isfile(f"{self.script_dir}/automation_presets/{self.line_save_preset.text()}.config"):
                 os.remove(f"{self.script_dir}/automation_presets/{self.line_save_preset.text()}.config")
+                self.comboBox_preset.removeItem(self.comboBox_preset.findText(self.line_save_preset.text()))
         # Make sure file doesn't exist yet and create presets data
         if not os.path.isfile(f"{self.script_dir}/automation_presets/{self.line_save_preset.text()}.config"):
             f = open(f"{self.script_dir}/automation_presets/{self.line_save_preset.text()}.config", "w")
             for key, val in self.inputDict.items():
                 f.write(f"{key}={val.text()}\n")
             f.close()
+            self.comboBox_preset.addItem(self.line_save_preset.text())
+            self.comboBox_preset.setCurrentText(self.line_save_preset.text())
             print("Preset Saved")
             self.menuiuhwuaibfa.setTitle("Preset Saved")
         else:
@@ -157,6 +172,7 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         # Delete file if it exists
         if os.path.isfile(f"{self.script_dir}/automation_presets/{self.line_remove_preset.text()}.config"):
             os.remove(f"{self.script_dir}/automation_presets/{self.line_remove_preset.text()}.config")
+            self.comboBox_preset.removeItem(self.comboBox_preset.findText(self.line_remove_preset.text()))
             print("Preset Removed")
             self.menuiuhwuaibfa.setTitle("Preset Removed")
         else:
@@ -187,9 +203,47 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
             else:
                 event.ignore()  # Ignore the event to prevent the window from closing
         
+class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        
+        self.button_launch_ui.setText('Launch UI')
+        self.button_launch_ui.clicked.connect(self.run_uiScript)
+        
+        # Get the directory of this file
+        self.script_dir = os.path.abspath(os.path.dirname(__file__))  
+        
+        num = 0
+        
+        for file in os.listdir(f"{self.script_dir}/automation_presets"):
+            file = file[:-7]
+            self.comboBox.addItem(file)
+            num += 1
+        
+        if num == 0:
+            self.comboBox.setItemText(0, 'You do not have any presets')
+            self.comboBox.setStyleSheet("background-color: rgb(137, 137, 137)")
+    
+    def run_uiScript(self):
+        self.new_ui = Window()
+        self.new_ui.show() 
+        if self.comboBox.currentIndex()>0:
+            self.new_ui.comboBox_preset.setCurrentText(self.comboBox.currentText())
+            self.new_ui.populate_inputs()
+        self.close()
+         
+    def set_background_image(self, image_path):
+        self.setStyleSheet(f"QMainWindow {{background-image: url({image_path}); background-repeat: no-repeat; background-position: center;}}")
+
 def main(): 
+    # app = QtWidgets.QApplication(sys.argv)
+    # ui = LoginWindow()
+    # ui.show()
+    # sys.exit(app.exec_())
+    
     app = QtWidgets.QApplication(sys.argv)
-    ui = Window()
+    ui = LoginWindow()
     ui.show()
     sys.exit(app.exec_())
     

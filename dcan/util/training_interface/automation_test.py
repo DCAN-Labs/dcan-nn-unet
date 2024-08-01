@@ -125,10 +125,10 @@ if __name__ == '__main__':
     subprocess.run(["python", f'copy_over_augmented_image_files.py', f'{args.task_path}SynthSeg_generated/labels/', f'{args.task_path}imagesTr/', f'{args.task_path}labelsTr/'])
     os.chdir(f'{args.task_path}')
    
-    subprocess.run(f'mv ./imagesTr/*_SynthSeg_generated_0000.nii.gz ./labelsTr/ -v', shell=True)
-    subprocess.run(f'mv ./imagesTr/*_SynthSeg_generated_0001.nii.gz ./labelsTr/ -v', shell=True)
-    #subprocess.run(['ls', f'./imagesTr/', '|', 'wc', '-l'])
-    #subprocess.run(['ls', f'./labelsTr/', '|', 'wc', '-l'])
+    subprocess.run(f'mv ./imagesTr/*_SynthSeg_generated_0000.nii.gz ./labelsTr/', shell=True)
+    subprocess.run(f'mv ./imagesTr/*_SynthSeg_generated_0001.nii.gz ./labelsTr/', shell=True)
+    subprocess.run(['ls', f'./imagesTr/', '|', 'wc', '-l'])
+    subprocess.run(['ls', f'./labelsTr/', '|', 'wc', '-l'])
     subprocess.run(['rm', f'SynthSeg_generated/', '-r'])
     print("--- Images Moved ---")
     

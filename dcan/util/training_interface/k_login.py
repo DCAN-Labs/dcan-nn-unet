@@ -11,8 +11,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
 import subprocess
-folder_path = f'/home/faird/cart0660/projects/dcan-nn-unet/dcan/util/training_interface/'
-class Ui_MainWindow(object):
+folder_path = f'/home/faird/efair/projects/dcan-nn-unet/dcan/util/training_interface/'
+class Ui_LoginWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(291, 414)
@@ -33,7 +33,7 @@ class Ui_MainWindow(object):
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(75, 120, 151, 31))
         self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem('Select Preset')
+        self.comboBox.addItem('-- Select Preset --')
          
        
 
@@ -63,17 +63,8 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Automation Training"))
         
         self.button_launch_ui.setText(_translate("MainWindow", "Launch UI"))
-        num=0
-        if not os.path.exists('automation_presets'):
-            os.makedirs('automation_presets')
-        for file in os.listdir(os.path.join(folder_path, 'automation_presets')):
-            if file[0:4] == 'pres':
-                self.comboBox.addItem(file)
-                num=1
     
-        if num == 0:
-            self.comboBox.setItemText(0, 'Please Create a Preset')
-            self.comboBox.setStyleSheet("background-color: rgb(137, 137, 137)")
+        
             
             
             

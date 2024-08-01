@@ -1,10 +1,10 @@
 import sys
 from PyQt5 import QtWidgets, QtGui, QtCore
-from k_login import Ui_MainWindow  # Generated from your .ui file
+from k_login import Ui_LoginWindow  # Generated from your .ui file
 import subprocess
 
 
-class MainWindow(Ui_MainWindow):
+class MainWindow(Ui_LoginWindow):
     def __init__(self):
         super(MainWindow,self).__init__()
     
@@ -22,11 +22,10 @@ class MainWindow(Ui_MainWindow):
             subprocess.run(['python', 'pyqt_test.py','--preset', self.comboBox.currentText()])
         else:
             subprocess.run(['python', 'pyqt_test.py'])
-    
-
-        
+         
     def set_background_image(self, image_path):
         self.setStyleSheet(f"QMainWindow {{background-image: url({image_path}); background-repeat: no-repeat; background-position: center;}}")
+        
 def main():
     app = QtWidgets.QApplication(sys.argv)
     window = QtWidgets.QMainWindow() 
