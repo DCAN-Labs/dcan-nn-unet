@@ -10,7 +10,7 @@ from os.path import isfile, join
 processess = []
 
 def get_job_id_by_name(job_name, fold):
-    # Get the job ID of a specified job
+    # Get the job ID with a specified job name
     result = subprocess.run(['squeue', '--name', job_name, '--format', '%.18i %.9P %.50j %.8u %.2t %.10M %.6D %R'], capture_output=True, text=True)
     
     # Extract the job ID from the output
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     parser.add_argument('synth_img_amt')
 
     args = parser.parse_args()
-
+    
     ### SETTING UP PATHS ###
     os.environ["PYTHONPATH"] = f"{args.synth_path}:{args.synth_path}SynthSeg/:{args.dcan_path}:{args.dcan_path}dcan/"
     os.environ["nnUNet_raw_data_base"] = f"{args.raw_data_base_path}"
@@ -114,8 +114,8 @@ if __name__ == '__main__':
     
     ### CREATING SYNTHETICS ###
     print("--- Now Creating Synthetic Images ---")
-    os.chdir(f'{args.synth_path}')
-    subprocess.run(["python", f'./SynthSeg/dcan/image_generation_for_all_ages.py', args.task_path, f'{args.task_path}SynthSeg_generated/', f'{args.synth_path}data/labels_classes_priors/dcan/uniform/mins_maxes_task_{args.task_number}.npy', args.synth_img_amt, f'--modalities={args.modality}', f'--distribution={args.distribution}'])
+    os.chdir(f'{args.slurm_scripts_path}')
+    subprocess.run(["sbatch", "-W", f'./SynthSeg_image_generation.sh', args.synth_path, args.task_path, f'{args.task_path}SynthSeg_generated/', f'{args.synth_path}data/labels_classes_priors/dcan/uniform/mins_maxes_task_{args.task_number}.npy', args.synth_img_amt, f'--modalities={args.modality}', f'--distribution={args.distribution}'])
     print("--- SynthSeg Images Generated ---")
     
     ### COPYING OVER SYNTHSEG GENERATED IMAGE FILES ###
@@ -184,3 +184,4 @@ if __name__ == '__main__':
     subprocess.run(["sbatch", "infer_agate.sh", "faird"])
     print("--- Inference Complete ---")
     print("PROGRAM COMPLETE!")
+    
