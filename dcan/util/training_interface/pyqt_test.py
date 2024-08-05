@@ -16,7 +16,7 @@ class Thread(QtCore.QThread):
     input2 = ''
     input3 = ''
     input4 = ''
-    input5 = ''
+    #input5 = ''
     input6 = ''
     input7 = ''
     input8 = ''
@@ -24,13 +24,13 @@ class Thread(QtCore.QThread):
     processes = []
     script_dir = ""
 
-    def __init__(self, input1, input2, input3, input4, input5, input6, input7, input8, input9, script_dir):
+    def __init__(self, input1, input2, input3, input4, input6, input7, input8, input9, script_dir):
         QtCore.QThread.__init__(self)
         self.input1 = input1
         self.input2 = input2
         self.input3 = input3
         self.input4 = input4
-        self.input5 = input5
+        #self.input5 = input5
         self.input6 = input6
         self.input7 = input7
         self.input8 = input8
@@ -39,7 +39,7 @@ class Thread(QtCore.QThread):
 
     def run(self):
         # Start subprocess and wait for it to finish
-        p = subprocess.Popen(["python", f"{self.script_dir}/automation_test.py", self.input1, self.input2, self.input3, self.input4, self.input5, self.input6, self.input7, self.input8, self.input9]) 
+        p = subprocess.Popen(["python", f"{self.script_dir}/automation_test.py", self.input1, self.input2, self.input3, self.input4, self.input6, self.input7, self.input8, self.input9]) 
         self.processes.append(p)
         p.wait()
         self.finished.emit() # Tells the program that the subprocess finished
@@ -86,7 +86,7 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         self.inputDict['task_number'] = self.line_task_number
         self.inputDict['distribution'] = self.line_distribution
         self.inputDict['synth_img_amt'] = self.line_synth_img_amt
-        self.inputDict['slurm_scripts_path'] = self.line_slurm_scripts_path
+        #self.inputDict['slurm_scripts_path'] = self.line_slurm_scripts_path
         
         # Some setup stuff
         self.menuiuhwuaibfa.setTitle("TEST PROGRAM")
@@ -108,7 +108,7 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
             else:
                 self.menuiuhwuaibfa.setTitle("Running...")
                 # Start new worker thread to run main program. Allows UI to continue working along with it
-                self.temp_thread = Thread(self.line_dcan_path.text(), self.line_task_path.text(), self.line_synth_path.text(), self.line_raw_data_base_path.text(), self.line_slurm_scripts_path.text(), 
+                self.temp_thread = Thread(self.line_dcan_path.text(), self.line_task_path.text(), self.line_synth_path.text(), self.line_raw_data_base_path.text(), 
                                           self.line_modality.text(), self.line_task_number.text(), self.line_distribution.text(), self.line_synth_img_amt.text(), self.script_dir)
                 #self.temp_thread.finished.connect(lambda: self.pushButton.setText('run')) # Listen for when process finishes
                 self.temp_thread.finished.connect(self.on_finish_thread) # Listen for when process finishes

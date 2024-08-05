@@ -2,7 +2,7 @@
 
 ### Argument to this script is the fold number (between 0 and 4 
 ### inclusive) and -A argument 
-### Sample invocation: ./NnUnetTrain_mesabi.sh 0 [-c]
+### Sample invocation:
 
 #SBATCH --job-name=545_plan_and_preprocess # job name
 #SBATCH --time=24:00:00          # total run time limit (HH:MM:SS)
@@ -21,9 +21,9 @@ source /common/software/install/migrated/anaconda/anaconda3-2018.12/etc/profile.
 conda activate /home/support/public/torch_cudnn8.2
 pip install numpy==1.21.6
 
-export nnUNet_raw_data_base="/scratch.global/lundq163/nnUNet_HBCD_noFlip_noMirr/nnUNet_raw_data_base/"
-export nnUNet_preprocessed="/scratch.global/lundq163/nnUNet_HBCD_noFlip_noMirr/nnUNet_raw_data_base/nnUNet_preprocessed/"
+export nnUNet_raw_data_base="$1"
+export nnUNet_preprocessed="$1nnUNet_preprocessed"
 export RESULTS_FOLDER="/home/faird/shared/data/nnUNet_lundq163/nnUNet_raw_data_base/nnUNet_trained_models/"
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/common/software/install/migrated/cudnn/8.2.0/lib64
 
-nnUNet_plan_and_preprocess -t 545 --verify_dataset_integrity
+nnUNet_plan_and_preprocess -t $2 --verify_dataset_integrity

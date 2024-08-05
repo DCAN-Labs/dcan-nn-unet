@@ -21,5 +21,4 @@ export PYTHONPATH=${PYTHONPATH}:$1SynthSeg/
 
 cd $1
 
-python ./SynthSeg/dcan/image_generation_for_all_ages.py $2 $3 $4 $5 $6 $7
-
+python ./SynthSeg/dcan/image_generation_for_all_ages.py $2 $2SynthSeg_generated $3 $4 $5 $6

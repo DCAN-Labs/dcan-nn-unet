@@ -2,7 +2,7 @@
 sbatch <<EOT
 #!/bin/sh
 
-#SBATCH --job-name=545_infer 
+#SBATCH --job-name=$2_infer 
 #SBATCH --mem=64g       
 #SBATCH --time=8:00:00          # (HH:MM:SS)
 
@@ -21,11 +21,11 @@ module load conda
 conda activate /home/support/public/pytorch_1.11.0_agate
 
 
-export nnUNet_raw_data_base="/scratch.global/lundq163/nnUNet_HBCD_noFlip_noMirr/nnUNet_raw_data_base/"
-export nnUNet_preprocessed="/scratch.global/lundq163/nnUNet_HBCD_noFlip_noMirr/nnUNet_raw_data_base/nnUNet_preprocessed/"
+export nnUNet_raw_data_base="$3"
+export nnUNet_preprocessed="$3nnUNet_preprocessed"
 export RESULTS_FOLDER="/home/faird/shared/data/nnUNet_lundq163/nnUNet_raw_data_base/nnUNet_trained_models/"
 
 
 
-nnUNet_predict -i /scratch.global/lundq163/nnUNet_HBCD_noFlip_noMirr/nnUNet_raw_data_base/nnUNet_raw_data/Task545/imagesTs -o /home/faird/shared/data/nnUNet_lundq163/545_infer/ -t 545 -tr nnUNetTrainerV2_noMirroring -m 3d_fullres --disable_tta
+nnUNet_predict -i $3nnUNet_raw_data/Task$2/imagesTs -o /home/faird/shared/data/nnUNet_lundq163/$2_infer/ -t $2 -tr nnUNetTrainerV2_noMirroring -m 3d_fullres --disable_tta
 EOT

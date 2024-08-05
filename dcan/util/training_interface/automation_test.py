@@ -7,8 +7,6 @@ import time
 
 from os.path import isfile, join
 
-processess = []
-
 def get_job_id_by_name(job_name, fold):
     # Get the job ID with a specified job name
     result = subprocess.run(['squeue', '--name', job_name, '--format', '%.18i %.9P %.50j %.8u %.2t %.10M %.6D %R'], capture_output=True, text=True)
@@ -88,7 +86,6 @@ if __name__ == '__main__':
     parser.add_argument('task_path')
     parser.add_argument('synth_path')
     parser.add_argument('raw_data_base_path')
-    parser.add_argument('slurm_scripts_path')
 
     parser.add_argument('modality')
     parser.add_argument('task_number')
@@ -101,24 +98,26 @@ if __name__ == '__main__':
     os.environ["PYTHONPATH"] = f"{args.synth_path}:{args.synth_path}SynthSeg/:{args.dcan_path}:{args.dcan_path}dcan/"
     os.environ["nnUNet_raw_data_base"] = f"{args.raw_data_base_path}"
     os.environ["nnUNet_preprocessed"] = f"{args.raw_data_base_path}nnUNet_preprocessed/"
-    os.environ["RESULTS_FOLDER"] = f"{args.raw_data_base_path}nnUNet_trained_models/"
+    os.environ["RESULTS_FOLDER"] = f"/home/faird/shared/data/nnUNet_lundq163/nnUNet_raw_data_base/nnUNet_trained_models/"
+    
+    script_dir = os.path.abspath(os.path.dirname(__file__))
+    os.chdir(script_dir) 
     
     ### RESIZING IMAGES ###
     print("--- Now Resizing Images ---")
     p = subprocess.run(["python", f'{args.dcan_path}dcan/img_processing/resize_images_test.py', args.task_path])
-    processess.append(p)
     print("--- Images Resized ---")
     
     ### SETTING UP MINS/MAXES ###
     print("--- Now Creating Min Maxes ---")
     os.chdir(f'{args.synth_path}')
-    subprocess.run(["python", f'{args.synth_path}SynthSeg/dcan/ten_fold_uniformity_estimation_one_task.py', args.task_path, f'./data/labels_classes_priors/dcan/uniform/mins_maxes_task_{args.task_number}.npy'])
+    subprocess.run(["python", f'{args.synth_path}SynthSeg/dcan/ten_fold_uniformity_estimation_one_task.py', args.task_path, f'{script_dir}/min_maxes/mins_maxes_task_{args.task_number}.npy'])
     print("--- Min Maxes Created ---")
     
     ### CREATING SYNTHETICS ###
     print("--- Now Creating Synthetic Images ---")
-    os.chdir(f'{args.slurm_scripts_path}')
-    subprocess.run(["sbatch", "-W", f'./SynthSeg_image_generation.sh', args.synth_path, args.task_path, f'{args.task_path}SynthSeg_generated/', f'{args.synth_path}data/labels_classes_priors/dcan/uniform/mins_maxes_task_{args.task_number}.npy', args.synth_img_amt, f'--modalities={args.modality}', f'--distribution={args.distribution}'])
+    os.chdir(f'{script_dir}/scripts/slurm_scripts')
+    subprocess.run(["sbatch", "-W", f'./SynthSeg_image_generation.sh', args.synth_path, args.task_path, f'{script_dir}/min_maxes/mins_maxes_task_{args.task_number}.npy', args.synth_img_amt, f'--modalities={args.modality}', f'--distribution={args.distribution}'])
     print("--- SynthSeg Images Generated ---")
     
     ### COPYING OVER SYNTHSEG GENERATED IMAGE FILES ###
@@ -146,8 +145,8 @@ if __name__ == '__main__':
     
     ### RUNNING PLAN AND PREPROCESS ###
     print("--- Now Running Plan and Preprocess ---")
-    os.chdir(f"{args.slurm_scripts_path}")
-    subprocess.run(["sbatch", "-W", "NnUnet_plan_and_preprocess_agate.sh"])
+    os.chdir(f'{script_dir}/scripts/slurm_scripts')
+    subprocess.run(["sbatch", "-W", "./NnUnet_plan_and_preprocess_agate.sh", args.raw_data_base_path, args.task_number])
     print("--- Finished Plan and Preprocessing ---")
     
     ### TRAINING MODEL ###
@@ -157,9 +156,9 @@ if __name__ == '__main__':
     complete = [False, False, False, False, False]
     
     # Start first fold and wait for initial steps
-    os.chdir(f"{args.slurm_scripts_path}")
+    os.chdir(f'{script_dir}/scripts/slurm_scripts')
     
-    subprocess.run(["sbatch", "-W", "NnUnetTrain_agate.sh", "0", "faird"])
+    subprocess.run(["sbatch", "-W", "./NnUnetTrain_agate.sh", "0", "faird", args.task_number, args.raw_data_base_path])
     job_ids[0] = get_job_id_by_name(f"{args.task_number}_0_Train_nnUNet", 0)
     wait_fold_0_setup(job_ids[0], 60)
     print("Begin training Fold 0.")
@@ -167,7 +166,7 @@ if __name__ == '__main__':
     # Start next folds
     for i in range(1, 5):
         print(f"Begin training Fold {i}")
-        subprocess.run(["sbatch", "-W", "NnUnetTrain_agate.sh", f"{i}", "faird"])
+        subprocess.run(["sbatch", "-W", "./NnUnetTrain_agate.sh", f"{i}", "faird", args.task_number, args.raw_data_base_path])
         job_ids[i] = get_job_id_by_name(f"{args.task_number}_{i}_Train_nnUNet", i)
     
     # Keep running folds untill all of them are done
@@ -178,15 +177,15 @@ if __name__ == '__main__':
             if check_complete(job_ids[i], i):
                 complete[i] = True
             else:
-                subprocess.run(["sbatch", "-W", "NnUnetTrain_agate.sh", f"{i}", "faird", "-c"])
+                subprocess.run(["sbatch", "-W", "./NnUnetTrain_agate.sh", f"{i}", "faird", args.task_number, args.raw_data_base_path, "-c"])
                 job_ids[i] = get_job_id_by_name(f"{args.task_number}_{i}_Train_nnUNet", i)
                 
     print("--- Training Complete ---")
     
     ### INFERENCE ###
     print("--- Starting Inference ---")
-    os.chdir(f"{args.slurm_scripts_path}")
-    subprocess.run(["sbatch", "-W", "infer_agate.sh", "faird"])
+    os.chdir(f'{script_dir}/scripts/slurm_scripts')
+    subprocess.run(["sbatch", "-W", "./infer_agate.sh", "faird", args.task_number, args.raw_data_base_path])
     job_ids[0] = get_job_id_by_name(f"{args.task_number}_infer", -1)
     wait_for_job_to_finish(job_ids[0], -1, 60) 
     print("--- Inference Complete ---")
