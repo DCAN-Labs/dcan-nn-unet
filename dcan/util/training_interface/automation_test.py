@@ -20,11 +20,12 @@ def get_job_id_by_name(job_name, fold):
         job_id = output[1].split()[0]
         # Wait for necessary files to be made
         break_count = 0
-        while (not os.path.isfile(f"{args.slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.out")) or (not os.path.isfile(f"{args.slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.out")):
-            time.sleep(5)        
-            break_count += 1
-            if break_count >= 50:
-                break
+        if fold >= 0:
+            while (not os.path.isfile(f"{args.slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.out")) or (not os.path.isfile(f"{args.slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.out")):
+                time.sleep(5)        
+                break_count += 1
+                if break_count >= 50:
+                    break
         return job_id
     else:
         return None
@@ -52,8 +53,10 @@ def wait_for_job_to_finish(job_id, fold, check_interval=60):
     printCondition = 0
     while is_job_running(job_id):
         # Check if the job has finished every 60 seconds but update the user in the terminal once an day if it is still running
-        if printCondition % 1140 == 0:
+        if printCondition % 1140 == 0 and fold >= 0:
             print(f"Waiting for fold {fold} to complete training...")
+        if printCondition % 60 == 0 and fold == -1:
+            print(f"Waiting for inference to complete...")
         printCondition += 1
         time.sleep(check_interval)
         
@@ -149,11 +152,13 @@ if __name__ == '__main__':
     
     ### TRAINING MODEL ###
     print("--- Now Running Nnunet Training ---")
+    
     job_ids = [0, 0, 0, 0, 0]
     complete = [False, False, False, False, False]
     
     # Start first fold and wait for initial steps
     os.chdir(f"{args.slurm_scripts_path}")
+    
     subprocess.run(["sbatch", "-W", "NnUnetTrain_agate.sh", "0", "faird"])
     job_ids[0] = get_job_id_by_name(f"{args.task_number}_0_Train_nnUNet", 0)
     wait_fold_0_setup(job_ids[0], 60)
@@ -169,19 +174,21 @@ if __name__ == '__main__':
     while not all(complete[i] == True for i in range(5)):
         for i in range(5):
             # Wait for first fold to finish and check the error file. If it terminated due to time limit, run it again with the -c argument
-            wait_for_job_to_finish(job_ids[i], i, 60)
-            check_complete(job_ids[i], i)
-            if complete[i] == False:
+            wait_for_job_to_finish(job_ids[i], i, 60) 
+            if check_complete(job_ids[i], i):
+                complete[i] = True
+            else:
                 subprocess.run(["sbatch", "-W", "NnUnetTrain_agate.sh", f"{i}", "faird", "-c"])
                 job_ids[i] = get_job_id_by_name(f"{args.task_number}_{i}_Train_nnUNet", i)
-            else:
-                complete[i] == True     
+                
     print("--- Training Complete ---")
     
     ### INFERENCE ###
     print("--- Starting Inference ---")
     os.chdir(f"{args.slurm_scripts_path}")
-    subprocess.run(["sbatch", "infer_agate.sh", "faird"])
+    subprocess.run(["sbatch", "-W", "infer_agate.sh", "faird"])
+    job_ids[0] = get_job_id_by_name(f"{args.task_number}_infer", -1)
+    wait_for_job_to_finish(job_ids[0], -1, 60) 
     print("--- Inference Complete ---")
     print("PROGRAM COMPLETE!")
     

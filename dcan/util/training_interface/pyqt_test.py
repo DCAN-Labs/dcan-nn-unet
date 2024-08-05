@@ -6,10 +6,9 @@ import psutil
 
 from test1 import Ui_MainWindow
 from k_login import Ui_LoginWindow
-from PyQt5.QtWidgets import *
-from PyQt5.QtWidgets import QMessageBox, QMainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import QObject, QThread, pyqtSignal, QTimer
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import QObject, QThread, pyqtSignal, QTimer, Qt
 
 class Thread(QtCore.QThread):
     finished = pyqtSignal()
@@ -149,6 +148,12 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.menuiuhwuaibfa.setTitle("File Does Not Exist")
             
     def save_preset(self):
+        if self.line_save_preset.text().strip() == "":
+            return
+        if any(inp.text() == "" for inp in self.inputDict.values()):
+            print("Please fill out at least one input")
+            self.menuiuhwuaibfa.setTitle("Please fill out at least one input")
+            return
         # If overwrite is checked, delete the file if it exists already
         if self.check_overwrite.isChecked(): 
             if os.path.isfile(f"{self.script_dir}/automation_presets/{self.line_save_preset.text()}.config"):
@@ -160,6 +165,8 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
             for key, val in self.inputDict.items():
                 f.write(f"{key}={val.text()}\n")
             f.close()
+            self.comboBox_preset.setItemText(0, '-- Select Preset --')
+            self.comboBox_preset.setStyleSheet("")
             self.comboBox_preset.addItem(self.line_save_preset.text())
             self.comboBox_preset.setCurrentText(self.line_save_preset.text())
             print("Preset Saved")
@@ -173,6 +180,11 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         if os.path.isfile(f"{self.script_dir}/automation_presets/{self.line_remove_preset.text()}.config"):
             os.remove(f"{self.script_dir}/automation_presets/{self.line_remove_preset.text()}.config")
             self.comboBox_preset.removeItem(self.comboBox_preset.findText(self.line_remove_preset.text()))
+            
+            # if self.comboBox_preset.count() < 2:
+            #     self.comboBox_preset.setItemText(0, 'You do not have any presets')
+            #     self.comboBox_preset.setStyleSheet("background-color: rgb(137, 137, 137)")
+            
             print("Preset Removed")
             self.menuiuhwuaibfa.setTitle("Preset Removed")
         else:
@@ -208,20 +220,21 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
         super().__init__()
         self.setupUi(self)
         
+        #self.comboBox_preset = SearchableComboBox(self)
+        #self.gridLayout.addWidget(self.comboBox_preset, 5, 1, 1, 2)
+        
         self.button_launch_ui.setText('Launch UI')
         self.button_launch_ui.clicked.connect(self.run_uiScript)
         
         # Get the directory of this file
         self.script_dir = os.path.abspath(os.path.dirname(__file__))  
-        
-        num = 0
+    
         
         for file in os.listdir(f"{self.script_dir}/automation_presets"):
             file = file[:-7]
             self.comboBox.addItem(file)
-            num += 1
         
-        if num == 0:
+        if self.comboBox.count() < 2:
             self.comboBox.setItemText(0, 'You do not have any presets')
             self.comboBox.setStyleSheet("background-color: rgb(137, 137, 137)")
     
@@ -243,6 +256,7 @@ def main():
     # sys.exit(app.exec_())
     
     app = QtWidgets.QApplication(sys.argv)
+    app.setStyle('Windows')
     ui = LoginWindow()
     ui.show()
     sys.exit(app.exec_())

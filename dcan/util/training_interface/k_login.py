@@ -34,8 +34,6 @@ class Ui_LoginWindow(object):
         self.comboBox.setGeometry(QtCore.QRect(75, 120, 151, 31))
         self.comboBox.setObjectName("comboBox")
         self.comboBox.addItem('-- Select Preset --')
-         
-       
 
         self.button_launch_ui = QtWidgets.QPushButton(self.centralwidget)
         self.button_launch_ui.setGeometry(QtCore.QRect(90, 200, 121, 50))

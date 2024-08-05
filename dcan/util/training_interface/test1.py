@@ -51,14 +51,14 @@ class Ui_MainWindow(object):
         # self.line_set_preset = QtWidgets.QLineEdit(self.centralwidget)
         # self.line_set_preset.setObjectName("line_set_preset")
         # self.gridLayout.addWidget(self.line_set_preset, 5, 1, 1, 2)
-        
+        #'''
         self.comboBox_preset = QtWidgets.QComboBox(self.centralwidget)
-        #self.comboBox.setGeometry(QtCore.QRect(75, 120, 151, 31))
         self.comboBox_preset.setObjectName("comboBox_preset")
+        self.comboBox_preset.setFixedSize(200, 30)  # Set fixed size
         self.gridLayout.addWidget(self.comboBox_preset, 5, 1, 1, 2)
         self.comboBox_preset.addItem('-- Select Preset --')
         
-        
+        #'''
         self.label_overwrite = QtWidgets.QLabel(self.centralwidget)
         self.label_overwrite.setMaximumSize(QtCore.QSize(150, 20))
         self.label_overwrite.setObjectName("label_overwrite")
