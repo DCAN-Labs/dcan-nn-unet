@@ -3,8 +3,8 @@
 ### Argument to this script is: 
 ### Sample invocation:
 
-#SBATCH --job-name=SynthSeg_image_generation
-#SBATCH --time=48:00:00          # total run time limit (HH:MM:SS)
+#SBATCH --job-name=create_min_maxes
+#SBATCH --time=8:00:00          # total run time limit (HH:MM:SS)
 #SBATCH --mem-per-cpu=8GB
 #SBATCH --cpus-per-task=4
 #SBATCH -A faird
@@ -21,4 +21,4 @@ export PYTHONPATH=${PYTHONPATH}:$1SynthSeg/
 
 cd $1
 
-python ./SynthSeg/dcan/image_generation_for_all_ages.py $2 $2SynthSeg_generated/ $3 $4 $5 $6
+python ./SynthSeg/dcan/ten_fold_uniformity_estimation_one_task.py $2 $3

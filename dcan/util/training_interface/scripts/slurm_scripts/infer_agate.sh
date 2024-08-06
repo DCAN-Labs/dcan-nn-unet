@@ -9,8 +9,8 @@ sbatch <<EOT
 #SBATCH -p a100-4     
 #SBATCH --gres=gpu:a100:1
 #SBATCH --ntasks=1
-#SBATCH -e infer_545-%j.err
-#SBATCH -o infer_545-%j.out
+#SBATCH -e infer_$2-%j.err
+#SBATCH -o infer_$2-%j.out
 
 #SBATCH -A $1
 
@@ -22,7 +22,7 @@ conda activate /home/support/public/pytorch_1.11.0_agate
 
 
 export nnUNet_raw_data_base="$3"
-export nnUNet_preprocessed="$3nnUNet_preprocessed"
+export nnUNet_preprocessed="$3nnUNet_preprocessed/"
 export RESULTS_FOLDER="/home/faird/shared/data/nnUNet_lundq163/nnUNet_raw_data_base/nnUNet_trained_models/"
 
 

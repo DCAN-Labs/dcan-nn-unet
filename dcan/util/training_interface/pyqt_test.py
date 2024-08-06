@@ -257,6 +257,9 @@ def main():
     
     app = QtWidgets.QApplication(sys.argv)
     app.setStyle('Windows')
+    with open('/home/faird/efair/projects/dcan-nn-unet/dcan/util/training_interface/style.qss', 'r') as file:
+        stylesheet = file.read()
+    app.setStyleSheet(stylesheet)
     ui = LoginWindow()
     ui.show()
     sys.exit(app.exec_())
