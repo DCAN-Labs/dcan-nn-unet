@@ -11,18 +11,18 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
 import subprocess
+import PyQt5_stylesheets
 folder_path = f'/home/faird/efair/projects/dcan-nn-unet/dcan/util/training_interface/'
 class Ui_LoginWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(291, 414)
-        MainWindow.setStyleSheet("")
+        MainWindow.setStyleSheet(PyQt5_stylesheets.load_stylesheet_pyqt5(style="style_blue"))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(10, 10, 301, 31))
-        self.label.setStyleSheet("font: 63 20pt \"URW Bookman [UKWN]\";\n"
-"")
+        self.label.setStyleSheet("font: 63 20pt \"URW Bookman [UKWN]\";\n""")
         self.label.setObjectName("label")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(-10, -10, 301, 481))
@@ -39,17 +39,14 @@ class Ui_LoginWindow(object):
         self.button_launch_ui.setGeometry(QtCore.QRect(90, 200, 121, 50))
         self.button_launch_ui.setObjectName("launch_ui")
 
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(140, 180, 31, 51))
-        self.label_2.setStyleSheet("font: 14pt \"Sans Serif\";")
-        self.label_2.setObjectName("label_2")
+       
         self.label_4.raise_()
         self.label.raise_()
         self.comboBox.raise_()
         
        
         self.button_launch_ui.raise_()
-        self.label_2.raise_()
+
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -59,6 +56,7 @@ class Ui_LoginWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Automation Training"))
+        
         
         self.button_launch_ui.setText(_translate("MainWindow", "Launch UI"))
     

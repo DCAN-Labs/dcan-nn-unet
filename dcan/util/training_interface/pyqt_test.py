@@ -9,6 +9,7 @@ from k_login import Ui_LoginWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import QObject, QThread, pyqtSignal, QTimer, Qt
+import PyQt5_stylesheets
 
 class Thread(QtCore.QThread):
     finished = pyqtSignal()
@@ -134,11 +135,12 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
 
                 for line in lines:
                     line = line.strip().split('=')
-                    # If there is no info associated with a certain input, clear the input line
-                    if len(line) == 1:
-                        self.inputDict[line[0]].clear() 
-                    elif len(line) == 2:
-                        self.inputDict[line[0]].setText(line[1])
+                    if line[0] in self.inputDict.keys():
+                        # If there is no info associated with a certain input, clear the input line
+                        if len(line) == 1:
+                            self.inputDict[line[0]].clear() 
+                        elif len(line) == 2:
+                            self.inputDict[line[0]].setText(line[1])
                             
                 f.close()
                 print("Preset Loaded")
@@ -250,16 +252,9 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
         self.setStyleSheet(f"QMainWindow {{background-image: url({image_path}); background-repeat: no-repeat; background-position: center;}}")
 
 def main(): 
-    # app = QtWidgets.QApplication(sys.argv)
-    # ui = LoginWindow()
-    # ui.show()
-    # sys.exit(app.exec_())
-    
     app = QtWidgets.QApplication(sys.argv)
     app.setStyle('Windows')
-    with open('/home/faird/efair/projects/dcan-nn-unet/dcan/util/training_interface/style.qss', 'r') as file:
-        stylesheet = file.read()
-    app.setStyleSheet(stylesheet)
+    # app.setStyleSheet(PyQt5_stylesheets.load_stylesheet_pyqt5(style="style_Dark"))
     ui = LoginWindow()
     ui.show()
     sys.exit(app.exec_())
