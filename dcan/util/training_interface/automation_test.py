@@ -21,11 +21,13 @@ def get_job_id_by_name(job_name, fold):
         # Wait for necessary files to be made
         break_count = 0
         # Only do this for train step, other steps will have fold number -1
+        # Waits for the necessary files to be made
         if fold >= 0:
             while (not os.path.isfile(f"{slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.out")) or (not os.path.isfile(f"{slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.out")):
                 time.sleep(5)        
                 break_count += 1
-                if break_count >= 50:
+                if break_count >= 2000:
+                    print("job couldn't start")
                     break
         return job_id
     else:
@@ -120,7 +122,7 @@ if __name__ == '__main__':
     all_slurm_path = f"{script_dir}/scripts/slurm_scripts/"
     
     set_up_slurm_scripts_folder(script_dir, args.task_number)
-    
+    '''
     ### RESIZING IMAGES ###
     print("--- Now Resizing Images ---")
     p = subprocess.run(["python", f'{args.dcan_path}dcan/img_processing/resize_images_test.py', args.task_path])
@@ -166,7 +168,7 @@ if __name__ == '__main__':
     os.chdir(f'{slurm_scripts_path}')
     subprocess.run(["sbatch", "-W", f"NnUnet_plan_and_preprocess_agate.sh", args.raw_data_base_path, args.task_number])
     print("--- Finished Plan and Preprocessing ---")
-    
+    '''
     ### TRAINING MODEL ###
     print("--- Now Running Nnunet Training ---")
     
