@@ -150,7 +150,7 @@ class Ui_MainWindow(object):
         self.button_remove.setText(_translate("MainWindow", "Remove Preset"))
         self.label_overwrite.setText(_translate("MainWindow", "Overwrite Save?"))
         self.label_raw_data_base_path.setText(_translate("MainWindow", "Raw Data Base Path"))
-        self.label_distribution.setText(_translate("MainWindow", "Distribution"))
+        self.label_distribution.setText(_translate("MainWindow", "Distribution (uniform, normal)"))
         self.label_task_number.setText(_translate("MainWindow", "Task Number"))
         self.label_synth_img_amt.setText(_translate("MainWindow", "Number of SynthSeg Generated Images"))
         self.label_task_path.setText(_translate("MainWindow", "Task Path"))

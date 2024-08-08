@@ -27,15 +27,15 @@ class Thread(QtCore.QThread):
 
     def __init__(self, input1, input2, input3, input4, input6, input7, input8, input9, script_dir):
         QtCore.QThread.__init__(self)
-        self.input1 = input1
-        self.input2 = input2
-        self.input3 = input3
-        self.input4 = input4
-        #self.input5 = input5
-        self.input6 = input6
-        self.input7 = input7
-        self.input8 = input8
-        self.input9 = input9
+        self.input1 = input1.strip()
+        self.input2 = input2.strip()
+        self.input3 = input3.strip()
+        self.input4 = input4.strip()
+        #self.input5 = input5.strip()
+        self.input6 = input6.strip()
+        self.input7 = input7.strip()
+        self.input8 = input8.strip()
+        self.input9 = input9.strip()
         self.script_dir = script_dir
 
     def run(self):
