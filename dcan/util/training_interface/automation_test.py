@@ -26,9 +26,10 @@ def get_job_id_by_name(job_name, fold):
             while (not os.path.isfile(f"{slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.out")) or (not os.path.isfile(f"{slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.out")):
                 time.sleep(5)        
                 break_count += 1
-                if break_count >= 2000:
-                    print("job couldn't start")
-                    break
+                if break_count >= 4000:
+                    print("Job couldn't start, you may try reruning the program from the training step")
+                    subprocess.run(["scancel", job_id])
+                    exit()
         return job_id
     else:
         return None
@@ -168,7 +169,7 @@ if __name__ == '__main__':
     os.chdir(f'{slurm_scripts_path}')
     subprocess.run(["sbatch", "-W", f"NnUnet_plan_and_preprocess_agate.sh", args.raw_data_base_path, args.task_number])
     print("--- Finished Plan and Preprocessing ---")
-    '''
+    
     ### TRAINING MODEL ###
     print("--- Now Running Nnunet Training ---")
     
@@ -210,12 +211,12 @@ if __name__ == '__main__':
     id = get_job_id_by_name(f"{args.task_number}_infer", -1)
     wait_for_job_to_finish(id, -1, 60) 
     print("--- Inference Complete ---")
-    
+    '''
     ### CREATE PLOTS
     print("--- Creating Plots ---")
     if not os.path.isdir(f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_results/"):
         os.mkdir(f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_results/")
     os.chdir(f'{args.synth_path}SynthSeg/dcan/paper/')
-    subprocess.run(["python", "./evaluate_results.py", f"{args.task_path}labelsTs/", f"/home/faird/shared/data/nnUNet_lundq163/545_infer/", "/home/faird/shared/data/nnUNet_lundq163/545_results/"])
+    subprocess.run(["python", "./evaluate_results.py", f"{args.task_path}labelsTs/", f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_infer/", f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_results/"])
     print("--- Plots Creted ---")
     print("PROGRAM COMPLETE!")
