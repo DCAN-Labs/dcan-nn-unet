@@ -11,6 +11,28 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import QObject, QThread, pyqtSignal, QTimer, Qt
 import PyQt5_stylesheets
 
+        
+    
+
+class CustomDialog(QDialog):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("Remove Preset")
+
+        QBtn = QDialogButtonBox.Yes | QDialogButtonBox.No
+
+        self.buttonBox = QDialogButtonBox(QBtn)
+        self.buttonBox.accepted.connect(self.accept)
+        self.buttonBox.rejected.connect(self.reject)
+
+        self.layout = QVBoxLayout()
+        message = QLabel("Are you sure you want to delete this preset?")
+        self.layout.addWidget(message)
+        self.layout.addWidget(self.buttonBox)
+        self.setLayout(self.layout)
+        self.setStyleSheet(PyQt5_stylesheets.load_stylesheet_pyqt5(style="style_Dark"))
+
 class Thread(QtCore.QThread):
     finished = pyqtSignal()
     input1 = ''
@@ -70,13 +92,24 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         
         # Set up presets
         num = 0
+        self.comboBox_preset.setCurrentIndex(-1)
         for file in os.listdir(f"{self.script_dir}/automation_presets"):
             file = file[:-7]
             self.comboBox_preset.addItem(file)
-            num += 1 
+            self.comboBox_remove_preset.addItem(file)
+            num += 1
         if num == 0:
+            self.comboBox_preset.setEditable(False) 
+            self.comboBox_remove_preset.setEditable(False) 
             self.comboBox_preset.setItemText(0, 'You do not have any presets')
             self.comboBox_preset.setStyleSheet("background-color: rgb(137, 137, 137)")
+            self.comboBox_remove_preset.setItemText(0, 'You do not have any presets')
+            self.comboBox_remove_preset.setStyleSheet("background-color: rgb(137, 137, 137)")
+            
+        self.pushButton.setFocus()
+        self.comboBox_preset.show()
+        
+            
         
         # Put all input fields in a dictionary
         self.inputDict['dcan_path'] = self.line_dcan_path
@@ -128,8 +161,8 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pushButton.setText('run')
             
     def populate_inputs(self):
-        if self.comboBox_preset.currentIndex()>0:
-            try:
+        if self.comboBox_preset.currentIndex()>=0:
+            if os.path.isfile(f"{self.script_dir}/automation_presets/{self.comboBox_preset.currentText()}.config"):
                 f = open(f"{self.script_dir}/automation_presets/{self.comboBox_preset.currentText()}.config")
                 lines = [line for line in f.readlines() if line.strip()] # Ignore blank lines
 
@@ -145,14 +178,14 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
                 f.close()
                 print("Preset Loaded")
                 self.menuiuhwuaibfa.setTitle("Preset Loaded")
-            except:
+            else:
                 print("File Does Not Exist")
                 self.menuiuhwuaibfa.setTitle("File Does Not Exist")
             
     def save_preset(self):
         if self.line_save_preset.text().strip() == "":
             return
-        if any(inp.text() == "" for inp in self.inputDict.values()):
+        if all(inp.text() == "" for inp in self.inputDict.values()):
             print("Please fill out at least one input")
             self.menuiuhwuaibfa.setTitle("Please fill out at least one input")
             return
@@ -161,37 +194,71 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
             if os.path.isfile(f"{self.script_dir}/automation_presets/{self.line_save_preset.text()}.config"):
                 os.remove(f"{self.script_dir}/automation_presets/{self.line_save_preset.text()}.config")
                 self.comboBox_preset.removeItem(self.comboBox_preset.findText(self.line_save_preset.text()))
+                self.comboBox_remove_preset.removeItem(self.comboBox_remove_preset.findText(self.line_save_preset.text()))
         # Make sure file doesn't exist yet and create presets data
         if not os.path.isfile(f"{self.script_dir}/automation_presets/{self.line_save_preset.text()}.config"):
             f = open(f"{self.script_dir}/automation_presets/{self.line_save_preset.text()}.config", "w")
             for key, val in self.inputDict.items():
                 f.write(f"{key}={val.text()}\n")
             f.close()
+            
+            
+            
             self.comboBox_preset.setItemText(0, '-- Select Preset --')
             self.comboBox_preset.setStyleSheet("")
             self.comboBox_preset.addItem(self.line_save_preset.text())
             self.comboBox_preset.setCurrentText(self.line_save_preset.text())
+            
+            self.comboBox_preset.setEditable(True)
+            self.comboBox_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
+            self.comboBox_preset.setInsertPolicy(QComboBox.NoInsert) 
+            
+            
+            
+            self.comboBox_remove_preset.setItemText(0, '-- Remove Preset --')
+            self.comboBox_remove_preset.setStyleSheet("")
+            self.comboBox_remove_preset.addItem(self.line_save_preset.text())
+            #self.comboBox_remove_preset.setCurrentText(self.line_save_preset.text())
+            self.comboBox_remove_preset.setEditable(True)
+            self.comboBox_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
+            self.comboBox_preset.setInsertPolicy(QComboBox.NoInsert) 
+            
+            self.comboBox_preset.setStyleSheet(PyQt5_stylesheets.load_stylesheet_pyqt5(style="style_Dark"))
+            self.comboBox_remove_preset.setStyleSheet(PyQt5_stylesheets.load_stylesheet_pyqt5(style="style_Dark"))
+            
             print("Preset Saved")
             self.menuiuhwuaibfa.setTitle("Preset Saved")
         else:
             print("File Already Exists")
             self.menuiuhwuaibfa.setTitle("File Already Exists")
             
-    def remove_preset(self):
+    def remove_preset(self, event):
         # Delete file if it exists
-        if os.path.isfile(f"{self.script_dir}/automation_presets/{self.line_remove_preset.text()}.config"):
-            os.remove(f"{self.script_dir}/automation_presets/{self.line_remove_preset.text()}.config")
-            self.comboBox_preset.removeItem(self.comboBox_preset.findText(self.line_remove_preset.text()))
+        if self.comboBox_remove_preset.currentIndex()>=0:
+            if os.path.isfile(f"{self.script_dir}/automation_presets/{self.comboBox_remove_preset.currentText()}.config"):
+                
+                dlg = CustomDialog()
+                if dlg.exec():
+                    os.remove(f"{self.script_dir}/automation_presets/{self.comboBox_remove_preset.currentText()}.config")
+                    self.comboBox_preset.removeItem(self.comboBox_remove_preset.findText(self.comboBox_remove_preset.currentText()))
+                    self.comboBox_remove_preset.removeItem(self.comboBox_remove_preset.findText(self.comboBox_remove_preset.currentText()))
+                
+                    if self.comboBox_preset.count() < 2:
+                        self.comboBox_remove_preset.setEditable(False) 
+                        self.comboBox_remove_preset.setItemText(0, 'You do not have any presets')
+                        self.comboBox_remove_preset.setStyleSheet("background-color: rgb(137, 137, 137)")
+                    
+                        self.comboBox_preset.setEditable(False) 
+                        self.comboBox_preset.setItemText(0, 'You do not have any presets')
+                        self.comboBox_preset.setStyleSheet("background-color: rgb(137, 137, 137)")
             
-            # if self.comboBox_preset.count() < 2:
-            #     self.comboBox_preset.setItemText(0, 'You do not have any presets')
-            #     self.comboBox_preset.setStyleSheet("background-color: rgb(137, 137, 137)")
-            
-            print("Preset Removed")
-            self.menuiuhwuaibfa.setTitle("Preset Removed")
-        else:
-            print("File Does Not Exist")
-            self.menuiuhwuaibfa.setTitle("File Does Not Exist")
+                    print("Preset Removed")
+                    self.menuiuhwuaibfa.setTitle("Preset Removed")
+                else:
+                    pass           
+            else:
+                print("File Does Not Exist")
+                self.menuiuhwuaibfa.setTitle("File Does Not Exist")
         
     def clear_inputs(self):
         # Clear all input fields

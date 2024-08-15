@@ -9,13 +9,13 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QCompleter, QComboBox
 import PyQt5_stylesheets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(892, 749)
+        MainWindow.resize(892, 749) 
         
         MainWindow.setStyleSheet(PyQt5_stylesheets.load_stylesheet_pyqt5(style="style_Dark"))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -46,9 +46,16 @@ class Ui_MainWindow(object):
         self.line_save_preset = QtWidgets.QLineEdit(self.centralwidget)
         self.line_save_preset.setObjectName("line_save_preset")
         self.gridLayout.addWidget(self.line_save_preset, 1, 1, 1, 2)
-        self.line_remove_preset = QtWidgets.QLineEdit(self.centralwidget)
-        self.line_remove_preset.setObjectName("line_remove_preset")
-        self.gridLayout.addWidget(self.line_remove_preset, 3, 1, 1, 2)
+        # self.line_remove_preset = QtWidgets.QLineEdit(self.centralwidget)
+        # self.line_remove_preset.setObjectName("line_remove_preset")
+        # self.gridLayout.addWidget(self.line_remove_preset, 3, 1, 1, 2)
+        
+        #self.comboBox_remove_preset = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox_remove_preset = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox_remove_preset.setObjectName("comboBox_remove_preset")
+        self.comboBox_remove_preset.setFixedSize(200, 30)  # Set fixed size
+        self.gridLayout.addWidget(self.comboBox_remove_preset, 3, 1, 1, 2)
+        self.comboBox_remove_preset.addItem('-- Remove Preset --')
         
         # self.line_set_preset = QtWidgets.QLineEdit(self.centralwidget)
         # self.line_set_preset.setObjectName("line_set_preset")
@@ -58,7 +65,18 @@ class Ui_MainWindow(object):
         self.comboBox_preset.setObjectName("comboBox_preset")
         self.comboBox_preset.setFixedSize(200, 30)  # Set fixed size
         self.gridLayout.addWidget(self.comboBox_preset, 5, 1, 1, 2)
-        self.comboBox_preset.addItem('-- Select Preset --')
+        
+        
+        
+        self.comboBox_preset.setEditable(True) 
+        self.comboBox_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
+        self.comboBox_preset.setInsertPolicy(QComboBox.NoInsert) 
+        
+        self.comboBox_preset.setPlaceholderText("-- Select Preset --")
+        
+        self.comboBox_remove_preset.setEditable(True) 
+        self.comboBox_remove_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
+        self.comboBox_remove_preset.setInsertPolicy(QComboBox.NoInsert) 
         
         #'''
         self.label_overwrite = QtWidgets.QLabel(self.centralwidget)
