@@ -23,7 +23,7 @@ def get_job_id_by_name(job_name, fold):
         # Only do this for train step, other steps will have fold number -1
         # Waits for the necessary files to be made
         if fold >= 0:
-            while (not os.path.isfile(f"{slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.out")) or (not os.path.isfile(f"{slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.out")):
+            while (not os.path.isfile(os.path.join(slurm_scripts_path, f"Train_{fold}_{args.task_number}_nnUNet-{job_id}.out"))) or (not os.path.isfile(os.path.join(slurm_scripts_path, f"Train_{fold}_{args.task_number}_nnUNet-{job_id}.out"))):
                 time.sleep(5)        
                 break_count += 1
                 if break_count >= 4000:
@@ -36,7 +36,7 @@ def get_job_id_by_name(job_name, fold):
 
 def check_complete(job_id, fold):
     # Checks if a job finished due to time limit or completion by reading the .err file
-    f = open(f"{slurm_scripts_path}Train_{fold}_{args.task_number}_nnUNet-{job_id}.err")
+    f = open(os.path.join(slurm_scripts_path, f"Train_{fold}_{args.task_number}_nnUNet-{job_id}.err"))
     lines = f.readlines()
     f.close()
     for line in lines:
@@ -66,7 +66,7 @@ def wait_for_job_to_finish(job_id, fold, check_interval=60):
         
 def is_training_ready(job_id):
     # Checks if initial fold has run up to the epochs step by reading the .out file
-    f = open(f"{slurm_scripts_path}Train_0_{args.task_number}_nnUNet-{job_id}.out")
+    f = open(os.path.join(slurm_scripts_path, f"Train_0_{args.task_number}_nnUNet-{job_id}.out"))
     lines = f.readlines()
     f.close()
     for line in lines:
@@ -89,62 +89,74 @@ def wait_fold_0_setup(job_id, check_interval=60):
 def set_up_slurm_scripts_folder(script_path, task_number):
     scripts = ["SynthSeg_image_generation.sh", "NnUnet_plan_and_preprocess_agate.sh", "NnUnetTrain_agate.sh", "infer_agate.sh", "create_min_maxes.sh"]
     # Set up the slurm scripts
-    if not os.path.isdir(f"{slurm_scripts_path}"):
-        os.mkdir(f"{slurm_scripts_path}")
+    if not os.path.isdir(slurm_scripts_path):
+        os.mkdir(slurm_scripts_path)
     for s in scripts:
-        if not os.path.isfile(f"{slurm_scripts_path}{s}"):
-            shutil.copyfile(f"{all_slurm_path}{s}", f"{slurm_scripts_path}{s}")
+        if not os.path.isfile(os.path.join(slurm_scripts_path, s)):
+            shutil.copyfile(os.path.join(all_slurm_path, s), os.path.join(slurm_scripts_path, s))
+            
+def move_files(src_dir, dst_dir, pattern):
+    for filename in os.listdir(src_dir):
+        if pattern in filename:
+            src_file = os.path.join(src_dir, filename)
+            dst_file = os.path.join(dst_dir, filename)
+            shutil.move(src_file, dst_file)            
+
  ### RESIZING IMAGES ###
 def resize_images():
         print("--- Now Resizing Images ---")
-        p = subprocess.run(["python", f'{args.dcan_path}dcan/img_processing/resize_images_test.py', args.task_path])
+        p = subprocess.run(["python", os.path.join(args.dcan_path, "dcan", "img_processing", "resize_images_test.py"), args.task_path])
         print("--- Images Resized ---")
     
 ### SETTING UP MINS/MAXES ###
 def min_max():
     print("--- Now Creating Min Maxes ---")
-    os.chdir(f'{slurm_scripts_path}')
-    subprocess.run(["sbatch", "-W", f'./create_min_maxes.sh', args.synth_path, args.task_path, f'{script_dir}/min_maxes/mins_maxes_task_{args.task_number}.npy'])
+    os.chdir(slurm_scripts_path)
+    subprocess.run(["sbatch", "-W", os.path.join(slurm_scripts_path, "create_min_maxes.sh"), args.synth_path, args.task_path, os.path.join(script_dir, "min_maxes", f"mins_maxes_task_{args.task_number}.npy")])
     print("--- Min Maxes Created ---")
 
 ### CREATING SYNTHETICS ###
 def SynthSeg_img():
     print("--- Now Creating Synthetic Images ---")
-    os.chdir(f'{slurm_scripts_path}')
-    subprocess.run(["sbatch", "-W", f'./SynthSeg_image_generation.sh', args.synth_path, args.task_path, f'{script_dir}/min_maxes/mins_maxes_task_{args.task_number}.npy', args.synth_img_amt, f'--modalities={args.modality}', f'--distribution={args.distribution}'])
+    os.chdir(slurm_scripts_path)
+    subprocess.run(["sbatch", "-W", os.path.join(slurm_scripts_path, "SynthSeg_image_generation.sh"), args.synth_path, args.task_path, os.path.join(script_dir, "min_maxes", f"mins_maxes_task_{args.task_number}.npy"), args.synth_img_amt, f'--modalities={args.modality}', f'--distribution={args.distribution}'])
     print("--- SynthSeg Images Generated ---")
 
 ### COPYING OVER SYNTHSEG GENERATED IMAGE FILES ###
 def copy_SynthSeg():
     print("--- Now Moving Over SynthSeg Generated Images ---")
-    os.chdir(f'{args.dcan_path}dcan/util/')
-    subprocess.run(["python", f'copy_over_augmented_image_files.py', f'{args.task_path}SynthSeg_generated/images/', f'{args.task_path}imagesTr/', f'{args.task_path}labelsTr/'])
-    subprocess.run(["python", f'copy_over_augmented_image_files.py', f'{args.task_path}SynthSeg_generated/labels/', f'{args.task_path}imagesTr/', f'{args.task_path}labelsTr/'])
+    os.chdir(os.path.join(args.dcan_path, "dcan", "util"))
+    subprocess.run(["python", f'copy_over_augmented_image_files.py', os.path.join(args.task_path, "SynthSeg_generated", "images"), os.path.join(args.task_path, "imagesTr"), os.path.join(args.task_path, "labelsTr")])
+    subprocess.run(["python", f'copy_over_augmented_image_files.py', os.path.join(args.task_path, "SynthSeg_generated", "labels"), os.path.join(args.task_path, "imagesTr"), os.path.join(args.task_path, "labelsTr")])
     os.chdir(f'{args.task_path}')
-    subprocess.run(f'mv ./imagesTr/*_SynthSeg_generated_0000.nii.gz ./labelsTr/', shell=True)
-    subprocess.run(f'mv ./imagesTr/*_SynthSeg_generated_0001.nii.gz ./labelsTr/', shell=True)
+    #subprocess.run(f'mv ./imagesTr/*_SynthSeg_generated_0000.nii.gz ./labelsTr/', shell=True)
+    #subprocess.run(f'mv ./imagesTr/*_SynthSeg_generated_0001.nii.gz ./labelsTr/', shell=True)
+    move_files("imagesTr", "labelsTr", "_SynthSeg_generated_0000.nii.gz")
+    move_files("imagesTr", "labelsTr", "_SynthSeg_generated_0001.nii.gz")
     #subprocess.run(['ls', f'./imagesTr/', '|', 'wc', '-l'])
     #subprocess.run(['ls', f'./labelsTr/', '|', 'wc', '-l'])
-    subprocess.run(['rm', f'SynthSeg_generated/', '-r'])
+    #subprocess.run(['rm', f'SynthSeg_generated/', '-r'])
+    if os.path.exists("SynthSeg_generated"):
+        shutil.rmtree("SynthSeg_generated")
     print("--- Images Moved ---")
 
 
 ### CREATING JSON ###
 def create_json():
     print("--- Now Creating Dataset json ---")
-    os.chdir(f'{args.task_path}')
-    subprocess.run(["python", f'{args.dcan_path}dcan/dataset_conversion/create_json_file.py', f'Task{args.task_number}', f'{args.dcan_path}look_up_tables/Freesurfer_LUT_DCAN.txt', f'--modalities={args.modality}'])
-    subprocess.run(["python", f'{args.dcan_path}dcan/dataset_conversion/fix_json_file.py', './dataset.json', './dataset2.json', f'{args.dcan_path}look_up_tables/Freesurfer_LUT_DCAN.txt'])
-    os.remove(f'{args.task_path}dataset.json')
-    os.rename(f'{args.task_path}dataset2.json', f'{args.task_path}dataset.json')
+    os.chdir(args.task_path)
+    subprocess.run(["python", os.path.join(args.dcan_path, "dcan", "dataset_conversion", "create_json_file.py"), f'Task{args.task_number}', os.path.join(args.dcan_path, "look_up_tables", "Freesurfer_LUT_DCAN.txt"), f'--modalities={args.modality}'])
+    subprocess.run(["python", os.path.join(args.dcan_path, "dcan", "dataset_conversion", "fix_json_file.py"), 'dataset.json', 'dataset2.json', os.path.join(args.dcan_path, "look_up_tables", "Freesurfer_LUT_DCAN.txt")])
+    os.remove('dataset.json')
+    os.rename('dataset2.json', 'dataset.json')
     print("--- Dataset json Created ---")
 
 ### RUNNING PLAN AND PREPROCESS ###
 def p_and_p():
 
     print("--- Now Running Plan and Preprocess ---")
-    os.chdir(f'{slurm_scripts_path}')
-    subprocess.run(["sbatch", "-W", f"NnUnet_plan_and_preprocess_agate.sh", args.raw_data_base_path, args.task_number])
+    os.chdir(slurm_scripts_path)
+    subprocess.run(["sbatch", "-W", "NnUnet_plan_and_preprocess_agate.sh", args.raw_data_base_path, args.task_number])
     print("--- Finished Plan and Preprocessing ---")
 
 ### TRAINING MODEL ###
@@ -155,7 +167,7 @@ def model_training():
     complete = [False, False, False, False, False]
     
     # Start first fold and wait for initial steps
-    os.chdir(f'{slurm_scripts_path}')
+    os.chdir(slurm_scripts_path)
     
     subprocess.run(["sbatch", "-W", f"NnUnetTrain_agate.sh", "0", "faird", args.task_number, args.raw_data_base_path])
     job_ids[0] = get_job_id_by_name(f"{args.task_number}_0_Train_nnUNet", 0)
@@ -183,9 +195,9 @@ def model_training():
 ### INFERENCE ###
 def inference():
     print("--- Starting Inference ---")
-    if not os.path.isdir(f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_infer/"):
-        os.mkdir(f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_infer/")
-    os.chdir(f'{slurm_scripts_path}')
+    if not os.path.isdir(os.path.join("home", "faird", "shared", "data", "nnUNet_lundq163", f"{args.task_number}_infer")):
+        os.mkdir(os.path.join("home", "faird", "shared", "data", "nnUNet_lundq163", f"{args.task_number}_infer"))
+    os.chdir(slurm_scripts_path)
     subprocess.run(["sbatch", "-W", f"infer_agate.sh", "faird", args.task_number, args.raw_data_base_path])
     id = get_job_id_by_name(f"{args.task_number}_infer", -1)
     wait_for_job_to_finish(id, -1, 60) 
@@ -193,10 +205,10 @@ def inference():
     #'''
     ### CREATE PLOTS
     print("--- Creating Plots ---")
-    if not os.path.isdir(f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_results/"):
-        os.mkdir(f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_results/")
-    os.chdir(f'{args.synth_path}SynthSeg/dcan/paper/')
-    subprocess.run(["python", "./evaluate_results.py", f"{args.task_path}labelsTs/", f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_infer/", f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_results/"])
+    if not os.path.isdir(os.path.join("home", "faird", "shared", "data", "nnUNet_lundq163", f"{args.task_number}_results")):
+        os.mkdir(os.path.join("home", "faird", "shared", "data", "nnUNet_lundq163", f"{args.task_number}_results"))
+    os.chdir(os.path.join(args.synth_path, "SynthSeg", "dcan", "paper"))
+    subprocess.run(["python", "evaluate_results.py", os.path.join(args.task_path, "labelsTs"), os.path.join("home", "faird", "shared", "data", "nnUNet_lundq163", f"{args.task_number}_infer"), os.path.join("home", "faird", "shared", "data", "nnUNet_lundq163", f"{args.task_number}_results")])
     print("--- Plots Creted ---")
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -216,21 +228,21 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     ### SETTING UP PATHS ###
-    os.environ["PYTHONPATH"] = f"{args.synth_path}:{args.synth_path}SynthSeg/:{args.dcan_path}:{args.dcan_path}dcan/"
-    os.environ["nnUNet_raw_data_base"] = f"{args.raw_data_base_path}"
-    os.environ["nnUNet_preprocessed"] = f"{args.raw_data_base_path}nnUNet_preprocessed/"
-    os.environ["RESULTS_FOLDER"] = f"/home/faird/shared/data/nnUNet_lundq163/nnUNet_raw_data_base/nnUNet_trained_models/"
+    os.environ["PYTHONPATH"] = f"{args.synth_path}:{os.path.join(args.synth_path, 'SynthSeg')}:{args.dcan_path}:{os.path.join(args.dcan_path, 'dcan')}"
+    os.environ["nnUNet_raw_data_base"] = args.raw_data_base_path
+    os.environ["nnUNet_preprocessed"] = os.path.join(args.raw_data_base_path, "nnUNet_preprocessed")
+    os.environ["RESULTS_FOLDER"] = os.path.join("home", "faird", "shared", "data", "nnUNet_lundq163", "nnUNet_raw_data_base", "nnUNet_trained_models")
     
     script_dir = os.path.abspath(os.path.dirname(__file__))
     os.chdir(script_dir) 
     
-    slurm_scripts_path = f"{script_dir}/scripts/slurm_scripts/{args.task_number}/"
-    all_slurm_path = f"{script_dir}/scripts/slurm_scripts/"
+    slurm_scripts_path = os.path.join(script_dir, "scripts", "slurm_scripts", args.task_number)
+    all_slurm_path = os.path.join(script_dir, "scripts", "slurm_scripts")
     
     set_up_slurm_scripts_folder(script_dir, args.task_number)
 
     run_list = ['resize_images', 'min_max', 'SynthSeg_img', 'copy_SynthSeg', 'create_json','p_and_p','model_training', 'inference']
-    print
+    
     if args.list[1]=='1':
         resize_images()
     if args.list[4]=='1':    

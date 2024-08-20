@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QCompleter, QComboBox, QCheckBox
 import PyQt5_stylesheets
+from custom_widgets import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -56,32 +57,33 @@ class Ui_MainWindow(object):
         # self.gridLayout.addWidget(self.line_remove_preset, 3, 1, 1, 2)
         
         #self.comboBox_remove_preset = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox_remove_preset = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox_remove_preset = ComboBox(self.centralwidget)
         self.comboBox_remove_preset.setObjectName("comboBox_remove_preset")
         self.comboBox_remove_preset.setFixedSize(200, 30)  # Set fixed size
         self.gridLayout.addWidget(self.comboBox_remove_preset, 3, 1, 1, 2)
-        self.comboBox_remove_preset.addItem('-- Remove Preset --')
+        
+        self.comboBox_remove_preset.setEditable(True) 
+        self.comboBox_remove_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
+        self.comboBox_remove_preset.setInsertPolicy(QComboBox.NoInsert) 
+        
+        self.comboBox_remove_preset.setCurrentIndex(-1)
+        self.comboBox_remove_preset.lineEdit().setPlaceholderText("-- Remove Preset --")
         
         # self.line_set_preset = QtWidgets.QLineEdit(self.centralwidget)
         # self.line_set_preset.setObjectName("line_set_preset")
         # self.gridLayout.addWidget(self.line_set_preset, 5, 1, 1, 2)
         #'''
-        self.comboBox_preset = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox_preset = ComboBox(self.centralwidget)
         self.comboBox_preset.setObjectName("comboBox_preset")
         self.comboBox_preset.setFixedSize(200, 30)  # Set fixed size
         self.gridLayout.addWidget(self.comboBox_preset, 5, 1, 1, 2)
-        
-        
-        
+          
         self.comboBox_preset.setEditable(True) 
         self.comboBox_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
         self.comboBox_preset.setInsertPolicy(QComboBox.NoInsert) 
         
-     #
-        
-        self.comboBox_remove_preset.setEditable(True) 
-        self.comboBox_remove_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
-        self.comboBox_remove_preset.setInsertPolicy(QComboBox.NoInsert) 
+        self.comboBox_preset.setCurrentIndex(-1)
+        self.comboBox_preset.lineEdit().setPlaceholderText("-- Select Preset --")
 
         self.checkBoxes = []  # Store references to checkboxes
         run_list = ['Resize Images', 'Mins/Maxs', 'SynthSeg Image Creation', 'Copying SynthSeg Images Over', 'Create JSON File','Plan and Preprocess','Training the Model', 'Running Inference']

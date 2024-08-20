@@ -11,6 +11,9 @@
 #SBATCH --tmp=20gb
 #SBATCH -p msismall
 
+#SBATCH -e Create_min_maxes-%j.err
+#SBATCH -o Create_min_maxes-%j.out
+
 ## build script here
 
 source /home/faird/shared/code/external/envs/miniconda3/load_miniconda3.sh

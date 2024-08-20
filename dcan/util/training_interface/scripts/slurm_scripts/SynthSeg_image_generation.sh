@@ -11,6 +11,9 @@
 #SBATCH --tmp=20gb
 #SBATCH -p msismall
 
+#SBATCH -e SynthSeg_image_generation-%j.err
+#SBATCH -o SynthSeg_image_generation-%j.out
+
 ## build script here
 
 source /home/faird/shared/code/external/envs/miniconda3/load_miniconda3.sh

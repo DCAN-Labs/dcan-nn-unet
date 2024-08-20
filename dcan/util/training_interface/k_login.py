@@ -9,10 +9,12 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QCompleter, QComboBox
 import os
 import subprocess
 import PyQt5_stylesheets
-folder_path = f'/home/faird/efair/projects/dcan-nn-unet/dcan/util/training_interface/'
+from custom_widgets import *
+
 class Ui_LoginWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -30,10 +32,16 @@ class Ui_LoginWindow(object):
         self.label_4.setText("")
         self.label_4.setObjectName("label_4")
         
-        self.comboBox = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox = ComboBox(self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(75, 120, 151, 31))
         self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem('-- Select Preset --')
+        
+        self.comboBox.setEditable(True) 
+        self.comboBox.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
+        self.comboBox.setInsertPolicy(QComboBox.NoInsert) 
+        
+        self.comboBox.setCurrentIndex(-1)
+        self.comboBox.lineEdit().setPlaceholderText("-- Select Preset --") 
 
         self.button_launch_ui = QtWidgets.QPushButton(self.centralwidget)
         self.button_launch_ui.setGeometry(QtCore.QRect(90, 200, 121, 50))
