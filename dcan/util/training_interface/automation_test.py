@@ -94,68 +94,43 @@ def set_up_slurm_scripts_folder(script_path, task_number):
     for s in scripts:
         if not os.path.isfile(f"{slurm_scripts_path}{s}"):
             shutil.copyfile(f"{all_slurm_path}{s}", f"{slurm_scripts_path}{s}")
-
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('dcan_path')
-    parser.add_argument('task_path')
-    parser.add_argument('synth_path')
-    parser.add_argument('raw_data_base_path')
-
-    parser.add_argument('modality')
-    parser.add_argument('task_number')
-    parser.add_argument('distribution')
-    parser.add_argument('synth_img_amt')
-
-    args = parser.parse_args()
-
-    ### SETTING UP PATHS ###
-    os.environ["PYTHONPATH"] = f"{args.synth_path}:{args.synth_path}SynthSeg/:{args.dcan_path}:{args.dcan_path}dcan/"
-    os.environ["nnUNet_raw_data_base"] = f"{args.raw_data_base_path}"
-    os.environ["nnUNet_preprocessed"] = f"{args.raw_data_base_path}nnUNet_preprocessed/"
-    os.environ["RESULTS_FOLDER"] = f"/home/faird/shared/data/nnUNet_lundq163/nnUNet_raw_data_base/nnUNet_trained_models/"
+ ### RESIZING IMAGES ###
+def resize_images():
+        print("--- Now Resizing Images ---")
+        p = subprocess.run(["python", f'{args.dcan_path}dcan/img_processing/resize_images_test.py', args.task_path])
+        print("--- Images Resized ---")
     
-    script_dir = os.path.abspath(os.path.dirname(__file__))
-    os.chdir(script_dir) 
-    
-    slurm_scripts_path = f"{script_dir}/scripts/slurm_scripts/{args.task_number}/"
-    all_slurm_path = f"{script_dir}/scripts/slurm_scripts/"
-    
-    set_up_slurm_scripts_folder(script_dir, args.task_number)
-    '''
-    ### RESIZING IMAGES ###
-    print("--- Now Resizing Images ---")
-    p = subprocess.run(["python", f'{args.dcan_path}dcan/img_processing/resize_images_test.py', args.task_path])
-    print("--- Images Resized ---")
-    
-    ### SETTING UP MINS/MAXES ###
+### SETTING UP MINS/MAXES ###
+def min_max():
     print("--- Now Creating Min Maxes ---")
     os.chdir(f'{slurm_scripts_path}')
     subprocess.run(["sbatch", "-W", f'./create_min_maxes.sh', args.synth_path, args.task_path, f'{script_dir}/min_maxes/mins_maxes_task_{args.task_number}.npy'])
     print("--- Min Maxes Created ---")
-    
-    ### CREATING SYNTHETICS ###
+
+### CREATING SYNTHETICS ###
+def SynthSeg_img():
     print("--- Now Creating Synthetic Images ---")
     os.chdir(f'{slurm_scripts_path}')
     subprocess.run(["sbatch", "-W", f'./SynthSeg_image_generation.sh', args.synth_path, args.task_path, f'{script_dir}/min_maxes/mins_maxes_task_{args.task_number}.npy', args.synth_img_amt, f'--modalities={args.modality}', f'--distribution={args.distribution}'])
     print("--- SynthSeg Images Generated ---")
-    
-    ### COPYING OVER SYNTHSEG GENERATED IMAGE FILES ###
+
+### COPYING OVER SYNTHSEG GENERATED IMAGE FILES ###
+def copy_SynthSeg():
     print("--- Now Moving Over SynthSeg Generated Images ---")
     os.chdir(f'{args.dcan_path}dcan/util/')
     subprocess.run(["python", f'copy_over_augmented_image_files.py', f'{args.task_path}SynthSeg_generated/images/', f'{args.task_path}imagesTr/', f'{args.task_path}labelsTr/'])
     subprocess.run(["python", f'copy_over_augmented_image_files.py', f'{args.task_path}SynthSeg_generated/labels/', f'{args.task_path}imagesTr/', f'{args.task_path}labelsTr/'])
     os.chdir(f'{args.task_path}')
-   
     subprocess.run(f'mv ./imagesTr/*_SynthSeg_generated_0000.nii.gz ./labelsTr/', shell=True)
     subprocess.run(f'mv ./imagesTr/*_SynthSeg_generated_0001.nii.gz ./labelsTr/', shell=True)
     #subprocess.run(['ls', f'./imagesTr/', '|', 'wc', '-l'])
     #subprocess.run(['ls', f'./labelsTr/', '|', 'wc', '-l'])
     subprocess.run(['rm', f'SynthSeg_generated/', '-r'])
     print("--- Images Moved ---")
-    
-    ### CREATING JSON ###
+
+
+### CREATING JSON ###
+def create_json():
     print("--- Now Creating Dataset json ---")
     os.chdir(f'{args.task_path}')
     subprocess.run(["python", f'{args.dcan_path}dcan/dataset_conversion/create_json_file.py', f'Task{args.task_number}', f'{args.dcan_path}look_up_tables/Freesurfer_LUT_DCAN.txt', f'--modalities={args.modality}'])
@@ -163,14 +138,17 @@ if __name__ == '__main__':
     os.remove(f'{args.task_path}dataset.json')
     os.rename(f'{args.task_path}dataset2.json', f'{args.task_path}dataset.json')
     print("--- Dataset json Created ---")
-    
-    ### RUNNING PLAN AND PREPROCESS ###
+
+### RUNNING PLAN AND PREPROCESS ###
+def p_and_p():
+
     print("--- Now Running Plan and Preprocess ---")
     os.chdir(f'{slurm_scripts_path}')
     subprocess.run(["sbatch", "-W", f"NnUnet_plan_and_preprocess_agate.sh", args.raw_data_base_path, args.task_number])
     print("--- Finished Plan and Preprocessing ---")
-    
-    ### TRAINING MODEL ###
+
+### TRAINING MODEL ###
+def model_training():
     print("--- Now Running Nnunet Training ---")
     
     job_ids = [0, 0, 0, 0, 0]
@@ -201,8 +179,9 @@ if __name__ == '__main__':
                 subprocess.run(["sbatch", "-W", f"NnUnetTrain_agate.sh", f"{i}", "faird", args.task_number, args.raw_data_base_path, "-c"])
                 job_ids[i] = get_job_id_by_name(f"{args.task_number}_{i}_Train_nnUNet", i)
     print("--- Training Complete ---")
-    
-    ### INFERENCE ###
+
+### INFERENCE ###
+def inference():
     print("--- Starting Inference ---")
     if not os.path.isdir(f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_infer/"):
         os.mkdir(f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_infer/")
@@ -211,7 +190,7 @@ if __name__ == '__main__':
     id = get_job_id_by_name(f"{args.task_number}_infer", -1)
     wait_for_job_to_finish(id, -1, 60) 
     print("--- Inference Complete ---")
-    '''
+    #'''
     ### CREATE PLOTS
     print("--- Creating Plots ---")
     if not os.path.isdir(f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_results/"):
@@ -219,4 +198,53 @@ if __name__ == '__main__':
     os.chdir(f'{args.synth_path}SynthSeg/dcan/paper/')
     subprocess.run(["python", "./evaluate_results.py", f"{args.task_path}labelsTs/", f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_infer/", f"/home/faird/shared/data/nnUNet_lundq163/{args.task_number}_results/"])
     print("--- Plots Creted ---")
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('dcan_path')
+    parser.add_argument('task_path')
+    parser.add_argument('synth_path')
+    parser.add_argument('raw_data_base_path')
+    parser.add_argument('modality')
+    parser.add_argument('task_number')
+    parser.add_argument('distribution')
+    parser.add_argument('synth_img_amt')
+    
+ 
+    parser.add_argument('list')
+    
+
+    args = parser.parse_args()
+
+    ### SETTING UP PATHS ###
+    os.environ["PYTHONPATH"] = f"{args.synth_path}:{args.synth_path}SynthSeg/:{args.dcan_path}:{args.dcan_path}dcan/"
+    os.environ["nnUNet_raw_data_base"] = f"{args.raw_data_base_path}"
+    os.environ["nnUNet_preprocessed"] = f"{args.raw_data_base_path}nnUNet_preprocessed/"
+    os.environ["RESULTS_FOLDER"] = f"/home/faird/shared/data/nnUNet_lundq163/nnUNet_raw_data_base/nnUNet_trained_models/"
+    
+    script_dir = os.path.abspath(os.path.dirname(__file__))
+    os.chdir(script_dir) 
+    
+    slurm_scripts_path = f"{script_dir}/scripts/slurm_scripts/{args.task_number}/"
+    all_slurm_path = f"{script_dir}/scripts/slurm_scripts/"
+    
+    set_up_slurm_scripts_folder(script_dir, args.task_number)
+
+    run_list = ['resize_images', 'min_max', 'SynthSeg_img', 'copy_SynthSeg', 'create_json','p_and_p','model_training', 'inference']
+    print
+    if args.list[1]=='1':
+        resize_images()
+    if args.list[4]=='1':    
+        min_max()
+    if args.list[7]=='1': 
+        SynthSeg_img()
+    if args.list[10]=='1': 
+        copy_SynthSeg()
+    if args.list[13]=='1': 
+        create_json()
+    if args.list[16]=='1': 
+        p_and_p()
+    if args.list[19]=='1': 
+        model_training()
+    if args.list[22]=='1': 
+        inference()
     print("PROGRAM COMPLETE!")

@@ -46,8 +46,9 @@ class Thread(QtCore.QThread):
     input9 = ''
     processes = []
     script_dir = ""
+    check_list=[]
 
-    def __init__(self, input1, input2, input3, input4, input6, input7, input8, input9, script_dir):
+    def __init__(self, input1, input2, input3, input4, input6, input7, input8, input9, script_dir, check_list):
         QtCore.QThread.__init__(self)
         self.input1 = input1.strip()
         self.input2 = input2.strip()
@@ -59,10 +60,11 @@ class Thread(QtCore.QThread):
         self.input8 = input8.strip()
         self.input9 = input9.strip()
         self.script_dir = script_dir
+        self.check_list=check_list
 
     def run(self):
         # Start subprocess and wait for it to finish
-        p = subprocess.Popen(["python", f"{self.script_dir}/automation_test.py", self.input1, self.input2, self.input3, self.input4, self.input6, self.input7, self.input8, self.input9]) 
+        p = subprocess.Popen(["python", f"{self.script_dir}/automation_test.py", self.input1, self.input2, self.input3, self.input4, self.input6, self.input7, self.input8, self.input9, self.check_list]) 
         self.processes.append(p)
         p.wait()
         self.finished.emit() # Tells the program that the subprocess finished
@@ -120,17 +122,22 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         self.inputDict['task_number'] = self.line_task_number
         self.inputDict['distribution'] = self.line_distribution
         self.inputDict['synth_img_amt'] = self.line_synth_img_amt
+
+        self.check_list=[]
+
         #self.inputDict['slurm_scripts_path'] = self.line_slurm_scripts_path
         
         # Some setup stuff
         self.menuiuhwuaibfa.setTitle("TEST PROGRAM")
         self.pushButton.setText('run')
         self.pushButton_2.setText('Populate Preset')
+     
         self.pushButton.clicked.connect(self.run_program)
         self.pushButton_2.clicked.connect(self.populate_inputs)
         self.button_clear.clicked.connect(self.clear_inputs)
         self.button_save.clicked.connect(self.save_preset)
         self.button_remove.clicked.connect(self.remove_preset)
+        self.button_select_all.clicked.connect(self.select_all_presets)
     
     def run_program(self):
         # If process isn't currently running
@@ -140,10 +147,12 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
                 print("Please fill out all input fields")
                 self.menuiuhwuaibfa.setTitle("Please fill out all input fields")
             else:
+                self.check_status()
+
                 self.menuiuhwuaibfa.setTitle("Running...")
                 # Start new worker thread to run main program. Allows UI to continue working along with it
                 self.temp_thread = Thread(self.line_dcan_path.text(), self.line_task_path.text(), self.line_synth_path.text(), self.line_raw_data_base_path.text(), 
-                                          self.line_modality.text(), self.line_task_number.text(), self.line_distribution.text(), self.line_synth_img_amt.text(), self.script_dir)
+                                          self.line_modality.text(), self.line_task_number.text(), self.line_distribution.text(), self.line_synth_img_amt.text(), self.script_dir, str(self.check_list))
                 #self.temp_thread.finished.connect(lambda: self.pushButton.setText('run')) # Listen for when process finishes
                 self.temp_thread.finished.connect(self.on_finish_thread) # Listen for when process finishes
                 self.temp_thread.start()
@@ -155,7 +164,24 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
             self.temp_thread.stop() # Stops subrocesses within thread. This will cause the finish signal to be sent
             self.running = False
             self.pushButton.setText('run')
+    def check_status(self):
         
+        for checkBox in self.checkBoxes:
+            self.check_list.append(1 if checkBox.isChecked() else 0)
+        
+        print(str(self.check_list))  # You can print or use this list as needed
+    def select_all_presets(self):
+        temp =True
+        for checkBox in self.checkBoxes: #checks to see if all of the boxes are already selected
+            if not checkBox.isChecked():
+                temp=False
+        if temp == False:
+            for checkBox in self.checkBoxes: #selects all boxes
+                checkBox.setChecked(True)
+        else:
+            for checkBox in self.checkBoxes: #deselects all boxes
+                checkBox.setChecked(False)
+
     def on_finish_thread(self):
         self.running = False
         self.pushButton.setText('run')
@@ -271,6 +297,7 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         QTimer.singleShot(sec * 1000, lambda: self.pushButton.setEnabled(True))
         
     def closeEvent(self, event):
+
         print("CLOSING")
         # Override the close event to execute a function first
         if self.running == True:
@@ -283,7 +310,7 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
                 event.accept()  # Accept the event to close the window
             else:
                 event.ignore()  # Ignore the event to prevent the window from closing
-        
+    
 class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
     def __init__(self):
         super().__init__()
@@ -317,6 +344,8 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
          
     def set_background_image(self, image_path):
         self.setStyleSheet(f"QMainWindow {{background-image: url({image_path}); background-repeat: no-repeat; background-position: center;}}")
+    
+
 
 def main(): 
     app = QtWidgets.QApplication(sys.argv)
@@ -324,6 +353,7 @@ def main():
     # app.setStyleSheet(PyQt5_stylesheets.load_stylesheet_pyqt5(style="style_Dark"))
     ui = LoginWindow()
     ui.show()
+    
     sys.exit(app.exec_())
     
 if __name__ == "__main__":

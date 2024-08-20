@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QCompleter, QComboBox
+from PyQt5.QtWidgets import QCompleter, QComboBox, QCheckBox
 import PyQt5_stylesheets
 
 class Ui_MainWindow(object):
@@ -40,6 +40,11 @@ class Ui_MainWindow(object):
         self.button_remove= QtWidgets.QPushButton(self.centralwidget)
         self.button_remove.setObjectName("button_remove")
         self.gridLayout.addWidget(self.button_remove, 2, 1, 1, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignBottom)
+        self.button_select_all=QtWidgets.QPushButton(self.centralwidget)
+        self.button_select_all.setObjectName("button_select_all")
+        #self.gridLayout.addWidget(self.button_select_all, 15, 1, 1, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignBottom)
+        self.button_select_all.setGeometry(QtCore.QRect(510, 490, 120, 26))
+
         self.check_overwrite = QtWidgets.QCheckBox(self.centralwidget)
         self.check_overwrite.setObjectName("check_overwrite")
         self.gridLayout.addWidget(self.check_overwrite, 0, 1, 1, 1, QtCore.Qt.AlignRight|QtCore.Qt.AlignBottom)
@@ -72,12 +77,25 @@ class Ui_MainWindow(object):
         self.comboBox_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
         self.comboBox_preset.setInsertPolicy(QComboBox.NoInsert) 
         
-        self.comboBox_preset.setPlaceholderText("-- Select Preset --")
+     #
         
         self.comboBox_remove_preset.setEditable(True) 
         self.comboBox_remove_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
         self.comboBox_remove_preset.setInsertPolicy(QComboBox.NoInsert) 
-        
+
+        self.checkBoxes = []  # Store references to checkboxes
+        run_list = ['Resize Images', 'Mins/Maxs', 'SynthSeg Image Creation', 'Copying SynthSeg Images Over', 'Create JSON File','Plan and Preprocess','Training the Model', 'Running Inference']
+        for i in range(8):
+            self.checkBox = QCheckBox(run_list[i], self.centralwidget)
+            self.checkBox.setObjectName(f'checkBox_{i}')
+            self.gridLayout.addWidget(self.checkBox, i+7, 1, 1, 1)
+            self.checkBoxes.append(self.checkBox)
+
+        self.label_i = QtWidgets.QLabel(self.centralwidget)
+        self.label_i.setObjectName("label_i")
+        self.gridLayout.addWidget(self.label_i, 6, 1, 1, 1)
+
+
         #'''
         self.label_overwrite = QtWidgets.QLabel(self.centralwidget)
         self.label_overwrite.setMaximumSize(QtCore.QSize(150, 20))
@@ -175,8 +193,11 @@ class Ui_MainWindow(object):
         self.label_dcan_path.setText(_translate("MainWindow", "Dcan-nn-unet Path"))
         self.label_modality.setText(_translate("MainWindow", "Modality (t1, t2, t1t2)"))
         self.label_synth_path.setText(_translate("MainWindow", "SynthSeg Path"))
+        self.button_select_all.setText(_translate("MainWindow", "Select All Boxes"))
         #self.label_slurm_scripts_path.setText(_translate("MainWindow", "Slurm Scripts Path"))
         self.menuiuhwuaibfa.setTitle(_translate("MainWindow", "iuhwuaibfa"))
+        
+        self.label_i.setText(_translate("MainWindow", "Select Which Features You Would Like to Run"))
 
 if __name__ == "__main__":
     import sys
