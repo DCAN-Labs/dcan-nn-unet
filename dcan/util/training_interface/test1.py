@@ -28,30 +28,33 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.line_dcan_path, 1, 0, 1, 1)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setObjectName("pushButton")
-        self.gridLayout.addWidget(self.pushButton, 18, 0, 1, 1, QtCore.Qt.AlignRight|QtCore.Qt.AlignBottom)
+        self.gridLayout.addWidget(self.pushButton, 18, 0, 1,1, QtCore.Qt.AlignRight|QtCore.Qt.AlignBottom)
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout.addWidget(self.pushButton_2, 4, 1, 1, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignBottom)
+        self.gridLayout.addWidget(self.pushButton_2, 4, 2, 1, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignBottom)
         self.button_clear= QtWidgets.QPushButton(self.centralwidget)
         self.button_clear.setObjectName("button_clear")
         self.gridLayout.addWidget(self.button_clear, 18, 0, 1, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignBottom)
         self.button_save= QtWidgets.QPushButton(self.centralwidget)
         self.button_save.setObjectName("button_save")
-        self.gridLayout.addWidget(self.button_save, 0, 1, 1, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignBottom)
+        self.gridLayout.addWidget(self.button_save, 0, 2, 1, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignBottom)
         self.button_remove= QtWidgets.QPushButton(self.centralwidget)
         self.button_remove.setObjectName("button_remove")
-        self.gridLayout.addWidget(self.button_remove, 2, 1, 1, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignBottom)
+        self.gridLayout.addWidget(self.button_remove, 2, 2, 1, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignBottom)
+        
         self.button_select_all=QtWidgets.QPushButton(self.centralwidget)
         self.button_select_all.setObjectName("button_select_all")
-        #self.gridLayout.addWidget(self.button_select_all, 15, 1, 1, 1, QtCore.Qt.AlignLeft|QtCore.Qt.AlignBottom)
-        self.button_select_all.setGeometry(QtCore.QRect(510, 490, 120, 26))
+        self.gridLayout.addWidget(self.button_select_all, 15, 2, 1, 1)
+
+        
+        
 
         self.check_overwrite = QtWidgets.QCheckBox(self.centralwidget)
         self.check_overwrite.setObjectName("check_overwrite")
-        self.gridLayout.addWidget(self.check_overwrite, 0, 1, 1, 1, QtCore.Qt.AlignRight|QtCore.Qt.AlignBottom)
+        self.gridLayout.addWidget(self.check_overwrite, 0, 3, 1, 1, QtCore.Qt.AlignRight|QtCore.Qt.AlignBottom)
         self.line_save_preset = QtWidgets.QLineEdit(self.centralwidget)
         self.line_save_preset.setObjectName("line_save_preset")
-        self.gridLayout.addWidget(self.line_save_preset, 1, 1, 1, 2)
+        self.gridLayout.addWidget(self.line_save_preset, 1, 2, 1, 2)
         # self.line_remove_preset = QtWidgets.QLineEdit(self.centralwidget)
         # self.line_remove_preset.setObjectName("line_remove_preset")
         # self.gridLayout.addWidget(self.line_remove_preset, 3, 1, 1, 2)
@@ -60,7 +63,7 @@ class Ui_MainWindow(object):
         self.comboBox_remove_preset = ComboBox(self.centralwidget)
         self.comboBox_remove_preset.setObjectName("comboBox_remove_preset")
         self.comboBox_remove_preset.setFixedSize(200, 30)  # Set fixed size
-        self.gridLayout.addWidget(self.comboBox_remove_preset, 3, 1, 1, 2)
+        self.gridLayout.addWidget(self.comboBox_remove_preset, 3, 2, 1, 2)
         
         self.comboBox_remove_preset.setEditable(True) 
         self.comboBox_remove_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
@@ -76,7 +79,7 @@ class Ui_MainWindow(object):
         self.comboBox_preset = ComboBox(self.centralwidget)
         self.comboBox_preset.setObjectName("comboBox_preset")
         self.comboBox_preset.setFixedSize(200, 30)  # Set fixed size
-        self.gridLayout.addWidget(self.comboBox_preset, 5, 1, 1, 2)
+        self.gridLayout.addWidget(self.comboBox_preset, 5, 2, 1, 2)
           
         self.comboBox_preset.setEditable(True) 
         self.comboBox_preset.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion) 
@@ -90,26 +93,27 @@ class Ui_MainWindow(object):
         for i in range(8):
             self.checkBox = QCheckBox(run_list[i], self.centralwidget)
             self.checkBox.setObjectName(f'checkBox_{i}')
-            self.gridLayout.addWidget(self.checkBox, i+7, 1, 1, 1)
+            self.gridLayout.addWidget(self.checkBox, i+7, 2, 1, 1)
             self.checkBox.setChecked(True)
             self.checkBoxes.append(self.checkBox)
+        
 
         self.label_i = QtWidgets.QLabel(self.centralwidget)
         self.label_i.setObjectName("label_i")
-        self.gridLayout.addWidget(self.label_i, 6, 1, 1, 1)
+        self.gridLayout.addWidget(self.label_i, 6, 2, 1, 1)
 
 
         #'''
         self.label_overwrite = QtWidgets.QLabel(self.centralwidget)
-        self.label_overwrite.setMaximumSize(QtCore.QSize(150, 20))
+        self.label_overwrite.setMaximumSize(QtCore.QSize(100, 20))
         self.label_overwrite.setObjectName("label_overwrite")
-        self.gridLayout.addWidget(self.label_overwrite, 0, 2, 1, 1)
+        self.gridLayout.addWidget(self.label_overwrite, 0, 3, 1, 1)
         self.label_raw_data_base_path = QtWidgets.QLabel(self.centralwidget)
         self.label_raw_data_base_path.setMaximumSize(QtCore.QSize(150, 20))
         self.label_raw_data_base_path.setObjectName("label_raw_data_base_path")
         self.gridLayout.addWidget(self.label_raw_data_base_path, 6, 0, 1, 1)
         self.label_distribution = QtWidgets.QLabel(self.centralwidget)
-        self.label_distribution.setMaximumSize(QtCore.QSize(150, 20))
+        self.label_distribution.setMaximumSize(QtCore.QSize(180, 20))
         self.label_distribution.setObjectName("label_distribution")
         self.gridLayout.addWidget(self.label_distribution, 12, 0, 1, 1)
         self.line_synth_path = QtWidgets.QLineEdit(self.centralwidget)
@@ -176,6 +180,23 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.menubar.addAction(self.menuiuhwuaibfa.menuAction())
 
+        
+        self.button_browse_1=QtWidgets.QPushButton(self.centralwidget)
+        self.button_browse_1.setObjectName(f"button_browse_1")
+        self.gridLayout.addWidget(self.button_browse_1, 1, 1, 1, 1)
+
+        self.button_browse_2=QtWidgets.QPushButton(self.centralwidget)
+        self.button_browse_2.setObjectName(f"button_browse_2")
+        self.gridLayout.addWidget(self.button_browse_2, 3, 1, 1, 1)
+
+        self.button_browse_3=QtWidgets.QPushButton(self.centralwidget)
+        self.button_browse_3.setObjectName(f"button_browse_3")
+        self.gridLayout.addWidget(self.button_browse_3, 5, 1, 1, 1)
+
+        self.button_browse_4=QtWidgets.QPushButton(self.centralwidget)
+        self.button_browse_4.setObjectName(f"button_browse_4")
+        self.gridLayout.addWidget(self.button_browse_4, 7, 1, 1, 1)
+
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -197,6 +218,11 @@ class Ui_MainWindow(object):
         self.label_modality.setText(_translate("MainWindow", "Modality (t1, t2, t1t2)"))
         self.label_synth_path.setText(_translate("MainWindow", "SynthSeg Path"))
         self.button_select_all.setText(_translate("MainWindow", "Select All Boxes"))
+        self.button_browse_1.setText(_translate("MainWindow", "Browse Paths"))
+        self.button_browse_4.setText(_translate("MainWindow", "Browse Paths"))
+        self.button_browse_3.setText(_translate("MainWindow", "Browse Paths"))
+        self.button_browse_2.setText(_translate("MainWindow", "Browse Paths"))
+        
         #self.label_slurm_scripts_path.setText(_translate("MainWindow", "Slurm Scripts Path"))
         self.menuiuhwuaibfa.setTitle(_translate("MainWindow", "iuhwuaibfa"))
         

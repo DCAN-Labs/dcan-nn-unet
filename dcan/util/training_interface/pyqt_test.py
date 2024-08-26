@@ -156,6 +156,10 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         self.button_save.clicked.connect(self.save_preset)
         self.button_remove.clicked.connect(self.remove_preset)
         self.button_select_all.clicked.connect(self.select_all_presets)
+        self.button_browse_1.clicked.connect(lambda: self.browse(1))
+        self.button_browse_2.clicked.connect(lambda: self.browse(2))
+        self.button_browse_3.clicked.connect(lambda: self.browse(3))
+        self.button_browse_4.clicked.connect(lambda: self.browse(4))
     
     def findAlphabeticalIndex(self, combo, item):
         combo_list = [combo.itemText(i) for i in range(combo.count())]
@@ -211,7 +215,21 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         elif self.running == True:
             self.menuiuhwuaibfa.setTitle("Program Stopped")
             self.temp_thread.stop_program() # Stops subrocesses within thread. This will cause the finish signal to be sent
-            
+    def browse(self,num):
+        path_dic = {
+    1: (self.line_dcan_path, os.path.expanduser("~")),
+    2: (self.line_task_path, "/"),
+    3: (self.line_synth_path, os.path.expanduser("~")),
+    4: (self.line_raw_data_base_path, "/")
+        }
+
+        line_edit,default_path=path_dic.get(num)
+
+        dialog = QFileDialog.getExistingDirectory(self, "Select Directory", line_edit.text() or default_path)
+
+        if dialog:
+            line_edit.setText(str(dialog))
+        
     def check_status(self):
         
         for checkBox in self.checkBoxes:
