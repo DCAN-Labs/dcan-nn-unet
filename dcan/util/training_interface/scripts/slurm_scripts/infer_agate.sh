@@ -22,7 +22,7 @@ conda activate /home/support/public/pytorch_1.11.0_agate
 
 
 export nnUNet_raw_data_base="$3"
-export nnUNet_preprocessed="$3nnUNet_preprocessed/"
+export nnUNet_preprocessed="$3/nnUNet_preprocessed/"
 export RESULTS_FOLDER="/home/faird/shared/data/nnUNet_lundq163/nnUNet_raw_data_base/nnUNet_trained_models/"
 
 

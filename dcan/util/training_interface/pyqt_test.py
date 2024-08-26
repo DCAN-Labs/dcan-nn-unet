@@ -30,6 +30,8 @@ class Thread(QtCore.QThread):
     script_dir = ""
     check_list=[]
 
+    quit_program = False
+
     def __init__(self, input1, input2, input3, input4, input6, input7, input8, input9, script_dir, check_list):
         QtCore.QThread.__init__(self)
         self.input1 = input1
@@ -44,26 +46,64 @@ class Thread(QtCore.QThread):
         self.script_dir = script_dir
         self.check_list=check_list
 
+    def get_active_job_names(self, job_names):
+    # Run the squeue command and capture the output
+        active_jobs = []
+        for job in job_names:  
+            result = subprocess.run(['squeue', '--name', job, '--format', '%.50j'], capture_output=True, text=True)
+            result = result.stdout.splitlines()
+            if result[-1] != "":
+                active_jobs.append(result[-1])
+
+        return active_jobs
+
+    def cancel_jobs(self):
+        with open(os.path.join(self.script_dir, "scripts", "slurm_scripts", self.input7, "active_jobs.txt"), 'r') as f:
+            lines = f.readlines()
+                    
+        for i in lines:
+            if i.strip() != '':
+                subprocess.run(["scancel", i.strip()])
+                
+        os.remove(os.path.join(self.script_dir, "scripts", "slurm_scripts", self.input7, "active_jobs.txt"))
+
     def run(self):
         # Start subprocess and wait for it to finish
-        p = subprocess.Popen(["python", os.path.join(self.script_dir, "automation_test.py"), self.input1, self.input2, self.input3, self.input4, self.input6, self.input7, self.input8, self.input9, self.check_list]) 
+        p = subprocess.Popen(["python", os.path.join(self.script_dir, "automation_test.py"), self.input1, self.input2, self.input3, self.input4, self.input6, self.input7, self.input8, self.input9, self.check_list], stdout=None, stderr=None) 
         self.processes.append(p)
         p.wait()
-        self.finished.emit() # Tells the program that the subprocess finished
-        
-    def stop(self):
-        if len(self.processes) > 0:
-            print("Stopping Process...")
-            parent = psutil.Process(self.processes[-1].pid) 
-            for child in parent.children(recursive=True):  # Kill current subprocess and all child subprocesses
-                child.kill()
-            parent.kill()
+              
+        if p.returncode != 0 and not self.quit_program:
+            print("AN ERROR HAS OCCURED")
+            self.cancel_jobs()         
+        elif p.returncode == 0:
+            self.cancel_jobs()
+        elif p.returncode != 0 and self.quit_program:
+            self.cancel_jobs()
             print("PROCESS STOPPED")
+  
+        self.finished.emit() # Tells the program that the thread has finished
+           
+    def stop_program(self):  
+        if len(self.processes) > 0:
+            self.quit_program = True
+            
+            print("Stopping Process...")
+            parent = psutil.Process(self.processes[-1].pid)
+            try:
+                for child in parent.children(recursive=True):  # Kill current subprocess and all child subprocesses
+                    child.kill()
+            except:
+                pass
+            parent.kill()    
+            
+        
 
 class Window(QtWidgets.QMainWindow, Ui_MainWindow):
     temp_thread = None
     inputDict = {}
     script_dir = ''
+    t_num = ''
     running = False
     
     def __init__(self):
@@ -122,13 +162,12 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         combo_list.append(item)
         combo_list.sort(key=lambda i: i.upper())
         return combo_list.index(item)
-            
     
     def check_inputs(self):
-        inp_dcan_path = os.path.exists(self.line_dcan_path.text().strip())
-        inp_synth_path = os.path.exists(self.line_synth_path.text().strip())
-        inp_task_path = os.path.exists(self.line_task_path.text().strip())
-        inp_raw_data_base_path = os.path.exists(self.line_raw_data_base_path.text().strip())
+        inp_dcan_path = os.path.exists(Path(self.line_dcan_path.text().strip()))
+        inp_synth_path = os.path.exists(Path(self.line_synth_path.text().strip()))
+        inp_task_path = os.path.exists(Path(self.line_task_path.text().strip()))
+        inp_raw_data_base_path = os.path.exists(Path(self.line_raw_data_base_path.text().strip()))
         inp_modality = self.line_modality.text().strip().lower() == "t1" or self.line_modality.text().strip().lower() == "t2" or self.line_modality.text().strip().lower() == "t1t2"
         # TODO: update task number check
         inp_task_number = self.line_task_number.text().isdigit()
@@ -171,10 +210,7 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         # If process is currently running
         elif self.running == True:
             self.menuiuhwuaibfa.setTitle("Program Stopped")
-            self.temp_thread.stop() # Stops subrocesses within thread. This will cause the finish signal to be sent
-            self.running = False
-            self.check_list = []
-            self.pushButton.setText('run')
+            self.temp_thread.stop_program() # Stops subrocesses within thread. This will cause the finish signal to be sent
             
     def check_status(self):
         
@@ -197,6 +233,7 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def on_finish_thread(self):
         self.running = False
+        self.check_list = []
         self.pushButton.setText('run')
             
     def populate_inputs(self):
@@ -381,7 +418,6 @@ class LoginWindow(QtWidgets.QMainWindow, Ui_LoginWindow):
          
     def set_background_image(self, image_path):
         self.setStyleSheet(f"QMainWindow {{background-image: url({image_path}); background-repeat: no-repeat; background-position: center;}}")
-
 
 def main(): 
     app = QtWidgets.QApplication(sys.argv)

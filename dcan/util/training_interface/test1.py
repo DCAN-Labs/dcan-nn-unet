@@ -91,6 +91,7 @@ class Ui_MainWindow(object):
             self.checkBox = QCheckBox(run_list[i], self.centralwidget)
             self.checkBox.setObjectName(f'checkBox_{i}')
             self.gridLayout.addWidget(self.checkBox, i+7, 1, 1, 1)
+            self.checkBox.setChecked(True)
             self.checkBoxes.append(self.checkBox)
 
         self.label_i = QtWidgets.QLabel(self.centralwidget)

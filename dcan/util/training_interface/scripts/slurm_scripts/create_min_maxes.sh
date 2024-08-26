@@ -20,7 +20,7 @@ source /home/faird/shared/code/external/envs/miniconda3/load_miniconda3.sh
 conda activate SynthSeg-fixed-perms
 
 export PYTHONPATH=${PYTHONPATH}:$1
-export PYTHONPATH=${PYTHONPATH}:$1SynthSeg/
+export PYTHONPATH=${PYTHONPATH}:$1/SynthSeg/
 
 cd $1
 
