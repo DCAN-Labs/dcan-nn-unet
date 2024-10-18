@@ -14,10 +14,10 @@ from collections import OrderedDict
 from os.path import join
 
 from docopt import docopt
-
-from dcan.dataset_conversion.utils import generate_dataset_json
-from dcan.paths import nnUNet_raw_data
-from dcan.util.look_up_tables import get_id_to_region_mapping
+ 
+from dataset_conversion.utils import generate_dataset_json
+from paths import nnUNet_raw_data
+from util.look_up_tables import get_id_to_region_mapping
 
 
 def fill_in_labels(free_surfer_label_to_region):
@@ -35,7 +35,7 @@ def get_label_dict(free_surfer_label_to_region):
     return dict1
 
 # TODO: Generalize hard coded path
-def main(task, free_surfer_color_lut='/home/miran045/reine097/projects/abcd-nn-unet/look_up_tables/Freesurfer_LUT_DCAN.txt'):
+def main(task, free_surfer_color_lut='/home/faird/efair/projects/dcan-nn-unet/look_up_tables/Freesurfer_LUT_DCAN.txt'):
     target_base = join(nnUNet_raw_data, task)
     target_images_tr = join(target_base, "imagesTr")
     target_images_ts = join(target_base, "imagesTs")

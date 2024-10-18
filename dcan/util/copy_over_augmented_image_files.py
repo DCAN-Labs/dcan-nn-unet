@@ -7,7 +7,7 @@ def copy_over_augmented_image_files(source_directory, images_tr_directory, label
     files = os.listdir(source_directory)
 
     for f in files:
-        print(f)
+        #print(f)
         if f.endswith('_0000.nii.gz') or f.endswith('_0001.nii.gz'):
             dst = images_tr_directory
         else:

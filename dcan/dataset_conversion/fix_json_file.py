@@ -42,7 +42,7 @@ def main(input_f, output_f):
                 in_regions = True
                 writer.write(line)
                 # TODO: generalize hard coded path
-                                        '/Freesurfer_LUT_DCAN.txt'
+                free_surfer_color_lut = args.lookup_table_path
                 free_surfer_label_to_region = get_id_to_region_mapping(free_surfer_color_lut)
                 consecutive_labels_to_regions = fill_in_labels(free_surfer_label_to_region)
                 for label in consecutive_labels_to_regions:
@@ -63,6 +63,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fix nnU-Net JSON file.')
     parser.add_argument('input_file', help='input file')
     parser.add_argument('output_file', help='output file')
+    parser.add_argument('lookup_table_path', help='lookup table path')
     args = parser.parse_args()
 
     main(args.input_file, args.output_file)

@@ -140,3 +140,8 @@ dmypy.json
 /data/dice.pickle
 /data/dice2.pickle
 /data/dice.csv
+/dcan/util/training_interface/automation_presets/
+/dcan/util/training_interface/min_maxes/
+/dcan/util/training_interface/scripts/slurm_scripts/*
+!/dcan/util/training_interface/scripts/slurm_scripts/*.sh
+/dcan/util/training_interface/scripts/slurm_scripts/*/
