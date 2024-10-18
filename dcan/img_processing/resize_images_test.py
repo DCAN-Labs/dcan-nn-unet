@@ -35,12 +35,12 @@ if __name__ == '__main__':
     args = parser.parse_args()
     file_list = ['imagesTr', 'imagesTs', 'labelsTr', 'labelsTs']
     for name in file_list:
-        if not os.path.isdir(os.path.join(args.task_folder,f'{name}_temp')):
-            os.rename(os.path.join(args.task_folder,name), os.path.join(args.task_folder,f'{name}_temp'))
+        if not os.path.isdir(os.path.join(args.task_folder, f'{name}_temp')):
+            os.rename(os.path.join(args.task_folder, name), os.path.join(args.task_folder, f'{name}_temp'))
     for name in file_list:
-        if not os.path.isdir(os.path.join(args.task_folder,name)):
-            os.mkdir(os.path.join(args.task_folder,name))
+        if not os.path.isdir(os.path.join(args.task_folder, name)):
+            os.mkdir(os.path.join(args.task_folder, name))
     for name in file_list:
-        resize_images(os.path.join(args.task_folder,f'{name}_temp'), os.path.join(args.task_folder,name))
+        resize_images(os.path.join(args.task_folder, f'{name}_temp'), os.path.join(args.task_folder,name))
     for name in file_list:
         shutil.rmtree(os.path.join(args.task_folder, f'{name}_temp'))

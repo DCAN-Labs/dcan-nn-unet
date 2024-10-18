@@ -17,32 +17,34 @@ from custom_widgets import *
 
 class Thread(QtCore.QThread):
     finished = pyqtSignal()
-    input1 = ''
-    input2 = ''
-    input3 = ''
-    input4 = ''
-    #input5 = ''
-    input6 = ''
-    input7 = ''
-    input8 = ''
-    input9 = ''
+    dcan_path = ''
+    task_path = ''
+    synth_path = ''
+    raw_path = ''
+    results_path = ''
+    trained_path = ''
+    modality = ''
+    task_num = ''
+    distribution = ''
+    synth_amt = ''
     processes = []
     script_dir = ""
     check_list=[]
 
     quit_program = False
 
-    def __init__(self, input1, input2, input3, input4, input6, input7, input8, input9, script_dir, check_list):
+    def __init__(self, dcan_path, task_path, synth_path, raw_path, results_path, trained_path, modality, task_num, distribution, synth_amt, script_dir, check_list):
         QtCore.QThread.__init__(self)
-        self.input1 = input1
-        self.input2 = input2
-        self.input3 = input3
-        self.input4 = input4
-        #self.input5 = input5.strip()
-        self.input6 = input6
-        self.input7 = input7
-        self.input8 = input8
-        self.input9 = input9
+        self.dcan_path = dcan_path
+        self.task_path = task_path
+        self.synth_path = synth_path
+        self.raw_path = raw_path
+        self.results_path = results_path
+        self.trained_path = trained_path
+        self.modality = modality
+        self.task_num = task_num
+        self.distribution = distribution
+        self.synth_amt = synth_amt
         self.script_dir = script_dir
         self.check_list=check_list
 
@@ -58,18 +60,18 @@ class Thread(QtCore.QThread):
         return active_jobs
 
     def cancel_jobs(self):
-        with open(os.path.join(self.script_dir, "scripts", "slurm_scripts", self.input7, "active_jobs.txt"), 'r') as f:
+        with open(os.path.join(self.script_dir, "scripts", "slurm_scripts", self.task_num, "active_jobs.txt"), 'r') as f:
             lines = f.readlines()
                     
         for i in lines:
             if i.strip() != '':
                 subprocess.run(["scancel", i.strip()])
                 
-        os.remove(os.path.join(self.script_dir, "scripts", "slurm_scripts", self.input7, "active_jobs.txt"))
+        os.remove(os.path.join(self.script_dir, "scripts", "slurm_scripts", self.task_num, "active_jobs.txt"))
 
     def run(self):
         # Start subprocess and wait for it to finish
-        p = subprocess.Popen(["python", os.path.join(self.script_dir, "automation_test.py"), self.input1, self.input2, self.input3, self.input4, self.input6, self.input7, self.input8, self.input9, self.check_list], stdout=None, stderr=None) 
+        p = subprocess.Popen(["python", os.path.join(self.script_dir, "automation_test.py"), self.dcan_path, self.task_path, self.synth_path, self.raw_path, self.results_path, self.trained_path, self.modality, self.task_num, self.distribution, self.synth_amt, self.check_list], stdout=None, stderr=None) 
         self.processes.append(p)
         p.wait()
               
@@ -142,6 +144,8 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         self.inputDict['task_number'] = self.line_task_number
         self.inputDict['distribution'] = self.line_distribution
         self.inputDict['synth_img_amt'] = self.line_synth_img_amt
+        self.inputDict['results_path'] = self.line_results_path
+        self.inputDict['trained_models_path'] = self.line_trained_models_path
         #self.inputDict['slurm_scripts_path'] = self.line_slurm_scripts_path
         
         self.check_list = []
@@ -172,6 +176,8 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         inp_synth_path = os.path.exists(Path(self.line_synth_path.text().strip()))
         inp_task_path = os.path.exists(Path(self.line_task_path.text().strip()))
         inp_raw_data_base_path = os.path.exists(Path(self.line_raw_data_base_path.text().strip()))
+        inp_results_path= os.path.exists(Path(self.line_results_path.text().strip()))
+        inp_trained_models_path = os.path.exists(Path(self.line_trained_models_path.text().strip()))
         inp_modality = self.line_modality.text().strip().lower() == "t1" or self.line_modality.text().strip().lower() == "t2" or self.line_modality.text().strip().lower() == "t1t2"
         # TODO: update task number check
         inp_task_number = self.line_task_number.text().isdigit()
@@ -182,7 +188,7 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         if inp_task_number and inp_task_path:
             tasks_match = os.path.split(Path(self.line_task_path.text().strip()))[-1] == f'Task{self.line_task_number.text().strip()}'
         
-        arguments = [inp_dcan_path, inp_synth_path, inp_task_path, inp_raw_data_base_path, inp_modality, inp_distribution, inp_synth_img_amt, tasks_match] 
+        arguments = [inp_dcan_path, inp_synth_path, inp_task_path, inp_raw_data_base_path, inp_modality, inp_distribution, inp_synth_img_amt, inp_results_path, inp_trained_models_path, tasks_match] 
         
         if all(i == True for i in arguments):
             return True
@@ -201,7 +207,7 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
                     self.menuiuhwuaibfa.setTitle("Running...")
                     self.check_status()
                     # Start new worker thread to run main program. Allows UI to continue working along with it
-                    self.temp_thread = Thread(Path(self.line_dcan_path.text().strip()), Path(self.line_task_path.text().strip()), Path(self.line_synth_path.text().strip()), Path(self.line_raw_data_base_path.text().strip()), 
+                    self.temp_thread = Thread(Path(self.line_dcan_path.text().strip()), Path(self.line_task_path.text().strip()), Path(self.line_synth_path.text().strip()), Path(self.line_raw_data_base_path.text().strip()), Path(self.line_results_path.text().strip()), Path(self.line_trained_models_path.text().strip()),
                                             self.line_modality.text().strip().lower(), self.line_task_number.text().strip(), self.line_distribution.text().strip().lower(), self.line_synth_img_amt.text().strip(), self.script_dir, str(self.check_list))
                     #self.temp_thread.finished.connect(lambda: self.pushButton.setText('run')) # Listen for when process finishes
                     self.temp_thread.finished.connect(self.on_finish_thread) # Listen for when process finishes
