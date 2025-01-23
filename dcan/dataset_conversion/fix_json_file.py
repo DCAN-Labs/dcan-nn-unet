@@ -1,7 +1,7 @@
 import argparse
 from collections import OrderedDict
 
-from dcan.dataset_conversion.create_json_file import get_label_dict
+from dataset_conversion.create_json_file import get_label_dict
 
 
 def get_id_to_region_mapping(mapping_file_name, separator=None):
