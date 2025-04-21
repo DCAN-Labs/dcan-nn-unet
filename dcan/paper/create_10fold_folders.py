@@ -42,20 +42,18 @@ def populate_folders(test_segmentations, test_images, model_type):
                 if (model_type == 1 or model_type == 2) and (not os.path.exists(os.path.join(f'Fold_{fold_num + 1}', "Train", "Images", images[img_file_index + 1]))):
                     copy(os.path.join(test_images, images[img_file_index + 1]), os.path.join(f'Fold_{fold_num + 1}', "Train", "Images"))
 def main():
-
-    #parser = argparse.ArgumentParser(description='Do stuff')
-    #parser.add_argument("dest_folder", help="output folder")
-    #args = parser.parse_args()
-    #print(args.echo)
-
-    test_segmentations = '/scratch.global/lundq163/E_and_K_test_segs/'
-    test_images = '/scratch.global/lundq163/E_and_K_test_imgs/'
-
-    # 0: t1 only, 1: t2 only, 2: both
-    model_type = 2
+    parser = argparse.ArgumentParser(
+        description='Create and populate 10-fold cross validation folders',
+        formatter_class=RawTextHelpFormatter
+    )
+    parser.add_argument("--seg-folder", required=True, help="Path to segmentation files")
+    parser.add_argument("--img-folder", required=True, help="Path to image files")
+    parser.add_argument("--model-type", type=int, choices=[0, 1, 2], default=2,
+                       help="Model type: 0 for t1 only, 1 for t2 only, 2 for both")
+    args = parser.parse_args()
 
     create_folders()
-    populate_folders(test_segmentations, test_images, model_type)
+    populate_folders(args.seg_folder, args.img_folder, args.model_type)
 
 if __name__ == "__main__":
     main()
