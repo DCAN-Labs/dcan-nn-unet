@@ -30,8 +30,8 @@ def populate_folders(test_segmentations, test_images, model_type):
                     copy(os.path.join(test_segmentations, segmentations[seg_file_index]), os.path.join(f'Fold_{fold_num + 1}', "Train", "Segmentations"))   
 
         #IMAGES
-        for img_file_index in range(0, len(images), 2): # evenly and uniquely populate train and test data by age
-            if img_file_index % 20 == (fold_num * 2): # Test data
+        for img_file_index in range(len(images)): # evenly and uniquely populate train and test data by age
+            if img_file_index % 10 == (fold_num * 2): # Test data
                 if (model_type == 0 or model_type == 2) and (not os.path.exists(os.path.join(f'Fold_{fold_num + 1}', "Test", "Images", images[img_file_index]))):
                     copy(os.path.join(test_images, images[img_file_index]), os.path.join(f'Fold_{fold_num + 1}', "Test", "Images"))
                 if (model_type == 1 or model_type == 2) and (not os.path.exists(os.path.join(f'Fold_{fold_num + 1}', "Test", "Images", images[img_file_index + 1]))):
