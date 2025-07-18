@@ -7,6 +7,7 @@ from nilearn import image
 from tqdm import tqdm
 def resize_images(input_folder, output_folder):
     only_files = [f for f in os.listdir(input_folder) if isfile(join(input_folder, f))]
+    # for lifespan models, we have been resizing to 256x256x256
     desired_shape = (182, 218, 182)
     for f in tqdm(only_files):
         file_path = join(input_folder, f)
