@@ -11,9 +11,9 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-                "--seg-folder", "/scratch.global/lundq163/corrected_HBCD_data/T1_and_T2_model/labels",
-                "--img-folder", "/scratch.global/lundq163/corrected_HBCD_data/T1_and_T2_model/images",
-                "--model-type", "2",
+                "--seg-folder", "/scratch.global/lundq163/corrected_HBCD_data/T1_only_model/labels",
+                "--img-folder", "/scratch.global/lundq163/corrected_HBCD_data/T1_only_model/images",
+                "--model-type", "1",
                 "--num-folds", "1",
                 "--split-ratio", "0.2"
             ]

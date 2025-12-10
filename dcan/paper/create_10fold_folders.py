@@ -18,28 +18,35 @@ def create_folders(num_folds):
 def populate_folders(test_segmentations, test_images, model_type, num_folds, split_ratio):
     segmentations = os.listdir(test_segmentations)
     images = os.listdir(test_images)
+    if split_ratio == 0.1:
+        test_index = 10
+    elif split_ratio == 0.2:
+        test_index = 5
 
     for fold_num in range(num_folds): # loop through each of the 10 fold folders
         # SEGMENTATIONS
         for seg_file_index in range(len(segmentations)): # evenly and uniquely populate train and test data by age
-            if seg_file_index * split_ratio % 2 == 1 or 0: # Test data
+            if seg_file_index % test_index == 0: # Test data
                 if not os.path.exists(os.path.join(f'Fold_{fold_num + 1}', "Test", "Segmentations", segmentations[seg_file_index])):
                     copy(os.path.join(test_segmentations, segmentations[seg_file_index]), os.path.join(f'Fold_{fold_num + 1}', "Test", "Segmentations"))
             else:   # Train data
                 if not os.path.exists(os.path.join(f'Fold_{fold_num + 1}', "Train", "Segmentations", segmentations[seg_file_index])):
-                    copy(os.path.join(test_segmentations, segmentations[seg_file_index]), os.path.join(f'Fold_{fold_num + 1}', "Train", "Segmentations"))   
+                    copy(os.path.join(test_segmentations, segmentations[seg_file_index]), os.path.join(f'Fold_{fold_num + 1}', "Train", "Segmentations"))
+                    
+        if model_type == 0:
+            test_index = 2 * test_index
 
         #IMAGES
         for img_file_index in range(len(images)): # evenly and uniquely populate train and test data by age
-            if model_type not in [1, 2]: # Both T1 and T2
-                if img_file_index * split_ratio % 2 <= 0.3: # Test data
+            if model_type == 0: # Both T1 and T2
+                if img_file_index % test_index == 0 or img_file_index % test_index == 1: # Test data
                     if not os.path.exists(os.path.join(f'Fold_{fold_num + 1}', "Test", "Images", images[img_file_index])):
                         copy(os.path.join(test_images, images[img_file_index]), os.path.join(f'Fold_{fold_num + 1}', "Test", "Images"))
                 else:   # Train data
                     if not os.path.exists(os.path.join(f'Fold_{fold_num + 1}', "Train", "Images", images[img_file_index])):
                         copy(os.path.join(test_images, images[img_file_index]), os.path.join(f'Fold_{fold_num + 1}', "Train", "Images")) 
             else:
-                if img_file_index * split_ratio % 2 == 1 or 0: # Test data
+                if img_file_index % test_index == 0: # Test data
                     if not os.path.exists(os.path.join(f'Fold_{fold_num + 1}', "Test", "Images", images[img_file_index])):
                         copy(os.path.join(test_images, images[img_file_index]), os.path.join(f'Fold_{fold_num + 1}', "Test", "Images"))
                 else:   # Train data
@@ -56,11 +63,10 @@ def main():
     parser.add_argument("--model-type", type=int, choices=[0, 1, 2], default=0,
                        help="Model type: 1 for t1 only, 2 for t2 only, 0 for both")
     parser.add_argument("--num-folds", type=int, default=10, help="Number of folds for cross-validation (default: 10)")
-    parser.add_argument("--split-ratio", type=float, default=0.2, help="Ratio of test data to total data (default: 0.2)")
+    parser.add_argument("--split-ratio", type=float, choices=[0.1, 0.2], default=0.2, help="Split between train and test data (choices: 0.1 or 0.2, default: 0.2)")
     args = parser.parse_args()
 
     create_folders(args.num_folds)
     populate_folders(args.seg_folder, args.img_folder, args.model_type, args.num_folds, args.split_ratio)
-
 if __name__ == "__main__":
     main()
